@@ -4,7 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Protoreno - Des outils numériques pour débloquer les pros du bâtiment</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
+    :root {
+      --max-width: 800px;
+      --padding-side: 1rem;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,12 +22,13 @@
     }
     header {
       background-color: #ffffff;
-      padding: 3rem 1rem;
+      padding: 3rem var(--padding-side);
       text-align: center;
       border-bottom: 1px solid #e0e0e0;
     }
     header img {
-      width: 120px;
+      width: 100px;
+      max-width: 30vw;
       margin-bottom: 1rem;
     }
     header h1 {
@@ -27,8 +36,8 @@
       margin-bottom: 1rem;
     }
     header p {
-      font-size: 1.2rem;
-      max-width: 600px;
+      font-size: 1.1rem;
+      max-width: var(--max-width);
       margin: 0 auto 2rem;
     }
     .btn {
@@ -43,12 +52,12 @@
       display: inline-block;
     }
     section {
-      max-width: 800px;
+      max-width: var(--max-width);
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 0 var(--padding-side);
     }
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       margin-bottom: 0.5rem;
     }
     ul {
@@ -67,9 +76,23 @@
     }
     footer {
       text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
+      padding: 2rem var(--padding-side);
+      font-size: 0.85rem;
       color: #777;
+    }
+    @media (min-width: 1200px) {
+      header h1 {
+        font-size: 2.4rem;
+      }
+      header p {
+        font-size: 1.25rem;
+      }
+      .btn {
+        font-size: 1.1rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
     }
   </style>
 </head>
