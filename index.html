@@ -97,7 +97,7 @@
       transition: transform 0.3s ease;
     }
     .screenshots img:hover {
-      transform: scale(2);
+      transform: scale(1.5);
     }
     footer {
       text-align: center;
@@ -119,6 +119,36 @@
         font-size: 2rem;
       }
     }
+    form {
+      max-width: var(--max-width);
+      margin: 3rem auto;
+      padding: 1.5rem 3.5rem 3.5rem;
+      background-color: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.4rem;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #007bff;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.4rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -132,15 +162,15 @@
   <section>
     <h2>Pourquoi Protoreno ?</h2>
     <p>Dans un secteur aussi exigeant que la rénovation énergétique, les artisans, architectes et bureaux d’études manquent souvent de temps, de clarté… et d’outils adaptés.<br><br>
-    👉 Protoreno est une initiative indépendante qui <strong>part de vos retours</strong> pour <strong>construire des solutions simples, efficaces et vraiment ciblées</strong>.</p>
+      💡 Protoreno est une initiative indépendante qui <strong>part de vos retours</strong> pour <strong>construire des solutions simples, efficaces et vraiment ciblées</strong>.</p>
   </section>
 
   <section>
     <h2>Ce que vous pouvez faire</h2>
     <ul>
-      <li>✅ <strong><a href="https://tally.so/r/wgVWgN" target="_blank">Répondre à notre mini-sondage (1 min)</a></strong></li>
-      <li>✅ Être recontacté si vous souhaitez tester l’outil en avant-première</li>
-      <li>✅ Influencer la conception d’un outil qui vous fera gagner du temps et des clients</li>
+      <li>👉 <strong><a href="https://tally.so/r/wgVWgN" target="_blank">Répondre à notre mini-sondage (1 min)</a></strong></li>
+      <li>👉 Être recontacté si vous souhaitez tester l’outil en avant-première</li>
+      <li>👉 Influencer la conception d’un outil qui vous fera gagner du temps et des clients</li>
     </ul>
     <img src="Business Plan-bro.svg" alt="Illustration tableau de bord">
   </section>
@@ -155,16 +185,41 @@
     <a href="capture1.png" target="_blank">
       <img src="capture1.png" alt="Capture outil tableau de bord">
     </a>
-  </section>  
-
+  </section>
+  
   <section>
     <h2>Qui sommes-nous ?</h2>
     <p>🔧 Protoreno est né d’un croisement entre expertise terrain en rénovation énergétique, compétences tech et goût du service. Nous avons déjà travaillé avec des professionnels sur des projets de simulations, d’audit, de pilotage ou de gestion documentaire.</p>
     <p>Nous croyons en un numérique <strong>utile, sobre et accessible</strong>.</p>
   </section>
 
+  <form action="https://formsubmit.co/contact@protoreno.com" method="POST">
+    <h2>Contactez-nous</h2>
+  
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name" required>
+  
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required>
+  
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+  
+    <!-- Anti-bot honeypot -->
+    <input type="text" name="_honey" style="display:none">
+  
+    <!-- Désactive le captcha -->
+    <input type="hidden" name="_captcha" value="false">
+  
+    <!-- Redirection après envoi -->
+    <input type="hidden" name="_next" value="https://protoreno.com/merci.html">
+  
+    <button type="submit">Envoyer</button>
+  </form>
+  
+
   <footer>
-    © Protoreno - 2025. Une question ? Contactez-nous à contact@protoreno.fr
+    © Protoreno - 2025. Une question ? Contactez-nous à contact@protoreno.com
   </footer>
 </body>
 </html>
