@@ -80,6 +80,25 @@
       background-size: contain;
       background-repeat: no-repeat;
     }
+    .screenshots {
+      max-width: var(--max-width);
+      margin: 3rem auto;
+      padding: 0 var(--padding-side);
+    }
+    .screenshots a {
+      display: block;
+      margin-bottom: 2rem;
+      cursor: zoom-in;
+    }
+    .screenshots img {
+      width: 100%;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .screenshots img:hover {
+      transform: scale(2);
+    }
     footer {
       text-align: center;
       padding: 2rem var(--padding-side);
@@ -123,6 +142,7 @@
       <li>✅ Être recontacté si vous souhaitez tester l’outil en avant-première</li>
       <li>✅ Influencer la conception d’un outil qui vous fera gagner du temps et des clients</li>
     </ul>
+    <img src="Business Plan-bro.svg" alt="Illustration tableau de bord">
   </section>
 
   <section>
@@ -130,6 +150,12 @@
     <p>Protoreno est porté par une jeune société numérique indépendante spécialisée dans la rénovation énergétique. Notre mission est simple : <strong>identifier les blocages concrets rencontrés par les professionnels du secteur</strong> (artisans, bureaux d'études, exploitants, maîtres d’œuvre…) et y répondre avec des <strong>outils SaaS ciblés, simples et efficaces</strong>.</p>
     <p>Nous ne développons pas des solutions complexes pour le plaisir de coder. Nous partons de vos retours, vos besoins quotidiens, vos urgences – et nous construisons avec vous les outils qui résolvent vraiment des problèmes.</p>
   </section>
+
+  <section class="screenshots">
+    <a href="capture1.png" target="_blank">
+      <img src="capture1.png" alt="Capture outil tableau de bord">
+    </a>
+  </section>  
 
   <section>
     <h2>Qui sommes-nous ?</h2>
