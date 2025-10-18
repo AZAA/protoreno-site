@@ -1,0 +1,9 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="16" fill="#2563EB"/>
+  <!-- Toit maison -->
+  <path d="M50 25 L75 45 L75 75 L25 75 L25 45 Z" fill="white" opacity="0.2" stroke="white" stroke-width="2.5"/>
+  <!-- Barres croissantes intégrées -->
+  <rect x="35" y="60" width="8" height="10" rx="2" fill="white"/>
+  <rect x="46" y="52" width="8" height="18" rx="2" fill="white"/>
+  <rect x="57" y="43" width="8" height="27" rx="2" fill="white"/>
+</svg>
