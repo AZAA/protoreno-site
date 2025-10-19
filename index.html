@@ -298,6 +298,94 @@
       z-index: 2;
     }
 
+    /* ============================================
+       SECTION BACKGROUNDS
+       ============================================ */
+    section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-bg-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    section .container,
+    section .container-narrow {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-alt {
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Gestion de l'affichage des fonds de section */
+    .section-bg-svg {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .section-bg-svg.active {
+      opacity: 1;
+    }
+
+    /* Toggle de sélection des fonds */
+    .section-bg-selector {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 0.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-bg-btn {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid var(--light-gray);
+      background: white;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .section-bg-btn:hover {
+      border-color: var(--blue);
+      background: var(--blue-light);
+      color: var(--blue);
+    }
+
+    .section-bg-btn.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: white;
+    }
+
     .badge {
       display: inline-block;
       padding: 0.5rem 1rem;
@@ -1068,7 +1156,38 @@
   <!-- ============================================
        LE CONSTAT
        ============================================ -->
-  <section class="section-alt">
+  <section class="section-alt" id="section-constat">
+    <!-- Option 1: Neutre (vide) -->
+    <svg class="section-bg-svg constat-bg active" data-section="constat" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    </svg>
+
+    <!-- Option 2: Lignes désalignées -->
+    <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 100 200 L 300 205 L 500 195" stroke="#2563EB" stroke-width="0.5" opacity="0.04" fill="none"/>
+      <path d="M 700 350 L 900 360 L 1100 345" stroke="#2563EB" stroke-width="0.5" opacity="0.04" fill="none"/>
+      <path d="M 150 600 L 350 590 L 550 605" stroke="#2563EB" stroke-width="0.5" opacity="0.04" fill="none"/>
+    </svg>
+
+    <!-- Option 3: Grille très légère -->
+    <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="light-grid-constat" width="100" height="100" patternUnits="userSpaceOnUse">
+          <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#2563EB" stroke-width="0.3" opacity="0.03"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="800" fill="url(#light-grid-constat)"/>
+    </svg>
+
+    <!-- Option 4: Points dispersés -->
+    <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="200" cy="200" r="2" fill="#2563EB" opacity="0.05"/>
+      <circle cx="500" cy="300" r="2" fill="#2563EB" opacity="0.05"/>
+      <circle cx="850" cy="250" r="2" fill="#2563EB" opacity="0.05"/>
+      <circle cx="300" cy="500" r="2" fill="#2563EB" opacity="0.05"/>
+      <circle cx="700" cy="600" r="2" fill="#2563EB" opacity="0.05"/>
+      <circle cx="1000" cy="450" r="2" fill="#2563EB" opacity="0.05"/>
+    </svg>
+
     <div class="container">
       <div class="section-header">
         <h2>Le constat</h2>
@@ -1107,13 +1226,42 @@
           <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
         </div>
       </div>
+
+      <!-- Toggle fond section -->
+      <div class="section-bg-selector" data-section="constat">
+        <button class="section-bg-btn active" data-variant="1">∅</button>
+        <button class="section-bg-btn" data-variant="2">1</button>
+        <button class="section-bg-btn" data-variant="3">2</button>
+        <button class="section-bg-btn" data-variant="4">3</button>
+      </div>
     </div>
   </section>
 
   <!-- ============================================
        NOTRE APPROCHE
        ============================================ -->
-  <section>
+  <section id="section-approche">
+    <!-- Option 1: Neutre (vide) -->
+    <svg class="section-bg-svg approche-bg active" data-section="approche" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    </svg>
+
+    <!-- Option 2: Flèche montante -->
+    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 900 550 L 950 500 L 1000 450" stroke="#2563EB" stroke-width="0.5" opacity="0.05" fill="none"/>
+    </svg>
+
+    <!-- Option 3: Points progressifs -->
+    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="200" cy="250" r="2" fill="#2563EB" opacity="0.05"/>
+      <circle cx="600" cy="400" r="2" fill="#2563EB" opacity="0.05"/>
+      <circle cx="1000" cy="450" r="2" fill="#2563EB" opacity="0.05"/>
+    </svg>
+
+    <!-- Option 4: Escalier léger -->
+    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 850 600 L 900 600 L 900 500 L 950 500 L 950 400" stroke="#2563EB" stroke-width="0.5" opacity="0.04" fill="none"/>
+    </svg>
+
     <div class="container">
       <div class="section-header">
         <h2>Notre approche</h2>
@@ -1151,13 +1299,50 @@
           </div>
         </div>
       </div>
+
+      <!-- Toggle fond section -->
+      <div class="section-bg-selector" data-section="approche">
+        <button class="section-bg-btn active" data-variant="1">∅</button>
+        <button class="section-bg-btn" data-variant="2">1</button>
+        <button class="section-bg-btn" data-variant="3">2</button>
+        <button class="section-bg-btn" data-variant="4">3</button>
+      </div>
     </div>
   </section>
 
   <!-- ============================================
        COMMENT PARTICIPER
        ============================================ -->
-  <section class="section-alt">
+  <section class="section-alt" id="section-participer">
+    <!-- Option 1: Neutre (vide) -->
+    <svg class="section-bg-svg participer-bg active" data-section="participer" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    </svg>
+
+    <!-- Option 2: Connexions minimales -->
+    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <line x1="300" y1="200" x2="500" y2="250" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+      <line x1="500" y1="250" x2="700" y2="220" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+      <line x1="800" y1="500" x2="1000" y2="520" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+    </svg>
+
+    <!-- Option 3: Nodes simples -->
+    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="300" cy="200" r="3" fill="#2563EB" opacity="0.06"/>
+      <circle cx="500" cy="250" r="3" fill="#2563EB" opacity="0.06"/>
+      <circle cx="700" cy="220" r="3" fill="#2563EB" opacity="0.06"/>
+      <circle cx="800" cy="500" r="3" fill="#2563EB" opacity="0.06"/>
+      <circle cx="1000" cy="520" r="3" fill="#2563EB" opacity="0.06"/>
+    </svg>
+
+    <!-- Option 4: Réseau très léger -->
+    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <line x1="300" y1="200" x2="500" y2="250" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+      <line x1="500" y1="250" x2="700" y2="220" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+      <circle cx="300" cy="200" r="2" fill="#2563EB" opacity="0.05"/>
+      <circle cx="500" cy="250" r="2" fill="#2563EB" opacity="0.05"/>
+      <circle cx="700" cy="220" r="2" fill="#2563EB" opacity="0.05"/>
+    </svg>
+
     <div class="container">
       <div class="section-header">
         <h2>Comment participer</h2>
@@ -1205,13 +1390,47 @@
       <div style="text-align: center; margin-top: 3.5rem;">
         <a href="https://tally.so/r/wgVWgN" target="_blank" class="btn btn-primary btn-large">Participer au sondage</a>
       </div>
+
+      <!-- Toggle fond section -->
+      <div class="section-bg-selector" data-section="participer">
+        <button class="section-bg-btn active" data-variant="1">∅</button>
+        <button class="section-bg-btn" data-variant="2">1</button>
+        <button class="section-bg-btn" data-variant="3">2</button>
+        <button class="section-bg-btn" data-variant="4">3</button>
+      </div>
     </div>
   </section>
 
   <!-- ============================================
        NOS OUTILS
        ============================================ -->
-  <section>
+  <section id="section-outils">
+    <!-- Option 1: Neutre (vide) -->
+    <svg class="section-bg-svg outils-bg active" data-section="outils" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    </svg>
+
+    <!-- Option 2: Grille très légère -->
+    <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="light-grid-outils" width="80" height="80" patternUnits="userSpaceOnUse">
+          <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#2563EB" stroke-width="0.3" opacity="0.03"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="800" fill="url(#light-grid-outils)"/>
+    </svg>
+
+    <!-- Option 3: Barres minimalistes -->
+    <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="200" y="250" width="15" height="60" rx="2" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+      <rect x="225" y="220" width="15" height="90" rx="2" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+      <rect x="250" y="240" width="15" height="70" rx="2" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+    </svg>
+
+    <!-- Option 4: Courbe légère -->
+    <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 850 550 L 900 530 L 950 500 L 1000 480" stroke="#2563EB" stroke-width="0.5" opacity="0.04" fill="none"/>
+    </svg>
+
     <div class="container">
       <div class="section-header">
         <h2>Des outils déjà opérationnels</h2>
@@ -1279,6 +1498,14 @@
           <div class="screenshot-label">Pilotage de chantiers</div>
         </div>
       </div>
+
+      <!-- Toggle fond section -->
+      <div class="section-bg-selector" data-section="outils">
+        <button class="section-bg-btn active" data-variant="1">∅</button>
+        <button class="section-bg-btn" data-variant="2">1</button>
+        <button class="section-bg-btn" data-variant="3">2</button>
+        <button class="section-bg-btn" data-variant="4">3</button>
+      </div>
     </div>
   </section>
 
@@ -1302,7 +1529,34 @@
   <!-- ============================================
        QUI SOMMES-NOUS
        ============================================ -->
-  <section>
+  <section id="section-about">
+    <!-- Option 1: Neutre (vide) -->
+    <svg class="section-bg-svg about-bg active" data-section="about" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    </svg>
+
+    <!-- Option 2: Code minimaliste -->
+    <svg class="section-bg-svg about-bg" data-section="about" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="code-light" width="250" height="100" patternUnits="userSpaceOnUse">
+          <text x="20" y="30" fill="#2563EB" opacity="0.03" font-size="16" font-family="monospace">{"{ }"}</text>
+          <text x="100" y="30" fill="#2563EB" opacity="0.03" font-size="16" font-family="monospace">{"< >"}</text>
+        </pattern>
+      </defs>
+      <rect width="1200" height="800" fill="url(#code-light)"/>
+    </svg>
+
+    <!-- Option 3: Symboles épars -->
+    <svg class="section-bg-svg about-bg" data-section="about" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 950 300 L 920 320 L 950 340" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+      <path d="M 1050 300 L 1080 320 L 1050 340" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+    </svg>
+
+    <!-- Option 4: Mix très léger -->
+    <svg class="section-bg-svg about-bg" data-section="about" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <line x1="200" y1="250" x2="350" y2="280" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+      <circle cx="900" cy="500" r="2" fill="#2563EB" opacity="0.05"/>
+    </svg>
+
     <div class="container">
       <div class="section-header">
         <h2>Qui sommes-nous</h2>
@@ -1350,6 +1604,14 @@
             Pas de grand groupe, pas d'investisseurs. Nous restons libres de nos choix et à l'écoute du terrain
           </p>
         </div>
+      </div>
+
+      <!-- Toggle fond section -->
+      <div class="section-bg-selector" data-section="about">
+        <button class="section-bg-btn active" data-variant="1">∅</button>
+        <button class="section-bg-btn" data-variant="2">1</button>
+        <button class="section-bg-btn" data-variant="3">2</button>
+        <button class="section-bg-btn" data-variant="4">3</button>
       </div>
     </div>
   </section>
@@ -1464,6 +1726,56 @@
         submitBtn.disabled = false;
       }
     });
+
+    // Gestion des toggles de fonds de section
+    const sections = ['constat', 'approche', 'participer', 'outils', 'about'];
+
+    sections.forEach(sectionName => {
+      const selector = document.querySelector(`.section-bg-selector[data-section="${sectionName}"]`);
+      if (!selector) return;
+
+      const buttons = selector.querySelectorAll('.section-bg-btn');
+      const backgrounds = document.querySelectorAll(`.${sectionName}-bg`);
+
+      // Charger le choix sauvegardé
+      const savedVariant = localStorage.getItem(`bg-${sectionName}`);
+      if (savedVariant) {
+        switchBackground(sectionName, savedVariant);
+      }
+
+      // Gérer les clics sur les boutons
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const variant = btn.dataset.variant;
+          switchBackground(sectionName, variant);
+          localStorage.setItem(`bg-${sectionName}`, variant);
+        });
+      });
+    });
+
+    function switchBackground(sectionName, variant) {
+      // Désactiver tous les fonds
+      document.querySelectorAll(`.${sectionName}-bg`).forEach(bg => {
+        bg.classList.remove('active');
+      });
+
+      // Activer le fond sélectionné
+      const selected = document.querySelector(`.${sectionName}-bg[data-variant="${variant}"]`);
+      if (selected) {
+        selected.classList.add('active');
+      }
+
+      // Mettre à jour les boutons
+      const selector = document.querySelector(`.section-bg-selector[data-section="${sectionName}"]`);
+      if (selector) {
+        selector.querySelectorAll('.section-bg-btn').forEach(btn => {
+          btn.classList.remove('active');
+          if (btn.dataset.variant === variant) {
+            btn.classList.add('active');
+          }
+        });
+      }
+    }
 
   </script>
 </body>
