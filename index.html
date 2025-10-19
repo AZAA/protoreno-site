@@ -1161,31 +1161,43 @@
     <svg class="section-bg-svg constat-bg active" data-section="constat" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     </svg>
 
-    <!-- Option 2: Lignes brisées (complexité) -->
+    <!-- Option 2: Grille désalignée (complexité) -->
     <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M 150 250 L 200 280 L 250 260 L 300 290" stroke="#2563EB" stroke-width="1.5" opacity="0.1" fill="none"/>
-      <path d="M 850 350 L 900 320 L 950 350 L 1000 330" stroke="#2563EB" stroke-width="1.5" opacity="0.1" fill="none"/>
-      <path d="M 300 550 L 350 520 L 400 540 L 450 520" stroke="#2563EB" stroke-width="1.5" opacity="0.1" fill="none"/>
+      <defs>
+        <pattern id="broken-grid" width="120" height="100" patternUnits="userSpaceOnUse">
+          <line x1="0" y1="0" x2="120" y2="3" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+          <line x1="0" y1="33" x2="120" y2="37" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+          <line x1="0" y1="66" x2="120" y2="63" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+          <line x1="0" y1="100" x2="120" y2="97" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+          <line x1="0" y1="0" x2="3" y2="100" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+          <line x1="40" y1="0" x2="37" y2="100" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+          <line x1="80" y1="0" x2="83" y2="100" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+          <line x1="120" y1="0" x2="117" y2="100" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="800" fill="url(#broken-grid)"/>
     </svg>
 
-    <!-- Option 3: Points dispersés (neutre) -->
+    <!-- Option 3: Losanges (neutre) -->
     <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
-        <pattern id="dots-constat" width="80" height="80" patternUnits="userSpaceOnUse">
-          <circle cx="40" cy="40" r="2" fill="#2563EB" opacity="0.12"/>
+        <pattern id="diamonds" width="80" height="80" patternUnits="userSpaceOnUse">
+          <path d="M 40 10 L 70 40 L 40 70 L 10 40 Z" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
         </pattern>
       </defs>
-      <rect width="1200" height="800" fill="url(#dots-constat)"/>
+      <rect width="1200" height="800" fill="url(#diamonds)"/>
     </svg>
 
-    <!-- Option 4: Grille simple (neutre) -->
+    <!-- Option 4: Points + lignes (neutre) -->
     <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
-        <pattern id="grid-constat" width="60" height="60" patternUnits="userSpaceOnUse">
-          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+        <pattern id="dots-lines" width="60" height="60" patternUnits="userSpaceOnUse">
+          <circle cx="30" cy="30" r="2" fill="#2563EB" opacity="0.1"/>
+          <line x1="0" y1="30" x2="60" y2="30" stroke="#2563EB" stroke-width="0.3" opacity="0.05"/>
+          <line x1="30" y1="0" x2="30" y2="60" stroke="#2563EB" stroke-width="0.3" opacity="0.05"/>
         </pattern>
       </defs>
-      <rect width="1200" height="800" fill="url(#grid-constat)"/>
+      <rect width="1200" height="800" fill="url(#dots-lines)"/>
     </svg>
 
     <div class="container">
@@ -1245,33 +1257,41 @@
     <svg class="section-bg-svg approche-bg active" data-section="approche" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     </svg>
 
-    <!-- Option 2: Flèches montantes (progression) -->
+    <!-- Option 2: Flèches pattern (progression) -->
     <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
-        <marker id="arrow-approche" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-          <path d="M 0 0 L 8 4 L 0 8 Z" fill="#2563EB" opacity="0.15"/>
+        <marker id="arrow-approche" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M 0 0 L 6 3 L 0 6 Z" fill="#2563EB" opacity="0.12"/>
         </marker>
-      </defs>
-      <path d="M 200 550 L 250 500 L 300 450" stroke="#2563EB" stroke-width="2" opacity="0.1" fill="none" marker-end="url(#arrow-approche)"/>
-      <path d="M 900 550 L 950 500 L 1000 450" stroke="#2563EB" stroke-width="2" opacity="0.1" fill="none" marker-end="url(#arrow-approche)"/>
-    </svg>
-
-    <!-- Option 3: Escalier simple (étapes) -->
-    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M 850 600 L 900 600 L 900 500 L 950 500 L 950 400" stroke="#2563EB" stroke-width="2" opacity="0.1" fill="none"/>
-      <circle cx="900" cy="600" r="5" fill="#2563EB" opacity="0.12"/>
-      <circle cx="900" cy="500" r="5" fill="#2563EB" opacity="0.12"/>
-      <circle cx="950" cy="400" r="5" fill="#2563EB" opacity="0.12"/>
-    </svg>
-
-    <!-- Option 4: Points alignés (neutre) -->
-    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="dots-approche" width="80" height="80" patternUnits="userSpaceOnUse">
-          <circle cx="40" cy="40" r="2" fill="#2563EB" opacity="0.12"/>
+        <pattern id="arrows-pattern" width="150" height="120" patternUnits="userSpaceOnUse">
+          <path d="M 20 80 L 50 50 L 80 20" stroke="#2563EB" stroke-width="1.5" opacity="0.08" fill="none" marker-end="url(#arrow-approche)"/>
         </pattern>
       </defs>
-      <rect width="1200" height="800" fill="url(#dots-approche)"/>
+      <rect width="1200" height="800" fill="url(#arrows-pattern)"/>
+    </svg>
+
+    <!-- Option 3: Chemin pointillé (parcours) -->
+    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="path-pattern" width="200" height="150" patternUnits="userSpaceOnUse">
+          <path d="M 20 100 Q 60 80 100 100 Q 140 120 180 100" stroke="#2563EB" stroke-width="1" opacity="0.08" fill="none" stroke-dasharray="5,5"/>
+          <circle cx="20" cy="100" r="3" fill="#2563EB" opacity="0.1"/>
+          <circle cx="100" cy="100" r="3" fill="#2563EB" opacity="0.1"/>
+          <circle cx="180" cy="100" r="3" fill="#2563EB" opacity="0.1"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="800" fill="url(#path-pattern)"/>
+    </svg>
+
+    <!-- Option 4: Croix légères (neutre) -->
+    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="crosses" width="60" height="60" patternUnits="userSpaceOnUse">
+          <line x1="30" y1="25" x2="30" y2="35" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+          <line x1="25" y1="30" x2="35" y2="30" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="800" fill="url(#crosses)"/>
     </svg>
 
     <div class="container">
@@ -1330,36 +1350,40 @@
     <svg class="section-bg-svg participer-bg active" data-section="participer" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     </svg>
 
-    <!-- Option 2: Réseau simple (connexions) -->
+    <!-- Option 2: Réseau maillé (collaboration) -->
     <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <line x1="300" y1="200" x2="500" y2="250" stroke="#2563EB" stroke-width="1" opacity="0.08"/>
-      <line x1="500" y1="250" x2="700" y2="220" stroke="#2563EB" stroke-width="1" opacity="0.08"/>
-      <circle cx="300" cy="200" r="5" fill="#2563EB" opacity="0.12"/>
-      <circle cx="500" cy="250" r="5" fill="#2563EB" opacity="0.12"/>
-      <circle cx="700" cy="220" r="5" fill="#2563EB" opacity="0.12"/>
-
-      <line x1="800" y1="500" x2="1000" y2="520" stroke="#2563EB" stroke-width="1" opacity="0.08"/>
-      <circle cx="800" cy="500" r="5" fill="#2563EB" opacity="0.12"/>
-      <circle cx="1000" cy="520" r="5" fill="#2563EB" opacity="0.12"/>
-    </svg>
-
-    <!-- Option 3: Cercles dispersés (neutre) -->
-    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="250" cy="200" r="4" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.1"/>
-      <circle cx="600" cy="300" r="4" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.1"/>
-      <circle cx="900" cy="250" r="4" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.1"/>
-      <circle cx="350" cy="500" r="4" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.1"/>
-      <circle cx="800" cy="600" r="4" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.1"/>
-    </svg>
-
-    <!-- Option 4: Points réguliers (neutre) -->
-    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
-        <pattern id="dots-participer" width="80" height="80" patternUnits="userSpaceOnUse">
-          <circle cx="40" cy="40" r="2" fill="#2563EB" opacity="0.12"/>
+        <pattern id="network" width="150" height="130" patternUnits="userSpaceOnUse">
+          <line x1="30" y1="30" x2="75" y2="65" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
+          <line x1="75" y1="65" x2="120" y2="30" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
+          <line x1="30" y1="30" x2="120" y2="30" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
+          <circle cx="30" cy="30" r="4" fill="#2563EB" opacity="0.1"/>
+          <circle cx="75" cy="65" r="4" fill="#2563EB" opacity="0.1"/>
+          <circle cx="120" cy="30" r="4" fill="#2563EB" opacity="0.1"/>
         </pattern>
       </defs>
-      <rect width="1200" height="800" fill="url(#dots-participer)"/>
+      <rect width="1200" height="800" fill="url(#network)"/>
+    </svg>
+
+    <!-- Option 3: Hexagones (communauté) -->
+    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="hexagons" width="87" height="100" patternUnits="userSpaceOnUse">
+          <path d="M 25 0 L 62 0 L 80 43 L 62 86 L 25 86 L 7 43 Z" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="800" fill="url(#hexagons)"/>
+    </svg>
+
+    <!-- Option 4: Cercles concentriques (neutre) -->
+    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="concentric" width="100" height="100" patternUnits="userSpaceOnUse">
+          <circle cx="50" cy="50" r="15" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
+          <circle cx="50" cy="50" r="25" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="800" fill="url(#concentric)"/>
     </svg>
 
     <div class="container">
@@ -1428,35 +1452,43 @@
     <svg class="section-bg-svg outils-bg active" data-section="outils" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     </svg>
 
-    <!-- Option 2: Grille simple (neutre) -->
+    <!-- Option 2: Widgets pattern (dashboards) -->
     <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
-        <pattern id="grid-outils" width="60" height="60" patternUnits="userSpaceOnUse">
-          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+        <pattern id="widgets" width="140" height="100" patternUnits="userSpaceOnUse">
+          <rect x="10" y="10" width="55" height="35" rx="4" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+          <rect x="75" y="10" width="55" height="35" rx="4" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+          <rect x="10" y="55" width="120" height="35" rx="4" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+          <line x1="20" y1="22" x2="50" y2="22" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
+          <line x1="20" y1="28" x2="55" y2="28" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
         </pattern>
       </defs>
-      <rect width="1200" height="800" fill="url(#grid-outils)"/>
+      <rect width="1200" height="800" fill="url(#widgets)"/>
     </svg>
 
-    <!-- Option 3: Barres graphique (dashboards) -->
+    <!-- Option 3: Barres pattern (graphiques) -->
     <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="200" y="250" width="20" height="80" rx="2" fill="none" stroke="#2563EB" stroke-width="1.5" opacity="0.1"/>
-      <rect x="230" y="200" width="20" height="130" rx="2" fill="none" stroke="#2563EB" stroke-width="1.5" opacity="0.1"/>
-      <rect x="260" y="230" width="20" height="100" rx="2" fill="none" stroke="#2563EB" stroke-width="1.5" opacity="0.1"/>
-      <rect x="290" y="180" width="20" height="150" rx="2" fill="none" stroke="#2563EB" stroke-width="1.5" opacity="0.1"/>
-
-      <rect x="900" y="400" width="20" height="100" rx="2" fill="none" stroke="#2563EB" stroke-width="1.5" opacity="0.1"/>
-      <rect x="930" y="350" width="20" height="150" rx="2" fill="none" stroke="#2563EB" stroke-width="1.5" opacity="0.1"/>
-      <rect x="960" y="380" width="20" height="120" rx="2" fill="none" stroke="#2563EB" stroke-width="1.5" opacity="0.1"/>
+      <defs>
+        <pattern id="bars" width="100" height="80" patternUnits="userSpaceOnUse">
+          <rect x="15" y="45" width="10" height="25" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.1"/>
+          <rect x="30" y="35" width="10" height="35" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.1"/>
+          <rect x="45" y="40" width="10" height="30" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.1"/>
+          <rect x="60" y="30" width="10" height="40" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.1"/>
+          <rect x="75" y="38" width="10" height="32" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.1"/>
+          <line x1="10" y1="70" x2="90" y2="70" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="800" fill="url(#bars)"/>
     </svg>
 
-    <!-- Option 4: Courbe montante (performance) -->
+    <!-- Option 4: Grille dashboard (neutre) -->
     <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M 850 550 L 900 520 L 950 480 L 1000 440" stroke="#2563EB" stroke-width="2" opacity="0.1" fill="none"/>
-      <circle cx="850" cy="550" r="4" fill="#2563EB" opacity="0.12"/>
-      <circle cx="900" cy="520" r="4" fill="#2563EB" opacity="0.12"/>
-      <circle cx="950" cy="480" r="4" fill="#2563EB" opacity="0.12"/>
-      <circle cx="1000" cy="440" r="4" fill="#2563EB" opacity="0.12"/>
+      <defs>
+        <pattern id="grid-dashboard" width="50" height="50" patternUnits="userSpaceOnUse">
+          <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#2563EB" stroke-width="0.3" opacity="0.06"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="800" fill="url(#grid-dashboard)"/>
     </svg>
 
     <div class="container">
@@ -1562,33 +1594,42 @@
     <svg class="section-bg-svg about-bg active" data-section="about" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     </svg>
 
-    <!-- Option 2: Symboles code simples (tech) -->
+    <!-- Option 2: Code pattern (tech) -->
     <svg class="section-bg-svg about-bg" data-section="about" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M 220 300 L 190 320 L 220 340" fill="none" stroke="#2563EB" stroke-width="2" opacity="0.1"/>
-      <path d="M 280 300 L 310 320 L 280 340" fill="none" stroke="#2563EB" stroke-width="2" opacity="0.1"/>
-
-      <path d="M 920 450 L 890 470 L 920 490" fill="none" stroke="#2563EB" stroke-width="2" opacity="0.1"/>
-      <path d="M 980 450 L 1010 470 L 980 490" fill="none" stroke="#2563EB" stroke-width="2" opacity="0.1"/>
+      <defs>
+        <pattern id="code-brackets" width="120" height="80" patternUnits="userSpaceOnUse">
+          <path d="M 30 25 L 20 40 L 30 55" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.08"/>
+          <path d="M 50 25 L 60 40 L 50 55" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.08"/>
+          <line x1="70" y1="35" x2="85" y2="45" stroke="#2563EB" stroke-width="0.8" opacity="0.06"/>
+        </pattern>
+      </defs>
+      <rect width="1200" height="800" fill="url(#code-brackets)"/>
     </svg>
 
-    <!-- Option 3: Points réguliers (neutre) -->
+    <!-- Option 3: Briques code mix (tech+construction) -->
     <svg class="section-bg-svg about-bg" data-section="about" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
-        <pattern id="dots-about" width="80" height="80" patternUnits="userSpaceOnUse">
-          <circle cx="40" cy="40" r="2" fill="#2563EB" opacity="0.12"/>
+        <pattern id="brick-code" width="140" height="60" patternUnits="userSpaceOnUse">
+          <!-- Brique -->
+          <rect x="5" y="5" width="60" height="20" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
+          <rect x="70" y="5" width="60" height="20" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
+          <!-- Deuxième rangée décalée -->
+          <rect x="-25" y="30" width="60" height="20" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
+          <rect x="40" y="30" width="60" height="20" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
+          <rect x="105" y="30" width="60" height="20" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
         </pattern>
       </defs>
-      <rect width="1200" height="800" fill="url(#dots-about)"/>
+      <rect width="1200" height="800" fill="url(#brick-code)"/>
     </svg>
 
-    <!-- Option 4: Grille simple (neutre) -->
+    <!-- Option 4: Diagonales (neutre) -->
     <svg class="section-bg-svg about-bg" data-section="about" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
-        <pattern id="grid-about" width="60" height="60" patternUnits="userSpaceOnUse">
-          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+        <pattern id="diagonals" width="40" height="40" patternUnits="userSpaceOnUse">
+          <line x1="0" y1="0" x2="40" y2="40" stroke="#2563EB" stroke-width="0.3" opacity="0.06"/>
         </pattern>
       </defs>
-      <rect width="1200" height="800" fill="url(#grid-about)"/>
+      <rect width="1200" height="800" fill="url(#diagonals)"/>
     </svg>
 
     <div class="container">
