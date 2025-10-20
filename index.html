@@ -1054,6 +1054,540 @@
         padding: 1.5rem 1rem;
       }
     }
+
+    /* ============================================
+       VARIANTS SELECTOR FOR TOOLS SECTION
+       ============================================ */
+    .tools-variant-selector {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid var(--light-gray);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .variant-option {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .variant-label {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--bg);
+      border: 2px solid var(--light-gray);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--slate);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .variant-label:hover {
+      background: var(--blue-light);
+      border-color: var(--blue);
+      color: var(--blue-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+    }
+
+    .variant-option:checked + .variant-label {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Hide all variants by default */
+    .tools-variant {
+      display: none !important;
+    }
+
+    .tools-variant.active {
+      display: block !important;
+    }
+
+    /* Override display for grid-based variants */
+    .tools-variant-4.active,
+    .tools-variant-5.active,
+    .tools-variant-8.active,
+    .tools-variant-9.active {
+      display: grid !important;
+    }
+
+    /* ============================================
+       VARIANT 1: Split 50/50 avec Watermark Géant
+       ============================================ */
+    .tools-variant-1 .tool-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 2.5rem;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--light-gray);
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .tools-variant-1 .tool-card:nth-child(even) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .tools-variant-1 .tool-card:nth-child(even) .tool-image {
+      order: 2;
+    }
+
+    .tools-variant-1 .tool-card:nth-child(even) .tool-content {
+      order: 1;
+    }
+
+    .tools-variant-1 .tool-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .tools-variant-1 .tool-image {
+      position: relative;
+      min-height: 320px;
+    }
+
+    .tools-variant-1 .tool-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tools-variant-1 .tool-content {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .tools-variant-1 .tool-content::before {
+      content: attr(data-number);
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      font-size: 8rem;
+      font-weight: 900;
+      color: var(--blue-light);
+      opacity: 0.3;
+      line-height: 1;
+      z-index: 0;
+    }
+
+    .tools-variant-1 .tool-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .tools-variant-1 .tool-text h3 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .tools-variant-1 .tool-text p {
+      margin: 0;
+      font-size: 1.125rem;
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       VARIANT 2: Split 50/50 avec Cercle Numéroté
+       ============================================ */
+    .tools-variant-2 .tool-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 2.5rem;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--light-gray);
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .tools-variant-2 .tool-card:nth-child(even) .tool-image {
+      order: 2;
+    }
+
+    .tools-variant-2 .tool-card:nth-child(even) .tool-content {
+      order: 1;
+    }
+
+    .tools-variant-2 .tool-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .tools-variant-2 .tool-image {
+      position: relative;
+      min-height: 320px;
+    }
+
+    .tools-variant-2 .tool-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tools-variant-2 .tool-content {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .tools-variant-2 .tool-number {
+      width: 64px;
+      height: 64px;
+      background: var(--blue);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+    }
+
+    .tools-variant-2 .tool-text h3 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .tools-variant-2 .tool-text p {
+      margin: 0;
+      font-size: 1.125rem;
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       VARIANT 3: Split 50/50 avec Ligne Verticale et Numéro
+       ============================================ */
+    .tools-variant-3 .tool-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 2.5rem;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--light-gray);
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .tools-variant-3 .tool-card:nth-child(even) .tool-image {
+      order: 2;
+    }
+
+    .tools-variant-3 .tool-card:nth-child(even) .tool-content {
+      order: 1;
+    }
+
+    .tools-variant-3 .tool-card:nth-child(even) .tool-content::before {
+      left: auto;
+      right: 0;
+    }
+
+    .tools-variant-3 .tool-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .tools-variant-3 .tool-image {
+      position: relative;
+      min-height: 320px;
+    }
+
+    .tools-variant-3 .tool-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tools-variant-3 .tool-content {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .tools-variant-3 .tool-content::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--blue);
+    }
+
+    .tools-variant-3 .tool-number {
+      display: inline-block;
+      padding: 0.5rem 1.25rem;
+      background: var(--blue);
+      color: white;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      align-self: flex-start;
+    }
+
+    .tools-variant-3 .tool-text h3 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .tools-variant-3 .tool-text p {
+      margin: 0;
+      font-size: 1.125rem;
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       VARIANT 4: Split 50/50 avec Badge Flottant
+       ============================================ */
+    .tools-variant-4 .tool-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 2.5rem;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--light-gray);
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .tools-variant-4 .tool-card:nth-child(even) .tool-image {
+      order: 2;
+    }
+
+    .tools-variant-4 .tool-card:nth-child(even) .tool-content {
+      order: 1;
+    }
+
+    .tools-variant-4 .tool-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .tools-variant-4 .tool-image {
+      position: relative;
+      min-height: 320px;
+    }
+
+    .tools-variant-4 .tool-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tools-variant-4 .tool-image::after {
+      content: attr(data-number);
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      width: 56px;
+      height: 56px;
+      background: var(--blue);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.5rem;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+    }
+
+    .tools-variant-4 .tool-content {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tools-variant-4 .tool-text h3 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .tools-variant-4 .tool-text p {
+      margin: 0;
+      font-size: 1.125rem;
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       VARIANT 5: Split 50/50 avec Bordure Latérale Colorée
+       ============================================ */
+    .tools-variant-5 .tool-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 2.5rem;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--light-gray);
+      position: relative;
+      transition: all 0.3s;
+      border-left: 6px solid var(--blue);
+    }
+
+    .tools-variant-5 .tool-card:nth-child(2) {
+      border-left-color: #10B981;
+    }
+
+    .tools-variant-5 .tool-card:nth-child(3) {
+      border-left-color: #F59E0B;
+    }
+
+    .tools-variant-5 .tool-card:nth-child(even) .tool-image {
+      order: 2;
+    }
+
+    .tools-variant-5 .tool-card:nth-child(even) .tool-content {
+      order: 1;
+    }
+
+    .tools-variant-5 .tool-card:nth-child(even) {
+      border-left: none;
+      border-right: 6px solid var(--blue);
+    }
+
+    .tools-variant-5 .tool-card:nth-child(2n) {
+      border-right-color: #10B981;
+    }
+
+    .tools-variant-5 .tool-card:hover {
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .tools-variant-5 .tool-image {
+      position: relative;
+      min-height: 320px;
+    }
+
+    .tools-variant-5 .tool-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tools-variant-5 .tool-content {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tools-variant-5 .tool-number {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      color: var(--blue);
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tools-variant-5 .tool-card:nth-child(2) .tool-number {
+      color: #10B981;
+    }
+
+    .tools-variant-5 .tool-card:nth-child(3) .tool-number {
+      color: #F59E0B;
+    }
+
+    .tools-variant-5 .tool-number::before {
+      content: attr(data-number);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: currentColor;
+      color: white;
+      border-radius: 6px;
+      font-size: 0.875rem;
+    }
+
+    .tools-variant-5 .tool-text h3 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .tools-variant-5 .tool-text p {
+      margin: 0;
+      font-size: 1.125rem;
+      line-height: 1.7;
+    }
+
+    /* Responsive adjustments for variants */
+    @media (max-width: 968px) {
+      .tools-variant-1 .tool-card,
+      .tools-variant-2 .tool-card,
+      .tools-variant-3 .tool-card,
+      .tools-variant-4 .tool-card,
+      .tools-variant-5 .tool-card {
+        grid-template-columns: 1fr;
+      }
+
+      .tools-variant-1 .tool-card:nth-child(even),
+      .tools-variant-2 .tool-card:nth-child(even),
+      .tools-variant-3 .tool-card:nth-child(even),
+      .tools-variant-4 .tool-card:nth-child(even),
+      .tools-variant-5 .tool-card:nth-child(even) {
+        grid-template-columns: 1fr;
+      }
+
+      .tools-variant-1 .tool-image,
+      .tools-variant-2 .tool-image,
+      .tools-variant-3 .tool-image,
+      .tools-variant-4 .tool-image,
+      .tools-variant-5 .tool-image {
+        min-height: 240px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .tools-variant-selector {
+        padding: 1rem;
+      }
+
+      .variant-label {
+        font-size: 0.8125rem;
+        padding: 0.5rem 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1309,67 +1843,803 @@
         <p class="lead">Plusieurs solutions utilisées par des professionnels</p>
       </div>
 
-      <div class="tools-list">
-        <div class="tool-item">
-          <div class="tool-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
+      <!-- Variant Selector -->
+      <div class="tools-variant-selector">
+        <input type="radio" name="tools-variant" id="variant-1" value="1" class="variant-option" checked>
+        <label for="variant-1" class="variant-label">Watermark</label>
+
+        <input type="radio" name="tools-variant" id="variant-2" value="2" class="variant-option">
+        <label for="variant-2" class="variant-label">Cercle</label>
+
+        <input type="radio" name="tools-variant" id="variant-3" value="3" class="variant-option">
+        <label for="variant-3" class="variant-label">Ligne</label>
+
+        <input type="radio" name="tools-variant" id="variant-4" value="4" class="variant-option">
+        <label for="variant-4" class="variant-label">Badge</label>
+
+        <input type="radio" name="tools-variant" id="variant-5" value="5" class="variant-option">
+        <label for="variant-5" class="variant-label">Bordure</label>
+      </div>
+
+      <!-- VARIANT 1: Original (List + Separate Gallery) -->
+      <div class="tools-variant tools-variant-1 active" data-variant="1">
+        <div class="tools-list">
+          <div class="tool-item">
+            <div class="tool-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <div class="tool-content">
+              <h3>Simulation de projets</h3>
+              <p>Calcul et modélisation des performances énergétiques</p>
+            </div>
           </div>
-          <div class="tool-content">
+
+          <div class="tool-item">
+            <div class="tool-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div class="tool-content">
+              <h3>Collecte de documents</h3>
+              <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+            </div>
+          </div>
+
+          <div class="tool-item">
+            <div class="tool-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 15l2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="tool-content">
+              <h3>Pilotage de chantiers</h3>
+              <p>Tableaux de bord et suivi en temps réel</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="screenshots-gallery">
+          <div class="screenshot-item">
+            <div class="screenshot-box">
+              <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+            </div>
+            <div class="screenshot-label">Simulation de projets</div>
+          </div>
+
+          <div class="screenshot-item">
+            <div class="screenshot-box">
+              <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+            </div>
+            <div class="screenshot-label">Collecte de documents</div>
+          </div>
+
+          <div class="screenshot-item">
+            <div class="screenshot-box">
+              <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+            </div>
+            <div class="screenshot-label">Pilotage de chantiers</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 2: Image Left, Text Right -->
+      <div class="tools-variant tools-variant-2" data-variant="2">
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-text">
             <h3>Simulation de projets</h3>
             <p>Calcul et modélisation des performances énergétiques</p>
           </div>
         </div>
 
-        <div class="tool-item">
-          <div class="tool-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
           </div>
-          <div class="tool-content">
+          <div class="tool-text">
             <h3>Collecte de documents</h3>
             <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
           </div>
         </div>
 
-        <div class="tool-item">
-          <div class="tool-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 15l2 2 4-4"/>
-            </svg>
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
           </div>
-          <div class="tool-content">
+          <div class="tool-text">
             <h3>Pilotage de chantiers</h3>
             <p>Tableaux de bord et suivi en temps réel</p>
           </div>
         </div>
       </div>
 
-      <div class="screenshots-gallery">
-        <div class="screenshot-item">
-          <div class="screenshot-box">
+      <!-- VARIANT 3: Image Right, Text Left -->
+      <div class="tools-variant tools-variant-3" data-variant="3">
+        <div class="tool-card">
+          <div class="tool-text">
+            <h3>Simulation de projets</h3>
+            <p>Calcul et modélisation des performances énergétiques</p>
+          </div>
+          <div class="tool-image">
             <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
           </div>
-          <div class="screenshot-label">Simulation de projets</div>
         </div>
 
-        <div class="screenshot-item">
-          <div class="screenshot-box">
+        <div class="tool-card">
+          <div class="tool-text">
+            <h3>Collecte de documents</h3>
+            <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+          </div>
+          <div class="tool-image">
             <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
           </div>
-          <div class="screenshot-label">Collecte de documents</div>
         </div>
 
-        <div class="screenshot-item">
-          <div class="screenshot-box">
+        <div class="tool-card">
+          <div class="tool-text">
+            <h3>Pilotage de chantiers</h3>
+            <p>Tableaux de bord et suivi en temps réel</p>
+          </div>
+          <div class="tool-image">
             <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
           </div>
-          <div class="screenshot-label">Pilotage de chantiers</div>
         </div>
       </div>
+
+      <!-- VARIANT 4: Image Top, Text Bottom (Grid) -->
+      <div class="tools-variant tools-variant-4" data-variant="4">
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Simulation de projets</h3>
+            <p>Calcul et modélisation des performances énergétiques</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Collecte de documents</h3>
+            <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Pilotage de chantiers</h3>
+            <p>Tableaux de bord et suivi en temps réel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 5: Text Top, Image Bottom (Grid) -->
+      <div class="tools-variant tools-variant-5" data-variant="5">
+        <div class="tool-card">
+          <div class="tool-text">
+            <h3>Simulation de projets</h3>
+            <p>Calcul et modélisation des performances énergétiques</p>
+          </div>
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-text">
+            <h3>Collecte de documents</h3>
+            <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+          </div>
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-text">
+            <h3>Pilotage de chantiers</h3>
+            <p>Tableaux de bord et suivi en temps réel</p>
+          </div>
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 6: Background Image with Overlay -->
+      <div class="tools-variant tools-variant-6" data-variant="6">
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-overlay">
+            <div class="tool-text">
+              <h3>Simulation de projets</h3>
+              <p>Calcul et modélisation des performances énergétiques</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-overlay">
+            <div class="tool-text">
+              <h3>Collecte de documents</h3>
+              <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-overlay">
+            <div class="tool-text">
+              <h3>Pilotage de chantiers</h3>
+              <p>Tableaux de bord et suivi en temps réel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 7: Alternating Left/Right -->
+      <div class="tools-variant tools-variant-7" data-variant="7">
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Simulation de projets</h3>
+            <p>Calcul et modélisation des performances énergétiques</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Collecte de documents</h3>
+            <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Pilotage de chantiers</h3>
+            <p>Tableaux de bord et suivi en temps réel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 8: Compact Grid 3 Columns -->
+      <div class="tools-variant tools-variant-8" data-variant="8">
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Simulation de projets</h3>
+            <p>Calcul et modélisation énergétique</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Collecte de documents</h3>
+            <p>Automatisation des dossiers</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Pilotage de chantiers</h3>
+            <p>Suivi en temps réel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 9: Bento Box (Asymmetric) -->
+      <div class="tools-variant tools-variant-9" data-variant="9">
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-overlay">
+            <div class="tool-text">
+              <h3>Simulation de projets</h3>
+              <p>Calcul et modélisation des performances énergétiques</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-overlay">
+            <div class="tool-text">
+              <h3>Collecte de documents</h3>
+              <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-overlay">
+            <div class="tool-text">
+              <h3>Pilotage de chantiers</h3>
+              <p>Tableaux de bord et suivi en temps réel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 10: Full Width Vertical List -->
+      <div class="tools-variant tools-variant-10" data-variant="10">
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Simulation de projets</h3>
+            <p>Calcul et modélisation des performances énergétiques</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Collecte de documents</h3>
+            <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Pilotage de chantiers</h3>
+            <p>Tableaux de bord et suivi en temps réel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 11: Full Width with Icon + Image -->
+      <div class="tools-variant tools-variant-11" data-variant="11">
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-content">
+            <div class="tool-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <div class="tool-text">
+              <h3>Simulation de projets</h3>
+              <p>Calcul et modélisation des performances énergétiques</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-content">
+            <div class="tool-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div class="tool-text">
+              <h3>Collecte de documents</h3>
+              <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-content">
+            <div class="tool-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 15l2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="tool-text">
+              <h3>Pilotage de chantiers</h3>
+              <p>Tableaux de bord et suivi en temps réel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 12: Timeline Verticale -->
+      <div class="tools-variant tools-variant-12" data-variant="12">
+        <div class="tool-card" data-number="01">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Simulation de projets</h3>
+            <p>Calcul et modélisation des performances énergétiques</p>
+          </div>
+        </div>
+
+        <div class="tool-card" data-number="02">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Collecte de documents</h3>
+            <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+          </div>
+        </div>
+
+        <div class="tool-card" data-number="03">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Pilotage de chantiers</h3>
+            <p>Tableaux de bord et suivi en temps réel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 13: Grille 2 Colonnes -->
+      <div class="tools-variant tools-variant-13" data-variant="13">
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Simulation de projets</h3>
+            <p>Calcul et modélisation des performances énergétiques</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Collecte de documents</h3>
+            <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Pilotage de chantiers</h3>
+            <p>Tableaux de bord et suivi en temps réel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 14: Cards avec Badge Numéroté -->
+      <div class="tools-variant tools-variant-14" data-variant="14">
+        <div class="tool-card" data-number="01">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-overlay">
+            <div class="tool-text">
+              <h3>Simulation de projets</h3>
+              <p>Calcul et modélisation des performances énergétiques</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card" data-number="02">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-overlay">
+            <div class="tool-text">
+              <h3>Collecte de documents</h3>
+              <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card" data-number="03">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-overlay">
+            <div class="tool-text">
+              <h3>Pilotage de chantiers</h3>
+              <p>Tableaux de bord et suivi en temps réel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 15: Split 50/50 avec Numérotation -->
+      <div class="tools-variant tools-variant-15" data-variant="15">
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-content" data-number="01">
+            <div class="tool-text">
+              <h3>Simulation de projets</h3>
+              <p>Calcul et modélisation des performances énergétiques</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-content" data-number="02">
+            <div class="tool-text">
+              <h3>Collecte de documents</h3>
+              <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-content" data-number="03">
+            <div class="tool-text">
+              <h3>Pilotage de chantiers</h3>
+              <p>Tableaux de bord et suivi en temps réel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 16: Minimal avec Icônes Circulaires -->
+      <div class="tools-variant tools-variant-16" data-variant="16">
+        <div class="tool-card">
+          <div class="tool-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <div class="tool-text">
+            <h3>Simulation de projets</h3>
+            <p>Calcul et modélisation des performances énergétiques</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <div class="tool-text">
+            <h3>Collecte de documents</h3>
+            <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 15l2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="tool-text">
+            <h3>Pilotage de chantiers</h3>
+            <p>Tableaux de bord et suivi en temps réel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 17: Cards Horizontales Compactes -->
+      <div class="tools-variant tools-variant-17" data-variant="17">
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Simulation de projets</h3>
+            <p>Calcul et modélisation des performances énergétiques</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Collecte de documents</h3>
+            <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-text">
+            <h3>Pilotage de chantiers</h3>
+            <p>Tableaux de bord et suivi en temps réel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 18: Image de Fond Pleine Page -->
+      <div class="tools-variant tools-variant-18" data-variant="18">
+        <div class="tool-bg-image">
+          <img src="images/simulateur.png" alt="Fond" loading="lazy">
+        </div>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <div class="tool-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <div class="tool-text">
+              <h3>Simulation de projets</h3>
+              <p>Calcul et modélisation des performances énergétiques</p>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div class="tool-text">
+              <h3>Collecte de documents</h3>
+              <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 15l2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="tool-text">
+              <h3>Pilotage de chantiers</h3>
+              <p>Tableaux de bord et suivi en temps réel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 19: Liste avec Grandes Icônes + Petites Images -->
+      <div class="tools-variant tools-variant-19" data-variant="19">
+        <div class="tool-card">
+          <div class="tool-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <div class="tool-text">
+            <h3>Simulation de projets</h3>
+            <p>Calcul et modélisation des performances énergétiques</p>
+          </div>
+          <div class="tool-thumbnail">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <div class="tool-text">
+            <h3>Collecte de documents</h3>
+            <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+          </div>
+          <div class="tool-thumbnail">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 15l2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="tool-text">
+            <h3>Pilotage de chantiers</h3>
+            <p>Tableaux de bord et suivi en temps réel</p>
+          </div>
+          <div class="tool-thumbnail">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANT 20: Grille Masonry (Briques) -->
+      <div class="tools-variant tools-variant-20" data-variant="20">
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-overlay">
+            <div class="tool-text">
+              <h3>Simulation de projets</h3>
+              <p>Calcul et modélisation des performances énergétiques</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-overlay">
+            <div class="tool-text">
+              <h3>Collecte de documents</h3>
+              <p>Automatisation complète de la collecte de documents pour vos dossiers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-overlay">
+            <div class="tool-text">
+              <h3>Pilotage de chantiers</h3>
+              <p>Tableaux de bord et suivi en temps réel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1566,6 +2836,42 @@
       } finally {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
+      }
+    });
+
+    // Gestion du sélecteur de variantes pour la section outils
+    document.addEventListener('DOMContentLoaded', function() {
+      const variantRadios = document.querySelectorAll('input[name="tools-variant"]');
+      const toolsVariants = document.querySelectorAll('.tools-variant');
+
+      // Fonction pour changer de variante
+      function switchVariant(selectedVariant) {
+        // Masquer toutes les variantes
+        toolsVariants.forEach(variant => {
+          variant.classList.remove('active');
+        });
+
+        // Afficher la variante sélectionnée
+        const activeVariant = document.querySelector(`.tools-variant-${selectedVariant}`);
+        if (activeVariant) {
+          activeVariant.classList.add('active');
+        } else {
+          console.error(`Variante ${selectedVariant} introuvable`);
+        }
+      }
+
+      // Écouter les changements de radio
+      variantRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+          const selectedVariant = this.value;
+          switchVariant(selectedVariant);
+        });
+      });
+
+      // S'assurer que la variante 1 est active au chargement
+      const checkedRadio = document.querySelector('input[name="tools-variant"]:checked');
+      if (checkedRadio) {
+        switchVariant(checkedRadio.value);
       }
     });
 
