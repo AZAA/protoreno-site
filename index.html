@@ -1450,6 +1450,191 @@
       color: #10B981;
     }
 
+    /* VARIANTE 4 : Mix Conversation + Vous/On - Format dialogue alterné */
+    .conversation-mix {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .dialogue-step {
+      margin-bottom: 5rem;
+      position: relative;
+    }
+
+    .dialogue-step:last-child {
+      margin-bottom: 2rem;
+    }
+
+    /* Lignes de connexion entre les étapes */
+    .dialogue-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -2.5rem;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 2rem;
+      background: linear-gradient(180deg, #E5E7EB 0%, transparent 100%);
+    }
+
+    /* Step On (Protoreno) - aligné à gauche */
+    .dialogue-on {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-direction: row;
+    }
+
+    /* Step Vous (Client) - aligné à droite */
+    .dialogue-vous {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-direction: row-reverse;
+    }
+
+    /* Avatar container */
+    .dialogue-avatar {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100px;
+    }
+
+    .dialogue-avatar-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+      position: relative;
+      z-index: 2;
+    }
+
+    .dialogue-on .dialogue-avatar-circle {
+      background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+    }
+
+    .dialogue-vous .dialogue-avatar-circle {
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    }
+
+    .dialogue-avatar-label {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6B7280;
+    }
+
+    /* Bubble content */
+    .dialogue-bubble {
+      flex: 1;
+      max-width: 650px;
+    }
+
+    .dialogue-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .dialogue-on .dialogue-title {
+      color: #2563EB;
+    }
+
+    .dialogue-vous .dialogue-title {
+      color: #F59E0B;
+    }
+
+    .dialogue-card {
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    /* Triangle pointer */
+    .dialogue-card::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    .dialogue-on .dialogue-card {
+      border-left: 4px solid #2563EB;
+    }
+
+    .dialogue-on .dialogue-card::before {
+      left: -16px;
+      border-width: 12px 16px 12px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+    .dialogue-vous .dialogue-card {
+      border-right: 4px solid #F59E0B;
+    }
+
+    .dialogue-vous .dialogue-card::before {
+      right: -16px;
+      border-width: 12px 0 12px 16px;
+      border-color: transparent transparent transparent white;
+    }
+
+    .dialogue-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+      transition: all 0.3s;
+    }
+
+    .dialogue-text {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: #374151;
+    }
+
+    .dialogue-text strong {
+      color: #1F2937;
+      font-weight: 700;
+    }
+
+    .dialogue-text em {
+      font-style: italic;
+      color: #6B7280;
+    }
+
+    .dialogue-example {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background: #F9FAFB;
+      border-radius: 12px;
+      border-left: 3px solid #E5E7EB;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #6B7280;
+    }
+
+    .dialogue-on .dialogue-example {
+      border-left-color: #93C5FD;
+      background: linear-gradient(135deg, #EFF6FF 0%, #F9FAFB 100%);
+    }
+
+    .dialogue-vous .dialogue-example {
+      border-left-color: #FCD34D;
+      background: linear-gradient(135deg, #FFFBEB 0%, #F9FAFB 100%);
+    }
+
     /* ============================================
        PARTICIPATE SECTION
        ============================================ */
@@ -2393,6 +2578,66 @@
         min-height: 240px;
       }
     }
+
+    /* Responsive pour variante 4 - Dialogue Mix */
+    @media (max-width: 768px) {
+      .dialogue-step {
+        margin-bottom: 3rem;
+      }
+
+      .dialogue-on,
+      .dialogue-vous {
+        flex-direction: column !important;
+        align-items: center;
+      }
+
+      .dialogue-avatar {
+        margin-bottom: 1rem;
+      }
+
+      .dialogue-avatar-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+      }
+
+      .dialogue-bubble {
+        max-width: 100%;
+      }
+
+      .dialogue-title {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .dialogue-card {
+        padding: 2rem;
+      }
+
+      .dialogue-card::before {
+        display: none;
+      }
+
+      .dialogue-on .dialogue-card,
+      .dialogue-vous .dialogue-card {
+        border-left: none;
+        border-right: none;
+        border-top: 4px solid #2563EB;
+      }
+
+      .dialogue-vous .dialogue-card {
+        border-top-color: #F59E0B;
+      }
+
+      .dialogue-text {
+        font-size: 1rem;
+      }
+
+      .dialogue-example {
+        padding: 1rem;
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -2549,6 +2794,9 @@
 
         <input type="radio" name="approche-variant" id="approche-v3" class="section-variant-option" value="3">
         <label for="approche-v3" class="section-variant-label"><span>Vous / On</span></label>
+
+        <input type="radio" name="approche-variant" id="approche-v4" class="section-variant-option" value="4">
+        <label for="approche-v4" class="section-variant-label"><span>Mix Dialogue</span></label>
       </div>
 
       <!-- VARIANTE 1 : Version originale - Ligne verticale avec progression -->
@@ -2706,6 +2954,93 @@
             </svg>
             <span class="loop-label">Et ça continue...</span>
           </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 4 : Mix Conversation + Vous/On - Format dialogue alterné -->
+      <div class="approche-variant approche-variant-4">
+        <div class="conversation-mix">
+
+          <!-- Step 1: Vous dites -->
+          <div class="dialogue-step dialogue-vous">
+            <div class="dialogue-avatar">
+              <div class="dialogue-avatar-circle">👷</div>
+              <span class="dialogue-avatar-label">Vous</span>
+            </div>
+            <div class="dialogue-bubble">
+              <h3 class="dialogue-title">Vous dites</h3>
+              <div class="dialogue-card">
+                <p class="dialogue-text">
+                  <strong>"J'en peux plus de la paperasse..."</strong><br>
+                  Entre <em>MaPrimeRénov</em>, l'<em>ANAH</em>, les <em>CEE</em> et les clients qui comprennent rien, je perds <strong>2-3 heures par dossier</strong> juste en admin.
+                  Et quand je fais une erreur dans un formulaire, c'est reparti pour un tour.
+                </p>
+                <div class="dialogue-example">
+                  💬 <em>"Je dois vraiment créer un compte différent pour chaque plateforme d'aide ? Et pourquoi mes devis ne sont jamais au bon format ?"</em>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: On crée -->
+          <div class="dialogue-step dialogue-on">
+            <div class="dialogue-avatar">
+              <div class="dialogue-avatar-circle">🚀</div>
+              <span class="dialogue-avatar-label">On</span>
+            </div>
+            <div class="dialogue-bubble">
+              <h3 class="dialogue-title">On crée</h3>
+              <div class="dialogue-card">
+                <p class="dialogue-text">
+                  <strong>Un module de devis intelligent</strong> qui pré-remplit automatiquement les données techniques, calcule les aides <em>MaPrimeRénov</em> selon les barèmes en vigueur, et génère un <strong>PDF professionnel</strong> en 2 clics.
+                </p>
+                <div class="dialogue-example">
+                  ⚙️ <em>Intégration directe : ANAH, barèmes CEE, templates personnalisables. Plus besoin de jongler entre 5 plateformes.</em>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Vous testez -->
+          <div class="dialogue-step dialogue-vous">
+            <div class="dialogue-avatar">
+              <div class="dialogue-avatar-circle">👷</div>
+              <span class="dialogue-avatar-label">Vous</span>
+            </div>
+            <div class="dialogue-bubble">
+              <h3 class="dialogue-title">Vous testez</h3>
+              <div class="dialogue-card">
+                <p class="dialogue-text">
+                  <strong>"C'est déjà pas mal, mais..."</strong><br>
+                  Il faudrait aussi pouvoir <em>sauvegarder mes barèmes personnalisés</em> (j'ai des tarifs spécifiques selon les chantiers), et si possible <strong>exporter en Excel</strong> pour mon comptable.
+                </p>
+                <div class="dialogue-example">
+                  💬 <em>"Et pour les dossiers CEE, y'a moyen d'automatiser le suivi des pièces justificatives ?"</em>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: On ajuste -->
+          <div class="dialogue-step dialogue-on">
+            <div class="dialogue-avatar">
+              <div class="dialogue-avatar-circle">🚀</div>
+              <span class="dialogue-avatar-label">On</span>
+            </div>
+            <div class="dialogue-bubble">
+              <h3 class="dialogue-title">On ajuste</h3>
+              <div class="dialogue-card">
+                <p class="dialogue-text">
+                  On ajoute la <strong>sauvegarde de barèmes</strong>, l'<strong>export Excel</strong> multi-formats, et un <strong>système de checklist CEE</strong> avec suivi automatique des documents manquants.
+                  On itère jusqu'à ce que l'outil soit <em>parfaitement adapté</em> à votre façon de travailler.
+                </p>
+                <div class="dialogue-example">
+                  🔄 <em>Cycle continu : vos retours terrain nourrissent les évolutions. Chaque amélioration profite à toute la communauté.</em>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
