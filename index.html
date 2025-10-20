@@ -1328,269 +1328,7 @@
       margin-bottom: 1.5rem;
     }
 
-    /* VARIANTE 1: Preview sondage */
-    .survey-preview {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .survey-question {
-      padding: 2rem;
-    }
-
-    .survey-progress {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .progress-bar {
-      flex: 1;
-      height: 8px;
-      background: var(--light-gray);
-      border-radius: 4px;
-      overflow: hidden;
-      margin-right: 1rem;
-    }
-
-    .progress-fill {
-      height: 100%;
-      background: var(--blue);
-      transition: width 0.3s ease;
-    }
-
-    .progress-label {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--slate);
-      white-space: nowrap;
-    }
-
-    .survey-question-title {
-      font-size: 1.25rem;
-      color: var(--navy);
-      margin-bottom: 1.5rem;
-    }
-
-    .survey-options {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .survey-option {
-      padding: 1rem 1.5rem;
-      background: var(--bg);
-      border: 2px solid var(--light-gray);
-      border-radius: 8px;
-      cursor: pointer;
-      transition: var(--transition-base);
-      font-size: 1rem;
-      color: var(--slate);
-    }
-
-    .survey-option:hover {
-      border-color: var(--blue);
-      background: white;
-      transform: translateX(4px);
-    }
-
-    /* VARIANTE 2: Impact immédiat */
-    .impact-flow {
-      max-width: 700px;
-      margin: 0 auto 2rem;
-    }
-
-    .impact-step {
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 2rem;
-      align-items: start;
-    }
-
-    .impact-step-number {
-      flex-shrink: 0;
-      width: 60px;
-      height: 60px;
-      background: var(--blue);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.75rem;
-      font-weight: 700;
-    }
-
-    .impact-step-content h3 {
-      font-size: 1.25rem;
-      color: var(--navy);
-      margin-bottom: 0.75rem;
-    }
-
-    .impact-step-content p {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--slate);
-      margin-bottom: 1rem;
-    }
-
-    .impact-visual svg {
-      width: 48px;
-      height: 48px;
-      color: var(--blue);
-      opacity: 0.2;
-    }
-
-    .impact-arrow-down {
-      text-align: center;
-      font-size: 2rem;
-      color: var(--blue);
-      margin: 1rem 0;
-      font-weight: 700;
-    }
-
-    /* VARIANTE 3: En direct (dashboard live) */
-    .live-dashboard {
-      padding: 2.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .dashboard-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 2px solid var(--light-gray);
-    }
-
-    .dashboard-header h3 {
-      font-size: 1.5rem;
-      color: var(--navy);
-      margin: 0;
-    }
-
-    .dashboard-live-indicator {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.9375rem;
-      font-weight: 600;
-      color: var(--slate);
-    }
-
-    .live-dot {
-      width: 10px;
-      height: 10px;
-      background: var(--green);
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-
-    .dashboard-stats {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .dashboard-stat-item {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .stat-bar {
-      flex: 1;
-    }
-
-    .stat-label {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 0.75rem;
-    }
-
-    .stat-progress {
-      height: 40px;
-      background: var(--bg);
-      border-radius: 8px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .stat-progress-bar {
-      height: 100%;
-      background: linear-gradient(90deg, var(--blue) 0%, #60A5FA 100%);
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding-right: 1rem;
-      transition: width 0.5s ease;
-    }
-
-    .stat-value {
-      color: white;
-      font-weight: 700;
-      font-size: 0.9375rem;
-    }
-
-    .status-badge {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-size: 0.875rem;
-      font-weight: 700;
-      text-align: center;
-    }
-
-    .status-dev {
-      background: var(--green);
-      color: white;
-    }
-
-    .status-test {
-      background: var(--blue);
-      color: white;
-    }
-
-    .status-planned {
-      background: var(--orange);
-      color: white;
-    }
-
-    .status-future {
-      background: var(--light-gray);
-      color: var(--slate);
-    }
-
-    .dashboard-footer {
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--light-gray);
-    }
-
-    .dashboard-note {
-      font-size: 0.9375rem;
-      color: var(--slate);
-      text-align: center;
-      font-style: italic;
-    }
-
-    /* VARIANTE 4: Timeline */
+    /* VARIANTE 1: Timeline */
     .testimonials-timeline {
       max-width: 800px;
       margin: 0 auto 2rem;
@@ -1657,281 +1395,246 @@
       font-weight: 600;
     }
 
-    /* VARIANTE 5: Quiz interactif */
-    .interactive-quiz {
-      max-width: 800px;
-      margin: 0 auto 2rem;
-    }
-
-    .quiz-card {
-      padding: 2.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .quiz-question-number {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: var(--blue);
-      color: white;
-      border-radius: 6px;
-      font-size: 0.875rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-
-    .quiz-question-text {
-      font-size: 1.375rem;
-      color: var(--navy);
-      margin-bottom: 2rem;
-      line-height: 1.4;
-    }
-
-    .quiz-scale {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      justify-content: center;
-    }
-
-    .scale-option {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 1.5rem 1rem;
-      background: var(--bg);
-      border: 2px solid var(--light-gray);
-      border-radius: 12px;
-      cursor: pointer;
-      transition: var(--transition-base);
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--navy);
-      min-width: 80px;
-    }
-
-    .scale-option span {
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--slate);
-      text-align: center;
-    }
-
-    .scale-option:hover {
-      border-color: var(--blue);
-      background: white;
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
-    }
-
-    .quiz-info {
-      text-align: center;
-      font-size: 0.875rem;
-      color: var(--slate);
-      font-style: italic;
-    }
-
-    .quiz-preview-next {
-      margin-bottom: 2rem;
-    }
-
-    .quiz-peek {
-      padding: 2rem;
-      background: var(--bg);
-    }
-
-    .quiz-peek-header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-      color: var(--blue);
-      font-weight: 600;
-    }
-
-    .quiz-peek-header svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .quiz-peek-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .quiz-peek-list li {
-      padding-left: 1.5rem;
-      position: relative;
-      color: var(--slate);
-    }
-
-    .quiz-peek-list li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--blue);
-      font-weight: 700;
-    }
-
-    .quiz-benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-    }
-
-    .benefit-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.5rem;
-      background: white;
-      border: 1px solid var(--light-gray);
-      border-radius: 12px;
-    }
-
-    .benefit-item svg {
-      width: 32px;
-      height: 32px;
-      color: var(--green);
-      flex-shrink: 0;
-    }
-
-    .benefit-item span {
-      font-size: 0.9375rem;
-      font-weight: 600;
-      color: var(--navy);
-    }
-
-    /* VARIANTE 6: Conversations */
+    /* VARIANTE 2: Conversations */
     .testimonials-conversations {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 2.5rem;
       margin-bottom: 2rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .conversation-thread {
-      padding: 2rem;
+      padding: 2.5rem;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1.75rem;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     }
 
     .conversation-message {
       display: flex;
-      gap: 1rem;
+      gap: 1.25rem;
       align-items: flex-start;
     }
 
+    .conversation-message.user {
+      /* Messages utilisateur alignés à gauche */
+    }
+
     .conversation-message.reply {
-      margin-left: 3rem;
+      margin-left: 2rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--green);
     }
 
     .message-avatar {
       flex-shrink: 0;
-      width: 40px;
-      height: 40px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       background: var(--blue);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
-      font-size: 0.875rem;
+      font-weight: 800;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(8, 78, 154, 0.3);
+      border: 3px solid white;
     }
 
     .conversation-message.reply .message-avatar {
       background: var(--green);
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
     }
 
     .message-content {
       flex: 1;
+      min-width: 0;
     }
 
     .message-author {
-      font-size: 0.875rem;
+      font-size: 0.9375rem;
       font-weight: 700;
       color: var(--navy);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.625rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .conversation-message.reply .message-author {
+      color: var(--green);
     }
 
     .message-content p {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 1.0625rem;
+      line-height: 1.65;
       color: var(--slate);
       background: var(--bg);
-      padding: 1rem;
-      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      border-radius: 16px;
       margin: 0;
+      position: relative;
+    }
+
+    .conversation-message.user .message-content p {
+      background: #F1F5F9;
     }
 
     .conversation-message.reply .message-content p {
-      background: rgba(16, 185, 129, 0.1);
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.15);
     }
 
     .conversation-result {
-      margin-left: 3rem;
-      padding: 1rem;
-      background: var(--bg);
+      margin-left: 4rem;
+      margin-top: 0.5rem;
+      padding: 1.25rem 1.5rem;
+      background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
       border-left: 4px solid var(--green);
-      border-radius: 8px;
+      border-radius: 12px;
       font-size: 0.9375rem;
       color: var(--slate);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
 
     .result-badge {
-      display: inline-block;
-      padding: 0.25rem 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      padding: 0.5rem 1rem;
       background: var(--green);
       color: white;
-      border-radius: 6px;
-      font-size: 0.75rem;
+      border-radius: 8px;
+      font-size: 0.8125rem;
       font-weight: 700;
-      margin-right: 0.5rem;
+      box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);
+      white-space: nowrap;
     }
 
-    /* VARIANTE 7: Sondage Tally intégré */
+    .result-badge.in-progress {
+      background: var(--blue);
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+    }
+
+    /* VARIANTE 3: Sondage Tally intégré (amélioré) */
+
+    /* Barre de bénéfices */
+    .tally-benefits-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      margin: 0 auto 2.5rem;
+      max-width: 800px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .benefit-stat {
+      text-align: center;
+    }
+
+    .benefit-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .benefit-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--slate);
+      line-height: 1.3;
+    }
+
+    .benefit-divider {
+      width: 1px;
+      height: 60px;
+      background: var(--light-gray);
+    }
+
+    .benefit-item-inline {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .benefit-item-inline svg {
+      width: 24px;
+      height: 24px;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+
+    .benefit-item-inline span {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* Container du sondage */
     .tally-embed-container {
       max-width: 800px;
       margin: 0 auto 2rem;
-      border-radius: 12px;
-      overflow: hidden;
+      border-radius: 16px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      background: white;
+      padding: 2.5rem;
+      border: 1px solid var(--light-gray);
     }
 
     .tally-iframe {
       display: block;
       border: none;
       min-height: 600px;
-    }
-
-    .tally-powered {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .tally-info {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.9375rem;
-      color: var(--slate);
-      padding: 1rem 1.5rem;
-      background: var(--bg);
+      width: 100%;
       border-radius: 8px;
-      margin: 0;
     }
 
-    .tally-info svg {
-      width: 20px;
-      height: 20px;
+    /* Footer avec message de remerciement */
+    .tally-footer {
+      max-width: 700px;
+      margin: 2.5rem auto 0;
+    }
+
+    .tally-thanks {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      background: var(--bg);
+      border-left: 4px solid var(--green);
+      border-radius: 8px;
+    }
+
+    .tally-thanks svg {
+      width: 28px;
+      height: 28px;
       color: var(--green);
       flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+
+    .tally-thanks p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--slate);
+      margin: 0;
+      font-style: italic;
     }
 
     /* ============================================
@@ -2407,52 +2110,7 @@
         padding: 1rem;
       }
 
-      /* Variante 1: Survey preview */
-      .survey-question {
-        padding: 1.5rem;
-      }
-
-      .survey-question-title {
-        font-size: 1.125rem;
-      }
-
-      /* Variante 2: Impact flow */
-      .impact-step {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 1.5rem;
-      }
-
-      .impact-step-number {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-        margin: 0 auto;
-      }
-
-      .impact-step-content {
-        text-align: center;
-      }
-
-      /* Variante 3: Live dashboard */
-      .live-dashboard {
-        padding: 1.5rem;
-      }
-
-      .dashboard-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .dashboard-header h3 {
-        font-size: 1.125rem;
-      }
-
-      .dashboard-stat-item {
-        grid-template-columns: 1fr;
-      }
-
-      /* Variante 4: Timeline */
+      /* Variante 1: Timeline */
       .testimonials-timeline::before {
         left: 20px;
       }
@@ -2467,37 +2125,61 @@
         gap: 1rem;
       }
 
-      /* Variante 5: Quiz interactif */
-      .quiz-question-text {
-        font-size: 1.125rem;
+      /* Variante 2: Conversations */
+      .conversation-thread {
+        padding: 1.5rem;
       }
 
-      .quiz-scale {
-        flex-wrap: wrap;
-        gap: 0.5rem;
+      .message-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 0.875rem;
       }
 
-      .scale-option {
-        min-width: 60px;
-        padding: 1rem 0.5rem;
-      }
-
-      /* Variante 6: Conversations */
       .conversation-message.reply {
-        margin-left: 1rem;
+        margin-left: 0.5rem;
+        padding-left: 1rem;
       }
 
       .conversation-result {
-        margin-left: 1rem;
+        margin-left: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      /* Variante 7: Tally embed */
+      .message-content p {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+
+      /* Variante 3: Tally embed */
+      .tally-benefits-bar {
+        gap: 1rem;
+        padding: 1.5rem;
+      }
+
+      .benefit-divider {
+        display: none;
+      }
+
+      .benefit-item-inline {
+        font-size: 0.875rem;
+      }
+
       .tally-embed-container {
         border-radius: 8px;
+        padding: 1.5rem;
       }
 
       .tally-iframe {
         min-height: 500px;
+      }
+
+      .tally-thanks {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
       }
     }
 
@@ -3129,222 +2811,14 @@
     <div class="container">
       <!-- Toggle de sélection des variantes -->
       <div class="testimonial-variant-selector">
-        <label><input type="radio" name="testimonial-variant" value="1" checked> 1. Preview sondage</label>
-        <label><input type="radio" name="testimonial-variant" value="2"> 2. Impact immédiat</label>
-        <label><input type="radio" name="testimonial-variant" value="3"> 3. En direct</label>
-        <label><input type="radio" name="testimonial-variant" value="4"> 4. Parcours timeline</label>
-        <label><input type="radio" name="testimonial-variant" value="5"> 5. Quiz interactif</label>
-        <label><input type="radio" name="testimonial-variant" value="6"> 6. Conversations</label>
-        <label><input type="radio" name="testimonial-variant" value="7"> 7. Sondage intégré</label>
+        <label><input type="radio" name="testimonial-variant" value="1" checked> 1. Parcours timeline</label>
+        <label><input type="radio" name="testimonial-variant" value="2"> 2. Conversations terrain</label>
+        <label><input type="radio" name="testimonial-variant" value="3"> 3. Sondage intégré</label>
       </div>
 
-      <!-- VARIANTE 1: Preview sondage (3 questions, 1 minute) -->
+
+      <!-- VARIANTE 1: Timeline parcours -->
       <div class="testimonial-box testimonial-variant-1 active">
-        <div class="section-header">
-          <h2>3 questions, 1 minute chrono</h2>
-          <p class="lead">Voici à quoi ressemble le sondage que vous allez remplir</p>
-        </div>
-
-        <div class="survey-preview">
-          <div class="card survey-question">
-            <div class="survey-progress">
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 33%"></div>
-              </div>
-              <span class="progress-label">Question 1/3</span>
-            </div>
-            <h3 class="survey-question-title">Quel est votre métier principal ?</h3>
-            <div class="survey-options">
-              <div class="survey-option">Conducteur de travaux</div>
-              <div class="survey-option">Architecte</div>
-              <div class="survey-option">Artisan</div>
-              <div class="survey-option">Maître d'ouvrage</div>
-            </div>
-          </div>
-
-          <div class="card survey-question">
-            <div class="survey-progress">
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 66%"></div>
-              </div>
-              <span class="progress-label">Question 2/3</span>
-            </div>
-            <h3 class="survey-question-title">Quel est votre principal point de blocage au quotidien ?</h3>
-            <div class="survey-options">
-              <div class="survey-option">Gestion documentaire chaotique</div>
-              <div class="survey-option">Suivi d'avancement compliqué</div>
-              <div class="survey-option">Communication entre corps de métier</div>
-              <div class="survey-option">Planification et délais</div>
-            </div>
-          </div>
-
-          <div class="card survey-question">
-            <div class="survey-progress">
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 100%"></div>
-              </div>
-              <span class="progress-label">Question 3/3</span>
-            </div>
-            <h3 class="survey-question-title">Seriez-vous prêt à tester une solution en avant-première ?</h3>
-            <div class="survey-options">
-              <div class="survey-option">Oui, volontiers !</div>
-              <div class="survey-option">Peut-être, selon la solution</div>
-              <div class="survey-option">Non, pas pour l'instant</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-cta">
-          <p class="testimonial-stat">Simple, rapide, et votre voix compte</p>
-          <a href="https://tally.so/r/wgVWgN" target="_blank" class="btn btn-primary btn-large">Répondre au vrai sondage</a>
-        </div>
-      </div>
-
-      <!-- VARIANTE 2: Impact immédiat -->
-      <div class="testimonial-box testimonial-variant-2">
-        <div class="section-header">
-          <h2>Ce qui se passe après avoir répondu</h2>
-          <p class="lead">Votre contribution a un impact immédiat</p>
-        </div>
-
-        <div class="impact-flow">
-          <div class="impact-step card">
-            <div class="impact-step-number">1</div>
-            <div class="impact-step-content">
-              <h3>Vous répondez (1 minute)</h3>
-              <p>Vous partagez votre métier, vos blocages, et votre intérêt à tester des solutions</p>
-              <div class="impact-visual">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          <div class="impact-arrow-down">↓</div>
-
-          <div class="impact-step card">
-            <div class="impact-step-number">2</div>
-            <div class="impact-step-content">
-              <h3>On analyse vos retours (instantané)</h3>
-              <p>Vos besoins sont ajoutés à notre feuille de route et priorisés avec les autres réponses</p>
-              <div class="impact-visual">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          <div class="impact-arrow-down">↓</div>
-
-          <div class="impact-step card">
-            <div class="impact-step-number">3</div>
-            <div class="impact-step-content">
-              <h3>Vous êtes invité à tester (quelques semaines)</h3>
-              <p>Si vous avez dit oui, on vous contacte pour tester une solution qui répond à vos besoins</p>
-              <div class="impact-visual">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-cta">
-          <p class="testimonial-stat">Lancez le processus maintenant</p>
-          <a href="https://tally.so/r/wgVWgN" target="_blank" class="btn btn-primary btn-large">Commencer en 1 minute</a>
-        </div>
-      </div>
-
-      <!-- VARIANTE 3: En direct (format live) -->
-      <div class="testimonial-box testimonial-variant-3">
-        <div class="section-header">
-          <h2>Répondez et voyez l'impact en direct</h2>
-          <p class="lead">Votre contribution rejoint immédiatement notre tableau de bord</p>
-        </div>
-
-        <div class="live-dashboard card">
-          <div class="dashboard-header">
-            <h3>Tableau de bord des besoins — Mis à jour en temps réel</h3>
-            <div class="dashboard-live-indicator">
-              <span class="live-dot"></span>
-              <span>45 réponses collectées</span>
-            </div>
-          </div>
-
-          <div class="dashboard-stats">
-            <div class="dashboard-stat-item">
-              <div class="stat-bar">
-                <div class="stat-label">Gestion documentaire</div>
-                <div class="stat-progress">
-                  <div class="stat-progress-bar" style="width: 78%">
-                    <span class="stat-value">35 votes</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stat-status">
-                <span class="status-badge status-dev">En développement</span>
-              </div>
-            </div>
-
-            <div class="dashboard-stat-item">
-              <div class="stat-bar">
-                <div class="stat-label">Suivi d'avancement</div>
-                <div class="stat-progress">
-                  <div class="stat-progress-bar" style="width: 62%">
-                    <span class="stat-value">28 votes</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stat-status">
-                <span class="status-badge status-test">Tests en cours</span>
-              </div>
-            </div>
-
-            <div class="dashboard-stat-item">
-              <div class="stat-bar">
-                <div class="stat-label">Communication chantier</div>
-                <div class="stat-progress">
-                  <div class="stat-progress-bar" style="width: 47%">
-                    <span class="stat-value">21 votes</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stat-status">
-                <span class="status-badge status-planned">Planifié</span>
-              </div>
-            </div>
-
-            <div class="dashboard-stat-item">
-              <div class="stat-bar">
-                <div class="stat-label">Planning et délais</div>
-                <div class="stat-progress">
-                  <div class="stat-progress-bar" style="width: 33%">
-                    <span class="stat-value">15 votes</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stat-status">
-                <span class="status-badge status-future">À venir</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="dashboard-footer">
-            <p class="dashboard-note">Chaque réponse influence directement nos priorités de développement</p>
-          </div>
-        </div>
-
-        <div class="testimonial-cta">
-          <p class="testimonial-stat">Ajoutez votre voix au tableau</p>
-          <a href="https://tally.so/r/wgVWgN" target="_blank" class="btn btn-primary btn-large">Participer maintenant</a>
-        </div>
-      </div>
-
-      <!-- VARIANTE 4: Timeline parcours -->
-      <div class="testimonial-box testimonial-variant-4">
         <div class="section-header">
           <h2>Le parcours d'un collaborateur</h2>
           <p class="lead">De la première contribution aux tests terrain</p>
@@ -3394,74 +2868,9 @@
         </div>
       </div>
 
-      <!-- VARIANTE 5: Quiz interactif (simulation) -->
-      <div class="testimonial-box testimonial-variant-5">
-        <div class="section-header">
-          <h2>Testez le sondage en direct</h2>
-          <p class="lead">Répondez aux questions ci-dessous pour voir comment ça fonctionne</p>
-        </div>
 
-        <div class="interactive-quiz">
-          <div class="quiz-card card">
-            <div class="quiz-question-number">Question 1</div>
-            <h3 class="quiz-question-text">Sur une échelle de 1 à 5, à quel point la gestion documentaire est un problème pour vous ?</h3>
-            <div class="quiz-scale">
-              <button class="scale-option">1<span>Pas du tout</span></button>
-              <button class="scale-option">2</button>
-              <button class="scale-option">3</button>
-              <button class="scale-option">4</button>
-              <button class="scale-option">5<span>Très problématique</span></button>
-            </div>
-            <div class="quiz-info">Cliquez sur un chiffre pour voir la suite (démo seulement, pas enregistré)</div>
-          </div>
-
-          <div class="quiz-preview-next">
-            <div class="card quiz-peek">
-              <div class="quiz-peek-header">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                </svg>
-                <span>Aperçu des questions suivantes</span>
-              </div>
-              <ul class="quiz-peek-list">
-                <li>Quels outils utilisez-vous actuellement ?</li>
-                <li>Combien de temps perdez-vous chaque semaine ?</li>
-                <li>Seriez-vous intéressé pour tester une solution ?</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="quiz-benefits">
-            <div class="benefit-item">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-              <span>1 minute maximum</span>
-            </div>
-            <div class="benefit-item">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-              </svg>
-              <span>Anonyme si vous voulez</span>
-            </div>
-            <div class="benefit-item">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-              <span>Impact immédiat</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-cta">
-          <p class="testimonial-stat">Prêt à remplir le vrai sondage ?</p>
-          <a href="https://tally.so/r/wgVWgN" target="_blank" class="btn btn-primary btn-large">Accéder au sondage officiel</a>
-        </div>
-      </div>
-
-      <!-- VARIANTE 6: Conversations -->
-      <div class="testimonial-box testimonial-variant-6">
+      <!-- VARIANTE 2: Conversations -->
+      <div class="testimonial-box testimonial-variant-2">
         <div class="section-header">
           <h2>Conversations terrain</h2>
           <p class="lead">Ce qu'on entend de la communauté</p>
@@ -3486,6 +2895,7 @@
             <div class="conversation-message user">
               <div class="message-avatar">M</div>
               <div class="message-content">
+                <div class="message-author">Marc</div>
                 <p>"Carrément ! Quand est-ce que je peux l'essayer sur un vrai chantier ?"</p>
               </div>
             </div>
@@ -3527,7 +2937,7 @@
               </div>
             </div>
             <div class="conversation-result">
-              <span class="result-badge">En cours</span> Atelier planifié avec 5 artisans
+              <span class="result-badge in-progress">En cours</span> Atelier planifié avec 5 artisans
             </div>
           </div>
         </div>
@@ -3538,13 +2948,41 @@
         </div>
       </div>
 
-      <!-- VARIANTE 7: Sondage Tally intégré -->
-      <div class="testimonial-box testimonial-variant-7">
+      <!-- VARIANTE 3: Sondage Tally intégré -->
+      <div class="testimonial-box testimonial-variant-3">
         <div class="section-header">
-          <h2>Participez directement ici</h2>
-          <p class="lead">Remplissez le sondage sans quitter la page — 1 minute chrono</p>
+          <h2>Aidez-nous à créer les bons outils</h2>
+          <p class="lead">Remplissez le sondage ci-dessous — Votre voix compte vraiment</p>
         </div>
 
+        <!-- Statistiques et bénéfices -->
+        <div class="tally-benefits-bar">
+          <div class="benefit-stat">
+            <div class="benefit-number">45</div>
+            <div class="benefit-label">Professionnels<br>ont déjà participé</div>
+          </div>
+          <div class="benefit-divider"></div>
+          <div class="benefit-item-inline">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>1 minute</span>
+          </div>
+          <div class="benefit-item-inline">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <span>Impact direct</span>
+          </div>
+          <div class="benefit-item-inline">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            <span>Confidentiel</span>
+          </div>
+        </div>
+
+        <!-- Sondage intégré -->
         <div class="tally-embed-container">
           <iframe
             data-tally-src="https://tally.so/embed/wgVWgN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
@@ -3559,13 +2997,14 @@
           </iframe>
         </div>
 
-        <div class="tally-powered">
-          <p class="tally-info">
+        <!-- Message de remerciement -->
+        <div class="tally-footer">
+          <div class="tally-thanks">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
             </svg>
-            Vos réponses sont sécurisées et traitées de manière confidentielle
-          </p>
+            <p>Merci de prendre le temps de répondre — Chaque retour nous aide à construire de meilleurs outils pour le secteur</p>
+          </div>
         </div>
       </div>
     </div>
