@@ -105,6 +105,30 @@
       outline-offset: 2px;
     }
 
+    /* Focus styles pour cards interactives */
+    .value-card:focus,
+    .problem-card:focus,
+    .participate-card:focus,
+    .tool-card:focus {
+      outline: 3px solid var(--blue);
+      outline-offset: 4px;
+    }
+
+    /* Focus styles pour avatars */
+    .team-avatar:focus {
+      outline: 3px solid var(--blue);
+      outline-offset: 4px;
+      transform: scale(1.05);
+    }
+
+    /* Focus styles pour liens dans header/footer */
+    header a:focus-visible,
+    footer a:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
     h1 {
       font-size: 4rem;
       font-weight: 800;
@@ -355,7 +379,7 @@
       border-radius: 100px;
       font-size: 0.9375rem;
       font-weight: 600;
-      color: var(--blue-dark);
+      color: var(--navy);
       margin: 0 auto 2rem;
     }
 
@@ -512,7 +536,7 @@
     .section-variant-label:hover {
       background: var(--blue-light);
       border-color: var(--blue);
-      color: var(--blue-dark);
+      color: var(--navy);
     }
 
     .section-variant-option:checked + .section-variant-label {
@@ -1313,6 +1337,68 @@
       }
     }
 
+    /* ============================================
+       TABLETTE (768px - 1024px)
+       ============================================ */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      /* Grilles 2 colonnes sur tablette */
+      .problem-grid,
+      .participate-grid,
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem;
+      }
+
+      /* Icônes XXL responsive tablette */
+      .constat-variant-9 .problem-icon {
+        width: 110px !important;
+        height: 110px !important;
+      }
+
+      .constat-variant-9 .problem-icon svg {
+        width: 55px !important;
+        height: 55px !important;
+      }
+
+      /* Avatars taille tablette */
+      .team-avatar {
+        width: 100px !important;
+        height: 100px !important;
+      }
+
+      .team-member-name {
+        font-size: 0.875rem;
+      }
+
+      .team-member-role {
+        font-size: 0.8125rem;
+      }
+
+      /* Timeline responsive */
+      .timeline-variant-1 .approach-step {
+        gap: 1.5rem;
+      }
+
+      .step-number-box {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+      }
+
+      /* Outil cards tablette */
+      .tools-grid .tool-content {
+        padding: 2rem;
+      }
+
+      /* Réduire padding sections */
+      section {
+        padding: 4rem 0;
+      }
+
+      .container {
+        padding: 0 2rem;
+      }
+    }
 
     /* ============================================
        OUTILS: Split 50/50 avec Bordure Latérale Colorée
@@ -1496,7 +1582,7 @@
   <!-- ============================================
        LE CONSTAT
        ============================================ -->
-  <section class="section-alt" id="section-constat">
+  <section class="section-alt" id="section-constat" aria-labelledby="heading-constat">
     <!-- Carrés déstructurés (désorganisation) -->
     <svg class="section-bg-svg constat-bg active" data-section="constat" data-variant="8" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
@@ -1510,7 +1596,7 @@
 
     <div class="container">
       <div class="section-header">
-        <h2>Le constat</h2>
+        <h2 id="heading-constat">Le constat</h2>
         <p class="lead">Les professionnels du bâtiment manquent d'outils adaptés</p>
       </div>
 
@@ -1554,7 +1640,7 @@
   <!-- ============================================
        NOTRE APPROCHE
        ============================================ -->
-  <section id="section-approche">
+  <section id="section-approche" aria-labelledby="heading-approche">
     <!-- Croix légères (neutre) -->
     <svg class="section-bg-svg approche-bg active" data-section="approche" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
@@ -1568,7 +1654,7 @@
 
     <div class="container">
       <div class="section-header">
-        <h2>Notre approche</h2>
+        <h2 id="heading-approche">Notre approche</h2>
         <p class="lead">Développement collaboratif avec les professionnels</p>
       </div>
 
@@ -1611,7 +1697,7 @@
   <!-- ============================================
        COMMENT PARTICIPER
        ============================================ -->
-  <section class="section-alt" id="section-participer">
+  <section class="section-alt" id="section-participer" aria-labelledby="heading-participer">
     <!-- Réseau maillé (collaboration) -->
     <svg class="section-bg-svg participer-bg active" data-section="participer" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
@@ -1629,7 +1715,7 @@
 
     <div class="container">
       <div class="section-header">
-        <h2>Comment participer</h2>
+        <h2 id="heading-participer">Comment participer</h2>
         <p class="lead">Trois façons de contribuer aux outils de demain</p>
       </div>
 
@@ -1681,14 +1767,14 @@
   <!-- ============================================
        NOS OUTILS
        ============================================ -->
-  <section id="section-outils">
+  <section id="section-outils" aria-labelledby="heading-outils">
     <!-- Neutre (vide) -->
     <svg class="section-bg-svg outils-bg active" data-section="outils" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     </svg>
 
     <div class="container">
       <div class="section-header">
-        <h2>Des outils déjà opérationnels</h2>
+        <h2 id="heading-outils">Des outils déjà opérationnels</h2>
         <p class="lead">Plusieurs solutions utilisées par des professionnels</p>
       </div>
 
@@ -1772,7 +1858,7 @@
   <!-- ============================================
        QUI SOMMES-NOUS
        ============================================ -->
-  <section id="section-about">
+  <section id="section-about" aria-labelledby="heading-about">
     <!-- Code HTML réel -->
     <svg class="section-bg-svg about-bg active" data-section="about"  viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
@@ -1788,7 +1874,7 @@
 
     <div class="container">
       <div class="section-header">
-        <h2>Qui sommes-nous</h2>
+        <h2 id="heading-about">Qui sommes-nous</h2>
       </div>
 
       <div class="about-intro">
@@ -1855,10 +1941,10 @@
   <!-- ============================================
        CONTACT
        ============================================ -->
-  <section class="section-alt">
+  <section class="section-alt" id="section-contact" aria-labelledby="heading-contact">
     <div class="container-narrow">
       <div class="section-header">
-        <h2>Nous contacter</h2>
+        <h2 id="heading-contact">Nous contacter</h2>
         <p class="lead">Une question ? Écrivez-nous</p>
       </div>
 
