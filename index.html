@@ -865,6 +865,46 @@
       border-color: #2563EB;
     }
 
+    /* Photo filter toggle */
+    .avatar-filter-toggle {
+      margin: 1.5rem auto 1rem;
+      transition: opacity 0.3s ease, max-height 0.3s ease;
+      overflow: hidden;
+    }
+
+    .avatar-filter-toggle.hidden {
+      opacity: 0;
+      max-height: 0;
+      margin: 0;
+    }
+
+    .avatar-filter-toggle input[type="radio"] {
+      display: none;
+    }
+
+    .avatar-filter-toggle label {
+      padding: 0.4rem 0.75rem;
+      background: white;
+      border: 2px solid #E5E7EB;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--slate);
+      transition: all 0.2s;
+    }
+
+    .avatar-filter-toggle label:hover {
+      border-color: #60A5FA;
+      color: #2563EB;
+    }
+
+    .avatar-filter-toggle input[type="radio"]:checked + label {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      color: white;
+      border-color: #2563EB;
+    }
+
     .team-avatars {
       display: flex;
       justify-content: center;
@@ -950,6 +990,84 @@
       transform: none;
       width: 70px;
       height: 70px;
+    }
+
+    /* Photo Filters - Multiple variants */
+    .team-avatar-filter-none {
+      filter: none;
+    }
+
+    /* Variante 1: Blue monochrome */
+    .team-avatar-filter-blue-mono {
+      filter: grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(150%) brightness(0.9);
+    }
+
+    /* Variante 2: Duotone bleu/blanc */
+    .team-avatar-filter-duotone {
+      filter: grayscale(100%) contrast(1.3) brightness(1.1);
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      background-clip: padding-box;
+    }
+
+    /* Variante 3: Overlay bleu léger */
+    .team-avatar-filter-overlay {
+      filter: contrast(1.1) brightness(1.05);
+      position: relative;
+    }
+
+    .team-avatar-filter-overlay::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(37, 99, 235, 0.15);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* Variante 4: High contrast bleu */
+    .team-avatar-filter-contrast {
+      filter: grayscale(100%) contrast(1.4) brightness(0.85);
+      mix-blend-mode: luminosity;
+    }
+
+    /* Variante 5: Bleu glacé */
+    .team-avatar-filter-frost {
+      filter: brightness(1.1) contrast(1.05) saturate(50%) hue-rotate(-10deg);
+      border-color: #60A5FA;
+    }
+
+    /* Variante 6: Monochrome sombre */
+    .team-avatar-filter-dark {
+      filter: grayscale(100%) contrast(1.3) brightness(0.8) sepia(20%);
+    }
+
+    /* Appliquer les filtres aussi aux avatars dans les cards */
+    .value-card-avatar-filter-blue-mono {
+      filter: grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(150%) brightness(0.9);
+    }
+
+    .value-card-avatar-filter-duotone {
+      filter: grayscale(100%) contrast(1.3) brightness(1.1);
+    }
+
+    .value-card-avatar-filter-overlay {
+      filter: contrast(1.1) brightness(1.05);
+    }
+
+    .value-card-avatar-filter-contrast {
+      filter: grayscale(100%) contrast(1.4) brightness(0.85);
+    }
+
+    .value-card-avatar-filter-frost {
+      filter: brightness(1.1) contrast(1.05) saturate(50%) hue-rotate(-10deg);
+      border-color: #60A5FA;
+    }
+
+    .value-card-avatar-filter-dark {
+      filter: grayscale(100%) contrast(1.3) brightness(0.8) sepia(20%);
     }
 
     .values-grid {
@@ -1243,6 +1361,76 @@
       .value-icon svg {
         width: 32px;
         height: 32px;
+      }
+
+      /* Icônes XXL responsive */
+      .constat-variant-9 .problem-card {
+        padding: 2rem 1.5rem !important;
+      }
+
+      .constat-variant-9 .problem-icon {
+        width: 90px !important;
+        height: 90px !important;
+        margin-bottom: 1.5rem !important;
+      }
+
+      .constat-variant-9 .problem-icon svg {
+        width: 45px !important;
+        height: 45px !important;
+      }
+
+      .constat-variant-9 .problem-card h3 {
+        font-size: 1.25rem !important;
+      }
+
+      .constat-variant-9 .problem-card p {
+        font-size: 1rem !important;
+      }
+
+      /* Avatars responsive */
+      .team-avatar {
+        width: 90px !important;
+        height: 90px !important;
+        border-width: 3px !important;
+      }
+
+      .team-avatars {
+        gap: 1.5rem;
+        margin: 1.5rem auto 3rem;
+      }
+
+      .team-member-name {
+        font-size: 0.875rem;
+      }
+
+      .team-member-role {
+        font-size: 0.8125rem;
+      }
+
+      /* Value cards avec avatars responsive */
+      .value-card-avatar {
+        width: 64px !important;
+        height: 64px !important;
+        top: -32px;
+      }
+
+      .value-card-avatars .value-card-avatar {
+        width: 56px !important;
+        height: 56px !important;
+      }
+
+      .values-grid-with-avatars .value-card {
+        padding-top: 3rem;
+      }
+
+      /* Toggle avatars responsive */
+      .avatar-style-toggle {
+        gap: 0.375rem;
+      }
+
+      .avatar-style-toggle label {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.8125rem;
       }
 
       .btn-large {
@@ -1814,6 +2002,33 @@
         <label for="avatar-cards">Dans les cards</label>
       </div>
 
+      <!-- Toggle filtres photos (visible uniquement avec style photo ou cards) -->
+      <div class="avatar-filter-toggle" id="photo-filter-toggle">
+        <div style="font-size: 0.8125rem; color: var(--slate); margin-bottom: 0.5rem; text-align: center;">Style de photo</div>
+        <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+          <input type="radio" name="photo-filter" id="filter-none" value="none" checked>
+          <label for="filter-none">Original</label>
+
+          <input type="radio" name="photo-filter" id="filter-blue-mono" value="blue-mono">
+          <label for="filter-blue-mono">Bleu mono</label>
+
+          <input type="radio" name="photo-filter" id="filter-duotone" value="duotone">
+          <label for="filter-duotone">Duotone</label>
+
+          <input type="radio" name="photo-filter" id="filter-overlay" value="overlay">
+          <label for="filter-overlay">Overlay</label>
+
+          <input type="radio" name="photo-filter" id="filter-contrast" value="contrast">
+          <label for="filter-contrast">Contraste</label>
+
+          <input type="radio" name="photo-filter" id="filter-frost" value="frost">
+          <label for="filter-frost">Glacé</label>
+
+          <input type="radio" name="photo-filter" id="filter-dark" value="dark">
+          <label for="filter-dark">Sombre</label>
+        </div>
+      </div>
+
       <!-- Avatars photo-réalistes -->
       <div class="team-avatars team-avatars-photo">
         <div class="team-member">
@@ -2083,6 +2298,7 @@
       const notionAvatars = document.querySelector('.team-avatars-notion');
       const valuesGridDefault = document.querySelector('.values-grid-default');
       const valuesGridWithAvatars = document.querySelector('.values-grid-with-avatars');
+      const filterToggle = document.getElementById('photo-filter-toggle');
 
       avatarRadios.forEach(radio => {
         radio.addEventListener('change', function() {
@@ -2092,19 +2308,61 @@
             notionAvatars.classList.add('hidden');
             valuesGridDefault.classList.remove('hidden');
             valuesGridWithAvatars.classList.add('hidden');
+            filterToggle.classList.remove('hidden'); // Afficher le toggle de filtres
           } else if (this.value === 'notion') {
             // Style Notion
             photoAvatars.classList.add('hidden');
             notionAvatars.classList.remove('hidden');
             valuesGridDefault.classList.remove('hidden');
             valuesGridWithAvatars.classList.add('hidden');
+            filterToggle.classList.add('hidden'); // Cacher le toggle de filtres
           } else if (this.value === 'cards') {
             // Style intégré dans les cards
             photoAvatars.classList.add('hidden');
             notionAvatars.classList.add('hidden');
             valuesGridDefault.classList.add('hidden');
             valuesGridWithAvatars.classList.remove('hidden');
+            filterToggle.classList.remove('hidden'); // Afficher le toggle de filtres
           }
+        });
+      });
+
+      // Toggle filtres photo
+      const filterRadios = document.querySelectorAll('input[name="photo-filter"]');
+      const allPhotoAvatars = document.querySelectorAll('.team-avatars-photo .team-avatar');
+      const allCardAvatars = document.querySelectorAll('.value-card-avatar');
+
+      // Fonction pour appliquer un filtre
+      function applyFilter(filterValue) {
+        // Retirer toutes les classes de filtre existantes
+        const filterClasses = ['team-avatar-filter-none', 'team-avatar-filter-blue-mono', 'team-avatar-filter-duotone',
+                               'team-avatar-filter-overlay', 'team-avatar-filter-contrast', 'team-avatar-filter-frost',
+                               'team-avatar-filter-dark'];
+        const cardFilterClasses = ['value-card-avatar-filter-blue-mono', 'value-card-avatar-filter-duotone',
+                                   'value-card-avatar-filter-overlay', 'value-card-avatar-filter-contrast',
+                                   'value-card-avatar-filter-frost', 'value-card-avatar-filter-dark'];
+
+        // Appliquer aux avatars standalone
+        allPhotoAvatars.forEach(avatar => {
+          filterClasses.forEach(cls => avatar.classList.remove(cls));
+          if (filterValue !== 'none') {
+            avatar.classList.add('team-avatar-filter-' + filterValue);
+          }
+        });
+
+        // Appliquer aux avatars dans les cards
+        allCardAvatars.forEach(avatar => {
+          cardFilterClasses.forEach(cls => avatar.classList.remove(cls));
+          if (filterValue !== 'none') {
+            avatar.classList.add('value-card-avatar-filter-' + filterValue);
+          }
+        });
+      }
+
+      // Écouter les changements de filtre
+      filterRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+          applyFilter(this.value);
         });
       });
     });
