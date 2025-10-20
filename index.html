@@ -954,6 +954,243 @@
       color: var(--slate);
     }
 
+    /* Variante 6 : Chiffre géant minimaliste */
+    .geant-card {
+      text-align: center !important;
+      padding: 3rem 2rem !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .geant-icon {
+      font-size: 3rem;
+      opacity: 0.3;
+    }
+
+    .geant-chiffre {
+      font-size: 5rem;
+      font-weight: 900;
+      color: var(--blue);
+      line-height: 1;
+    }
+
+    .geant-titre {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .geant-contexte {
+      font-size: 0.875rem;
+      color: var(--slate);
+      margin: 0 !important;
+      max-width: 280px;
+    }
+
+    /* Variante 7 : Problème → Impact (flèche causale) */
+    .fleche-card {
+      padding: 2rem 1.5rem !important;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .fleche-probleme {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: var(--bg);
+      border-radius: 12px 12px 0 0;
+      border: 1px solid var(--light-gray);
+    }
+
+    .fleche-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .fleche-titre-pb {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .fleche-arrow {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #EF4444;
+      text-align: center;
+      line-height: 1;
+      margin: -0.5rem 0;
+    }
+
+    .fleche-impact {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
+      border: 2px solid #EF4444;
+      border-radius: 0 0 12px 12px;
+    }
+
+    .impact-chiffre {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #DC2626;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .impact-label {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #EF4444;
+      letter-spacing: 0.05em;
+    }
+
+    /* Variante 8 : Badge + barre de progression */
+    .barre-card {
+      padding: 2.5rem 2rem !important;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .barre-badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: var(--blue);
+      color: white;
+      border-radius: 24px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      align-self: flex-start;
+    }
+
+    .barre-container {
+      position: relative;
+      width: 100%;
+      height: 48px;
+      background: var(--bg);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 2px solid var(--light-gray);
+    }
+
+    .barre-fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: linear-gradient(90deg, var(--blue) 0%, #1E40AF 100%);
+      transition: width 0.6s ease;
+      border-radius: 24px 0 0 24px;
+    }
+
+    .barre-percentage {
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .barre-card h3 {
+      font-size: 1.25rem;
+      color: var(--navy);
+      margin: 0 !important;
+    }
+
+    .barre-card p {
+      font-size: 0.9375rem;
+      color: var(--slate);
+      margin: 0 !important;
+    }
+
+    /* Variante 9 : Icône + 3 impacts bullets */
+    .bullets-card {
+      text-align: left !important;
+      padding: 2.5rem 2rem !important;
+    }
+
+    .bullets-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .bullets-card h3 {
+      font-size: 1.375rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: var(--navy);
+    }
+
+    .impact-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .impact-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      color: var(--slate);
+    }
+
+    .bullet-marker {
+      display: inline-block;
+      color: #EF4444;
+      font-weight: 800;
+      font-size: 1.125rem;
+      flex-shrink: 0;
+    }
+
+    /* Variante 10 : Gauge circulaire + conséquence € */
+    .gauge-card {
+      text-align: center !important;
+      padding: 2.5rem 2rem !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .gauge-circle {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0.5rem;
+    }
+
+    .gauge-card h3 {
+      font-size: 1.125rem;
+      color: var(--navy);
+      margin: 0 !important;
+    }
+
+    .gauge-montant {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #DC2626;
+      line-height: 1;
+    }
+
+    .gauge-label {
+      font-size: 0.875rem;
+      color: var(--slate);
+      margin: 0 !important;
+    }
+
     .section-variant-selector {
       display: flex;
       justify-content: center;
@@ -2090,6 +2327,26 @@
             <input type="radio" name="constat-variant" value="5" style="display: none;">
             <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">5. Coût du chaos</span>
           </label>
+          <label style="display: inline-block;">
+            <input type="radio" name="constat-variant" value="6" style="display: none;">
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">6. Chiffre géant</span>
+          </label>
+          <label style="display: inline-block;">
+            <input type="radio" name="constat-variant" value="7" style="display: none;">
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">7. Problème → Impact</span>
+          </label>
+          <label style="display: inline-block;">
+            <input type="radio" name="constat-variant" value="8" style="display: none;">
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">8. Badge + barre</span>
+          </label>
+          <label style="display: inline-block;">
+            <input type="radio" name="constat-variant" value="9" style="display: none;">
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">9. Icône + bullets</span>
+          </label>
+          <label style="display: inline-block;">
+            <input type="radio" name="constat-variant" value="10" style="display: none;">
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">10. Gauge circulaire</span>
+          </label>
         </div>
       </div>
 
@@ -2245,6 +2502,187 @@
             <div class="cout-label">par refus de dossier</div>
             <h3>Le coût d'un refus ANAH</h3>
             <p>8h de travail supplémentaire pour corriger + renvoyer à 60€/h. Sans compter le retard sur les autres chantiers et la frustration client.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 6 : Chiffre géant minimaliste -->
+      <div class="constat-variant-6">
+        <div class="problem-grid">
+          <div class="problem-card geant-card">
+            <div class="geant-icon">⏱️</div>
+            <div class="geant-chiffre">14h</div>
+            <div class="geant-titre">perdues chaque semaine</div>
+            <p class="geant-contexte">En paperasse administrative au lieu d'être sur vos chantiers</p>
+          </div>
+
+          <div class="problem-card geant-card">
+            <div class="geant-icon">📋</div>
+            <div class="geant-chiffre">47%</div>
+            <div class="geant-titre">de dossiers incomplets</div>
+            <p class="geant-contexte">Refus au premier envoi = recommencer tout le processus</p>
+          </div>
+
+          <div class="problem-card geant-card">
+            <div class="geant-icon">💸</div>
+            <div class="geant-chiffre">3 200€</div>
+            <div class="geant-titre">perdus par abandon</div>
+            <p class="geant-contexte">Quand un client renonce face à la complexité</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 7 : Problème → Impact (flèche causale) -->
+      <div class="constat-variant-7">
+        <div class="problem-grid">
+          <div class="problem-card fleche-card">
+            <div class="fleche-probleme">
+              <div class="fleche-icon">📧</div>
+              <div class="fleche-titre-pb">Emails partout</div>
+            </div>
+            <div class="fleche-arrow">↓</div>
+            <div class="fleche-impact">
+              <div class="impact-chiffre">2h/jour</div>
+              <div class="impact-label">PERDUES</div>
+            </div>
+          </div>
+
+          <div class="problem-card fleche-card">
+            <div class="fleche-probleme">
+              <div class="fleche-icon">📊</div>
+              <div class="fleche-titre-pb">Excel pour tout</div>
+            </div>
+            <div class="fleche-arrow">↓</div>
+            <div class="fleche-impact">
+              <div class="impact-chiffre">0</div>
+              <div class="impact-label">VISION GLOBALE</div>
+            </div>
+          </div>
+
+          <div class="problem-card fleche-card">
+            <div class="fleche-probleme">
+              <div class="fleche-icon">🔄</div>
+              <div class="fleche-titre-pb">Relances manuelles</div>
+            </div>
+            <div class="fleche-arrow">↓</div>
+            <div class="fleche-impact">
+              <div class="impact-chiffre">25%</div>
+              <div class="impact-label">ABANDONNENT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 8 : Badge + barre de progression -->
+      <div class="constat-variant-8">
+        <div class="problem-grid">
+          <div class="problem-card barre-card">
+            <div class="barre-badge">DOSSIERS</div>
+            <div class="barre-container">
+              <div class="barre-fill" style="width: 73%;"></div>
+              <div class="barre-percentage">73%</div>
+            </div>
+            <h3>de votre temps en administration</h3>
+            <p>Au lieu d'être sur le terrain ou à prospecter</p>
+          </div>
+
+          <div class="problem-card barre-card">
+            <div class="barre-badge">OUTILS</div>
+            <div class="barre-container">
+              <div class="barre-fill" style="width: 100%;"></div>
+              <div class="barre-percentage">6</div>
+            </div>
+            <h3>outils différents par chantier</h3>
+            <p>Excel, emails, WhatsApp, Drive, papier, téléphone...</p>
+          </div>
+
+          <div class="problem-card barre-card">
+            <div class="barre-badge">CLIENTS</div>
+            <div class="barre-container">
+              <div class="barre-fill" style="width: 67%;"></div>
+              <div class="barre-percentage">2/3</div>
+            </div>
+            <h3>finissent par abandonner</h3>
+            <p>Face à la complexité des démarches administratives</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 9 : Icône + 3 impacts bullets -->
+      <div class="constat-variant-9-new">
+        <div class="problem-grid">
+          <div class="problem-card bullets-card">
+            <div class="bullets-icon">📊</div>
+            <h3>Outils dispersés</h3>
+            <ul class="impact-bullets">
+              <li><span class="bullet-marker">✗</span> 6 outils différents par chantier</li>
+              <li><span class="bullet-marker">✗</span> Aucune vision d'ensemble</li>
+              <li><span class="bullet-marker">✗</span> Temps perdu à chercher l'info</li>
+            </ul>
+          </div>
+
+          <div class="problem-card bullets-card">
+            <div class="bullets-icon">⏰</div>
+            <h3>Paperasse qui s'accumule</h3>
+            <ul class="impact-bullets">
+              <li><span class="bullet-marker">✗</span> 14h/semaine d'administration</li>
+              <li><span class="bullet-marker">✗</span> Dossiers incomplets à 47%</li>
+              <li><span class="bullet-marker">✗</span> Relances clients sans fin</li>
+            </ul>
+          </div>
+
+          <div class="problem-card bullets-card">
+            <div class="bullets-icon">💰</div>
+            <h3>Pertes financières</h3>
+            <ul class="impact-bullets">
+              <li><span class="bullet-marker">✗</span> 2 800€/mois en productivité</li>
+              <li><span class="bullet-marker">✗</span> 15k€ de CA par abandon</li>
+              <li><span class="bullet-marker">✗</span> 480€ par refus de dossier</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 10 : Gauge circulaire + conséquence € -->
+      <div class="constat-variant-10">
+        <div class="problem-grid">
+          <div class="problem-card gauge-card">
+            <svg class="gauge-circle" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="12"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#EF4444" stroke-width="12"
+                stroke-dasharray="251.2" stroke-dashoffset="75.36" transform="rotate(-90 60 60)"/>
+              <text x="60" y="60" text-anchor="middle" dominant-baseline="middle"
+                font-size="28" font-weight="800" fill="#DC2626">73%</text>
+            </svg>
+            <h3>Dossiers incomplets</h3>
+            <div class="gauge-montant">-3 200€</div>
+            <p class="gauge-label">par client qui abandonne</p>
+          </div>
+
+          <div class="problem-card gauge-card">
+            <svg class="gauge-circle" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="12"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#F59E0B" stroke-width="12"
+                stroke-dasharray="251.2" stroke-dashoffset="25.12" transform="rotate(-90 60 60)"/>
+              <text x="60" y="60" text-anchor="middle" dominant-baseline="middle"
+                font-size="28" font-weight="800" fill="#D97706">90%</text>
+            </svg>
+            <h3>Temps en administration</h3>
+            <div class="gauge-montant">-14h</div>
+            <p class="gauge-label">chaque semaine perdues</p>
+          </div>
+
+          <div class="problem-card gauge-card">
+            <svg class="gauge-circle" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="12"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#EF4444" stroke-width="12"
+                stroke-dasharray="251.2" stroke-dashoffset="100.48" transform="rotate(-90 60 60)"/>
+              <text x="60" y="60" text-anchor="middle" dominant-baseline="middle"
+                font-size="24" font-weight="800" fill="#DC2626">6</text>
+            </svg>
+            <h3>Outils utilisés</h3>
+            <div class="gauge-montant">0</div>
+            <p class="gauge-label">vision d'ensemble</p>
           </div>
         </div>
       </div>
