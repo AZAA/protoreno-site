@@ -829,6 +829,48 @@
       margin-bottom: 0;
     }
 
+    /* Team avatars */
+    .team-avatars {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 3rem auto 4rem;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      text-align: center;
+    }
+
+    .team-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #2563EB;
+      object-fit: cover;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+    }
+
+    .team-avatar:hover {
+      transform: scale(1.05);
+      border-color: #1D4ED8;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+    }
+
+    .team-member-name {
+      margin-top: 0.75rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .team-member-role {
+      font-size: 0.875rem;
+      color: var(--slate);
+      margin-top: 0.25rem;
+    }
+
     .values-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1436,8 +1478,6 @@
   <!-- ============================================
        NOTRE APPROCHE
        ============================================ -->
-       NOTRE APPROCHE
-       ============================================ -->
   <section id="section-approche">
     <!-- Croix légères (neutre) -->
     <svg class="section-bg-svg approche-bg active" data-section="approche" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1679,6 +1719,19 @@
         <p class="lead">
           Une jeune société numérique indépendante, spécialisée dans la rénovation énergétique
         </p>
+      </div>
+
+      <div class="team-avatars">
+        <div class="team-member">
+          <img src="images/avatar1.jpeg" alt="Membre de l'équipe Protoreno" class="team-avatar">
+          <div class="team-member-name">Sarah M.</div>
+          <div class="team-member-role">Co-fondatrice</div>
+        </div>
+        <div class="team-member">
+          <img src="images/avatar2.jpeg" alt="Membre de l'équipe Protoreno" class="team-avatar">
+          <div class="team-member-name">Alex D.</div>
+          <div class="team-member-role">Co-fondateur</div>
+        </div>
       </div>
 
       <div class="values-grid">
