@@ -830,12 +830,50 @@
     }
 
     /* Team avatars */
+    .avatar-style-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 2rem auto 1rem;
+    }
+
+    .avatar-style-toggle input[type="radio"] {
+      display: none;
+    }
+
+    .avatar-style-toggle label {
+      padding: 0.5rem 1.25rem;
+      background: white;
+      border: 2px solid #E5E7EB;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--slate);
+      transition: all 0.2s;
+    }
+
+    .avatar-style-toggle label:hover {
+      border-color: #2563EB;
+      color: #2563EB;
+    }
+
+    .avatar-style-toggle input[type="radio"]:checked + label {
+      background: #2563EB;
+      color: white;
+      border-color: #2563EB;
+    }
+
     .team-avatars {
       display: flex;
       justify-content: center;
       gap: 2rem;
-      margin: 3rem auto 4rem;
+      margin: 2rem auto 4rem;
       flex-wrap: wrap;
+    }
+
+    .team-avatars.hidden {
+      display: none;
     }
 
     .team-member {
@@ -856,6 +894,12 @@
       transform: scale(1.05);
       border-color: #1D4ED8;
       box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+    }
+
+    /* Style Notion - fond blanc pour contraste */
+    .team-avatars-notion .team-avatar {
+      background: white;
+      padding: 0.5rem;
     }
 
     .team-member-name {
@@ -1721,7 +1765,17 @@
         </p>
       </div>
 
-      <div class="team-avatars">
+      <!-- Toggle style avatars -->
+      <div class="avatar-style-toggle">
+        <input type="radio" name="avatar-style" id="avatar-photo" value="photo" checked>
+        <label for="avatar-photo">Photos</label>
+
+        <input type="radio" name="avatar-style" id="avatar-notion" value="notion">
+        <label for="avatar-notion">Illustrations</label>
+      </div>
+
+      <!-- Avatars photo-réalistes -->
+      <div class="team-avatars team-avatars-photo">
         <div class="team-member">
           <img src="images/avatar1.jpeg" alt="Membre de l'équipe Protoreno" class="team-avatar">
           <div class="team-member-name">Sarah M.</div>
@@ -1729,6 +1783,20 @@
         </div>
         <div class="team-member">
           <img src="images/avatar2.jpeg" alt="Membre de l'équipe Protoreno" class="team-avatar">
+          <div class="team-member-name">Alex D.</div>
+          <div class="team-member-role">Co-fondateur</div>
+        </div>
+      </div>
+
+      <!-- Avatars Notion -->
+      <div class="team-avatars team-avatars-notion hidden">
+        <div class="team-member">
+          <img src="images/notion-avatar-1760960428241.png" alt="Membre de l'équipe Protoreno" class="team-avatar">
+          <div class="team-member-name">Sarah M.</div>
+          <div class="team-member-role">Co-fondatrice</div>
+        </div>
+        <div class="team-member">
+          <img src="images/notion-avatar-1760960439785.png" alt="Membre de l'équipe Protoreno" class="team-avatar">
           <div class="team-member-name">Alex D.</div>
           <div class="team-member-role">Co-fondateur</div>
         </div>
@@ -1922,6 +1990,23 @@
       // Initialiser les deux sections
       setupVariantSelector('constat');
       setupVariantSelector('approche');
+
+      // Toggle avatars (photo vs Notion)
+      const avatarRadios = document.querySelectorAll('input[name="avatar-style"]');
+      const photoAvatars = document.querySelector('.team-avatars-photo');
+      const notionAvatars = document.querySelector('.team-avatars-notion');
+
+      avatarRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+          if (this.value === 'photo') {
+            photoAvatars.classList.remove('hidden');
+            notionAvatars.classList.add('hidden');
+          } else {
+            photoAvatars.classList.add('hidden');
+            notionAvatars.classList.remove('hidden');
+          }
+        });
+      });
     });
 
   </script>
