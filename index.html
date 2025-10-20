@@ -1519,6 +1519,12 @@
 
     .dialogue-on .dialogue-avatar-circle {
       background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+      padding: 12px;
+    }
+
+    .dialogue-avatar-logo {
+      width: 100%;
+      height: 100%;
     }
 
     .dialogue-vous .dialogue-avatar-circle {
@@ -2506,6 +2512,8 @@
       align-items: center;
       justify-content: center;
       padding: 2rem;
+      border: 1px solid #E5E7EB;
+      border-radius: 8px;
     }
 
     .tools-grid .tool-image img {
@@ -2513,8 +2521,6 @@
       height: 100%;
       object-fit: contain;
       max-height: 400px;
-      border-radius: 8px;
-      box-shadow: 0 0 0 1px #E5E7EB;
     }
 
     .tools-grid .tool-content {
@@ -2784,181 +2790,7 @@
         <p class="lead">Développement collaboratif avec les professionnels</p>
       </div>
 
-      <!-- Toggle variantes -->
-      <div class="section-variant-selector">
-        <input type="radio" name="approche-variant" id="approche-v1" class="section-variant-option" value="1" checked>
-        <label for="approche-v1" class="section-variant-label"><span>Originale</span></label>
-
-        <input type="radio" name="approche-variant" id="approche-v2" class="section-variant-option" value="2">
-        <label for="approche-v2" class="section-variant-label"><span>Conversation</span></label>
-
-        <input type="radio" name="approche-variant" id="approche-v3" class="section-variant-option" value="3">
-        <label for="approche-v3" class="section-variant-label"><span>Vous / On</span></label>
-
-        <input type="radio" name="approche-variant" id="approche-v4" class="section-variant-option" value="4">
-        <label for="approche-v4" class="section-variant-label"><span>Mix Dialogue</span></label>
-      </div>
-
-      <!-- VARIANTE 1 : Version originale - Ligne verticale avec progression -->
-      <div class="approche-variant approche-variant-1 active">
-        <div class="approach-original">
-          <div class="approach-step">
-            <div class="step-number-box">1</div>
-            <div class="step-content">
-              <h3>Écouter le terrain</h3>
-              <p>Nous recueillons vos retours pour identifier les vrais blocages. Chaque fonctionnalité est priorisée selon son utilité réelle pour gagner du temps au quotidien.</p>
-            </div>
-          </div>
-
-          <div class="approach-step">
-            <div class="step-number-box">2</div>
-            <div class="step-content">
-              <h3>Développer des solutions ciblées</h3>
-              <p>Nous créons des outils SaaS sans superflu, avec une interface claire et des fonctionnalités essentielles. Performance, fiabilité et simplicité sont nos priorités.</p>
-            </div>
-          </div>
-
-          <div class="approach-step">
-            <div class="step-number-box">3</div>
-            <div class="step-content">
-              <h3>Améliorer en continu</h3>
-              <p>Grâce à vos retours réguliers lors des phases de tests, nous ajustons et améliorons nos outils de manière itérative pour qu'ils soient vraiment utiles.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 2 : Conversation SMS avec plus de contexte -->
-      <div class="approche-variant approche-variant-2">
-        <div class="sms-conversation">
-          <div class="sms-message sms-client">
-            <div class="sms-avatar">👷</div>
-            <div class="sms-bubble sms-bubble-client">
-              <div class="sms-sender">Artisan RGE</div>
-              <div class="sms-text">Franchement j'en peux plus... Entre MaPrimeRénov, l'ANAH et les clients qui comprennent rien, je perds 2-3h par dossier juste en paperasse 😤</div>
-              <div class="sms-time">Lundi 14:23</div>
-            </div>
-          </div>
-
-          <div class="sms-message sms-proto">
-            <div class="sms-bubble sms-bubble-proto">
-              <div class="sms-sender">Protoreno</div>
-              <div class="sms-text">On vous entend. Racontez-nous exactement ce qui vous fait perdre du temps, sur quel type de projet, avec quels documents ? Plus c'est précis, mieux c'est.</div>
-              <div class="sms-badge">1. Écouter le terrain</div>
-              <div class="sms-time">Lundi 14:25</div>
-            </div>
-            <div class="sms-avatar">🛠️</div>
-          </div>
-
-          <div class="sms-message sms-client">
-            <div class="sms-avatar">👷</div>
-            <div class="sms-bubble sms-bubble-client">
-              <div class="sms-text">Par exemple le pre-remplissage des formulaires ANAH. J'ai 15 clients par mois, je ressaisis les mêmes infos à chaque fois...</div>
-              <div class="sms-time">Lundi 14:28</div>
-            </div>
-          </div>
-
-          <div class="sms-message sms-proto">
-            <div class="sms-bubble sms-bubble-proto">
-              <div class="sms-text">Parfait, c'est exactement le genre de retour qu'on cherche. On va créer un système de templates réutilisables. Simple, rapide, sans fioritures.</div>
-              <div class="sms-badge">2. Développer ciblé</div>
-              <div class="sms-time">Lundi 14:30</div>
-            </div>
-            <div class="sms-avatar">🛠️</div>
-          </div>
-
-          <div class="sms-message sms-client">
-            <div class="sms-avatar">👷</div>
-            <div class="sms-bubble sms-bubble-client">
-              <div class="sms-text">OK cool. Et je pourrai tester avant ?</div>
-              <div class="sms-time">Lundi 14:32</div>
-            </div>
-          </div>
-
-          <div class="sms-message sms-proto">
-            <div class="sms-bubble sms-bubble-proto">
-              <div class="sms-text">Carrément ! Vous testez en avant-première, vous nous dites si ça colle ou pas, on ajuste direct. Jusqu'à ce que ce soit pile ce qu'il vous faut.</div>
-              <div class="sms-badge">3. Améliorer en continu</div>
-              <div class="sms-time">Lundi 14:33</div>
-            </div>
-            <div class="sms-avatar">🛠️</div>
-          </div>
-
-          <div class="sms-message sms-proto">
-            <div class="sms-bubble sms-typing">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="sms-avatar">🛠️</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 3 : Style Vous / On alterné -->
-      <div class="approche-variant approche-variant-3">
-        <div class="vous-on-flow">
-          <div class="flow-row flow-vous">
-            <div class="flow-label">Vous</div>
-            <div class="flow-card">
-              <div class="flow-title">Vous dites</div>
-              <p>"J'ai besoin d'automatiser la génération de devis pour mes chantiers de rénovation énergétique"</p>
-            </div>
-          </div>
-
-          <div class="flow-arrow-down">
-            <svg viewBox="0 0 40 60" fill="none">
-              <path d="M20 0 L20 50 M10 40 L20 50 L30 40" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-
-          <div class="flow-row flow-on">
-            <div class="flow-card">
-              <div class="flow-title">On crée</div>
-              <p>Un module de devis intelligent qui pré-remplit les données, calcule automatiquement les aides MaPrimeRénov et génère un PDF pro en 2 clics</p>
-            </div>
-            <div class="flow-label">On</div>
-          </div>
-
-          <div class="flow-arrow-down">
-            <svg viewBox="0 0 40 60" fill="none">
-              <path d="M20 0 L20 50 M10 40 L20 50 L30 40" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-
-          <div class="flow-row flow-vous">
-            <div class="flow-label">Vous</div>
-            <div class="flow-card">
-              <div class="flow-title">Vous testez</div>
-              <p>"C'est bien mais il faudrait aussi pouvoir sauvegarder mes barèmes personnalisés et intégrer les CEE"</p>
-            </div>
-          </div>
-
-          <div class="flow-arrow-down">
-            <svg viewBox="0 0 40 60" fill="none">
-              <path d="M20 0 L20 50 M10 40 L20 50 L30 40" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-
-          <div class="flow-row flow-on">
-            <div class="flow-card">
-              <div class="flow-title">On ajuste</div>
-              <p>On ajoute la sauvegarde de barèmes + intégration CEE + export Excel. On itère jusqu'à ce que l'outil soit parfait pour vous</p>
-            </div>
-            <div class="flow-label">On</div>
-          </div>
-
-          <div class="flow-loop">
-            <svg viewBox="0 0 200 80" fill="none">
-              <path d="M100 70 Q 20 70, 20 30 Q 20 5, 40 5 L 160 5 Q 180 5, 180 30 Q 180 70, 100 70"
-                    stroke="#10B981" stroke-width="3" stroke-dasharray="6 6" fill="none" opacity="0.6"/>
-              <polygon points="95,65 100,70 105,65" fill="#10B981" opacity="0.6"/>
-            </svg>
-            <span class="loop-label">Et ça continue...</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 4 : Mix Conversation + Vous/On - Format dialogue alterné -->
-      <div class="approche-variant approche-variant-4">
+      <!-- Format dialogue alterné -->
         <div class="conversation-mix">
 
           <!-- Step 1: Vous dites -->
@@ -2982,14 +2814,22 @@
             </div>
           </div>
 
-          <!-- Step 2: On crée -->
+          <!-- Step 2: Nous créons -->
           <div class="dialogue-step dialogue-on">
             <div class="dialogue-avatar">
-              <div class="dialogue-avatar-circle">🚀</div>
-              <span class="dialogue-avatar-label">On</span>
+              <div class="dialogue-avatar-circle">
+                <svg class="dialogue-avatar-logo" viewBox="0 0 100 100" fill="none">
+                  <rect width="100" height="100" rx="16" fill="white" opacity="0.95"/>
+                  <path d="M50 25 L75 45 L75 75 L25 75 L25 45 Z" fill="#2563EB" opacity="0.2" stroke="#2563EB" stroke-width="2.5"/>
+                  <rect x="35" y="60" width="8" height="10" rx="2" fill="#2563EB"/>
+                  <rect x="46" y="52" width="8" height="18" rx="2" fill="#2563EB"/>
+                  <rect x="57" y="43" width="8" height="27" rx="2" fill="#2563EB"/>
+                </svg>
+              </div>
+              <span class="dialogue-avatar-label">Nous</span>
             </div>
             <div class="dialogue-bubble">
-              <h3 class="dialogue-title">On crée</h3>
+              <h3 class="dialogue-title">Nous créons</h3>
               <div class="dialogue-card">
                 <p class="dialogue-text">
                   <strong>Un module de devis intelligent</strong> qui pré-remplit automatiquement les données techniques, calcule les aides <em>MaPrimeRénov</em> selon les barèmes en vigueur, et génère un <strong>PDF professionnel</strong> en 2 clics.
@@ -3021,18 +2861,26 @@
             </div>
           </div>
 
-          <!-- Step 4: On ajuste -->
+          <!-- Step 4: Nous ajustons -->
           <div class="dialogue-step dialogue-on">
             <div class="dialogue-avatar">
-              <div class="dialogue-avatar-circle">🚀</div>
-              <span class="dialogue-avatar-label">On</span>
+              <div class="dialogue-avatar-circle">
+                <svg class="dialogue-avatar-logo" viewBox="0 0 100 100" fill="none">
+                  <rect width="100" height="100" rx="16" fill="white" opacity="0.95"/>
+                  <path d="M50 25 L75 45 L75 75 L25 75 L25 45 Z" fill="#2563EB" opacity="0.2" stroke="#2563EB" stroke-width="2.5"/>
+                  <rect x="35" y="60" width="8" height="10" rx="2" fill="#2563EB"/>
+                  <rect x="46" y="52" width="8" height="18" rx="2" fill="#2563EB"/>
+                  <rect x="57" y="43" width="8" height="27" rx="2" fill="#2563EB"/>
+                </svg>
+              </div>
+              <span class="dialogue-avatar-label">Nous</span>
             </div>
             <div class="dialogue-bubble">
-              <h3 class="dialogue-title">On ajuste</h3>
+              <h3 class="dialogue-title">Nous ajustons</h3>
               <div class="dialogue-card">
                 <p class="dialogue-text">
-                  On ajoute la <strong>sauvegarde de barèmes</strong>, l'<strong>export Excel</strong> multi-formats, et un <strong>système de checklist CEE</strong> avec suivi automatique des documents manquants.
-                  On itère jusqu'à ce que l'outil soit <em>parfaitement adapté</em> à votre façon de travailler.
+                  Nous ajoutons la <strong>sauvegarde de barèmes</strong>, l'<strong>export Excel</strong> multi-formats, et un <strong>système de checklist CEE</strong> avec suivi automatique des documents manquants.
+                  Nous itérons jusqu'à ce que l'outil soit <em>parfaitement adapté</em> à votre façon de travailler.
                 </p>
                 <div class="dialogue-example">
                   🔄 <em>Cycle continu : vos retours terrain nourrissent les évolutions. Chaque amélioration profite à toute la communauté.</em>
