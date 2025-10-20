@@ -1115,7 +1115,81 @@
       display: block;
     }
 
-    /* VARIANTE 1 : Style conversation SMS/iMessage */
+    /* VARIANTE 1 : Version originale - Ligne verticale avec progression */
+    .approach-original {
+      position: relative;
+      padding-left: 100px;
+    }
+
+    .approach-original::before {
+      content: '';
+      position: absolute;
+      left: 60px;
+      top: 60px;
+      bottom: 60px;
+      width: 3px;
+      background: linear-gradient(180deg, #DBEAFE 0%, #2563EB 50%, #1E40AF 100%);
+    }
+
+    .approach-step {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 3.5rem;
+      position: relative;
+    }
+
+    .approach-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number-box {
+      width: 120px;
+      height: 120px;
+      background: var(--blue);
+      color: white;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 3rem;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+      transition: all 0.3s;
+    }
+
+    .approach-step:nth-child(1) .step-number-box {
+      background: #60A5FA;
+    }
+
+    .approach-step:nth-child(2) .step-number-box {
+      background: #2563EB;
+    }
+
+    .approach-step:nth-child(3) .step-number-box {
+      background: #1E40AF;
+    }
+
+    .step-number-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+    }
+
+    .step-content h3 {
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+    }
+
+    .step-content p {
+      font-size: 1.0625rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* VARIANTE 2 : Style conversation SMS/iMessage */
     .sms-conversation {
       max-width: 600px;
       margin: 0 auto;
@@ -1266,192 +1340,114 @@
       }
     }
 
-    /* VARIANTE 2 : Bento Grid asymétrique */
-    .bento-approach {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 2rem;
-    }
-
-    .bento-card {
-      background: white;
-      border: 2px solid #E5E7EB;
-      border-radius: 16px;
-      padding: 3rem 2.5rem;
+    /* VARIANTE 3 : Style Vous / On alterné */
+    .vous-on-flow {
+      max-width: 700px;
+      margin: 0 auto;
       position: relative;
-      transition: all 0.4s;
+      padding-bottom: 100px;
     }
 
-    .bento-card:hover {
-      border-color: var(--blue);
-      transform: translateY(-6px);
-      box-shadow: 0 16px 48px rgba(37, 99, 235, 0.12);
-    }
-
-    .bento-large {
-      grid-row: span 2;
-      background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
-      border: 3px solid var(--blue);
-    }
-
-    .bento-badge {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      width: 48px;
-      height: 48px;
-      background: var(--blue);
-      color: white;
-      border-radius: 12px;
+    .flow-row {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.25rem;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      gap: 2rem;
+      margin-bottom: 1rem;
     }
 
-    .bento-icon {
+    .flow-vous {
+      flex-direction: row;
+    }
+
+    .flow-on {
+      flex-direction: row-reverse;
+    }
+
+    .flow-label {
+      flex-shrink: 0;
       width: 80px;
       height: 80px;
-      color: var(--blue);
-      margin-bottom: 2rem;
-    }
-
-    .bento-large .bento-icon {
-      width: 120px;
-      height: 120px;
-    }
-
-    .bento-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: var(--navy);
-    }
-
-    .bento-large h3 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .bento-card p {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--slate);
-      margin: 0;
-    }
-
-    .bento-large p {
-      font-size: 1.125rem;
-    }
-
-    /* VARIANTE 3 : Cycle horizontal avec flèches */
-    .cycle-approach {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      position: relative;
-      padding: 2rem 0;
-    }
-
-    .cycle-step {
-      flex: 1;
-      text-align: center;
-      position: relative;
-    }
-
-    .cycle-number {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 32px;
-      height: 32px;
-      background: var(--blue);
+      background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
       color: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 1rem;
-      border: 3px solid white;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      font-size: 1.5rem;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+      position: relative;
       z-index: 2;
     }
 
-    .cycle-icon-box {
-      width: 120px;
-      height: 120px;
-      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-      border: 3px solid var(--blue);
-      border-radius: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-      transition: all 0.4s;
+    .flow-card {
+      flex: 1;
+      background: white;
+      border: 2px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s;
     }
 
-    .cycle-icon-box:hover {
-      transform: scale(1.1) rotate(-5deg);
-      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.2);
+    .flow-vous .flow-card {
+      border-left: 4px solid #60A5FA;
     }
 
-    .cycle-icon-box svg {
-      width: 60px;
-      height: 60px;
-      color: var(--blue);
+    .flow-on .flow-card {
+      border-right: 4px solid #2563EB;
     }
 
-    .cycle-step h4 {
+    .flow-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+    }
+
+    .flow-title {
       font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-      color: var(--navy);
       font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
     }
 
-    .cycle-step p {
-      font-size: 0.9375rem;
+    .flow-card p {
+      font-size: 1rem;
+      line-height: 1.7;
       color: var(--slate);
       margin: 0;
-      line-height: 1.6;
+      font-style: italic;
     }
 
-    .cycle-arrow {
-      flex: 0 0 100px;
-      position: relative;
+    .flow-arrow-down {
+      width: 40px;
+      margin: 0.5rem auto;
+      opacity: 0.6;
     }
 
-    .cycle-arrow svg {
+    .flow-arrow-down svg {
+      width: 100%;
+    }
+
+    .flow-loop {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      text-align: center;
+    }
+
+    .flow-loop svg {
       width: 100%;
       height: auto;
     }
 
-    .cycle-arrow-return {
-      position: absolute;
-      bottom: -80px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 120px;
-    }
-
-    .cycle-arrow-return svg {
-      width: 120px;
-      height: 60px;
-    }
-
-    .cycle-label {
-      position: absolute;
-      bottom: -105px;
-      left: 50%;
-      transform: translateX(-50%);
+    .loop-label {
+      display: block;
+      margin-top: -15px;
       font-size: 0.875rem;
       font-weight: 600;
       color: #10B981;
-      white-space: nowrap;
     }
 
     /* ============================================
@@ -2054,6 +2050,37 @@
       }
 
       /* Approche variantes responsive */
+      /* V1 : Originale */
+      .approach-original {
+        padding-left: 0;
+      }
+
+      .approach-original::before {
+        display: none;
+      }
+
+      .approach-step {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      .step-number-box {
+        width: 90px;
+        height: 90px;
+        font-size: 2.25rem;
+        margin: 0 auto;
+      }
+
+      .step-content h3 {
+        font-size: 1.5rem;
+      }
+
+      .step-content p {
+        font-size: 1rem;
+      }
+
+      /* V2 : SMS */
       .sms-conversation {
         padding: 1.5rem 1rem;
       }
@@ -2078,89 +2105,46 @@
         padding: 0.25rem 0.625rem;
       }
 
-      /* Bento Grid responsive */
-      .bento-approach {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+      /* V3 : Vous/On */
+      .flow-row {
+        flex-direction: column !important;
+        gap: 1rem;
       }
 
-      .bento-large {
-        grid-row: span 1;
-      }
-
-      .bento-card {
-        padding: 2.5rem 2rem;
-      }
-
-      .bento-icon {
-        width: 64px;
-        height: 64px;
-      }
-
-      .bento-large .bento-icon {
-        width: 80px;
-        height: 80px;
-      }
-
-      .bento-badge {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-      }
-
-      .bento-card h3,
-      .bento-large h3 {
-        font-size: 1.5rem;
-      }
-
-      .bento-card p,
-      .bento-large p {
-        font-size: 1rem;
-      }
-
-      /* Cycle responsive */
-      .cycle-approach {
-        flex-direction: column;
-        gap: 2rem;
-        padding-bottom: 4rem;
-      }
-
-      .cycle-step {
-        width: 100%;
-      }
-
-      .cycle-icon-box {
-        width: 100px;
-        height: 100px;
-      }
-
-      .cycle-icon-box svg {
-        width: 50px;
-        height: 50px;
-      }
-
-      .cycle-arrow {
-        transform: rotate(90deg);
-        flex: 0 0 60px;
-      }
-
-      .cycle-arrow svg {
+      .flow-label {
         width: 60px;
+        height: 60px;
+        font-size: 1.125rem;
       }
 
-      .cycle-arrow-return {
-        bottom: 10px;
-        left: 50%;
-        width: 80px;
+      .flow-card {
+        padding: 1.5rem;
       }
 
-      .cycle-arrow-return svg {
-        width: 80px;
-        height: 40px;
+      .flow-vous .flow-card,
+      .flow-on .flow-card {
+        border-left: 2px solid #E5E7EB;
+        border-right: 2px solid #E5E7EB;
+        border-top: 4px solid #2563EB;
       }
 
-      .cycle-label {
-        bottom: -20px;
+      .flow-title {
+        font-size: 1.125rem;
+      }
+
+      .flow-card p {
+        font-size: 0.9375rem;
+      }
+
+      .vous-on-flow {
+        padding-bottom: 80px;
+      }
+
+      .flow-loop {
+        width: 160px;
+      }
+
+      .loop-label {
         font-size: 0.8125rem;
       }
 
@@ -2546,79 +2530,100 @@
       <!-- Toggle variantes -->
       <div class="section-variant-selector">
         <input type="radio" name="approche-variant" id="approche-v1" class="section-variant-option" value="1" checked>
-        <label for="approche-v1" class="section-variant-label"><span>Convo SMS</span></label>
+        <label for="approche-v1" class="section-variant-label"><span>Originale</span></label>
 
         <input type="radio" name="approche-variant" id="approche-v2" class="section-variant-option" value="2">
-        <label for="approche-v2" class="section-variant-label"><span>Bento Grid</span></label>
+        <label for="approche-v2" class="section-variant-label"><span>Conversation</span></label>
 
         <input type="radio" name="approche-variant" id="approche-v3" class="section-variant-option" value="3">
-        <label for="approche-v3" class="section-variant-label"><span>Cycle continu</span></label>
+        <label for="approche-v3" class="section-variant-label"><span>Vous / On</span></label>
       </div>
 
-      <!-- VARIANTE 1 : Conversation SMS style -->
+      <!-- VARIANTE 1 : Version originale - Ligne verticale avec progression -->
       <div class="approche-variant approche-variant-1 active">
-        <div class="sms-conversation">
-          <!-- Message 1 : Vous -->
-          <div class="sms-message sms-client">
-            <div class="sms-avatar">👷</div>
-            <div class="sms-bubble sms-bubble-client">
-              <div class="sms-sender">Vous</div>
-              <div class="sms-text">J'ai besoin d'un outil pour gérer mes dossiers MaPrimeRénov, c'est le chaos total là...</div>
-              <div class="sms-time">Aujourd'hui 10:23</div>
+        <div class="approach-original">
+          <div class="approach-step">
+            <div class="step-number-box">1</div>
+            <div class="step-content">
+              <h3>Écouter le terrain</h3>
+              <p>Nous recueillons vos retours pour identifier les vrais blocages. Chaque fonctionnalité est priorisée selon son utilité réelle pour gagner du temps au quotidien.</p>
             </div>
           </div>
 
-          <!-- Message 2 : Protoreno -->
+          <div class="approach-step">
+            <div class="step-number-box">2</div>
+            <div class="step-content">
+              <h3>Développer des solutions ciblées</h3>
+              <p>Nous créons des outils SaaS sans superflu, avec une interface claire et des fonctionnalités essentielles. Performance, fiabilité et simplicité sont nos priorités.</p>
+            </div>
+          </div>
+
+          <div class="approach-step">
+            <div class="step-number-box">3</div>
+            <div class="step-content">
+              <h3>Améliorer en continu</h3>
+              <p>Grâce à vos retours réguliers lors des phases de tests, nous ajustons et améliorons nos outils de manière itérative pour qu'ils soient vraiment utiles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 2 : Conversation SMS avec plus de contexte -->
+      <div class="approche-variant approche-variant-2">
+        <div class="sms-conversation">
+          <div class="sms-message sms-client">
+            <div class="sms-avatar">👷</div>
+            <div class="sms-bubble sms-bubble-client">
+              <div class="sms-sender">Artisan RGE</div>
+              <div class="sms-text">Franchement j'en peux plus... Entre MaPrimeRénov, l'ANAH et les clients qui comprennent rien, je perds 2-3h par dossier juste en paperasse 😤</div>
+              <div class="sms-time">Lundi 14:23</div>
+            </div>
+          </div>
+
           <div class="sms-message sms-proto">
             <div class="sms-bubble sms-bubble-proto">
               <div class="sms-sender">Protoreno</div>
-              <div class="sms-text">On vous écoute ! Dites-nous exactement ce qui vous bloque au quotidien. Chaque retour compte pour prioriser les bonnes fonctionnalités.</div>
+              <div class="sms-text">On vous entend. Racontez-nous exactement ce qui vous fait perdre du temps, sur quel type de projet, avec quels documents ? Plus c'est précis, mieux c'est.</div>
               <div class="sms-badge">1. Écouter le terrain</div>
-              <div class="sms-time">Aujourd'hui 10:25</div>
+              <div class="sms-time">Lundi 14:25</div>
             </div>
             <div class="sms-avatar">🛠️</div>
           </div>
 
-          <!-- Message 3 : Vous -->
           <div class="sms-message sms-client">
             <div class="sms-avatar">👷</div>
             <div class="sms-bubble sms-bubble-client">
-              <div class="sms-sender">Vous</div>
-              <div class="sms-text">Ok nickel ! Et après vous faites comment ?</div>
-              <div class="sms-time">Aujourd'hui 10:27</div>
+              <div class="sms-text">Par exemple le pre-remplissage des formulaires ANAH. J'ai 15 clients par mois, je ressaisis les mêmes infos à chaque fois...</div>
+              <div class="sms-time">Lundi 14:28</div>
             </div>
           </div>
 
-          <!-- Message 4 : Protoreno -->
           <div class="sms-message sms-proto">
             <div class="sms-bubble sms-bubble-proto">
-              <div class="sms-text">On développe un outil SaaS simple et efficace. Pas de superflu, juste ce dont vous avez vraiment besoin. Performance et fiabilité avant tout.</div>
+              <div class="sms-text">Parfait, c'est exactement le genre de retour qu'on cherche. On va créer un système de templates réutilisables. Simple, rapide, sans fioritures.</div>
               <div class="sms-badge">2. Développer ciblé</div>
-              <div class="sms-time">Aujourd'hui 10:28</div>
+              <div class="sms-time">Lundi 14:30</div>
             </div>
             <div class="sms-avatar">🛠️</div>
           </div>
 
-          <!-- Message 5 : Vous testez -->
           <div class="sms-message sms-client">
             <div class="sms-avatar">👷</div>
             <div class="sms-bubble sms-bubble-client">
-              <div class="sms-text">Et si ça marche pas pour moi ?</div>
-              <div class="sms-time">Aujourd'hui 10:30</div>
+              <div class="sms-text">OK cool. Et je pourrai tester avant ?</div>
+              <div class="sms-time">Lundi 14:32</div>
             </div>
           </div>
 
-          <!-- Message 6 : Protoreno -->
           <div class="sms-message sms-proto">
             <div class="sms-bubble sms-bubble-proto">
-              <div class="sms-text">On ajuste ensemble ! Vous testez, vous nous dites ce qui cloche, on améliore. C'est un cycle continu jusqu'à ce que ce soit parfait pour vous.</div>
+              <div class="sms-text">Carrément ! Vous testez en avant-première, vous nous dites si ça colle ou pas, on ajuste direct. Jusqu'à ce que ce soit pile ce qu'il vous faut.</div>
               <div class="sms-badge">3. Améliorer en continu</div>
-              <div class="sms-time">Aujourd'hui 10:31</div>
+              <div class="sms-time">Lundi 14:33</div>
             </div>
             <div class="sms-avatar">🛠️</div>
           </div>
 
-          <!-- Message final typing -->
           <div class="sms-message sms-proto">
             <div class="sms-bubble sms-typing">
               <span></span><span></span><span></span>
@@ -2628,94 +2633,66 @@
         </div>
       </div>
 
-      <!-- VARIANTE 2 : Bento Grid asymétrique -->
-      <div class="approche-variant approche-variant-2">
-        <div class="bento-approach">
-          <div class="bento-card bento-large">
-            <div class="bento-badge">01</div>
-            <svg class="bento-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
-            </svg>
-            <h3>Écouter le terrain</h3>
-            <p>Nous recueillons vos retours pour identifier les vrais blocages. Chaque fonctionnalité est priorisée selon son utilité réelle pour gagner du temps au quotidien.</p>
-          </div>
-
-          <div class="bento-card">
-            <div class="bento-badge">02</div>
-            <svg class="bento-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-            </svg>
-            <h3>Développer des solutions ciblées</h3>
-            <p>Nous créons des outils SaaS sans superflu, avec une interface claire et des fonctionnalités essentielles.</p>
-          </div>
-
-          <div class="bento-card">
-            <div class="bento-badge">03</div>
-            <svg class="bento-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-            </svg>
-            <h3>Améliorer en continu</h3>
-            <p>Grâce à vos retours réguliers, nous ajustons et améliorons nos outils de manière itérative.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 3 : Cycle horizontal avec flèches -->
+      <!-- VARIANTE 3 : Style Vous / On alterné -->
       <div class="approche-variant approche-variant-3">
-        <div class="cycle-approach">
-          <div class="cycle-step">
-            <div class="cycle-number">1</div>
-            <div class="cycle-icon-box">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
-              </svg>
+        <div class="vous-on-flow">
+          <div class="flow-row flow-vous">
+            <div class="flow-label">Vous</div>
+            <div class="flow-card">
+              <div class="flow-title">Vous dites</div>
+              <p>"J'ai besoin d'automatiser la génération de devis pour mes chantiers de rénovation énergétique"</p>
             </div>
-            <h4>Écouter le terrain</h4>
-            <p>Identifier les vrais blocages avec vous</p>
           </div>
 
-          <div class="cycle-arrow">
-            <svg viewBox="0 0 100 40" fill="none">
-              <path d="M0 20 Q 50 -10, 100 20" stroke="#2563EB" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
-              <polygon points="95,15 100,20 95,25" fill="#2563EB"/>
+          <div class="flow-arrow-down">
+            <svg viewBox="0 0 40 60" fill="none">
+              <path d="M20 0 L20 50 M10 40 L20 50 L30 40" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
 
-          <div class="cycle-step">
-            <div class="cycle-number">2</div>
-            <div class="cycle-icon-box">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-              </svg>
+          <div class="flow-row flow-on">
+            <div class="flow-card">
+              <div class="flow-title">On crée</div>
+              <p>Un module de devis intelligent qui pré-remplit les données, calcule automatiquement les aides MaPrimeRénov et génère un PDF pro en 2 clics</p>
             </div>
-            <h4>Développer</h4>
-            <p>Créer des outils SaaS sans superflu</p>
+            <div class="flow-label">On</div>
           </div>
 
-          <div class="cycle-arrow">
-            <svg viewBox="0 0 100 40" fill="none">
-              <path d="M0 20 Q 50 50, 100 20" stroke="#2563EB" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
-              <polygon points="95,15 100,20 95,25" fill="#2563EB"/>
+          <div class="flow-arrow-down">
+            <svg viewBox="0 0 40 60" fill="none">
+              <path d="M20 0 L20 50 M10 40 L20 50 L30 40" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
 
-          <div class="cycle-step">
-            <div class="cycle-number">3</div>
-            <div class="cycle-icon-box">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-              </svg>
+          <div class="flow-row flow-vous">
+            <div class="flow-label">Vous</div>
+            <div class="flow-card">
+              <div class="flow-title">Vous testez</div>
+              <p>"C'est bien mais il faudrait aussi pouvoir sauvegarder mes barèmes personnalisés et intégrer les CEE"</p>
             </div>
-            <h4>Améliorer</h4>
-            <p>Ajuster en continu avec vos retours</p>
           </div>
 
-          <div class="cycle-arrow cycle-arrow-return">
-            <svg viewBox="0 0 120 60" fill="none">
-              <path d="M110 10 Q 60 -20, 10 10 L 10 50" stroke="#10B981" stroke-width="2" fill="none" stroke-dasharray="4 4" opacity="0.6"/>
-              <polygon points="5,45 10,50 15,45" fill="#10B981" opacity="0.6"/>
+          <div class="flow-arrow-down">
+            <svg viewBox="0 0 40 60" fill="none">
+              <path d="M20 0 L20 50 M10 40 L20 50 L30 40" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span class="cycle-label">Cycle continu</span>
+          </div>
+
+          <div class="flow-row flow-on">
+            <div class="flow-card">
+              <div class="flow-title">On ajuste</div>
+              <p>On ajoute la sauvegarde de barèmes + intégration CEE + export Excel. On itère jusqu'à ce que l'outil soit parfait pour vous</p>
+            </div>
+            <div class="flow-label">On</div>
+          </div>
+
+          <div class="flow-loop">
+            <svg viewBox="0 0 200 80" fill="none">
+              <path d="M100 70 Q 20 70, 20 30 Q 20 5, 40 5 L 160 5 Q 180 5, 180 30 Q 180 70, 100 70"
+                    stroke="#10B981" stroke-width="3" stroke-dasharray="6 6" fill="none" opacity="0.6"/>
+              <polygon points="95,65 100,70 105,65" fill="#10B981" opacity="0.6"/>
+            </svg>
+            <span class="loop-label">Et ça continue...</span>
           </div>
         </div>
       </div>
