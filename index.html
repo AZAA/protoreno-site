@@ -1518,29 +1518,18 @@
     }
 
     .dialogue-on .dialogue-avatar-circle {
-      background: transparent;
+      background: white;
       padding: 0;
+    }
+
+    .dialogue-vous .dialogue-avatar-circle {
+      background: white;
+      padding: 10px;
     }
 
     .dialogue-avatar-logo {
       width: 100%;
       height: 100%;
-      filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.2));
-    }
-
-    .dialogue-avatar-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #2563EB;
-      /* Filtre N&B contrasté comme dans la section Qui sommes-nous */
-      filter: grayscale(100%) contrast(1.4) brightness(1.05);
-      box-shadow: 0 6px 24px rgba(37, 99, 235, 0.2);
-    }
-
-    .dialogue-vous .dialogue-avatar-circle {
-      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
     }
 
     .dialogue-avatar-label {
@@ -2619,10 +2608,6 @@
         font-size: 2.5rem;
       }
 
-      .dialogue-avatar-image {
-        border-width: 3px;
-      }
-
       .dialogue-bubble {
         max-width: 100%;
       }
@@ -2834,7 +2819,13 @@
           <div class="dialogue-step dialogue-on">
             <div class="dialogue-avatar">
               <div class="dialogue-avatar-circle">
-                <img src="images/avatar1.png" alt="Renaud" class="dialogue-avatar-image" loading="lazy">
+                <svg class="dialogue-avatar-logo" viewBox="0 0 100 100" fill="none">
+                  <circle cx="50" cy="50" r="50" fill="#2563EB"/>
+                  <path d="M50 25 L75 45 L75 75 L25 75 L25 45 Z" fill="white" opacity="0.2" stroke="white" stroke-width="2.5"/>
+                  <rect x="35" y="60" width="8" height="10" rx="2" fill="white"/>
+                  <rect x="46" y="52" width="8" height="18" rx="2" fill="white"/>
+                  <rect x="57" y="43" width="8" height="27" rx="2" fill="white"/>
+                </svg>
               </div>
               <span class="dialogue-avatar-label">Nous</span>
             </div>
