@@ -1118,84 +1118,7 @@
        LE CONSTAT
        ============================================ -->
   <section class="section-alt" id="section-constat">
-    <!-- Option 1: Neutre (vide) -->
-    <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    </svg>
-
-    <!-- Option 2: Grille désalignée (complexité) -->
-    <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="broken-grid" width="120" height="100" patternUnits="userSpaceOnUse">
-          <line x1="0" y1="0" x2="120" y2="3" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <line x1="0" y1="33" x2="120" y2="37" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <line x1="0" y1="66" x2="120" y2="63" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <line x1="0" y1="100" x2="120" y2="97" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <line x1="0" y1="0" x2="3" y2="100" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <line x1="40" y1="0" x2="37" y2="100" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <line x1="80" y1="0" x2="83" y2="100" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <line x1="120" y1="0" x2="117" y2="100" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#broken-grid)"/>
-    </svg>
-
-    <!-- Option 3: Losanges (neutre) -->
-    <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="diamonds" width="80" height="80" patternUnits="userSpaceOnUse">
-          <path d="M 40 10 L 70 40 L 40 70 L 10 40 Z" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#diamonds)"/>
-    </svg>
-
-    <!-- Option 4: Points + lignes (neutre) -->
-    <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="dots-lines" width="60" height="60" patternUnits="userSpaceOnUse">
-          <circle cx="30" cy="30" r="2" fill="#2563EB" opacity="0.1"/>
-          <line x1="0" y1="30" x2="60" y2="30" stroke="#2563EB" stroke-width="0.3" opacity="0.05"/>
-          <line x1="30" y1="0" x2="30" y2="60" stroke="#2563EB" stroke-width="0.3" opacity="0.05"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#dots-lines)"/>
-    </svg>
-
-    <!-- Option 5: Zig-zag (chaos) -->
-    <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="5" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="zigzag" width="100" height="60" patternUnits="userSpaceOnUse">
-          <path d="M 0 30 L 20 15 L 40 30 L 60 15 L 80 30 L 100 15" stroke="#2563EB" stroke-width="0.8" opacity="0.08" fill="none"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#zigzag)"/>
-    </svg>
-
-    <!-- Option 6: Triangles dispersés (instabilité) -->
-    <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="6" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="triangles-random" width="120" height="100" patternUnits="userSpaceOnUse">
-          <path d="M 30 20 L 45 50 L 15 50 Z" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <path d="M 80 60 L 95 30 L 105 60 Z" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#triangles-random)"/>
-    </svg>
-
-    <!-- Option 7: Points aléatoires (dispersion) -->
-    <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="7" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="scattered-dots" width="90" height="90" patternUnits="userSpaceOnUse">
-          <circle cx="20" cy="25" r="2" fill="#2563EB" opacity="0.1"/>
-          <circle cx="55" cy="15" r="2" fill="#2563EB" opacity="0.1"/>
-          <circle cx="70" cy="50" r="2" fill="#2563EB" opacity="0.1"/>
-          <circle cx="30" cy="70" r="2" fill="#2563EB" opacity="0.1"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#scattered-dots)"/>
-    </svg>
-
-    <!-- Option 8: Carrés déstructurés (désorganisation) -->
+    <!-- Carrés déstructurés (désorganisation) -->
     <svg class="section-bg-svg constat-bg active" data-section="constat" data-variant="8" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
         <pattern id="broken-squares" width="100" height="100" patternUnits="userSpaceOnUse">
@@ -1204,26 +1127,6 @@
         </pattern>
       </defs>
       <rect width="1200" height="800" fill="url(#broken-squares)"/>
-    </svg>
-
-    <!-- Option 9: Vagues irrégulières (instabilité) -->
-    <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="9" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="irregular-waves" width="150" height="80" patternUnits="userSpaceOnUse">
-          <path d="M 0 40 Q 25 25 50 40 Q 75 58 100 40 Q 125 30 150 40" stroke="#2563EB" stroke-width="0.6" opacity="0.06" fill="none"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#irregular-waves)"/>
-    </svg>
-
-    <!-- Option 10: Étoiles éparpillées (neutre) -->
-    <svg class="section-bg-svg constat-bg" data-section="constat" data-variant="10" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="stars-scattered" width="80" height="80" patternUnits="userSpaceOnUse">
-          <path d="M 40 20 L 43 32 L 55 32 L 45 39 L 48 51 L 40 44 L 32 51 L 35 39 L 25 32 L 37 32 Z" fill="none" stroke="#2563EB" stroke-width="0.4" opacity="0.06"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#stars-scattered)"/>
     </svg>
 
     <div class="container">
@@ -1271,37 +1174,7 @@
        NOTRE APPROCHE
        ============================================ -->
   <section id="section-approche">
-    <!-- Option 1: Neutre (vide) -->
-    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    </svg>
-
-    <!-- Option 2: Flèches pattern (progression) -->
-    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <marker id="arrow-approche" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-          <path d="M 0 0 L 6 3 L 0 6 Z" fill="#2563EB" opacity="0.12"/>
-        </marker>
-        <pattern id="arrows-pattern" width="150" height="120" patternUnits="userSpaceOnUse">
-          <path d="M 20 80 L 50 50 L 80 20" stroke="#2563EB" stroke-width="1.5" opacity="0.08" fill="none" marker-end="url(#arrow-approche)"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#arrows-pattern)"/>
-    </svg>
-
-    <!-- Option 3: Chemin pointillé (parcours) -->
-    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="path-pattern" width="200" height="150" patternUnits="userSpaceOnUse">
-          <path d="M 20 100 Q 60 80 100 100 Q 140 120 180 100" stroke="#2563EB" stroke-width="1" opacity="0.08" fill="none" stroke-dasharray="5,5"/>
-          <circle cx="20" cy="100" r="3" fill="#2563EB" opacity="0.1"/>
-          <circle cx="100" cy="100" r="3" fill="#2563EB" opacity="0.1"/>
-          <circle cx="180" cy="100" r="3" fill="#2563EB" opacity="0.1"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#path-pattern)"/>
-    </svg>
-
-    <!-- Option 4: Croix légères (neutre) -->
+    <!-- Croix légères (neutre) -->
     <svg class="section-bg-svg approche-bg active" data-section="approche" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
         <pattern id="crosses" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -1310,74 +1183,6 @@
         </pattern>
       </defs>
       <rect width="1200" height="800" fill="url(#crosses)"/>
-    </svg>
-
-    <!-- Option 5: Escaliers pattern (étapes multiples) -->
-    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="5" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="stairs-pattern" width="120" height="100" patternUnits="userSpaceOnUse">
-          <path d="M 20 80 L 40 80 L 40 60 L 60 60 L 60 40 L 80 40 L 80 20" stroke="#2563EB" stroke-width="1" opacity="0.08" fill="none"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#stairs-pattern)"/>
-    </svg>
-
-    <!-- Option 6: Lignes montantes parallèles (ascension) -->
-    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="6" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="rising-lines" width="80" height="100" patternUnits="userSpaceOnUse">
-          <line x1="10" y1="80" x2="30" y2="20" stroke="#2563EB" stroke-width="0.8" opacity="0.07" />
-          <line x1="50" y1="90" x2="70" y2="30" stroke="#2563EB" stroke-width="0.8" opacity="0.07" />
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#rising-lines)"/>
-    </svg>
-
-    <!-- Option 7: Vagues progressives (mouvement) -->
-    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="7" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="progressive-waves" width="150" height="60" patternUnits="userSpaceOnUse">
-          <path d="M 0 40 Q 25 20 50 30 Q 75 40 100 20 Q 125 10 150 20" stroke="#2563EB" stroke-width="0.8" opacity="0.07" fill="none"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#progressive-waves)"/>
-    </svg>
-
-    <!-- Option 8: Cercles grandissants (évolution) -->
-    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="8" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="growing-circles" width="100" height="100" patternUnits="userSpaceOnUse">
-          <circle cx="30" cy="50" r="5" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <circle cx="50" cy="50" r="8" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <circle cx="70" cy="50" r="11" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#growing-circles)"/>
-    </svg>
-
-    <!-- Option 9: Route sinueuse (parcours) -->
-    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="9" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="winding-road" width="200" height="120" patternUnits="userSpaceOnUse">
-          <path d="M 20 60 Q 60 30 100 60 Q 140 90 180 60" stroke="#2563EB" stroke-width="1.2" opacity="0.06" fill="none"/>
-          <path d="M 20 70 Q 60 40 100 70 Q 140 100 180 70" stroke="#2563EB" stroke-width="0.5" opacity="0.04" fill="none" stroke-dasharray="3,3"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#winding-road)"/>
-    </svg>
-
-    <!-- Option 10: Points reliés ascendants (neutre) -->
-    <svg class="section-bg-svg approche-bg" data-section="approche" data-variant="10" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="connected-ascending" width="100" height="80" patternUnits="userSpaceOnUse">
-          <circle cx="20" cy="60" r="2" fill="#2563EB" opacity="0.1"/>
-          <circle cx="50" cy="40" r="2" fill="#2563EB" opacity="0.1"/>
-          <circle cx="80" cy="20" r="2" fill="#2563EB" opacity="0.1"/>
-          <line x1="20" y1="60" x2="50" y2="40" stroke="#2563EB" stroke-width="0.4" opacity="0.05"/>
-          <line x1="50" y1="40" x2="80" y2="20" stroke="#2563EB" stroke-width="0.4" opacity="0.05"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#connected-ascending)"/>
     </svg>
 
     <div class="container">
@@ -1424,11 +1229,7 @@
        COMMENT PARTICIPER
        ============================================ -->
   <section class="section-alt" id="section-participer">
-    <!-- Option 1: Neutre (vide) -->
-    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    </svg>
-
-    <!-- Option 2: Réseau maillé (collaboration) -->
+    <!-- Réseau maillé (collaboration) -->
     <svg class="section-bg-svg participer-bg active" data-section="participer" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
         <pattern id="network" width="150" height="130" patternUnits="userSpaceOnUse">
@@ -1441,116 +1242,6 @@
         </pattern>
       </defs>
       <rect width="1200" height="800" fill="url(#network)"/>
-    </svg>
-
-    <!-- Option 3: Hexagones (communauté) -->
-    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="hexagons" width="87" height="100" patternUnits="userSpaceOnUse">
-          <path d="M 25 0 L 62 0 L 80 43 L 62 86 L 25 86 L 7 43 Z" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#hexagons)"/>
-    </svg>
-
-    <!-- Option 4: Cercles concentriques (neutre) -->
-    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="concentric" width="100" height="100" patternUnits="userSpaceOnUse">
-          <circle cx="50" cy="50" r="15" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
-          <circle cx="50" cy="50" r="25" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#concentric)"/>
-    </svg>
-
-    <!-- Option 5: Toile d'araignée (interconnexion) -->
-    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="5" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="spider-web" width="150" height="150" patternUnits="userSpaceOnUse">
-          <circle cx="75" cy="75" r="20" fill="none" stroke="#2563EB" stroke-width="0.4" opacity="0.06"/>
-          <circle cx="75" cy="75" r="40" fill="none" stroke="#2563EB" stroke-width="0.4" opacity="0.06"/>
-          <line x1="75" y1="35" x2="75" y2="115" stroke="#2563EB" stroke-width="0.3" opacity="0.05"/>
-          <line x1="35" y1="75" x2="115" y2="75" stroke="#2563EB" stroke-width="0.3" opacity="0.05"/>
-          <line x1="50" y1="50" x2="100" y2="100" stroke="#2563EB" stroke-width="0.3" opacity="0.05"/>
-          <line x1="100" y1="50" x2="50" y2="100" stroke="#2563EB" stroke-width="0.3" opacity="0.05"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#spider-web)"/>
-    </svg>
-
-    <!-- Option 6: Molécules connectées (liens) -->
-    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="6" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="molecules" width="120" height="100" patternUnits="userSpaceOnUse">
-          <circle cx="30" cy="30" r="5" fill="#2563EB" opacity="0.08"/>
-          <circle cx="70" cy="50" r="5" fill="#2563EB" opacity="0.08"/>
-          <circle cx="90" cy="30" r="5" fill="#2563EB" opacity="0.08"/>
-          <line x1="30" y1="30" x2="70" y2="50" stroke="#2563EB" stroke-width="0.5" opacity="0.05"/>
-          <line x1="70" y1="50" x2="90" y2="30" stroke="#2563EB" stroke-width="0.5" opacity="0.05"/>
-          <line x1="90" y1="30" x2="30" y2="30" stroke="#2563EB" stroke-width="0.5" opacity="0.05"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#molecules)"/>
-    </svg>
-
-    <!-- Option 7: Grille interconnectée (maillage) -->
-    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="7" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="mesh-grid" width="80" height="80" patternUnits="userSpaceOnUse">
-          <circle cx="0" cy="0" r="3" fill="#2563EB" opacity="0.08"/>
-          <circle cx="80" cy="0" r="3" fill="#2563EB" opacity="0.08"/>
-          <circle cx="0" cy="80" r="3" fill="#2563EB" opacity="0.08"/>
-          <circle cx="40" cy="40" r="3" fill="#2563EB" opacity="0.08"/>
-          <line x1="0" y1="0" x2="40" y2="40" stroke="#2563EB" stroke-width="0.4" opacity="0.04"/>
-          <line x1="80" y1="0" x2="40" y2="40" stroke="#2563EB" stroke-width="0.4" opacity="0.04"/>
-          <line x1="0" y1="80" x2="40" y2="40" stroke="#2563EB" stroke-width="0.4" opacity="0.04"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#mesh-grid)"/>
-    </svg>
-
-    <!-- Option 8: Bulles connectées (communauté) -->
-    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="8" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="bubbles" width="140" height="120" patternUnits="userSpaceOnUse">
-          <circle cx="40" cy="40" r="15" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
-          <circle cx="100" cy="60" r="12" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
-          <circle cx="70" cy="90" r="10" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
-          <line x1="53" y1="47" x2="88" y2="57" stroke="#2563EB" stroke-width="0.4" opacity="0.04"/>
-          <line x1="93" y1="68" x2="77" y2="83" stroke="#2563EB" stroke-width="0.4" opacity="0.04"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#bubbles)"/>
-    </svg>
-
-    <!-- Option 9: Étoiles connectées (réseau) -->
-    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="9" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="star-network" width="100" height="100" patternUnits="userSpaceOnUse">
-          <circle cx="20" cy="30" r="3" fill="#2563EB" opacity="0.1"/>
-          <circle cx="50" cy="50" r="3" fill="#2563EB" opacity="0.1"/>
-          <circle cx="80" cy="30" r="3" fill="#2563EB" opacity="0.1"/>
-          <circle cx="50" cy="15" r="3" fill="#2563EB" opacity="0.1"/>
-          <line x1="20" y1="30" x2="50" y2="50" stroke="#2563EB" stroke-width="0.3" opacity="0.05"/>
-          <line x1="50" y1="50" x2="80" y2="30" stroke="#2563EB" stroke-width="0.3" opacity="0.05"/>
-          <line x1="50" y1="15" x2="50" y2="50" stroke="#2563EB" stroke-width="0.3" opacity="0.05"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#star-network)"/>
-    </svg>
-
-    <!-- Option 10: Tissage (neutre) -->
-    <svg class="section-bg-svg participer-bg" data-section="participer" data-variant="10" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="weave" width="40" height="40" patternUnits="userSpaceOnUse">
-          <line x1="0" y1="10" x2="40" y2="10" stroke="#2563EB" stroke-width="2" opacity="0.05"/>
-          <line x1="0" y1="30" x2="40" y2="30" stroke="#2563EB" stroke-width="2" opacity="0.05"/>
-          <line x1="10" y1="0" x2="10" y2="40" stroke="#2563EB" stroke-width="2" opacity="0.05"/>
-          <line x1="30" y1="0" x2="30" y2="40" stroke="#2563EB" stroke-width="2" opacity="0.05"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#weave)"/>
     </svg>
 
     <div class="container">
@@ -1608,128 +1299,8 @@
        NOS OUTILS
        ============================================ -->
   <section id="section-outils">
-    <!-- Option 1: Neutre (vide) -->
+    <!-- Neutre (vide) -->
     <svg class="section-bg-svg outils-bg active" data-section="outils" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    </svg>
-
-    <!-- Option 2: Widgets pattern (dashboards) -->
-    <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="widgets" width="140" height="100" patternUnits="userSpaceOnUse">
-          <rect x="10" y="10" width="55" height="35" rx="4" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <rect x="75" y="10" width="55" height="35" rx="4" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <rect x="10" y="55" width="120" height="35" rx="4" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <line x1="20" y1="22" x2="50" y2="22" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
-          <line x1="20" y1="28" x2="55" y2="28" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#widgets)"/>
-    </svg>
-
-    <!-- Option 3: Barres pattern (graphiques) -->
-    <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="bars" width="100" height="80" patternUnits="userSpaceOnUse">
-          <rect x="15" y="45" width="10" height="25" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.1"/>
-          <rect x="30" y="35" width="10" height="35" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.1"/>
-          <rect x="45" y="40" width="10" height="30" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.1"/>
-          <rect x="60" y="30" width="10" height="40" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.1"/>
-          <rect x="75" y="38" width="10" height="32" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.1"/>
-          <line x1="10" y1="70" x2="90" y2="70" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#bars)"/>
-    </svg>
-
-    <!-- Option 4: Grille dashboard (neutre) -->
-    <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="grid-dashboard" width="50" height="50" patternUnits="userSpaceOnUse">
-          <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#2563EB" stroke-width="0.3" opacity="0.06"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#grid-dashboard)"/>
-    </svg>
-
-    <!-- Option 5: Courbes de données (line charts) -->
-    <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="5" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="data-curves" width="120" height="80" patternUnits="userSpaceOnUse">
-          <path d="M 0 60 Q 15 45 30 50 T 60 55 T 90 45 T 120 50" stroke="#2563EB" stroke-width="0.8" opacity="0.09" fill="none"/>
-          <path d="M 0 35 Q 15 25 30 30 T 60 28 T 90 22 T 120 25" stroke="#2563EB" stroke-width="0.8" opacity="0.06" fill="none"/>
-          <circle cx="30" cy="50" r="1.5" fill="#2563EB" opacity="0.08"/>
-          <circle cx="60" cy="55" r="1.5" fill="#2563EB" opacity="0.08"/>
-          <circle cx="90" cy="45" r="1.5" fill="#2563EB" opacity="0.08"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#data-curves)"/>
-    </svg>
-
-    <!-- Option 6: Camembert sections (pie chart sections) -->
-    <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="6" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="pie-sections" width="100" height="100" patternUnits="userSpaceOnUse">
-          <circle cx="50" cy="50" r="20" fill="none" stroke="#2563EB" stroke-width="0.6" opacity="0.06"/>
-          <path d="M 50 50 L 50 30 A 20 20 0 0 1 65.32 41" fill="none" stroke="#2563EB" stroke-width="0.6" opacity="0.1"/>
-          <path d="M 50 50 L 65.32 41 A 20 20 0 0 1 65.32 59" fill="none" stroke="#2563EB" stroke-width="0.6" opacity="0.08"/>
-          <path d="M 50 50 L 65.32 59 A 20 20 0 0 1 50 70" fill="none" stroke="#2563EB" stroke-width="0.6" opacity="0.07"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#pie-sections)"/>
-    </svg>
-
-    <!-- Option 7: Diagonales métriques (metric diagonals) -->
-    <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="7" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="metric-diagonals" width="80" height="80" patternUnits="userSpaceOnUse">
-          <line x1="0" y1="0" x2="80" y2="80" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <line x1="20" y1="0" x2="80" y2="60" stroke="#2563EB" stroke-width="0.5" opacity="0.05"/>
-          <line x1="0" y1="20" x2="60" y2="80" stroke="#2563EB" stroke-width="0.5" opacity="0.05"/>
-          <circle cx="40" cy="40" r="1" fill="#2563EB" opacity="0.1"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#metric-diagonals)"/>
-    </svg>
-
-    <!-- Option 8: Hexagones data (data hexagons - neutre tech) -->
-    <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="8" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="data-hexagons" width="86.6" height="100" patternUnits="userSpaceOnUse">
-          <path d="M 43.3 0 L 86.6 25 L 86.6 75 L 43.3 100 L 0 75 L 0 25 Z" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.07"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#data-hexagons)"/>
-    </svg>
-
-    <!-- Option 9: Lignes de code (code lines - très subtil) -->
-    <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="9" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="code-lines" width="120" height="70" patternUnits="userSpaceOnUse">
-          <line x1="10" y1="15" x2="60" y2="15" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
-          <line x1="20" y1="25" x2="80" y2="25" stroke="#2563EB" stroke-width="0.5" opacity="0.05"/>
-          <line x1="20" y1="35" x2="70" y2="35" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
-          <line x1="10" y1="45" x2="55" y2="45" stroke="#2563EB" stroke-width="0.5" opacity="0.05"/>
-          <line x1="30" y1="55" x2="75" y2="55" stroke="#2563EB" stroke-width="0.5" opacity="0.04"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#code-lines)"/>
-    </svg>
-
-    <!-- Option 10: Points de données scatter (data points) -->
-    <svg class="section-bg-svg outils-bg" data-section="outils" data-variant="10" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="scatter-data" width="100" height="100" patternUnits="userSpaceOnUse">
-          <circle cx="20" cy="30" r="1.5" fill="#2563EB" opacity="0.1"/>
-          <circle cx="45" cy="55" r="1.5" fill="#2563EB" opacity="0.08"/>
-          <circle cx="70" cy="25" r="1.5" fill="#2563EB" opacity="0.09"/>
-          <circle cx="35" cy="75" r="1.5" fill="#2563EB" opacity="0.07"/>
-          <circle cx="80" cy="65" r="1.5" fill="#2563EB" opacity="0.1"/>
-          <circle cx="55" cy="40" r="1.5" fill="#2563EB" opacity="0.08"/>
-          <circle cx="15" cy="70" r="1.5" fill="#2563EB" opacity="0.06"/>
-          <circle cx="90" cy="35" r="1.5" fill="#2563EB" opacity="0.09"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#scatter-data)"/>
     </svg>
 
     <div class="container">
@@ -1823,49 +1394,7 @@
        QUI SOMMES-NOUS
        ============================================ -->
   <section id="section-about">
-    <!-- Option 1: Neutre (vide) -->
-    <svg class="section-bg-svg about-bg" data-section="about" data-variant="1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    </svg>
-
-    <!-- Option 2: Code pattern (tech) -->
-    <svg class="section-bg-svg about-bg" data-section="about" data-variant="2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="code-brackets" width="120" height="80" patternUnits="userSpaceOnUse">
-          <path d="M 30 25 L 20 40 L 30 55" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.08"/>
-          <path d="M 50 25 L 60 40 L 50 55" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.08"/>
-          <line x1="70" y1="35" x2="85" y2="45" stroke="#2563EB" stroke-width="0.8" opacity="0.06"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#code-brackets)"/>
-    </svg>
-
-    <!-- Option 3: Briques code mix (tech+construction) -->
-    <svg class="section-bg-svg about-bg" data-section="about" data-variant="3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="brick-code" width="140" height="60" patternUnits="userSpaceOnUse">
-          <!-- Brique -->
-          <rect x="5" y="5" width="60" height="20" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
-          <rect x="70" y="5" width="60" height="20" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
-          <!-- Deuxième rangée décalée -->
-          <rect x="-25" y="30" width="60" height="20" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
-          <rect x="40" y="30" width="60" height="20" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
-          <rect x="105" y="30" width="60" height="20" rx="1" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.06"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#brick-code)"/>
-    </svg>
-
-    <!-- Option 4: Diagonales (neutre) -->
-    <svg class="section-bg-svg about-bg" data-section="about" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="diagonals" width="40" height="40" patternUnits="userSpaceOnUse">
-          <line x1="0" y1="0" x2="40" y2="40" stroke="#2563EB" stroke-width="0.3" opacity="0.06"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#diagonals)"/>
-    </svg>
-
-    <!-- Option 5: Code HTML réel -->
+    <!-- Code HTML réel -->
     <svg class="section-bg-svg about-bg active" data-section="about" data-variant="5" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
         <pattern id="real-html-code" width="300" height="100" patternUnits="userSpaceOnUse">
@@ -1876,71 +1405,6 @@
         </pattern>
       </defs>
       <rect width="1200" height="800" fill="url(#real-html-code)"/>
-    </svg>
-
-    <!-- Option 6: Code CSS réel -->
-    <svg class="section-bg-svg about-bg" data-section="about" data-variant="6" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="real-css-code" width="280" height="110" patternUnits="userSpaceOnUse">
-          <text x="5" y="20" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.08">.container {</text>
-          <text x="15" y="40" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.07">  display: flex;</text>
-          <text x="15" y="60" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.07">  color: #084e9a;</text>
-          <text x="5" y="80" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.08">}</text>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#real-css-code)"/>
-    </svg>
-
-    <!-- Option 7: Code JavaScript réel -->
-    <svg class="section-bg-svg about-bg" data-section="about" data-variant="7" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="real-js-code" width="320" height="110" patternUnits="userSpaceOnUse">
-          <text x="5" y="20" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.08">const handleClick = () =&gt; {</text>
-          <text x="15" y="40" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.07">  return data.map(item =&gt;</text>
-          <text x="15" y="60" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.06">  // Update state</text>
-          <text x="5" y="80" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.08">}</text>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#real-js-code)"/>
-    </svg>
-
-    <!-- Option 8: Code React/JSX réel -->
-    <svg class="section-bg-svg about-bg" data-section="about" data-variant="8" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="real-react-code" width="300" height="110" patternUnits="userSpaceOnUse">
-          <text x="5" y="20" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.08">return (</text>
-          <text x="15" y="40" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.07">  &lt;div className="app"&gt;</text>
-          <text x="25" y="60" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.07">    {children}</text>
-          <text x="15" y="80" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.08">  &lt;/div&gt;</text>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#real-react-code)"/>
-    </svg>
-
-    <!-- Option 9: Code JSON réel -->
-    <svg class="section-bg-svg about-bg" data-section="about" data-variant="9" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="real-json-code" width="280" height="110" patternUnits="userSpaceOnUse">
-          <text x="5" y="20" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.08">{</text>
-          <text x="15" y="40" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.07">  "name": "protoreno",</text>
-          <text x="15" y="60" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.07">  "version": "1.0.0",</text>
-          <text x="5" y="80" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.08">}</text>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#real-json-code)"/>
-    </svg>
-
-    <!-- Option 10: Code TypeScript/Imports réel -->
-    <svg class="section-bg-svg about-bg" data-section="about" data-variant="10" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="real-ts-code" width="350" height="110" patternUnits="userSpaceOnUse">
-          <text x="5" y="20" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.08">import React from 'react';</text>
-          <text x="5" y="40" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.07">export const App = () =&gt; {</text>
-          <text x="5" y="60" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.06">interface Props {</text>
-          <text x="5" y="80" font-family="monospace" font-size="11" fill="#2563EB" opacity="0.08">useState&lt;string&gt;</text>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#real-ts-code)"/>
     </svg>
 
     <div class="container">
