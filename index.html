@@ -747,7 +747,7 @@
       font-weight: 600;
     }
 
-    /* Variante 1 : Souligné progressif (gradient underline) */
+    /* Variante 1 : Souligné épais gradient (bleu clair → foncé) */
     .hero-title-variant-1 .hero-highlight {
       font-weight: 800;
       position: relative;
@@ -761,27 +761,37 @@
       bottom: 0;
       left: 0;
       right: 0;
-      height: 6px;
-      background: linear-gradient(90deg, transparent 0%, #2563EB 50%, transparent 100%);
-      border-radius: 3px;
+      height: 8px;
+      background: linear-gradient(90deg, #60A5FA 0%, #2563EB 100%);
+      border-radius: 4px;
     }
 
-    /* Variante 2 : Bleu vif + fond subtil */
+    /* Variante 2 : Souligné épais arrondi (plein bleu) */
     .hero-title-variant-2 .hero-highlight {
-      color: #2563EB;
       font-weight: 800;
-      background: rgba(37, 99, 235, 0.08);
-      padding: 0.25rem 1rem;
-      border-radius: 6px;
+      position: relative;
       display: inline-block;
+      padding-bottom: 0.5rem;
     }
 
-    /* Variante 3 : Soulignement épais (TOP 3) */
+    .hero-title-variant-2 .hero-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: #2563EB;
+      border-radius: 5px;
+    }
+
+    /* Variante 3 : Souligné très épais (12px) */
     .hero-title-variant-3 .hero-highlight {
       font-weight: 800;
       position: relative;
       display: inline-block;
       padding-bottom: 0.5rem;
+      color: #1E40AF;
     }
 
     .hero-title-variant-3 .hero-highlight::after {
@@ -790,18 +800,41 @@
       bottom: 0;
       left: 0;
       right: 0;
-      height: 8px;
-      background: linear-gradient(90deg, #60A5FA 0%, #2563EB 100%);
-      border-radius: 4px;
+      height: 12px;
+      background: linear-gradient(90deg, #60A5FA 0%, #1E40AF 100%);
+      border-radius: 6px;
     }
 
-    /* Variante 4 : Couleur bleu vif simple (TOP 3) */
+    /* Variante 4 : Souligné avec trait fin au-dessus */
     .hero-title-variant-4 .hero-highlight {
-      color: #2563EB;
       font-weight: 800;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem;
     }
 
-    /* Variante 5 : Double soulignement fin */
+    .hero-title-variant-4 .hero-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 7px;
+      background: #2563EB;
+      border-radius: 3px;
+    }
+
+    .hero-title-variant-4 .hero-highlight::before {
+      content: '';
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #60A5FA;
+    }
+
+    /* Variante 5 : Double trait espacé (bleu clair + foncé) */
     .hero-title-variant-5 .hero-highlight {
       font-weight: 800;
       color: #2563EB;
@@ -830,46 +863,129 @@
       background: #60A5FA;
     }
 
-    /* Variante 6 : Bleu + bordure bottom épaisse */
+    /* Variante 6 : Double trait épais (4px + 4px) */
     .hero-title-variant-6 .hero-highlight {
+      font-weight: 800;
       color: #1E40AF;
-      font-weight: 800;
-      border-bottom: 4px solid #2563EB;
-      padding-bottom: 0.25rem;
+      position: relative;
       display: inline-block;
+      padding-bottom: 1rem;
     }
 
-    /* Variante 7 : Gradient bleu doux (foncé → clair) */
+    .hero-title-variant-6 .hero-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #2563EB;
+      border-radius: 2px;
+    }
+
+    .hero-title-variant-6 .hero-highlight::before {
+      content: '';
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #60A5FA;
+      border-radius: 2px;
+    }
+
+    /* Variante 7 : Double trait serré (très proche) */
     .hero-title-variant-7 .hero-highlight {
-      background: linear-gradient(135deg, #1E40AF 0%, #60A5FA 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
       font-weight: 800;
-    }
-
-    /* Variante 8 : Bleu + espacement lettres */
-    .hero-title-variant-8 .hero-highlight {
       color: #2563EB;
-      font-weight: 800;
-      letter-spacing: 0.05em;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.625rem;
     }
 
-    /* Variante 9 : Mix bleu/orange subtil */
+    .hero-title-variant-7 .hero-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: #2563EB;
+    }
+
+    .hero-title-variant-7 .hero-highlight::before {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: #60A5FA;
+    }
+
+    /* Variante 8 : Triple trait fin (dégradé d'intensité) */
+    .hero-title-variant-8 .hero-highlight {
+      font-weight: 800;
+      color: #2563EB;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 1rem;
+      box-shadow: 0 8px 0 0 #DBEAFE,
+                  0 11px 0 0 #60A5FA,
+                  0 14px 0 0 #2563EB;
+    }
+
+    /* Variante 9 : Double trait gradient (chaque trait en gradient) */
     .hero-title-variant-9 .hero-highlight {
       font-weight: 800;
-      color: #2563EB;
+      color: #1E40AF;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.875rem;
     }
 
-    .hero-title-variant-9 .hero-highlight .word-accent {
-      color: #F59E0B;
+    .hero-title-variant-9 .hero-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #60A5FA 0%, #2563EB 100%);
+      border-radius: 1.5px;
     }
 
-    /* Variante 10 : Mix couleur + gras + ombre (TOP 3) */
+    .hero-title-variant-9 .hero-highlight::before {
+      content: '';
+      position: absolute;
+      bottom: 7px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #DBEAFE 0%, #60A5FA 100%);
+      border-radius: 1.5px;
+    }
+
+    /* Variante 10 : Souligné avec couleur texte + ombre */
     .hero-title-variant-10 .hero-highlight {
       color: #2563EB;
       font-weight: 800;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem;
       text-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    }
+
+    .hero-title-variant-10 .hero-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #60A5FA 0%, #2563EB 100%);
+      border-radius: 3px;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
     }
 
     /* ============================================
@@ -2215,43 +2331,43 @@
         </label>
         <label>
           <input type="radio" name="hero-title-variant" value="1" class="hero-title-option">
-          <span class="hero-title-label">Souligné fade</span>
+          <span class="hero-title-label">Souligné 8px gradient</span>
         </label>
         <label>
           <input type="radio" name="hero-title-variant" value="2" class="hero-title-option">
-          <span class="hero-title-label">Bleu + fond</span>
+          <span class="hero-title-label">Souligné 10px arrondi</span>
         </label>
         <label>
           <input type="radio" name="hero-title-variant" value="3" class="hero-title-option">
-          <span class="hero-title-label">⭐ Souligné</span>
+          <span class="hero-title-label">Souligné 12px XL</span>
         </label>
         <label>
           <input type="radio" name="hero-title-variant" value="4" class="hero-title-option">
-          <span class="hero-title-label">⭐ Bleu vif</span>
+          <span class="hero-title-label">Souligné + trait fin</span>
         </label>
         <label>
           <input type="radio" name="hero-title-variant" value="5" class="hero-title-option">
-          <span class="hero-title-label">Double trait</span>
+          <span class="hero-title-label">Double trait fin</span>
         </label>
         <label>
           <input type="radio" name="hero-title-variant" value="6" class="hero-title-option">
-          <span class="hero-title-label">Bordure bottom</span>
+          <span class="hero-title-label">Double trait épais</span>
         </label>
         <label>
           <input type="radio" name="hero-title-variant" value="7" class="hero-title-option">
-          <span class="hero-title-label">Gradient doux</span>
+          <span class="hero-title-label">Double trait serré</span>
         </label>
         <label>
           <input type="radio" name="hero-title-variant" value="8" class="hero-title-option">
-          <span class="hero-title-label">Lettres espacées</span>
+          <span class="hero-title-label">Triple trait</span>
         </label>
         <label>
           <input type="radio" name="hero-title-variant" value="9" class="hero-title-option">
-          <span class="hero-title-label">Bleu/Orange</span>
+          <span class="hero-title-label">Double gradient</span>
         </label>
         <label>
           <input type="radio" name="hero-title-variant" value="10" class="hero-title-option">
-          <span class="hero-title-label">⭐ Mix</span>
+          <span class="hero-title-label">Souligné + ombre</span>
         </label>
       </div>
 
