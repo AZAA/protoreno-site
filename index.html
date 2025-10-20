@@ -954,241 +954,357 @@
       color: var(--slate);
     }
 
-    /* Variante 6 : Chiffre géant minimaliste */
-    .geant-card {
-      text-align: center !important;
-      padding: 3rem 2rem !important;
+    /* Variante 6 : Chiffre dans carré gradient (style variante 1) */
+    .constat-variant-6 .problem-card {
+      padding: 3rem 2rem;
+    }
+
+    .constat-variant-6 .chiffre-box {
+      width: 140px;
+      height: 140px;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border: 3px solid #2563EB;
+      border-radius: 12px;
+      margin: 0 auto 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s;
+    }
+
+    .constat-variant-6 .chiffre-display {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #2563EB;
+      line-height: 1;
+    }
+
+    .constat-variant-6 .problem-card:hover .chiffre-box {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      border-color: #1D4ED8;
+      transform: scale(1.05);
+    }
+
+    .constat-variant-6 .problem-card:hover .chiffre-display {
+      color: white;
+    }
+
+    .constat-variant-6 .problem-card h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .constat-variant-6 .problem-card p {
+      font-size: 1.0625rem;
+      color: var(--slate);
+    }
+
+    /* Variante 7 : Icône + Badge chiffré superposé */
+    .constat-variant-7 .problem-card {
+      padding: 3rem 2rem;
+      position: relative;
+    }
+
+    .constat-variant-7 .problem-icon {
+      width: 140px;
+      height: 140px;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border: 3px solid #2563EB;
+      border-radius: 12px;
+      margin: 0 auto 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: all 0.4s;
+    }
+
+    .constat-variant-7 .problem-icon svg {
+      width: 70px;
+      height: 70px;
+      color: #2563EB;
+    }
+
+    .constat-variant-7 .badge-chiffre {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      width: 56px;
+      height: 56px;
+      background: #1E40AF;
+      border: 3px solid white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: white;
+      box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+    }
+
+    .constat-variant-7 .problem-card:hover .problem-icon {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      border-color: #1D4ED8;
+      transform: scale(1.05);
+    }
+
+    .constat-variant-7 .problem-card:hover .problem-icon svg {
+      color: white;
+    }
+
+    .constat-variant-7 .problem-card:hover .badge-chiffre {
+      transform: scale(1.15);
+      background: #2563EB;
+    }
+
+    .constat-variant-7 .problem-card h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .constat-variant-7 .problem-card p {
+      font-size: 1.0625rem;
+      color: var(--slate);
+    }
+
+    /* Variante 8 : Double niveau (petit problème / GROS impact) */
+    .constat-variant-8 .problem-card {
+      padding: 2.5rem 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
-    }
-
-    .geant-icon {
-      font-size: 3rem;
-      opacity: 0.3;
-    }
-
-    .geant-chiffre {
-      font-size: 5rem;
-      font-weight: 900;
-      color: var(--blue);
-      line-height: 1;
-    }
-
-    .geant-titre {
-      font-size: 1.125rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.5rem;
-    }
-
-    .geant-contexte {
-      font-size: 0.875rem;
-      color: var(--slate);
-      margin: 0 !important;
-      max-width: 280px;
-    }
-
-    /* Variante 7 : Problème → Impact (flèche causale) */
-    .fleche-card {
-      padding: 2rem 1.5rem !important;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .fleche-probleme {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      background: var(--bg);
-      border-radius: 12px 12px 0 0;
-      border: 1px solid var(--light-gray);
-    }
-
-    .fleche-icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .fleche-titre-pb {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: var(--navy);
-    }
-
-    .fleche-arrow {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #EF4444;
-      text-align: center;
-      line-height: 1;
-      margin: -0.5rem 0;
-    }
-
-    .fleche-impact {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
-      border: 2px solid #EF4444;
-      border-radius: 0 0 12px 12px;
-    }
-
-    .impact-chiffre {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #DC2626;
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-
-    .impact-label {
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: #EF4444;
-      letter-spacing: 0.05em;
-    }
-
-    /* Variante 8 : Badge + barre de progression */
-    .barre-card {
-      padding: 2.5rem 2rem !important;
-      display: flex;
-      flex-direction: column;
       gap: 1.5rem;
     }
 
-    .barre-badge {
-      display: inline-block;
-      padding: 0.5rem 1.5rem;
-      background: var(--blue);
+    .constat-variant-8 .petit-carre {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border: 2px solid #2563EB;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s;
+    }
+
+    .constat-variant-8 .petit-carre svg {
+      width: 40px;
+      height: 40px;
+      color: #2563EB;
+    }
+
+    .constat-variant-8 .gros-carre {
+      width: 180px;
+      height: 180px;
+      background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
+      border: 3px solid #1E40AF;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s;
+    }
+
+    .constat-variant-8 .gros-chiffre {
+      font-size: 4rem;
+      font-weight: 900;
+      color: #1E40AF;
+      line-height: 1;
+    }
+
+    .constat-variant-8 .problem-card:hover .petit-carre {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      transform: translateY(-5px);
+    }
+
+    .constat-variant-8 .problem-card:hover .petit-carre svg {
       color: white;
-      border-radius: 24px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      align-self: flex-start;
     }
 
-    .barre-container {
-      position: relative;
+    .constat-variant-8 .problem-card:hover .gros-carre {
+      background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+      border-color: #1E3A8A;
+      transform: scale(1.05);
+    }
+
+    .constat-variant-8 .problem-card:hover .gros-chiffre {
+      color: white;
+    }
+
+    .constat-variant-8 .problem-card h3 {
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+    }
+
+    .constat-variant-8 .problem-card p {
+      font-size: 1rem;
+      color: var(--slate);
+      margin: 0;
+    }
+
+    /* Variante 9 : Barres quantifiées bleues */
+    .constat-variant-9-new .problem-card {
+      padding: 3rem 2rem;
+    }
+
+    .constat-variant-9-new .problem-icon {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border: 3px solid #2563EB;
+      border-radius: 12px;
+      margin: 0 auto 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s;
+    }
+
+    .constat-variant-9-new .problem-icon svg {
+      width: 50px;
+      height: 50px;
+      color: #2563EB;
+    }
+
+    .constat-variant-9-new .barre-bleue {
       width: 100%;
-      height: 48px;
-      background: var(--bg);
-      border-radius: 24px;
+      height: 32px;
+      background: #EFF6FF;
+      border: 2px solid #BFDBFE;
+      border-radius: 16px;
+      position: relative;
       overflow: hidden;
-      border: 2px solid var(--light-gray);
+      margin: 1.5rem 0;
     }
 
-    .barre-fill {
+    .constat-variant-9-new .barre-fill {
       position: absolute;
       left: 0;
       top: 0;
       height: 100%;
-      background: linear-gradient(90deg, var(--blue) 0%, #1E40AF 100%);
+      background: linear-gradient(90deg, #60A5FA 0%, #2563EB 100%);
+      border-radius: 16px;
       transition: width 0.6s ease;
-      border-radius: 24px 0 0 24px;
     }
 
-    .barre-percentage {
+    .constat-variant-9-new .barre-label {
       position: absolute;
-      right: 1.5rem;
+      right: 12px;
       top: 50%;
       transform: translateY(-50%);
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1E40AF;
+    }
+
+    .constat-variant-9-new .problem-card:hover .problem-icon {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      border-color: #1D4ED8;
+      transform: scale(1.05);
+    }
+
+    .constat-variant-9-new .problem-card:hover .problem-icon svg {
+      color: white;
+    }
+
+    .constat-variant-9-new .problem-card h3 {
       font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--navy);
+      margin-bottom: 0.75rem;
     }
 
-    .barre-card h3 {
-      font-size: 1.25rem;
-      color: var(--navy);
-      margin: 0 !important;
-    }
-
-    .barre-card p {
-      font-size: 0.9375rem;
-      color: var(--slate);
-      margin: 0 !important;
-    }
-
-    /* Variante 9 : Icône + 3 impacts bullets */
-    .bullets-card {
-      text-align: left !important;
-      padding: 2.5rem 2rem !important;
-    }
-
-    .bullets-icon {
-      font-size: 3.5rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .bullets-card h3 {
-      font-size: 1.375rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      color: var(--navy);
-    }
-
-    .impact-bullets {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .impact-bullets li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.9375rem;
-      line-height: 1.5;
+    .constat-variant-9-new .problem-card p {
+      font-size: 1rem;
       color: var(--slate);
     }
 
-    .bullet-marker {
-      display: inline-block;
-      color: #EF4444;
-      font-weight: 800;
-      font-size: 1.125rem;
-      flex-shrink: 0;
+    /* Variante 10 : 1 grande icône + 3 micro-chiffres */
+    .constat-variant-10 .problem-card {
+      padding: 3rem 2rem;
     }
 
-    /* Variante 10 : Gauge circulaire + conséquence € */
-    .gauge-card {
-      text-align: center !important;
-      padding: 2.5rem 2rem !important;
+    .constat-variant-10 .icone-principale {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border: 3px solid #2563EB;
+      border-radius: 12px;
+      margin: 0 auto 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s;
+    }
+
+    .constat-variant-10 .icone-principale svg {
+      width: 60px;
+      height: 60px;
+      color: #2563EB;
+    }
+
+    .constat-variant-10 .micro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .constat-variant-10 .micro-carre {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
+      gap: 0.5rem;
     }
 
-    .gauge-circle {
-      width: 120px;
-      height: 120px;
-      margin-bottom: 0.5rem;
-    }
-
-    .gauge-card h3 {
-      font-size: 1.125rem;
-      color: var(--navy);
-      margin: 0 !important;
-    }
-
-    .gauge-montant {
-      font-size: 2.5rem;
+    .constat-variant-10 .micro-box {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
+      border: 2px solid #60A5FA;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
       font-weight: 800;
-      color: #DC2626;
-      line-height: 1;
+      color: #1E40AF;
+      transition: all 0.3s;
     }
 
-    .gauge-label {
-      font-size: 0.875rem;
+    .constat-variant-10 .micro-label {
+      font-size: 0.75rem;
+      font-weight: 600;
       color: var(--slate);
-      margin: 0 !important;
+      text-align: center;
+    }
+
+    .constat-variant-10 .problem-card:hover .icone-principale {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      border-color: #1D4ED8;
+      transform: scale(1.05);
+    }
+
+    .constat-variant-10 .problem-card:hover .icone-principale svg {
+      color: white;
+    }
+
+    .constat-variant-10 .problem-card:hover .micro-box {
+      background: linear-gradient(135deg, #60A5FA 0%, #2563EB 100%);
+      border-color: #1E40AF;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .constat-variant-10 .problem-card h3 {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 0.75rem;
+    }
+
+    .constat-variant-10 .problem-card p {
+      font-size: 1rem;
+      color: var(--slate);
+      margin: 0;
     }
 
     .section-variant-selector {
@@ -2506,183 +2622,237 @@
         </div>
       </div>
 
-      <!-- Variante 6 : Chiffre géant minimaliste -->
+      <!-- Variante 6 : Chiffre dans carré gradient -->
       <div class="constat-variant-6">
         <div class="problem-grid">
-          <div class="problem-card geant-card">
-            <div class="geant-icon">⏱️</div>
-            <div class="geant-chiffre">14h</div>
-            <div class="geant-titre">perdues chaque semaine</div>
-            <p class="geant-contexte">En paperasse administrative au lieu d'être sur vos chantiers</p>
+          <div class="problem-card">
+            <div class="chiffre-box">
+              <div class="chiffre-display">14h</div>
+            </div>
+            <h3>Temps perdu chaque semaine</h3>
+            <p>En paperasse administrative au lieu d'être sur vos chantiers</p>
           </div>
 
-          <div class="problem-card geant-card">
-            <div class="geant-icon">📋</div>
-            <div class="geant-chiffre">47%</div>
-            <div class="geant-titre">de dossiers incomplets</div>
-            <p class="geant-contexte">Refus au premier envoi = recommencer tout le processus</p>
+          <div class="problem-card">
+            <div class="chiffre-box">
+              <div class="chiffre-display">47%</div>
+            </div>
+            <h3>De dossiers incomplets</h3>
+            <p>Refus au premier envoi par manque de pièces justificatives</p>
           </div>
 
-          <div class="problem-card geant-card">
-            <div class="geant-icon">💸</div>
-            <div class="geant-chiffre">3 200€</div>
-            <div class="geant-titre">perdus par abandon</div>
-            <p class="geant-contexte">Quand un client renonce face à la complexité</p>
+          <div class="problem-card">
+            <div class="chiffre-box">
+              <div class="chiffre-display">3.2k€</div>
+            </div>
+            <h3>Perdus par abandon client</h3>
+            <p>Quand la complexité administrative fait renoncer à un projet</p>
           </div>
         </div>
       </div>
 
-      <!-- Variante 7 : Problème → Impact (flèche causale) -->
+      <!-- Variante 7 : Icône + Badge chiffré superposé -->
       <div class="constat-variant-7">
         <div class="problem-grid">
-          <div class="problem-card fleche-card">
-            <div class="fleche-probleme">
-              <div class="fleche-icon">📧</div>
-              <div class="fleche-titre-pb">Emails partout</div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div class="badge-chiffre">14h</div>
             </div>
-            <div class="fleche-arrow">↓</div>
-            <div class="fleche-impact">
-              <div class="impact-chiffre">2h/jour</div>
-              <div class="impact-label">PERDUES</div>
-            </div>
+            <h3>Temps perdu en paperasse</h3>
+            <p>Chaque semaine passée en administration au lieu du terrain</p>
           </div>
 
-          <div class="problem-card fleche-card">
-            <div class="fleche-probleme">
-              <div class="fleche-icon">📊</div>
-              <div class="fleche-titre-pb">Excel pour tout</div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <div class="badge-chiffre">6</div>
             </div>
-            <div class="fleche-arrow">↓</div>
-            <div class="fleche-impact">
-              <div class="impact-chiffre">0</div>
-              <div class="impact-label">VISION GLOBALE</div>
-            </div>
+            <h3>Outils différents par chantier</h3>
+            <p>Excel, emails, WhatsApp, Drive... aucune vision d'ensemble</p>
           </div>
 
-          <div class="problem-card fleche-card">
-            <div class="fleche-probleme">
-              <div class="fleche-icon">🔄</div>
-              <div class="fleche-titre-pb">Relances manuelles</div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              <div class="badge-chiffre">1/3</div>
             </div>
-            <div class="fleche-arrow">↓</div>
-            <div class="fleche-impact">
-              <div class="impact-chiffre">25%</div>
-              <div class="impact-label">ABANDONNENT</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Variante 8 : Badge + barre de progression -->
-      <div class="constat-variant-8">
-        <div class="problem-grid">
-          <div class="problem-card barre-card">
-            <div class="barre-badge">DOSSIERS</div>
-            <div class="barre-container">
-              <div class="barre-fill" style="width: 73%;"></div>
-              <div class="barre-percentage">73%</div>
-            </div>
-            <h3>de votre temps en administration</h3>
-            <p>Au lieu d'être sur le terrain ou à prospecter</p>
-          </div>
-
-          <div class="problem-card barre-card">
-            <div class="barre-badge">OUTILS</div>
-            <div class="barre-container">
-              <div class="barre-fill" style="width: 100%;"></div>
-              <div class="barre-percentage">6</div>
-            </div>
-            <h3>outils différents par chantier</h3>
-            <p>Excel, emails, WhatsApp, Drive, papier, téléphone...</p>
-          </div>
-
-          <div class="problem-card barre-card">
-            <div class="barre-badge">CLIENTS</div>
-            <div class="barre-container">
-              <div class="barre-fill" style="width: 67%;"></div>
-              <div class="barre-percentage">2/3</div>
-            </div>
-            <h3>finissent par abandonner</h3>
+            <h3>Clients qui abandonnent</h3>
             <p>Face à la complexité des démarches administratives</p>
           </div>
         </div>
       </div>
 
-      <!-- Variante 9 : Icône + 3 impacts bullets -->
-      <div class="constat-variant-9-new">
+      <!-- Variante 8 : Double niveau (petit problème / GROS impact) -->
+      <div class="constat-variant-8">
         <div class="problem-grid">
-          <div class="problem-card bullets-card">
-            <div class="bullets-icon">📊</div>
-            <h3>Outils dispersés</h3>
-            <ul class="impact-bullets">
-              <li><span class="bullet-marker">✗</span> 6 outils différents par chantier</li>
-              <li><span class="bullet-marker">✗</span> Aucune vision d'ensemble</li>
-              <li><span class="bullet-marker">✗</span> Temps perdu à chercher l'info</li>
-            </ul>
+          <div class="problem-card">
+            <div class="petit-carre">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3>Emails dispersés</h3>
+            <div class="gros-carre">
+              <div class="gros-chiffre">2h</div>
+            </div>
+            <p>perdues chaque jour à chercher des documents</p>
           </div>
 
-          <div class="problem-card bullets-card">
-            <div class="bullets-icon">⏰</div>
-            <h3>Paperasse qui s'accumule</h3>
-            <ul class="impact-bullets">
-              <li><span class="bullet-marker">✗</span> 14h/semaine d'administration</li>
-              <li><span class="bullet-marker">✗</span> Dossiers incomplets à 47%</li>
-              <li><span class="bullet-marker">✗</span> Relances clients sans fin</li>
-            </ul>
+          <div class="problem-card">
+            <div class="petit-carre">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3>Dossiers incomplets</h3>
+            <div class="gros-carre">
+              <div class="gros-chiffre">47%</div>
+            </div>
+            <p>de refus au premier envoi à l'ANAH</p>
           </div>
 
-          <div class="problem-card bullets-card">
-            <div class="bullets-icon">💰</div>
-            <h3>Pertes financières</h3>
-            <ul class="impact-bullets">
-              <li><span class="bullet-marker">✗</span> 2 800€/mois en productivité</li>
-              <li><span class="bullet-marker">✗</span> 15k€ de CA par abandon</li>
-              <li><span class="bullet-marker">✗</span> 480€ par refus de dossier</li>
-            </ul>
+          <div class="problem-card">
+            <div class="petit-carre">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3>Clients perdus</h3>
+            <div class="gros-carre">
+              <div class="gros-chiffre">3.2k€</div>
+            </div>
+            <p>d'aides non touchées par abandon</p>
           </div>
         </div>
       </div>
 
-      <!-- Variante 10 : Gauge circulaire + conséquence € -->
+      <!-- Variante 9 : Barres quantifiées bleues -->
+      <div class="constat-variant-9-new">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Temps en administration</h3>
+            <div class="barre-bleue">
+              <div class="barre-fill" style="width: 73%;"></div>
+              <div class="barre-label">73%</div>
+            </div>
+            <p>de votre temps passé en paperasse au lieu du terrain</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3>Dossiers refusés</h3>
+            <div class="barre-bleue">
+              <div class="barre-fill" style="width: 47%;"></div>
+              <div class="barre-label">47%</div>
+            </div>
+            <p>de refus au premier envoi par pièce manquante ou erreur</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3>Clients qui abandonnent</h3>
+            <div class="barre-bleue">
+              <div class="barre-fill" style="width: 33%;"></div>
+              <div class="barre-label">1/3</div>
+            </div>
+            <p>renoncent face à la complexité administrative</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 10 : 1 grande icône + 3 micro-chiffres -->
       <div class="constat-variant-10">
         <div class="problem-grid">
-          <div class="problem-card gauge-card">
-            <svg class="gauge-circle" viewBox="0 0 120 120">
-              <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="12"/>
-              <circle cx="60" cy="60" r="50" fill="none" stroke="#EF4444" stroke-width="12"
-                stroke-dasharray="251.2" stroke-dashoffset="75.36" transform="rotate(-90 60 60)"/>
-              <text x="60" y="60" text-anchor="middle" dominant-baseline="middle"
-                font-size="28" font-weight="800" fill="#DC2626">73%</text>
-            </svg>
-            <h3>Dossiers incomplets</h3>
-            <div class="gauge-montant">-3 200€</div>
-            <p class="gauge-label">par client qui abandonne</p>
+          <div class="problem-card">
+            <div class="icone-principale">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Gestion du temps</h3>
+            <p>La paperasse grignote votre productivité quotidienne</p>
+            <div class="micro-grid">
+              <div class="micro-carre">
+                <div class="micro-box">14h</div>
+                <div class="micro-label">par semaine</div>
+              </div>
+              <div class="micro-carre">
+                <div class="micro-box">2h</div>
+                <div class="micro-label">par jour</div>
+              </div>
+              <div class="micro-carre">
+                <div class="micro-box">73%</div>
+                <div class="micro-label">de votre temps</div>
+              </div>
+            </div>
           </div>
 
-          <div class="problem-card gauge-card">
-            <svg class="gauge-circle" viewBox="0 0 120 120">
-              <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="12"/>
-              <circle cx="60" cy="60" r="50" fill="none" stroke="#F59E0B" stroke-width="12"
-                stroke-dasharray="251.2" stroke-dashoffset="25.12" transform="rotate(-90 60 60)"/>
-              <text x="60" y="60" text-anchor="middle" dominant-baseline="middle"
-                font-size="28" font-weight="800" fill="#D97706">90%</text>
-            </svg>
-            <h3>Temps en administration</h3>
-            <div class="gauge-montant">-14h</div>
-            <p class="gauge-label">chaque semaine perdues</p>
+          <div class="problem-card">
+            <div class="icone-principale">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3>Complexité des dossiers</h3>
+            <p>Les refus et erreurs qui s'accumulent et font perdre du temps</p>
+            <div class="micro-grid">
+              <div class="micro-carre">
+                <div class="micro-box">47%</div>
+                <div class="micro-label">refusés</div>
+              </div>
+              <div class="micro-carre">
+                <div class="micro-box">3sem</div>
+                <div class="micro-label">par dossier</div>
+              </div>
+              <div class="micro-carre">
+                <div class="micro-box">6</div>
+                <div class="micro-label">outils</div>
+              </div>
+            </div>
           </div>
 
-          <div class="problem-card gauge-card">
-            <svg class="gauge-circle" viewBox="0 0 120 120">
-              <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="12"/>
-              <circle cx="60" cy="60" r="50" fill="none" stroke="#EF4444" stroke-width="12"
-                stroke-dasharray="251.2" stroke-dashoffset="100.48" transform="rotate(-90 60 60)"/>
-              <text x="60" y="60" text-anchor="middle" dominant-baseline="middle"
-                font-size="24" font-weight="800" fill="#DC2626">6</text>
-            </svg>
-            <h3>Outils utilisés</h3>
-            <div class="gauge-montant">0</div>
-            <p class="gauge-label">vision d'ensemble</p>
+          <div class="problem-card">
+            <div class="icone-principale">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3>Impact sur les clients</h3>
+            <p>La complexité fait fuir et génère des pertes financières</p>
+            <div class="micro-grid">
+              <div class="micro-carre">
+                <div class="micro-box">1/3</div>
+                <div class="micro-label">abandons</div>
+              </div>
+              <div class="micro-carre">
+                <div class="micro-box">3.2k€</div>
+                <div class="micro-label">perdus</div>
+              </div>
+              <div class="micro-carre">
+                <div class="micro-box">10j</div>
+                <div class="micro-label">de retard</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
