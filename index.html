@@ -461,6 +461,743 @@
       font-size: 1.75rem;
     }
 
+    /* ============================================
+       VARIANT SYSTEM FOR CONSTAT & APPROCHE
+       ============================================ */
+    .section-variant {
+      display: none;
+    }
+
+    .section-variant.active {
+      display: block;
+    }
+
+    .section-variant.active .problem-grid,
+    .section-variant.active .approach-steps {
+      display: grid;
+    }
+
+    .section-variant-selector {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid var(--light-gray);
+    }
+
+    .section-variant-option {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .section-variant-label {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: var(--bg);
+      border: 2px solid var(--light-gray);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--slate);
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .section-variant-label:hover {
+      background: var(--blue-light);
+      border-color: var(--blue);
+      color: var(--blue-dark);
+    }
+
+    .section-variant-option:checked + .section-variant-label {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: white;
+      font-weight: 600;
+    }
+
+    /* ============================================
+       CONSTAT VARIANTS
+       ============================================ */
+
+    /* VARIANTE 2: Icônes circulaires bleues (cohérent avec Nos outils) */
+    .constat-variant-2 .problem-icon {
+      width: 90px;
+      height: 90px;
+      background: #2563EB;
+      border-radius: 50%;
+      box-shadow: 0 10px 28px rgba(37, 99, 235, 0.25);
+    }
+
+    .constat-variant-2 .problem-icon svg {
+      color: white;
+      width: 44px;
+      height: 44px;
+    }
+
+    .constat-variant-2 .problem-card:hover .problem-icon {
+      background: #1D4ED8;
+      transform: scale(1.05);
+      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.3);
+    }
+
+    /* VARIANTE 3: Cards alternées blanc/bleu pâle */
+    .constat-variant-3 .problem-card:nth-child(2) {
+      background: linear-gradient(135deg, #F0F9FF 0%, #EFF6FF 100%);
+      border-color: #DBEAFE;
+    }
+
+    .constat-variant-3 .problem-card:nth-child(2) .problem-icon {
+      background: white;
+      border: 2px solid #2563EB;
+    }
+
+    .constat-variant-3 .problem-card:nth-child(2) .problem-icon svg {
+      color: #2563EB;
+    }
+
+    .constat-variant-3 .problem-card:nth-child(1) .problem-icon,
+    .constat-variant-3 .problem-card:nth-child(3) .problem-icon {
+      background: #EFF6FF;
+    }
+
+    .constat-variant-3 .problem-card:nth-child(1) .problem-icon svg,
+    .constat-variant-3 .problem-card:nth-child(3) .problem-icon svg {
+      color: #2563EB;
+    }
+
+    /* VARIANTE 4: Badges numérotés */
+    .constat-variant-4 .problem-card {
+      position: relative;
+      overflow: visible;
+    }
+
+    .constat-variant-4 .problem-card::before {
+      content: '0' counter(problem-counter);
+      counter-increment: problem-counter;
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      z-index: 2;
+    }
+
+    .constat-variant-4 .problem-grid {
+      counter-reset: problem-counter;
+    }
+
+    .constat-variant-4 .problem-icon {
+      background: #EFF6FF;
+    }
+
+    .constat-variant-4 .problem-icon svg {
+      color: #2563EB;
+    }
+
+    .constat-variant-4 .problem-card:hover::before {
+      transform: scale(1.1) rotate(5deg);
+      transition: all 0.3s;
+    }
+
+    /* VARIANTE 5: Bordure épaisse + icône outline */
+    .constat-variant-5 .problem-card {
+      border-left: 8px solid #2563EB;
+      padding-left: 2rem;
+    }
+
+    .constat-variant-5 .problem-icon {
+      width: 90px;
+      height: 90px;
+      background: white;
+      border: 4px solid #2563EB;
+      position: relative;
+    }
+
+    .constat-variant-5 .problem-icon::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 2px solid #60A5FA;
+      border-radius: 8px;
+    }
+
+    .constat-variant-5 .problem-icon svg {
+      color: #2563EB;
+    }
+
+    .constat-variant-5 .problem-card:hover {
+      border-left-width: 12px;
+      transition: all 0.3s;
+    }
+
+    .constat-variant-5 .problem-card:hover .problem-icon {
+      background: #EFF6FF;
+    }
+
+    /* VARIANTE 6: Layout horizontal */
+    .constat-variant-6 .problem-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      text-align: left;
+      padding: 2rem;
+    }
+
+    .constat-variant-6 .problem-icon {
+      width: 80px;
+      height: 80px;
+      min-width: 80px;
+      margin: 0;
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      border-radius: 16px;
+    }
+
+    .constat-variant-6 .problem-icon svg {
+      color: white;
+    }
+
+    .constat-variant-6 .problem-card h3 {
+      text-align: left;
+      margin-bottom: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .constat-variant-6 .problem-card p {
+      text-align: left;
+    }
+
+    /* VARIANTE 7: Ombres XXL */
+    .constat-variant-7 .problem-card {
+      box-shadow: 0 20px 60px rgba(37, 99, 235, 0.15), 0 10px 30px rgba(37, 99, 235, 0.1);
+      transform: translateY(0);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .constat-variant-7 .problem-icon {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      box-shadow: 0 15px 40px rgba(37, 99, 235, 0.3);
+    }
+
+    .constat-variant-7 .problem-icon svg {
+      color: white;
+    }
+
+    .constat-variant-7 .problem-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 30px 80px rgba(37, 99, 235, 0.25), 0 15px 40px rgba(37, 99, 235, 0.15);
+    }
+
+    .constat-variant-7 .problem-card:hover .problem-icon {
+      box-shadow: 0 20px 50px rgba(37, 99, 235, 0.4);
+      transform: scale(1.05);
+    }
+
+    /* VARIANTE 8: Header bleu */
+    .constat-variant-8 .problem-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .constat-variant-8 .problem-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 0;
+      background: white;
+      border: 3px solid white;
+    }
+
+    .constat-variant-8 .problem-icon svg {
+      color: #2563EB;
+    }
+
+    .constat-variant-8 .problem-card > div:first-child {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      padding: 2.5rem 2rem 2rem;
+      margin-bottom: 0;
+    }
+
+    .constat-variant-8 .problem-card h3 {
+      color: white;
+      margin-bottom: 0;
+      padding: 1.5rem 2rem 0;
+    }
+
+    .constat-variant-8 .problem-card p {
+      padding: 1rem 2rem 2.5rem;
+      color: var(--slate);
+    }
+
+    .constat-variant-8 .problem-card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* VARIANTE 9: Icônes XXL (Hero style) */
+    .constat-variant-9 .problem-card {
+      padding: 3rem 2rem;
+    }
+
+    .constat-variant-9 .problem-icon {
+      width: 140px;
+      height: 140px;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border: 3px solid #2563EB;
+      margin-bottom: 2.5rem;
+    }
+
+    .constat-variant-9 .problem-icon svg {
+      width: 70px;
+      height: 70px;
+      color: #2563EB;
+    }
+
+    .constat-variant-9 .problem-card h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .constat-variant-9 .problem-card p {
+      font-size: 1.0625rem;
+      color: var(--slate);
+    }
+
+    .constat-variant-9 .problem-card:hover .problem-icon {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      border-color: #1D4ED8;
+      transform: scale(1.05);
+      transition: all 0.4s;
+    }
+
+    .constat-variant-9 .problem-card:hover .problem-icon svg {
+      color: white;
+    }
+
+    /* VARIANTE 10: Glassmorphism */
+    .constat-variant-10 .problem-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 8px 32px rgba(37, 99, 235, 0.1);
+    }
+
+    .constat-variant-10 .problem-icon {
+      background: rgba(37, 99, 235, 0.15);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 2px solid rgba(37, 99, 235, 0.3);
+    }
+
+    .constat-variant-10 .problem-icon svg {
+      color: #2563EB;
+    }
+
+    .constat-variant-10 .problem-card:hover {
+      background: rgba(255, 255, 255, 0.85);
+      border-color: rgba(37, 99, 235, 0.4);
+      box-shadow: 0 12px 48px rgba(37, 99, 235, 0.15);
+    }
+
+    .constat-variant-10 .problem-card:hover .problem-icon {
+      background: rgba(37, 99, 235, 0.25);
+      border-color: rgba(37, 99, 235, 0.5);
+    }
+
+    /* VARIANTE 11: Hover transformation complète */
+    .constat-variant-11 .problem-card {
+      background: #FAFAFA;
+      border: 1px solid #E5E7EB;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .constat-variant-11 .problem-icon {
+      background: white;
+      border: 2px solid #E5E7EB;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .constat-variant-11 .problem-icon svg {
+      color: #9CA3AF;
+      transition: all 0.5s;
+    }
+
+    .constat-variant-11 .problem-card h3,
+    .constat-variant-11 .problem-card p {
+      transition: all 0.5s;
+    }
+
+    .constat-variant-11 .problem-card:hover {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      border-color: #1D4ED8;
+      transform: scale(1.05);
+      box-shadow: 0 20px 60px rgba(37, 99, 235, 0.3);
+    }
+
+    .constat-variant-11 .problem-card:hover .problem-icon {
+      background: white;
+      border-color: white;
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .constat-variant-11 .problem-card:hover .problem-icon svg {
+      color: #2563EB;
+    }
+
+    .constat-variant-11 .problem-card:hover h3 {
+      color: white;
+    }
+
+    .constat-variant-11 .problem-card:hover p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* VARIANTE 12: Cards connectées */
+    .constat-variant-12 .problem-grid {
+      position: relative;
+    }
+
+    .constat-variant-12 .problem-grid::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, transparent 0%, #2563EB 20%, #2563EB 80%, transparent 100%);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    .constat-variant-12 .problem-card {
+      position: relative;
+      z-index: 1;
+    }
+
+    .constat-variant-12 .problem-card::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      background: #2563EB;
+      border: 4px solid white;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      z-index: -1;
+    }
+
+    .constat-variant-12 .problem-icon {
+      background: #EFF6FF;
+      border: 3px solid #2563EB;
+    }
+
+    .constat-variant-12 .problem-icon svg {
+      color: #2563EB;
+    }
+
+    .constat-variant-12 .problem-card:hover::before {
+      width: 30px;
+      height: 30px;
+      background: #1D4ED8;
+      transition: all 0.3s;
+    }
+
+    .constat-variant-12 .problem-card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* VARIANTE 13: Progression de taille */
+    .constat-variant-13 .problem-card:nth-child(1) {
+      transform: scale(0.85);
+      opacity: 0.9;
+    }
+
+    .constat-variant-13 .problem-card:nth-child(2) {
+      transform: scale(1);
+    }
+
+    .constat-variant-13 .problem-card:nth-child(3) {
+      transform: scale(1.15);
+      border: 2px solid #2563EB;
+      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.15);
+    }
+
+    .constat-variant-13 .problem-card:nth-child(3) .problem-icon {
+      width: 110px;
+      height: 110px;
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+    }
+
+    .constat-variant-13 .problem-card:nth-child(3) .problem-icon svg {
+      color: white;
+      width: 54px;
+      height: 54px;
+    }
+
+    .constat-variant-13 .problem-card:nth-child(3) h3 {
+      font-size: 1.75rem;
+      color: #2563EB;
+    }
+
+    /* VARIANTE 14: Card centrale spotlight */
+    .constat-variant-14 .problem-card:nth-child(1),
+    .constat-variant-14 .problem-card:nth-child(3) {
+      transform: scale(0.9);
+      opacity: 0.7;
+      filter: grayscale(40%);
+    }
+
+    .constat-variant-14 .problem-card:nth-child(2) {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, #EFF6FF 0%, white 100%);
+      border: 3px solid #2563EB;
+      box-shadow: 0 20px 60px rgba(37, 99, 235, 0.25);
+      position: relative;
+      z-index: 2;
+    }
+
+    .constat-variant-14 .problem-card:nth-child(2) .problem-icon {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.3);
+    }
+
+    .constat-variant-14 .problem-card:nth-child(2) .problem-icon svg {
+      color: white;
+      width: 60px;
+      height: 60px;
+    }
+
+    .constat-variant-14 .problem-card:nth-child(2) h3 {
+      font-size: 1.875rem;
+      color: #2563EB;
+    }
+
+    .constat-variant-14 .problem-card:nth-child(1):hover,
+    .constat-variant-14 .problem-card:nth-child(3):hover {
+      opacity: 0.85;
+      filter: grayscale(20%);
+    }
+
+    /* VARIANTE 15: Décalage vertical */
+    .constat-variant-15 .problem-grid {
+      align-items: center;
+    }
+
+    .constat-variant-15 .problem-card:nth-child(2) {
+      transform: translateY(-40px);
+      border: 2px solid #2563EB;
+      box-shadow: 0 16px 48px rgba(37, 99, 235, 0.2);
+    }
+
+    .constat-variant-15 .problem-card:nth-child(2) .problem-icon {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+    }
+
+    .constat-variant-15 .problem-card:nth-child(2) .problem-icon svg {
+      color: white;
+    }
+
+    .constat-variant-15 .problem-card:nth-child(1) .problem-icon,
+    .constat-variant-15 .problem-card:nth-child(3) .problem-icon {
+      background: #EFF6FF;
+      border: 2px solid #DBEAFE;
+    }
+
+    .constat-variant-15 .problem-card:nth-child(1) .problem-icon svg,
+    .constat-variant-15 .problem-card:nth-child(3) .problem-icon svg {
+      color: #2563EB;
+    }
+
+    /* VARIANTE 16: Layouts mixtes */
+    .constat-variant-16 .problem-card:nth-child(2) {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      text-align: left;
+      padding: 2.5rem;
+    }
+
+    .constat-variant-16 .problem-card:nth-child(2) .problem-icon {
+      margin: 0;
+      min-width: 100px;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      border-radius: 16px;
+    }
+
+    .constat-variant-16 .problem-card:nth-child(2) .problem-icon svg {
+      color: white;
+    }
+
+    .constat-variant-16 .problem-card:nth-child(2) h3 {
+      text-align: left;
+      margin-bottom: 0.75rem;
+    }
+
+    .constat-variant-16 .problem-card:nth-child(2) p {
+      text-align: left;
+    }
+
+    .constat-variant-16 .problem-card:nth-child(1) .problem-icon,
+    .constat-variant-16 .problem-card:nth-child(3) .problem-icon {
+      background: #EFF6FF;
+      border: 2px solid #2563EB;
+    }
+
+    .constat-variant-16 .problem-card:nth-child(1) .problem-icon svg,
+    .constat-variant-16 .problem-card:nth-child(3) .problem-icon svg {
+      color: #2563EB;
+    }
+
+    /* VARIANTE 17: Intensité progressive */
+    .constat-variant-17 .problem-card:nth-child(1) {
+      background: linear-gradient(135deg, #F0F9FF 0%, white 100%);
+      border-color: #DBEAFE;
+    }
+
+    .constat-variant-17 .problem-card:nth-child(1) .problem-icon {
+      background: white;
+      border: 3px solid #93C5FD;
+    }
+
+    .constat-variant-17 .problem-card:nth-child(1) .problem-icon svg {
+      color: #60A5FA;
+    }
+
+    .constat-variant-17 .problem-card:nth-child(2) {
+      background: linear-gradient(135deg, #DBEAFE 0%, white 100%);
+      border: 2px solid #60A5FA;
+    }
+
+    .constat-variant-17 .problem-card:nth-child(2) .problem-icon {
+      background: linear-gradient(135deg, #93C5FD 0%, #60A5FA 100%);
+      border: 2px solid white;
+    }
+
+    .constat-variant-17 .problem-card:nth-child(2) .problem-icon svg {
+      color: white;
+    }
+
+    .constat-variant-17 .problem-card:nth-child(3) {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      border: none;
+      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.25);
+    }
+
+    .constat-variant-17 .problem-card:nth-child(3) .problem-icon {
+      background: white;
+      border: 3px solid white;
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+    }
+
+    .constat-variant-17 .problem-card:nth-child(3) .problem-icon svg {
+      color: #2563EB;
+    }
+
+    .constat-variant-17 .problem-card:nth-child(3) h3 {
+      color: white;
+    }
+
+    .constat-variant-17 .problem-card:nth-child(3) p {
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    /* VARIANTE 18: Rotation asymétrique */
+    .constat-variant-18 .problem-card:nth-child(1) {
+      transform: rotate(-2deg);
+      transition: all 0.3s;
+    }
+
+    .constat-variant-18 .problem-card:nth-child(2) {
+      transform: rotate(0deg);
+      border: 2px solid #2563EB;
+      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.15);
+    }
+
+    .constat-variant-18 .problem-card:nth-child(3) {
+      transform: rotate(2deg);
+      transition: all 0.3s;
+    }
+
+    .constat-variant-18 .problem-card:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    .constat-variant-18 .problem-card:nth-child(2) .problem-icon {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+    }
+
+    .constat-variant-18 .problem-card:nth-child(2) .problem-icon svg {
+      color: white;
+    }
+
+    .constat-variant-18 .problem-card:nth-child(1) .problem-icon,
+    .constat-variant-18 .problem-card:nth-child(3) .problem-icon {
+      background: #EFF6FF;
+      border: 2px solid #DBEAFE;
+    }
+
+    .constat-variant-18 .problem-card:nth-child(1) .problem-icon svg,
+    .constat-variant-18 .problem-card:nth-child(3) .problem-icon svg {
+      color: #2563EB;
+    }
+
+    /* ============================================
+       APPROCHE VARIANTS
+       ============================================ */
+
+    /* VARIANTE 2: Timeline bleue avec progression */
+    .approche-variant-2 .approach-steps {
+      position: relative;
+    }
+
+    .approche-variant-2 .approach-steps::before {
+      content: '';
+      position: absolute;
+      left: 60px;
+      top: 60px;
+      bottom: 60px;
+      width: 3px;
+      background: linear-gradient(180deg, #DBEAFE 0%, #2563EB 50%, #1E40AF 100%);
+    }
+
+    .approche-variant-2 .approach-step {
+      position: relative;
+      z-index: 1;
+    }
+
+    .approche-variant-2 .approach-step:nth-child(1) .step-number-box {
+      background: #60A5FA;
+    }
+
+    .approche-variant-2 .approach-step:nth-child(2) .step-number-box {
+      background: #2563EB;
+    }
+
+    .approche-variant-2 .approach-step:nth-child(3) .step-number-box {
+      background: #1E40AF;
+    }
+
     .step-content p {
       font-size: 1.0625rem;
       margin: 0;
@@ -1243,8 +1980,8 @@
     <svg class="section-bg-svg constat-bg active" data-section="constat" data-variant="8" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
         <pattern id="broken-squares" width="100" height="100" patternUnits="userSpaceOnUse">
-          <rect x="15" y="10" width="25" height="25" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.15" transform="rotate(8 27.5 22.5)"/>
-          <rect x="60" y="50" width="25" height="25" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.15" transform="rotate(-12 72.5 62.5)"/>
+          <rect x="15" y="10" width="25" height="25" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.07" transform="rotate(8 27.5 22.5)"/>
+          <rect x="60" y="50" width="25" height="25" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.07" transform="rotate(-12 72.5 62.5)"/>
         </pattern>
       </defs>
       <rect width="1200" height="800" fill="url(#broken-squares)"/>
@@ -1256,36 +1993,711 @@
         <p class="lead">Les professionnels du bâtiment manquent d'outils adaptés</p>
       </div>
 
-      <div class="problem-grid">
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </div>
-          <h3>Trop complexe</h3>
-          <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
-        </div>
+      <!-- Sélecteur de variantes pour Le constat -->
+      <div class="section-variant-selector">
+        <input type="radio" name="constat-variant" id="constat-v1" value="1" class="section-variant-option" checked>
+        <label for="constat-v1" class="section-variant-label">Original</label>
 
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-            </svg>
-          </div>
-          <h3>Inadapté au terrain</h3>
-          <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
-        </div>
+        <input type="radio" name="constat-variant" id="constat-v2" value="2" class="section-variant-option">
+        <label for="constat-v2" class="section-variant-label">Cercles bleus</label>
 
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+        <input type="radio" name="constat-variant" id="constat-v3" value="3" class="section-variant-option">
+        <label for="constat-v3" class="section-variant-label">Alternée</label>
+
+        <input type="radio" name="constat-variant" id="constat-v4" value="4" class="section-variant-option">
+        <label for="constat-v4" class="section-variant-label">Badges</label>
+
+        <input type="radio" name="constat-variant" id="constat-v5" value="5" class="section-variant-option">
+        <label for="constat-v5" class="section-variant-label">Bordure épaisse</label>
+
+        <input type="radio" name="constat-variant" id="constat-v6" value="6" class="section-variant-option">
+        <label for="constat-v6" class="section-variant-label">Horizontal</label>
+
+        <input type="radio" name="constat-variant" id="constat-v7" value="7" class="section-variant-option">
+        <label for="constat-v7" class="section-variant-label">Ombres XXL</label>
+
+        <input type="radio" name="constat-variant" id="constat-v8" value="8" class="section-variant-option">
+        <label for="constat-v8" class="section-variant-label">Header bleu</label>
+
+        <input type="radio" name="constat-variant" id="constat-v9" value="9" class="section-variant-option">
+        <label for="constat-v9" class="section-variant-label">Icônes XXL</label>
+
+        <input type="radio" name="constat-variant" id="constat-v10" value="10" class="section-variant-option">
+        <label for="constat-v10" class="section-variant-label">Glassmorphism</label>
+
+        <input type="radio" name="constat-variant" id="constat-v11" value="11" class="section-variant-option">
+        <label for="constat-v11" class="section-variant-label">Hover transformation</label>
+
+        <input type="radio" name="constat-variant" id="constat-v12" value="12" class="section-variant-option">
+        <label for="constat-v12" class="section-variant-label">Connectées</label>
+
+        <input type="radio" name="constat-variant" id="constat-v13" value="13" class="section-variant-option">
+        <label for="constat-v13" class="section-variant-label">Progression taille</label>
+
+        <input type="radio" name="constat-variant" id="constat-v14" value="14" class="section-variant-option">
+        <label for="constat-v14" class="section-variant-label">Spotlight central</label>
+
+        <input type="radio" name="constat-variant" id="constat-v15" value="15" class="section-variant-option">
+        <label for="constat-v15" class="section-variant-label">Décalage vertical</label>
+
+        <input type="radio" name="constat-variant" id="constat-v16" value="16" class="section-variant-option">
+        <label for="constat-v16" class="section-variant-label">Layouts mixtes</label>
+
+        <input type="radio" name="constat-variant" id="constat-v17" value="17" class="section-variant-option">
+        <label for="constat-v17" class="section-variant-label">Intensité progressive</label>
+
+        <input type="radio" name="constat-variant" id="constat-v18" value="18" class="section-variant-option">
+        <label for="constat-v18" class="section-variant-label">Rotation asymétrique</label>
+      </div>
+
+      <!-- VARIANTE 1: Original -->
+      <div class="section-variant constat-variant-1 active">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
           </div>
-          <h3>Perte de temps</h3>
-          <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 2: Icônes colorées -->
+      <div class="section-variant constat-variant-2">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 3: Bordures -->
+      <div class="section-variant constat-variant-3">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 4: Dégradés -->
+      <div class="section-variant constat-variant-4">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 5: Bordure épaisse -->
+      <div class="section-variant constat-variant-5">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 6: Horizontal -->
+      <div class="section-variant constat-variant-6">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3>Trop complexe</h3>
+              <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+            </div>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <div>
+              <h3>Inadapté au terrain</h3>
+              <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+            </div>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3>Perte de temps</h3>
+              <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 7: Ombres XXL -->
+      <div class="section-variant constat-variant-7">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 8: Header bleu -->
+      <div class="section-variant constat-variant-8">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div>
+              <div class="problem-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+
+          <div class="problem-card">
+            <div>
+              <div class="problem-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+
+          <div class="problem-card">
+            <div>
+              <div class="problem-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 9: Icônes XXL -->
+      <div class="section-variant constat-variant-9">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 10: Glassmorphism -->
+      <div class="section-variant constat-variant-10">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 11: Hover transformation -->
+      <div class="section-variant constat-variant-11">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 12: Connectées -->
+      <div class="section-variant constat-variant-12">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTES 13-18: Cards différenciées (même HTML, CSS fait le travail) -->
+      <!-- VARIANTE 13: Progression taille -->
+      <div class="section-variant constat-variant-13">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 14: Spotlight central -->
+      <div class="section-variant constat-variant-14">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 15: Décalage vertical -->
+      <div class="section-variant constat-variant-15">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 16: Layouts mixtes -->
+      <div class="section-variant constat-variant-16">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <div>
+              <h3>Inadapté au terrain</h3>
+              <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+            </div>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 17: Intensité progressive -->
+      <div class="section-variant constat-variant-17">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 18: Rotation asymétrique -->
+      <div class="section-variant constat-variant-18">
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3>Trop complexe</h3>
+            <p>Des interfaces surchargées avec trop de fonctionnalités inutiles</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3>Perte de temps</h3>
+            <p>Entre technique, admin et réglementaire, il faut aller à l'essentiel</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1299,8 +2711,8 @@
     <svg class="section-bg-svg approche-bg active" data-section="approche" data-variant="4" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
         <pattern id="crosses" width="60" height="60" patternUnits="userSpaceOnUse">
-          <line x1="30" y1="25" x2="30" y2="35" stroke="#2563EB" stroke-width="0.5" opacity="0.15"/>
-          <line x1="25" y1="30" x2="35" y2="30" stroke="#2563EB" stroke-width="0.5" opacity="0.15"/>
+          <line x1="30" y1="25" x2="30" y2="35" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
+          <line x1="25" y1="30" x2="35" y2="30" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
         </pattern>
       </defs>
       <rect width="1200" height="800" fill="url(#crosses)"/>
@@ -1312,34 +2724,36 @@
         <p class="lead">Développement collaboratif avec les professionnels</p>
       </div>
 
-      <div class="approach-steps">
-        <div class="approach-step">
-          <div class="step-number-box">1</div>
-          <div class="step-content">
-            <h3>Écouter le terrain</h3>
-            <p>
-              Nous recueillons vos retours pour identifier les vrais blocages. Chaque fonctionnalité est priorisée selon son utilité réelle pour gagner du temps au quotidien.
-            </p>
+      <div class="approche-variant-2">
+        <div class="approach-steps">
+          <div class="approach-step">
+            <div class="step-number-box">1</div>
+            <div class="step-content">
+              <h3>Écouter le terrain</h3>
+              <p>
+                Nous recueillons vos retours pour identifier les vrais blocages. Chaque fonctionnalité est priorisée selon son utilité réelle pour gagner du temps au quotidien.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="approach-step">
-          <div class="step-number-box">2</div>
-          <div class="step-content">
-            <h3>Développer des solutions ciblées</h3>
-            <p>
-              Nous créons des outils SaaS sans superflu, avec une interface claire et des fonctionnalités essentielles. Performance, fiabilité et simplicité sont nos priorités.
-            </p>
+          <div class="approach-step">
+            <div class="step-number-box">2</div>
+            <div class="step-content">
+              <h3>Développer des solutions ciblées</h3>
+              <p>
+                Nous créons des outils SaaS sans superflu, avec une interface claire et des fonctionnalités essentielles. Performance, fiabilité et simplicité sont nos priorités.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="approach-step">
-          <div class="step-number-box">3</div>
-          <div class="step-content">
-            <h3>Améliorer en continu</h3>
-            <p>
-              Grâce à vos retours réguliers lors des phases de tests, nous ajustons et améliorons nos outils de manière itérative pour qu'ils soient vraiment utiles.
-            </p>
+          <div class="approach-step">
+            <div class="step-number-box">3</div>
+            <div class="step-content">
+              <h3>Améliorer en continu</h3>
+              <p>
+                Grâce à vos retours réguliers lors des phases de tests, nous ajustons et améliorons nos outils de manière itérative pour qu'ils soient vraiment utiles.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -1684,6 +3098,45 @@
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
       }
+    });
+
+    // Gestion des sélecteurs de variantes pour les sections
+    document.addEventListener('DOMContentLoaded', function() {
+      // Fonction générique pour gérer les variantes d'une section
+      function setupVariantSelector(sectionName) {
+        const radios = document.querySelectorAll(`input[name="${sectionName}-variant"]`);
+        const variants = document.querySelectorAll(`[class*="${sectionName}-variant-"]`);
+
+        function switchVariant(selectedValue) {
+          // Masquer toutes les variantes
+          variants.forEach(variant => {
+            variant.classList.remove('active');
+          });
+
+          // Afficher la variante sélectionnée
+          const activeVariant = document.querySelector(`.${sectionName}-variant-${selectedValue}`);
+          if (activeVariant) {
+            activeVariant.classList.add('active');
+          }
+        }
+
+        // Écouter les changements
+        radios.forEach(radio => {
+          radio.addEventListener('change', function() {
+            switchVariant(this.value);
+          });
+        });
+
+        // Activer la variante par défaut
+        const checkedRadio = document.querySelector(`input[name="${sectionName}-variant"]:checked`);
+        if (checkedRadio) {
+          switchVariant(checkedRadio.value);
+        }
+      }
+
+      // Initialiser les deux sections
+      setupVariantSelector('constat');
+      setupVariantSelector('approche');
     });
 
   </script>
