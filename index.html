@@ -992,56 +992,115 @@
       height: 70px;
     }
 
-    /* Photo Filters - Multiple variants */
+    /* Photo Filters - Multiple variants (20+ styles bleus) */
     .team-avatar-filter-none {
       filter: none;
     }
 
-    /* Variante 1: Blue monochrome */
+    /* Variante 1: Bleu monochrome classique */
     .team-avatar-filter-blue-mono {
       filter: grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(150%) brightness(0.9);
     }
 
-    /* Variante 2: Duotone bleu/blanc */
-    .team-avatar-filter-duotone {
-      filter: grayscale(100%) contrast(1.3) brightness(1.1);
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      background-clip: padding-box;
+    /* Variante 2: Bleu électrique */
+    .team-avatar-filter-electric {
+      filter: grayscale(100%) sepia(80%) hue-rotate(180deg) saturate(250%) brightness(1.1) contrast(1.2);
     }
 
-    /* Variante 3: Overlay bleu léger */
-    .team-avatar-filter-overlay {
-      filter: contrast(1.1) brightness(1.05);
-      position: relative;
+    /* Variante 3: Bleu navy profond */
+    .team-avatar-filter-navy {
+      filter: grayscale(100%) sepia(90%) hue-rotate(190deg) saturate(200%) brightness(0.75) contrast(1.3);
     }
 
-    .team-avatar-filter-overlay::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(37, 99, 235, 0.15);
-      border-radius: 50%;
-      pointer-events: none;
+    /* Variante 4: Bleu pastel doux */
+    .team-avatar-filter-pastel {
+      filter: grayscale(80%) sepia(40%) hue-rotate(180deg) saturate(80%) brightness(1.15) contrast(0.9);
     }
 
-    /* Variante 4: High contrast bleu */
-    .team-avatar-filter-contrast {
-      filter: grayscale(100%) contrast(1.4) brightness(0.85);
-      mix-blend-mode: luminosity;
+    /* Variante 5: Cyan lumineux */
+    .team-avatar-filter-cyan {
+      filter: grayscale(100%) sepia(60%) hue-rotate(160deg) saturate(180%) brightness(1.2);
     }
 
-    /* Variante 5: Bleu glacé */
+    /* Variante 6: Bleu glacé */
     .team-avatar-filter-frost {
       filter: brightness(1.1) contrast(1.05) saturate(50%) hue-rotate(-10deg);
       border-color: #60A5FA;
     }
 
-    /* Variante 6: Monochrome sombre */
-    .team-avatar-filter-dark {
-      filter: grayscale(100%) contrast(1.3) brightness(0.8) sepia(20%);
+    /* Variante 7: Bleu vintage */
+    .team-avatar-filter-vintage {
+      filter: grayscale(90%) sepia(70%) hue-rotate(185deg) saturate(120%) brightness(0.95) contrast(1.1);
+    }
+
+    /* Variante 8: Bleu néon */
+    .team-avatar-filter-neon {
+      filter: grayscale(100%) sepia(100%) hue-rotate(175deg) saturate(300%) brightness(1.3) contrast(1.4);
+    }
+
+    /* Variante 9: Bleu cobalt */
+    .team-avatar-filter-cobalt {
+      filter: grayscale(100%) sepia(85%) hue-rotate(195deg) saturate(220%) brightness(0.85) contrast(1.25);
+    }
+
+    /* Variante 10: Bleu azur */
+    .team-avatar-filter-azure {
+      filter: grayscale(100%) sepia(50%) hue-rotate(170deg) saturate(160%) brightness(1.1);
+    }
+
+    /* Variante 11: Bleu acier */
+    .team-avatar-filter-steel {
+      filter: grayscale(100%) sepia(40%) hue-rotate(180deg) saturate(110%) brightness(0.95) contrast(1.15);
+    }
+
+    /* Variante 12: Bleu océan */
+    .team-avatar-filter-ocean {
+      filter: grayscale(100%) sepia(75%) hue-rotate(175deg) saturate(190%) brightness(0.9) contrast(1.2);
+    }
+
+    /* Variante 13: Bleu poudré */
+    .team-avatar-filter-powder {
+      filter: grayscale(70%) sepia(30%) hue-rotate(180deg) saturate(70%) brightness(1.2) contrast(0.85);
+    }
+
+    /* Variante 14: Bleu saphir */
+    .team-avatar-filter-sapphire {
+      filter: grayscale(100%) sepia(95%) hue-rotate(200deg) saturate(240%) brightness(0.8) contrast(1.35);
+    }
+
+    /* Variante 15: Bleu ciel */
+    .team-avatar-filter-sky {
+      filter: grayscale(90%) sepia(45%) hue-rotate(165deg) saturate(140%) brightness(1.25) contrast(0.95);
+    }
+
+    /* Variante 16: Bleu minuit */
+    .team-avatar-filter-midnight {
+      filter: grayscale(100%) sepia(100%) hue-rotate(195deg) saturate(200%) brightness(0.65) contrast(1.4);
+    }
+
+    /* Variante 17: Bleu turquoise */
+    .team-avatar-filter-turquoise {
+      filter: grayscale(100%) sepia(55%) hue-rotate(155deg) saturate(170%) brightness(1.15) contrast(1.05);
+    }
+
+    /* Variante 18: Bleu ardoise */
+    .team-avatar-filter-slate {
+      filter: grayscale(100%) sepia(50%) hue-rotate(185deg) saturate(100%) brightness(0.9) contrast(1.2);
+    }
+
+    /* Variante 19: Bleu indigo */
+    .team-avatar-filter-indigo {
+      filter: grayscale(100%) sepia(90%) hue-rotate(210deg) saturate(210%) brightness(0.85) contrast(1.3);
+    }
+
+    /* Variante 20: Bleu pervenche */
+    .team-avatar-filter-periwinkle {
+      filter: grayscale(85%) sepia(60%) hue-rotate(190deg) saturate(130%) brightness(1.1) contrast(0.95);
+    }
+
+    /* Variante 21: Bleu cristal */
+    .team-avatar-filter-crystal {
+      filter: grayscale(95%) sepia(30%) hue-rotate(175deg) saturate(150%) brightness(1.25) contrast(1.1);
     }
 
     /* Appliquer les filtres aussi aux avatars dans les cards */
@@ -1049,16 +1108,20 @@
       filter: grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(150%) brightness(0.9);
     }
 
-    .value-card-avatar-filter-duotone {
-      filter: grayscale(100%) contrast(1.3) brightness(1.1);
+    .value-card-avatar-filter-electric {
+      filter: grayscale(100%) sepia(80%) hue-rotate(180deg) saturate(250%) brightness(1.1) contrast(1.2);
     }
 
-    .value-card-avatar-filter-overlay {
-      filter: contrast(1.1) brightness(1.05);
+    .value-card-avatar-filter-navy {
+      filter: grayscale(100%) sepia(90%) hue-rotate(190deg) saturate(200%) brightness(0.75) contrast(1.3);
     }
 
-    .value-card-avatar-filter-contrast {
-      filter: grayscale(100%) contrast(1.4) brightness(0.85);
+    .value-card-avatar-filter-pastel {
+      filter: grayscale(80%) sepia(40%) hue-rotate(180deg) saturate(80%) brightness(1.15) contrast(0.9);
+    }
+
+    .value-card-avatar-filter-cyan {
+      filter: grayscale(100%) sepia(60%) hue-rotate(160deg) saturate(180%) brightness(1.2);
     }
 
     .value-card-avatar-filter-frost {
@@ -1066,8 +1129,64 @@
       border-color: #60A5FA;
     }
 
-    .value-card-avatar-filter-dark {
-      filter: grayscale(100%) contrast(1.3) brightness(0.8) sepia(20%);
+    .value-card-avatar-filter-vintage {
+      filter: grayscale(90%) sepia(70%) hue-rotate(185deg) saturate(120%) brightness(0.95) contrast(1.1);
+    }
+
+    .value-card-avatar-filter-neon {
+      filter: grayscale(100%) sepia(100%) hue-rotate(175deg) saturate(300%) brightness(1.3) contrast(1.4);
+    }
+
+    .value-card-avatar-filter-cobalt {
+      filter: grayscale(100%) sepia(85%) hue-rotate(195deg) saturate(220%) brightness(0.85) contrast(1.25);
+    }
+
+    .value-card-avatar-filter-azure {
+      filter: grayscale(100%) sepia(50%) hue-rotate(170deg) saturate(160%) brightness(1.1);
+    }
+
+    .value-card-avatar-filter-steel {
+      filter: grayscale(100%) sepia(40%) hue-rotate(180deg) saturate(110%) brightness(0.95) contrast(1.15);
+    }
+
+    .value-card-avatar-filter-ocean {
+      filter: grayscale(100%) sepia(75%) hue-rotate(175deg) saturate(190%) brightness(0.9) contrast(1.2);
+    }
+
+    .value-card-avatar-filter-powder {
+      filter: grayscale(70%) sepia(30%) hue-rotate(180deg) saturate(70%) brightness(1.2) contrast(0.85);
+    }
+
+    .value-card-avatar-filter-sapphire {
+      filter: grayscale(100%) sepia(95%) hue-rotate(200deg) saturate(240%) brightness(0.8) contrast(1.35);
+    }
+
+    .value-card-avatar-filter-sky {
+      filter: grayscale(90%) sepia(45%) hue-rotate(165deg) saturate(140%) brightness(1.25) contrast(0.95);
+    }
+
+    .value-card-avatar-filter-midnight {
+      filter: grayscale(100%) sepia(100%) hue-rotate(195deg) saturate(200%) brightness(0.65) contrast(1.4);
+    }
+
+    .value-card-avatar-filter-turquoise {
+      filter: grayscale(100%) sepia(55%) hue-rotate(155deg) saturate(170%) brightness(1.15) contrast(1.05);
+    }
+
+    .value-card-avatar-filter-slate {
+      filter: grayscale(100%) sepia(50%) hue-rotate(185deg) saturate(100%) brightness(0.9) contrast(1.2);
+    }
+
+    .value-card-avatar-filter-indigo {
+      filter: grayscale(100%) sepia(90%) hue-rotate(210deg) saturate(210%) brightness(0.85) contrast(1.3);
+    }
+
+    .value-card-avatar-filter-periwinkle {
+      filter: grayscale(85%) sepia(60%) hue-rotate(190deg) saturate(130%) brightness(1.1) contrast(0.95);
+    }
+
+    .value-card-avatar-filter-crystal {
+      filter: grayscale(95%) sepia(30%) hue-rotate(175deg) saturate(150%) brightness(1.25) contrast(1.1);
     }
 
     .values-grid {
@@ -2004,28 +2123,73 @@
 
       <!-- Toggle filtres photos (visible uniquement avec style photo ou cards) -->
       <div class="avatar-filter-toggle" id="photo-filter-toggle">
-        <div style="font-size: 0.8125rem; color: var(--slate); margin-bottom: 0.5rem; text-align: center;">Style de photo</div>
-        <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+        <div style="font-size: 0.8125rem; color: var(--slate); margin-bottom: 0.5rem; text-align: center; font-weight: 500;">Style de photo (21 variantes)</div>
+        <div style="display: flex; justify-content: center; gap: 0.4rem; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
           <input type="radio" name="photo-filter" id="filter-none" value="none" checked>
           <label for="filter-none">Original</label>
 
           <input type="radio" name="photo-filter" id="filter-blue-mono" value="blue-mono">
-          <label for="filter-blue-mono">Bleu mono</label>
+          <label for="filter-blue-mono">Mono</label>
 
-          <input type="radio" name="photo-filter" id="filter-duotone" value="duotone">
-          <label for="filter-duotone">Duotone</label>
+          <input type="radio" name="photo-filter" id="filter-electric" value="electric">
+          <label for="filter-electric">Électrique</label>
 
-          <input type="radio" name="photo-filter" id="filter-overlay" value="overlay">
-          <label for="filter-overlay">Overlay</label>
+          <input type="radio" name="photo-filter" id="filter-navy" value="navy">
+          <label for="filter-navy">Navy</label>
 
-          <input type="radio" name="photo-filter" id="filter-contrast" value="contrast">
-          <label for="filter-contrast">Contraste</label>
+          <input type="radio" name="photo-filter" id="filter-pastel" value="pastel">
+          <label for="filter-pastel">Pastel</label>
+
+          <input type="radio" name="photo-filter" id="filter-cyan" value="cyan">
+          <label for="filter-cyan">Cyan</label>
 
           <input type="radio" name="photo-filter" id="filter-frost" value="frost">
           <label for="filter-frost">Glacé</label>
 
-          <input type="radio" name="photo-filter" id="filter-dark" value="dark">
-          <label for="filter-dark">Sombre</label>
+          <input type="radio" name="photo-filter" id="filter-vintage" value="vintage">
+          <label for="filter-vintage">Vintage</label>
+
+          <input type="radio" name="photo-filter" id="filter-neon" value="neon">
+          <label for="filter-neon">Néon</label>
+
+          <input type="radio" name="photo-filter" id="filter-cobalt" value="cobalt">
+          <label for="filter-cobalt">Cobalt</label>
+
+          <input type="radio" name="photo-filter" id="filter-azure" value="azure">
+          <label for="filter-azure">Azur</label>
+
+          <input type="radio" name="photo-filter" id="filter-steel" value="steel">
+          <label for="filter-steel">Acier</label>
+
+          <input type="radio" name="photo-filter" id="filter-ocean" value="ocean">
+          <label for="filter-ocean">Océan</label>
+
+          <input type="radio" name="photo-filter" id="filter-powder" value="powder">
+          <label for="filter-powder">Poudré</label>
+
+          <input type="radio" name="photo-filter" id="filter-sapphire" value="sapphire">
+          <label for="filter-sapphire">Saphir</label>
+
+          <input type="radio" name="photo-filter" id="filter-sky" value="sky">
+          <label for="filter-sky">Ciel</label>
+
+          <input type="radio" name="photo-filter" id="filter-midnight" value="midnight">
+          <label for="filter-midnight">Minuit</label>
+
+          <input type="radio" name="photo-filter" id="filter-turquoise" value="turquoise">
+          <label for="filter-turquoise">Turquoise</label>
+
+          <input type="radio" name="photo-filter" id="filter-slate" value="slate">
+          <label for="filter-slate">Ardoise</label>
+
+          <input type="radio" name="photo-filter" id="filter-indigo" value="indigo">
+          <label for="filter-indigo">Indigo</label>
+
+          <input type="radio" name="photo-filter" id="filter-periwinkle" value="periwinkle">
+          <label for="filter-periwinkle">Pervenche</label>
+
+          <input type="radio" name="photo-filter" id="filter-crystal" value="crystal">
+          <label for="filter-crystal">Cristal</label>
         </div>
       </div>
 
@@ -2334,13 +2498,28 @@
 
       // Fonction pour appliquer un filtre
       function applyFilter(filterValue) {
-        // Retirer toutes les classes de filtre existantes
-        const filterClasses = ['team-avatar-filter-none', 'team-avatar-filter-blue-mono', 'team-avatar-filter-duotone',
-                               'team-avatar-filter-overlay', 'team-avatar-filter-contrast', 'team-avatar-filter-frost',
-                               'team-avatar-filter-dark'];
-        const cardFilterClasses = ['value-card-avatar-filter-blue-mono', 'value-card-avatar-filter-duotone',
-                                   'value-card-avatar-filter-overlay', 'value-card-avatar-filter-contrast',
-                                   'value-card-avatar-filter-frost', 'value-card-avatar-filter-dark'];
+        // Liste complète de tous les filtres disponibles (21 variantes)
+        const filterClasses = [
+          'team-avatar-filter-none', 'team-avatar-filter-blue-mono', 'team-avatar-filter-electric',
+          'team-avatar-filter-navy', 'team-avatar-filter-pastel', 'team-avatar-filter-cyan',
+          'team-avatar-filter-frost', 'team-avatar-filter-vintage', 'team-avatar-filter-neon',
+          'team-avatar-filter-cobalt', 'team-avatar-filter-azure', 'team-avatar-filter-steel',
+          'team-avatar-filter-ocean', 'team-avatar-filter-powder', 'team-avatar-filter-sapphire',
+          'team-avatar-filter-sky', 'team-avatar-filter-midnight', 'team-avatar-filter-turquoise',
+          'team-avatar-filter-slate', 'team-avatar-filter-indigo', 'team-avatar-filter-periwinkle',
+          'team-avatar-filter-crystal'
+        ];
+
+        const cardFilterClasses = [
+          'value-card-avatar-filter-blue-mono', 'value-card-avatar-filter-electric',
+          'value-card-avatar-filter-navy', 'value-card-avatar-filter-pastel', 'value-card-avatar-filter-cyan',
+          'value-card-avatar-filter-frost', 'value-card-avatar-filter-vintage', 'value-card-avatar-filter-neon',
+          'value-card-avatar-filter-cobalt', 'value-card-avatar-filter-azure', 'value-card-avatar-filter-steel',
+          'value-card-avatar-filter-ocean', 'value-card-avatar-filter-powder', 'value-card-avatar-filter-sapphire',
+          'value-card-avatar-filter-sky', 'value-card-avatar-filter-midnight', 'value-card-avatar-filter-turquoise',
+          'value-card-avatar-filter-slate', 'value-card-avatar-filter-indigo', 'value-card-avatar-filter-periwinkle',
+          'value-card-avatar-filter-crystal'
+        ];
 
         // Appliquer aux avatars standalone
         allPhotoAvatars.forEach(avatar => {
