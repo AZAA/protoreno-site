@@ -1270,50 +1270,8 @@
     /* ============================================
        TESTIMONIALS SECTION
        ============================================ */
-
-    /* Toggle selector */
-    .testimonial-variant-selector {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: center;
-      margin-bottom: 3rem;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .testimonial-variant-selector label {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      background: var(--bg);
-      border: 2px solid var(--light-gray);
-      border-radius: 8px;
-      cursor: pointer;
-      transition: var(--transition-base);
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-
-    .testimonial-variant-selector input[type="radio"] {
-      margin-right: 0.5rem;
-    }
-
-    .testimonial-variant-selector label:has(input:checked) {
-      background: var(--blue);
-      color: white;
-      border-color: var(--blue);
-    }
-
-    /* Hide all variants by default */
     .testimonial-box {
-      display: none;
-    }
-
-    .testimonial-box.active {
-      display: block;
+      margin-bottom: 4rem;
     }
 
     .testimonial-cta {
@@ -1328,74 +1286,7 @@
       margin-bottom: 1.5rem;
     }
 
-    /* VARIANTE 1: Timeline */
-    .testimonials-timeline {
-      max-width: 800px;
-      margin: 0 auto 2rem;
-      position: relative;
-    }
-
-    .testimonials-timeline::before {
-      content: '';
-      position: absolute;
-      left: 30px;
-      top: 30px;
-      bottom: 30px;
-      width: 2px;
-      background: var(--light-gray);
-    }
-
-    .timeline-item {
-      display: flex;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      position: relative;
-    }
-
-    .timeline-marker {
-      flex-shrink: 0;
-      width: 60px;
-      height: 60px;
-      background: var(--blue);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: 700;
-      z-index: 1;
-    }
-
-    .timeline-card {
-      flex: 1;
-      padding: 1.5rem;
-    }
-
-    .timeline-step {
-      font-size: 0.875rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      color: var(--blue);
-      margin-bottom: 0.75rem;
-    }
-
-    .timeline-card blockquote {
-      font-size: 1.0625rem;
-      line-height: 1.7;
-      color: var(--slate);
-      font-style: italic;
-      margin-bottom: 0.75rem;
-    }
-
-    .timeline-author {
-      font-size: 0.875rem;
-      color: var(--navy);
-      font-weight: 600;
-    }
-
-    /* VARIANTE 2: Conversations */
+    /* Conversations terrain */
     .testimonials-conversations {
       display: flex;
       flex-direction: column;
@@ -1446,11 +1337,13 @@
       font-size: 1rem;
       box-shadow: 0 2px 8px rgba(8, 78, 154, 0.3);
       border: 3px solid white;
+      text-transform: uppercase;
     }
 
     .conversation-message.reply .message-avatar {
-      background: var(--green);
-      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+      background: var(--green) !important;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
+      color: white !important;
     }
 
     .message-content {
@@ -1496,7 +1389,7 @@
       margin-left: 4rem;
       margin-top: 0.5rem;
       padding: 1.25rem 1.5rem;
-      background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+      background: #F0FDF4;
       border-left: 4px solid var(--green);
       border-radius: 12px;
       font-size: 0.9375rem;
@@ -1509,20 +1402,17 @@
     .result-badge {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 0.375rem;
       padding: 0.5rem 1rem;
-      background: var(--green);
-      color: white;
+      background: var(--green) !important;
+      color: white !important;
       border-radius: 8px;
       font-size: 0.8125rem;
-      font-weight: 700;
-      box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);
+      font-weight: 800;
+      box-shadow: 0 3px 8px rgba(16, 185, 129, 0.35);
       white-space: nowrap;
-    }
-
-    .result-badge.in-progress {
-      background: var(--blue);
-      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+      min-width: fit-content;
     }
 
     /* VARIANTE 3: Sondage Tally intégré (amélioré) */
@@ -1593,7 +1483,7 @@
       border-radius: 16px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
       background: white;
-      padding: 2.5rem;
+      padding: 0 2.5rem 2.5rem;
       border: 1px solid var(--light-gray);
     }
 
@@ -2104,28 +1994,7 @@
         padding: 1.5rem 1rem;
       }
 
-      /* Testimonials responsive */
-      .testimonial-variant-selector {
-        flex-direction: column;
-        padding: 1rem;
-      }
-
-      /* Variante 1: Timeline */
-      .testimonials-timeline::before {
-        left: 20px;
-      }
-
-      .timeline-marker {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-      }
-
-      .timeline-item {
-        gap: 1rem;
-      }
-
-      /* Variante 2: Conversations */
+      /* Conversations terrain responsive */
       .conversation-thread {
         padding: 1.5rem;
       }
@@ -2168,7 +2037,7 @@
 
       .tally-embed-container {
         border-radius: 8px;
-        padding: 1.5rem;
+        padding: 0 1.5rem 1.5rem;
       }
 
       .tally-iframe {
@@ -2809,68 +2678,8 @@
        ============================================ -->
   <section class="section-alt">
     <div class="container">
-      <!-- Toggle de sélection des variantes -->
-      <div class="testimonial-variant-selector">
-        <label><input type="radio" name="testimonial-variant" value="1" checked> 1. Parcours timeline</label>
-        <label><input type="radio" name="testimonial-variant" value="2"> 2. Conversations terrain</label>
-        <label><input type="radio" name="testimonial-variant" value="3"> 3. Sondage intégré</label>
-      </div>
-
-
-      <!-- VARIANTE 1: Timeline parcours -->
-      <div class="testimonial-box testimonial-variant-1 active">
-        <div class="section-header">
-          <h2>Le parcours d'un collaborateur</h2>
-          <p class="lead">De la première contribution aux tests terrain</p>
-        </div>
-
-        <div class="testimonials-timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker">1</div>
-            <div class="card timeline-card">
-              <div class="timeline-step">Première participation</div>
-              <blockquote>"J'ai répondu au sondage en 1 minute pendant une pause café. Simple et rapide."</blockquote>
-              <div class="timeline-author">Marc, il y a 4 mois</div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">2</div>
-            <div class="card timeline-card">
-              <div class="timeline-step">Invitation à tester</div>
-              <blockquote>"Deux semaines après, j'ai reçu une invitation pour tester une nouvelle fonctionnalité."</blockquote>
-              <div class="timeline-author">Marc, il y a 3 mois</div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">3</div>
-            <div class="card timeline-card">
-              <div class="timeline-step">Tests sur chantier</div>
-              <blockquote>"J'ai testé pendant 2 semaines sur un vrai chantier. Mes retours ont été intégrés directement."</blockquote>
-              <div class="timeline-author">Marc, il y a 2 mois</div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker">4</div>
-            <div class="card timeline-card">
-              <div class="timeline-step">Membre actif</div>
-              <blockquote>"Aujourd'hui je fais partie de la communauté et j'utilise l'outil tous les jours."</blockquote>
-              <div class="timeline-author">Marc, aujourd'hui</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-cta">
-          <p class="testimonial-stat">Commencez votre parcours maintenant</p>
-          <a href="https://tally.so/r/wgVWgN" target="_blank" class="btn btn-primary btn-large">Première étape : le sondage</a>
-        </div>
-      </div>
-
-
-      <!-- VARIANTE 2: Conversations -->
-      <div class="testimonial-box testimonial-variant-2">
+      <!-- Conversations terrain -->
+      <div class="testimonial-box">
         <div class="section-header">
           <h2>Conversations terrain</h2>
           <p class="lead">Ce qu'on entend de la communauté</p>
@@ -2937,7 +2746,7 @@
               </div>
             </div>
             <div class="conversation-result">
-              <span class="result-badge in-progress">En cours</span> Atelier planifié avec 5 artisans
+              <span class="result-badge">✓ Réalisé</span> Atelier organisé avec succès, interface simplifiée
             </div>
           </div>
         </div>
@@ -2948,8 +2757,8 @@
         </div>
       </div>
 
-      <!-- VARIANTE 3: Sondage Tally intégré -->
-      <div class="testimonial-box testimonial-variant-3">
+      <!-- Sondage Tally intégré -->
+      <div class="testimonial-box">
         <div class="section-header">
           <h2>Aidez-nous à créer les bons outils</h2>
           <p class="lead">Remplissez le sondage ci-dessous — Votre voix compte vraiment</p>
@@ -3202,23 +3011,6 @@
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
       }
-    });
-
-    // Gestion du toggle des variantes testimonials
-    const testimonialRadios = document.querySelectorAll('input[name="testimonial-variant"]');
-    const testimonialBoxes = document.querySelectorAll('.testimonial-box');
-
-    testimonialRadios.forEach(radio => {
-      radio.addEventListener('change', function() {
-        // Masquer toutes les variantes
-        testimonialBoxes.forEach(box => box.classList.remove('active'));
-
-        // Afficher la variante sélectionnée
-        const selectedVariant = document.querySelector(`.testimonial-variant-${this.value}`);
-        if (selectedVariant) {
-          selectedVariant.classList.add('active');
-        }
-      });
     });
 
     // Chargement du widget Tally
