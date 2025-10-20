@@ -2315,13 +2315,19 @@
 
     .tools-grid .tool-image {
       position: relative;
-      min-height: 320px;
+      min-height: 400px;
+      background: #F9FAFB;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
     }
 
     .tools-grid .tool-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      max-height: 400px;
     }
 
     .tools-grid .tool-content {
