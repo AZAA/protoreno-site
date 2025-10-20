@@ -716,40 +716,6 @@
       font-size: 1rem;
     }
 
-    /* ============================================
-       APPROACH SECTION
-       ============================================ */
-    .approach-steps {
-      display: grid;
-      gap: 3.5rem;
-      margin-top: 3.5rem;
-    }
-
-    .approach-step {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .step-number-box {
-      width: 120px;
-      height: 120px;
-      background: var(--navy);
-      color: white;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 3rem;
-      flex-shrink: 0;
-    }
-
-    .step-content h3 {
-      margin-bottom: 1rem;
-      font-size: 1.75rem;
-    }
 
     /* ============================================
        VARIANT SYSTEM FOR CONSTAT & APPROCHE
@@ -1139,41 +1105,312 @@
        APPROCHE VARIANTS
        ============================================ */
 
-    /* VARIANTE 2: Timeline bleue avec progression */
-    .approche-variant-2 .approach-steps {
-      position: relative;
+    /* Système de toggle variantes */
+    .approche-variant {
+      display: none;
+      margin-top: 3rem;
     }
 
-    .approche-variant-2 .approach-steps::before {
+    .approche-variant.active {
+      display: block;
+    }
+
+    #approche-v1:checked ~ .approche-v1,
+    #approche-v2:checked ~ .approche-v2,
+    #approche-v3:checked ~ .approche-v3 {
+      display: block;
+    }
+
+    /* VARIANTE 1 : Timeline verticale avec grandes icônes */
+    .approach-timeline {
+      position: relative;
+      padding-left: 100px;
+    }
+
+    .approach-timeline::before {
       content: '';
       position: absolute;
       left: 60px;
-      top: 60px;
-      bottom: 60px;
-      width: 3px;
+      top: 80px;
+      bottom: 80px;
+      width: 4px;
       background: linear-gradient(180deg, #DBEAFE 0%, #2563EB 50%, #1E40AF 100%);
+      border-radius: 2px;
     }
 
-    .approche-variant-2 .approach-step {
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
       position: relative;
-      z-index: 1;
     }
 
-    .approche-variant-2 .approach-step:nth-child(1) .step-number-box {
-      background: #60A5FA;
+    .timeline-item:last-child {
+      margin-bottom: 0;
     }
 
-    .approche-variant-2 .approach-step:nth-child(2) .step-number-box {
-      background: #2563EB;
+    .timeline-icon-wrapper {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      background: white;
+      border: 4px solid #E5E7EB;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s;
+      z-index: 2;
     }
 
-    .approche-variant-2 .approach-step:nth-child(3) .step-number-box {
-      background: #1E40AF;
+    .timeline-item:nth-child(1) .timeline-icon-wrapper {
+      border-color: #60A5FA;
+      background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
     }
 
-    .step-content p {
+    .timeline-item:nth-child(2) .timeline-icon-wrapper {
+      border-color: #2563EB;
+      background: linear-gradient(135deg, #DBEAFE 0%, #FFFFFF 100%);
+    }
+
+    .timeline-item:nth-child(3) .timeline-icon-wrapper {
+      border-color: #1E40AF;
+      background: linear-gradient(135deg, #BFDBFE 0%, #FFFFFF 100%);
+    }
+
+    .timeline-icon-wrapper:hover {
+      transform: scale(1.08) rotate(5deg);
+      box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
+    }
+
+    .timeline-number {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 36px;
+      height: 36px;
+      background: var(--blue);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.125rem;
+      border: 3px solid white;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .timeline-icon {
+      width: 70px;
+      height: 70px;
+      color: var(--blue);
+    }
+
+    .timeline-content {
+      padding-top: 1rem;
+    }
+
+    .timeline-content h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+
+    .timeline-content p {
       font-size: 1.0625rem;
+      line-height: 1.7;
+      color: var(--slate);
       margin: 0;
+    }
+
+    /* VARIANTE 2 : Bento Grid asymétrique */
+    .bento-approach {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 2rem;
+    }
+
+    .bento-card {
+      background: white;
+      border: 2px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      position: relative;
+      transition: all 0.4s;
+    }
+
+    .bento-card:hover {
+      border-color: var(--blue);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(37, 99, 235, 0.12);
+    }
+
+    .bento-large {
+      grid-row: span 2;
+      background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
+      border: 3px solid var(--blue);
+    }
+
+    .bento-badge {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      width: 48px;
+      height: 48px;
+      background: var(--blue);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .bento-icon {
+      width: 80px;
+      height: 80px;
+      color: var(--blue);
+      margin-bottom: 2rem;
+    }
+
+    .bento-large .bento-icon {
+      width: 120px;
+      height: 120px;
+    }
+
+    .bento-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+
+    .bento-large h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .bento-card p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--slate);
+      margin: 0;
+    }
+
+    .bento-large p {
+      font-size: 1.125rem;
+    }
+
+    /* VARIANTE 3 : Cycle horizontal avec flèches */
+    .cycle-approach {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .cycle-step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+    }
+
+    .cycle-number {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 32px;
+      height: 32px;
+      background: var(--blue);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      border: 3px solid white;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      z-index: 2;
+    }
+
+    .cycle-icon-box {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border: 3px solid var(--blue);
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      transition: all 0.4s;
+    }
+
+    .cycle-icon-box:hover {
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.2);
+    }
+
+    .cycle-icon-box svg {
+      width: 60px;
+      height: 60px;
+      color: var(--blue);
+    }
+
+    .cycle-step h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .cycle-step p {
+      font-size: 0.9375rem;
+      color: var(--slate);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .cycle-arrow {
+      flex: 0 0 100px;
+      position: relative;
+    }
+
+    .cycle-arrow svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .cycle-arrow-return {
+      position: absolute;
+      bottom: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+    }
+
+    .cycle-arrow-return svg {
+      width: 120px;
+      height: 60px;
+    }
+
+    .cycle-label {
+      position: absolute;
+      bottom: -105px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #10B981;
+      white-space: nowrap;
     }
 
     /* ============================================
@@ -1683,17 +1920,6 @@
     }
 
     @media (max-width: 968px) {
-      .approach-step {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .step-number-box {
-        width: 100px;
-        height: 100px;
-        font-size: 2.5rem;
-      }
-
       .screenshots-gallery {
         grid-template-columns: 1fr;
       }
@@ -1783,6 +2009,137 @@
 
       .avatar-style-toggle label {
         padding: 0.375rem 0.75rem;
+        font-size: 0.8125rem;
+      }
+
+      /* Approche variantes responsive */
+      .approach-timeline {
+        padding-left: 0;
+      }
+
+      .approach-timeline::before {
+        display: none;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .timeline-icon-wrapper {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+      }
+
+      .timeline-icon {
+        width: 50px;
+        height: 50px;
+      }
+
+      .timeline-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9375rem;
+      }
+
+      .timeline-content {
+        text-align: center;
+        padding-top: 0;
+      }
+
+      .timeline-content h3 {
+        font-size: 1.5rem;
+      }
+
+      .timeline-content p {
+        font-size: 1rem;
+      }
+
+      /* Bento Grid responsive */
+      .bento-approach {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .bento-large {
+        grid-row: span 1;
+      }
+
+      .bento-card {
+        padding: 2.5rem 2rem;
+      }
+
+      .bento-icon {
+        width: 64px;
+        height: 64px;
+      }
+
+      .bento-large .bento-icon {
+        width: 80px;
+        height: 80px;
+      }
+
+      .bento-badge {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
+
+      .bento-card h3,
+      .bento-large h3 {
+        font-size: 1.5rem;
+      }
+
+      .bento-card p,
+      .bento-large p {
+        font-size: 1rem;
+      }
+
+      /* Cycle responsive */
+      .cycle-approach {
+        flex-direction: column;
+        gap: 2rem;
+        padding-bottom: 4rem;
+      }
+
+      .cycle-step {
+        width: 100%;
+      }
+
+      .cycle-icon-box {
+        width: 100px;
+        height: 100px;
+      }
+
+      .cycle-icon-box svg {
+        width: 50px;
+        height: 50px;
+      }
+
+      .cycle-arrow {
+        transform: rotate(90deg);
+        flex: 0 0 60px;
+      }
+
+      .cycle-arrow svg {
+        width: 60px;
+      }
+
+      .cycle-arrow-return {
+        bottom: 10px;
+        left: 50%;
+        width: 80px;
+      }
+
+      .cycle-arrow-return svg {
+        width: 80px;
+        height: 40px;
+      }
+
+      .cycle-label {
+        bottom: -20px;
         font-size: 0.8125rem;
       }
 
@@ -1883,13 +2240,6 @@
 
       .team-member-role {
         font-size: 0.8125rem;
-      }
-
-      /* Timeline responsive */
-      .step-number-box {
-        width: 100px;
-        height: 100px;
-        font-size: 2.5rem;
       }
 
       /* Outil cards tablette */
@@ -2172,62 +2522,154 @@
         <p class="lead">Développement collaboratif avec les professionnels</p>
       </div>
 
-      <!-- Timeline épurée -->
-      <div class="hero-timeline">
-        <div class="timeline-step">
-          <div class="timeline-dot"></div>
-          <div class="timeline-label">Vous dites</div>
-        </div>
-        <div class="timeline-line"></div>
-        <div class="timeline-step">
-          <div class="timeline-dot"></div>
-          <div class="timeline-label">On crée</div>
-        </div>
-        <div class="timeline-line"></div>
-        <div class="timeline-step">
-          <div class="timeline-dot"></div>
-          <div class="timeline-label">Vous testez</div>
-        </div>
-        <div class="timeline-line"></div>
-        <div class="timeline-step">
-          <div class="timeline-dot"></div>
-          <div class="timeline-label">On ajuste</div>
-        </div>
+      <!-- Toggle variantes -->
+      <div class="section-variant-selector">
+        <input type="radio" name="approche-variant" id="approche-v1" class="section-variant-option" checked>
+        <label for="approche-v1" class="section-variant-label">Timeline icônes</label>
+
+        <input type="radio" name="approche-variant" id="approche-v2" class="section-variant-option">
+        <label for="approche-v2" class="section-variant-label">Bento Grid</label>
+
+        <input type="radio" name="approche-variant" id="approche-v3" class="section-variant-option">
+        <label for="approche-v3" class="section-variant-label">Cycle continu</label>
       </div>
 
-      <div class="approche-variant-2">
-        <div class="approach-steps">
-          <div class="approach-step">
-            <div class="step-number-box">1</div>
-            <div class="step-content">
+      <!-- VARIANTE 1 : Timeline verticale avec grandes icônes -->
+      <div class="approche-variant approche-v1 active">
+        <div class="approach-timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon-wrapper">
+              <div class="timeline-number">1</div>
+              <svg class="timeline-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+              </svg>
+            </div>
+            <div class="timeline-content">
               <h3>Écouter le terrain</h3>
-              <p>
-                Nous recueillons vos retours pour identifier les vrais blocages. Chaque fonctionnalité est priorisée selon son utilité réelle pour gagner du temps au quotidien.
-              </p>
+              <p>Nous recueillons vos retours pour identifier les vrais blocages. Chaque fonctionnalité est priorisée selon son utilité réelle pour gagner du temps au quotidien.</p>
             </div>
           </div>
 
-          <div class="approach-step">
-            <div class="step-number-box">2</div>
-            <div class="step-content">
+          <div class="timeline-item">
+            <div class="timeline-icon-wrapper">
+              <div class="timeline-number">2</div>
+              <svg class="timeline-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </div>
+            <div class="timeline-content">
               <h3>Développer des solutions ciblées</h3>
-              <p>
-                Nous créons des outils SaaS sans superflu, avec une interface claire et des fonctionnalités essentielles. Performance, fiabilité et simplicité sont nos priorités.
-              </p>
+              <p>Nous créons des outils SaaS sans superflu, avec une interface claire et des fonctionnalités essentielles. Performance, fiabilité et simplicité sont nos priorités.</p>
             </div>
           </div>
 
-          <div class="approach-step">
-            <div class="step-number-box">3</div>
-            <div class="step-content">
+          <div class="timeline-item">
+            <div class="timeline-icon-wrapper">
+              <div class="timeline-number">3</div>
+              <svg class="timeline-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </div>
+            <div class="timeline-content">
               <h3>Améliorer en continu</h3>
-              <p>
-                Grâce à vos retours réguliers lors des phases de tests, nous ajustons et améliorons nos outils de manière itérative pour qu'ils soient vraiment utiles.
-              </p>
+              <p>Grâce à vos retours réguliers lors des phases de tests, nous ajustons et améliorons nos outils de manière itérative pour qu'ils soient vraiment utiles.</p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- VARIANTE 2 : Bento Grid asymétrique -->
+      <div class="approche-variant approche-v2">
+        <div class="bento-approach">
+          <div class="bento-card bento-large">
+            <div class="bento-badge">01</div>
+            <svg class="bento-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+            </svg>
+            <h3>Écouter le terrain</h3>
+            <p>Nous recueillons vos retours pour identifier les vrais blocages. Chaque fonctionnalité est priorisée selon son utilité réelle pour gagner du temps au quotidien.</p>
+          </div>
+
+          <div class="bento-card">
+            <div class="bento-badge">02</div>
+            <svg class="bento-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+            <h3>Développer des solutions ciblées</h3>
+            <p>Nous créons des outils SaaS sans superflu, avec une interface claire et des fonctionnalités essentielles.</p>
+          </div>
+
+          <div class="bento-card">
+            <div class="bento-badge">03</div>
+            <svg class="bento-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+            <h3>Améliorer en continu</h3>
+            <p>Grâce à vos retours réguliers, nous ajustons et améliorons nos outils de manière itérative.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 3 : Cycle horizontal avec flèches -->
+      <div class="approche-variant approche-v3">
+        <div class="cycle-approach">
+          <div class="cycle-step">
+            <div class="cycle-number">1</div>
+            <div class="cycle-icon-box">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+              </svg>
+            </div>
+            <h4>Écouter le terrain</h4>
+            <p>Identifier les vrais blocages avec vous</p>
+          </div>
+
+          <div class="cycle-arrow">
+            <svg viewBox="0 0 100 40" fill="none">
+              <path d="M0 20 Q 50 -10, 100 20" stroke="#2563EB" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+              <polygon points="95,15 100,20 95,25" fill="#2563EB"/>
+            </svg>
+          </div>
+
+          <div class="cycle-step">
+            <div class="cycle-number">2</div>
+            <div class="cycle-icon-box">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </div>
+            <h4>Développer</h4>
+            <p>Créer des outils SaaS sans superflu</p>
+          </div>
+
+          <div class="cycle-arrow">
+            <svg viewBox="0 0 100 40" fill="none">
+              <path d="M0 20 Q 50 50, 100 20" stroke="#2563EB" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+              <polygon points="95,15 100,20 95,25" fill="#2563EB"/>
+            </svg>
+          </div>
+
+          <div class="cycle-step">
+            <div class="cycle-number">3</div>
+            <div class="cycle-icon-box">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </div>
+            <h4>Améliorer</h4>
+            <p>Ajuster en continu avec vos retours</p>
+          </div>
+
+          <div class="cycle-arrow cycle-arrow-return">
+            <svg viewBox="0 0 120 60" fill="none">
+              <path d="M110 10 Q 60 -20, 10 10 L 10 50" stroke="#10B981" stroke-width="2" fill="none" stroke-dasharray="4 4" opacity="0.6"/>
+              <polygon points="5,45 10,50 15,45" fill="#10B981" opacity="0.6"/>
+            </svg>
+            <span class="cycle-label">Cycle continu</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
