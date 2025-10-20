@@ -957,7 +957,8 @@
     }
 
     /* Style Cards - Avatars intégrés dans les value-cards */
-    .values-grid-with-avatars .value-card {
+    .values-grid-with-avatars .value-card,
+    .values-grid-with-avatars-notion .value-card {
       position: relative;
       padding-top: 4rem;
     }
@@ -974,6 +975,12 @@
       box-shadow: 0 4px 16px rgba(37, 99, 235, 0.2);
       object-fit: cover;
       background: white;
+    }
+
+    /* Fond blanc pour avatars Notion dans les cards */
+    .values-grid-with-avatars-notion .value-card-avatar {
+      background: white;
+      padding: 0.5rem;
     }
 
     .value-card-avatars {
@@ -2118,7 +2125,10 @@
         <label for="avatar-notion">Illustrations</label>
 
         <input type="radio" name="avatar-style" id="avatar-cards" value="cards">
-        <label for="avatar-cards">Dans les cards</label>
+        <label for="avatar-cards">Photos + cards</label>
+
+        <input type="radio" name="avatar-style" id="avatar-notion-cards" value="notion-cards">
+        <label for="avatar-notion-cards">Illustrations + cards</label>
       </div>
 
       <!-- Toggle filtres photos (visible uniquement avec style photo ou cards) -->
@@ -2260,7 +2270,7 @@
         </div>
       </div>
 
-      <!-- Values Grid avec avatars intégrés (cachée par défaut) -->
+      <!-- Values Grid avec avatars photo intégrés (cachée par défaut) -->
       <div class="values-grid values-grid-with-avatars hidden">
         <div class="value-card">
           <img src="images/avatar1.png" alt="Sarah M." class="value-card-avatar">
@@ -2292,6 +2302,51 @@
           <div class="value-card-avatars">
             <img src="images/avatar1.png" alt="Sarah M." class="value-card-avatar">
             <img src="images/avatar2.png" alt="Alex D." class="value-card-avatar">
+          </div>
+          <div class="value-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3>Indépendance</h3>
+          <p>
+            Pas de grand groupe, pas d'investisseurs. Nous restons libres de nos choix et à l'écoute du terrain
+          </p>
+        </div>
+      </div>
+
+      <!-- Values Grid avec avatars Notion intégrés (cachée par défaut) -->
+      <div class="values-grid values-grid-with-avatars-notion hidden">
+        <div class="value-card">
+          <img src="images/notion-avatar-1760960428241.png" alt="Sarah M." class="value-card-avatar">
+          <div class="value-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3>Expertise terrain</h3>
+          <p>
+            Issus du secteur de la rénovation énergétique, nous connaissons les contraintes réelles du métier
+          </p>
+        </div>
+
+        <div class="value-card">
+          <img src="images/notion-avatar-1760960439785.png" alt="Alex D." class="value-card-avatar">
+          <div class="value-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3>Compétences tech</h3>
+          <p>
+            Une équipe de développeurs expérimentés qui créent des solutions fiables et performantes
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-card-avatars">
+            <img src="images/notion-avatar-1760960428241.png" alt="Sarah M." class="value-card-avatar">
+            <img src="images/notion-avatar-1760960439785.png" alt="Alex D." class="value-card-avatar">
           </div>
           <div class="value-icon">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -2462,31 +2517,43 @@
       const notionAvatars = document.querySelector('.team-avatars-notion');
       const valuesGridDefault = document.querySelector('.values-grid-default');
       const valuesGridWithAvatars = document.querySelector('.values-grid-with-avatars');
+      const valuesGridWithAvatarsNotion = document.querySelector('.values-grid-with-avatars-notion');
       const filterToggle = document.getElementById('photo-filter-toggle');
 
       avatarRadios.forEach(radio => {
         radio.addEventListener('change', function() {
           if (this.value === 'photo') {
-            // Style Photos
+            // Style Photos standalone
             photoAvatars.classList.remove('hidden');
             notionAvatars.classList.add('hidden');
             valuesGridDefault.classList.remove('hidden');
             valuesGridWithAvatars.classList.add('hidden');
+            valuesGridWithAvatarsNotion.classList.add('hidden');
             filterToggle.classList.remove('hidden'); // Afficher le toggle de filtres
           } else if (this.value === 'notion') {
-            // Style Notion
+            // Style Illustrations standalone
             photoAvatars.classList.add('hidden');
             notionAvatars.classList.remove('hidden');
             valuesGridDefault.classList.remove('hidden');
             valuesGridWithAvatars.classList.add('hidden');
+            valuesGridWithAvatarsNotion.classList.add('hidden');
             filterToggle.classList.add('hidden'); // Cacher le toggle de filtres
           } else if (this.value === 'cards') {
-            // Style intégré dans les cards
+            // Style Photos intégrées dans les cards
             photoAvatars.classList.add('hidden');
             notionAvatars.classList.add('hidden');
             valuesGridDefault.classList.add('hidden');
             valuesGridWithAvatars.classList.remove('hidden');
+            valuesGridWithAvatarsNotion.classList.add('hidden');
             filterToggle.classList.remove('hidden'); // Afficher le toggle de filtres
+          } else if (this.value === 'notion-cards') {
+            // Style Illustrations intégrées dans les cards
+            photoAvatars.classList.add('hidden');
+            notionAvatars.classList.add('hidden');
+            valuesGridDefault.classList.add('hidden');
+            valuesGridWithAvatars.classList.add('hidden');
+            valuesGridWithAvatarsNotion.classList.remove('hidden');
+            filterToggle.classList.remove('hidden'); // Afficher le toggle de filtres pour appliquer aux illustrations
           }
         });
       });
