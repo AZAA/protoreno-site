@@ -776,110 +776,179 @@
       display: block;
     }
 
-    /* Variante 3 : Données chiffrées impactantes */
-    .stat-card {
+    /* Variante 2 : Timeline d'une journée galère */
+    .timeline-galere {
+      max-width: 800px;
+      margin: 3.5rem auto 0;
       position: relative;
-      padding-top: 3rem !important;
     }
 
-    .stat-large {
-      font-size: 4rem;
-      font-weight: 800;
+    .timeline-galere::before {
+      content: '';
+      position: absolute;
+      left: 60px;
+      top: 20px;
+      bottom: 20px;
+      width: 3px;
+      background: linear-gradient(180deg, #DBEAFE 0%, #EF4444 100%);
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .timeline-hour {
+      flex-shrink: 0;
+      width: 80px;
+      font-size: 1.25rem;
+      font-weight: 700;
       color: var(--blue);
-      line-height: 1;
-      margin-bottom: 0.25rem;
+      text-align: right;
+      padding-top: 0.25rem;
     }
 
-    .stat-sublabel {
+    .timeline-content {
+      flex: 1;
+      background: white;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--light-gray);
+      border-left: 4px solid #EF4444;
+      position: relative;
+    }
+
+    .timeline-content h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--navy);
+    }
+
+    .timeline-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--slate);
+      margin: 0;
+    }
+
+    .timeline-item:last-child .timeline-content {
+      border-left-color: #DC2626;
+      background: linear-gradient(135deg, #FEF2F2 0%, white 100%);
+    }
+
+    /* Variante 3 : Problèmes MaPrimeRénov ultra-spécifiques */
+    .specifique-card {
+      text-align: left !important;
+      padding: 2.5rem 2rem !important;
+      border-left: 4px solid #F59E0B !important;
+    }
+
+    .specifique-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .specifique-card h3 {
+      font-size: 1.375rem;
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+
+    .specifique-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--slate);
+    }
+
+    /* Variante 4 : Avant / Après visuel */
+    .avant-apres-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3.5rem;
+    }
+
+    .column-title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid var(--light-gray);
+    }
+
+    .avant-column .column-title {
+      border-color: #EF4444;
+      color: #DC2626;
+    }
+
+    .apres-column .column-title {
+      border-color: #10B981;
+      color: #059669;
+    }
+
+    .chaos-list,
+    .ordre-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .chaos-list li {
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.75rem;
+      background: #FEF2F2;
+      border-left: 4px solid #EF4444;
+      border-radius: 8px;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      color: var(--slate);
+    }
+
+    .ordre-list li {
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.75rem;
+      background: #ECFDF5;
+      border-left: 4px solid #10B981;
+      border-radius: 8px;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      color: var(--slate);
+    }
+
+    /* Variante 5 : Coût du chaos */
+    .cout-card {
+      text-align: center !important;
+      padding: 3rem 2rem !important;
+      background: linear-gradient(135deg, #FEF2F2 0%, white 100%) !important;
+      border: 2px solid #EF4444 !important;
+    }
+
+    .cout-montant {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #DC2626;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .cout-label {
       font-size: 0.875rem;
       font-weight: 600;
-      color: var(--slate);
+      color: #EF4444;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-bottom: 1.5rem;
     }
 
-    .stat-card p {
-      font-size: 0.9375rem;
-      line-height: 1.6;
-    }
-
-    /* Variante 4 : Format quote-driven (témoignages) */
-    .quote-card {
-      text-align: left !important;
-      padding: 2rem !important;
-      position: relative;
-      border-left: 4px solid var(--blue);
-    }
-
-    .quote-mark {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      font-size: 5rem;
-      font-weight: 700;
-      color: var(--blue);
-      opacity: 0.1;
-      line-height: 1;
-    }
-
-    .quote-text {
-      font-size: 1.125rem;
-      font-weight: 600;
-      font-style: italic;
-      color: var(--navy);
-      margin-bottom: 1.25rem !important;
-      line-height: 1.5;
-    }
-
-    .quote-author {
-      font-size: 0.875rem;
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--light-gray);
-    }
-
-    .quote-author strong {
-      color: var(--navy);
-      font-weight: 700;
-    }
-
-    .quote-author span {
-      color: var(--slate);
-      font-weight: 500;
-    }
-
-    .quote-context {
-      font-size: 0.9375rem;
-      color: var(--slate);
-      margin: 0 !important;
-      line-height: 1.6;
-    }
-
-    /* Variante 5 : Mix spécifique + chiffres */
-    .mix-card {
-      text-align: left !important;
-      padding: 2.5rem 2rem !important;
-    }
-
-    .mix-badge {
-      display: inline-block;
-      padding: 0.5rem 1.25rem;
-      background: var(--blue);
-      color: white;
-      border-radius: 24px;
-      font-size: 1.125rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-
-    .mix-card h3 {
+    .cout-card h3 {
       font-size: 1.375rem;
-      margin-bottom: 1rem !important;
+      margin-bottom: 1rem;
       color: var(--navy);
     }
 
-    .mix-card p {
+    .cout-card p {
       font-size: 0.9375rem;
       line-height: 1.6;
       color: var(--slate);
@@ -2007,25 +2076,25 @@
           </label>
           <label style="display: inline-block;">
             <input type="radio" name="constat-variant" value="2" style="display: none;">
-            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">2. Ultra-spécifique</span>
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">2. Timeline journée galère</span>
           </label>
           <label style="display: inline-block;">
             <input type="radio" name="constat-variant" value="3" style="display: none;">
-            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">3. Chiffres impactants</span>
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">3. Problèmes MaPrimeRénov</span>
           </label>
           <label style="display: inline-block;">
             <input type="radio" name="constat-variant" value="4" style="display: none;">
-            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">4. Témoignages</span>
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">4. Avant / Après</span>
           </label>
           <label style="display: inline-block;">
             <input type="radio" name="constat-variant" value="5" style="display: none;">
-            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">5. Mix spécifique + chiffres</span>
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">5. Coût du chaos</span>
           </label>
         </div>
       </div>
 
       <!-- Variante 1 : Version actuelle (référence) -->
-      <div class="constat-variant-1 active">
+      <div class="constat-variant-1 constat-variant-9 active">
         <div class="problem-grid">
           <div class="problem-card">
             <div class="problem-icon">
@@ -2060,118 +2129,122 @@
         </div>
       </div>
 
-      <!-- Variante 2 : Ultra-spécifique avec problèmes terrain -->
+      <!-- Variante 2 : Timeline d'une journée galère -->
       <div class="constat-variant-2">
-        <div class="problem-grid">
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
+        <div class="timeline-galere">
+          <div class="timeline-item">
+            <div class="timeline-hour">8h30</div>
+            <div class="timeline-content">
+              <h4>Client qui relance pour son dossier</h4>
+              <p>"C'est quand qu'on envoie à l'ANAH ?" — Alors que vous attendez encore 3 pièces de sa part depuis 10 jours.</p>
             </div>
-            <h3>3 semaines pour 1 dossier</h3>
-            <p>Constitution manuelle des dossiers MaPrimeRénov avec relances multiples des clients pour les justificatifs. Excel, emails, téléphone... et souvent un refus au premier envoi.</p>
           </div>
-
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-              </svg>
+          <div class="timeline-item">
+            <div class="timeline-hour">10h15</div>
+            <div class="timeline-content">
+              <h4>Dossier refusé sans explication claire</h4>
+              <p>L'instructeur mentionne "justificatif non conforme". Lequel ? Pourquoi ? Mystère. 30 minutes au téléphone pour comprendre.</p>
             </div>
-            <h3>Relances sans fin</h3>
-            <p>"Vous avez reçu mon mail pour la facture du plombier ?" Entre WhatsApp, SMS, emails et appels, impossible de suivre qui a envoyé quoi et quand.</p>
           </div>
-
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
+          <div class="timeline-item">
+            <div class="timeline-hour">14h45</div>
+            <div class="timeline-content">
+              <h4>Recherche de documents dans 47 emails</h4>
+              <p>Vous cherchez l'attestation RGE envoyée il y a 2 semaines. Elle est noyée entre les devis, factures et photos de chantier.</p>
             </div>
-            <h3>Excel partout, vision nulle part</h3>
-            <p>Un fichier Excel par chantier, impossible de voir d'un coup d'œil où ça coince. Les tableaux croisés dynamiques, c'est pas votre métier.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-hour">17h00</div>
+            <div class="timeline-content">
+              <h4>Mise à jour de 3 fichiers Excel différents</h4>
+              <p>Un par chantier. Copier-coller entre les onglets. Une erreur de formule ? Tout refaire.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-hour">19h30</div>
+            <div class="timeline-content">
+              <h4>Toujours pas sur le terrain</h4>
+              <p>La journée est passée. Paperasse, relances, admin. Zéro heure de chantier ou prospection.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Variante 3 : Données chiffrées impactantes -->
+      <!-- Variante 3 : Problèmes MaPrimeRénov ultra-spécifiques -->
       <div class="constat-variant-3">
         <div class="problem-grid">
-          <div class="problem-card stat-card">
-            <div class="stat-large">14h</div>
-            <div class="stat-sublabel">par semaine</div>
-            <p>C'est le temps moyen passé sur la paperasse administrative au lieu d'être sur le terrain ou à prospecter de nouveaux chantiers.</p>
+          <div class="problem-card specifique-card">
+            <div class="specifique-icon">⚠️</div>
+            <h3>Attestation RGE expirée de 2 jours</h3>
+            <p>Votre qualification était valide quand vous avez démarré le projet. Mais l'ANAH refuse le dossier car elle a expiré entre temps. Tout recommencer.</p>
           </div>
 
-          <div class="problem-card stat-card">
-            <div class="stat-large">47%</div>
-            <div class="stat-sublabel">de dossiers incomplets</div>
-            <p>Près d'un dossier sur deux est refusé au premier envoi par manque de pièces justificatives ou erreur de saisie. Chaque refus = 5 à 10 jours perdus.</p>
+          <div class="problem-card specifique-card">
+            <div class="specifique-icon">📄</div>
+            <h3>Devis "non conforme" sans précision</h3>
+            <p>Le mail de refus dit juste "devis non conforme". Pas de détail. Il manque une mention obligatoire que personne ne connaît. 3 semaines perdues.</p>
           </div>
 
-          <div class="problem-card stat-card">
-            <div class="stat-large">3 200€</div>
-            <div class="stat-sublabel">perdus par abandon</div>
-            <p>Montant moyen des aides non touchées quand un client abandonne en cours de route face à la complexité administrative.</p>
+          <div class="problem-card specifique-card">
+            <div class="specifique-icon">🔄</div>
+            <h3>Format PDF refusé, puis JPEG refusé</h3>
+            <p>Premier envoi en PDF : "doit être en JPEG". Renvoi en JPEG : "fichier trop lourd". Renvoi compressé : "illisible". Boucle infernale.</p>
           </div>
         </div>
       </div>
 
-      <!-- Variante 4 : Format quote-driven (témoignages) -->
+      <!-- Variante 4 : Avant / Après visuel -->
       <div class="constat-variant-4">
-        <div class="problem-grid">
-          <div class="problem-card quote-card">
-            <div class="quote-mark">"</div>
-            <p class="quote-text">J'ai encore perdu 2h à rechercher les justificatifs d'un client dans mes mails</p>
-            <div class="quote-author">
-              <strong>Arnaud</strong><br>
-              <span>Bureau d'études thermiques, Lyon</span>
-            </div>
-            <p class="quote-context">Sans outil centralisé, impossible de retrouver rapidement les documents envoyés il y a 3 semaines.</p>
+        <div class="avant-apres-grid">
+          <div class="avant-column">
+            <h3 class="column-title">📊 Aujourd'hui</h3>
+            <ul class="chaos-list">
+              <li>127 emails non lus avec des pièces justificatives quelque part dedans</li>
+              <li>Chantier_FINAL_v3_VRAIFINAL.xlsx sur le bureau</li>
+              <li>"T'as bien envoyé l'attestation ?" — Euh... je crois ?</li>
+              <li>Relancer le client par WhatsApp OU par SMS OU par mail ?</li>
+              <li>Dossier refusé pour une raison incompréhensible</li>
+              <li>2h à chercher une facture envoyée "y'a pas longtemps"</li>
+              <li>Client qui abandonne : "C'est trop compliqué"</li>
+            </ul>
           </div>
-
-          <div class="problem-card quote-card">
-            <div class="quote-mark">"</div>
-            <p class="quote-text">Un client sur trois abandonne quand je lui explique toutes les pièces à fournir</p>
-            <div class="quote-author">
-              <strong>Marie</strong><br>
-              <span>Coordinatrice rénovation, Nantes</span>
-            </div>
-            <p class="quote-context">La liste des justificatifs fait fuir. Un accompagnement automatisé changerait tout.</p>
-          </div>
-
-          <div class="problem-card quote-card">
-            <div class="quote-mark">"</div>
-            <p class="quote-text">Je passe plus de temps sur Excel que sur mes chantiers</p>
-            <div class="quote-author">
-              <strong>Thomas</strong><br>
-              <span>Artisan chauffagiste, Bordeaux</span>
-            </div>
-            <p class="quote-context">Suivre 8 chantiers en parallèle avec des tableurs, c'est la garantie d'oublier quelque chose.</p>
+          <div class="apres-column">
+            <h3 class="column-title">✅ Ce que ça devrait être</h3>
+            <ul class="ordre-list">
+              <li>Tous les docs au même endroit, faciles à retrouver</li>
+              <li>Alertes auto si une pièce manque</li>
+              <li>Vue d'ensemble de tous vos chantiers en un clin d'œil</li>
+              <li>Le client dépose ses justificatifs lui-même</li>
+              <li>Vérification avant envoi pour éviter les refus</li>
+              <li>Recherche instantanée de n'importe quel document</li>
+              <li>Votre temps sur le terrain, pas sur Excel</li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <!-- Variante 5 : Mix spécifique + chiffres (RECOMMANDÉ) -->
+      <!-- Variante 5 : Coût réel du chaos -->
       <div class="constat-variant-5">
         <div class="problem-grid">
-          <div class="problem-card mix-card">
-            <div class="mix-badge">21 jours</div>
-            <h3>Pour constituer un dossier MaPrimeRénov</h3>
-            <p>Entre les relances client pour les pièces manquantes, la vérification des documents et les allers-retours avec l'instructeur. Pendant ce temps, pas de nouveaux chantiers.</p>
+          <div class="problem-card cout-card">
+            <div class="cout-montant">2 800€</div>
+            <div class="cout-label">perdus / mois</div>
+            <h3>En productivité gaspillée</h3>
+            <p>56h de paperasse × 50€/h (votre taux horaire) = argent qui part en fumée chaque mois au lieu de générer du chiffre d'affaires.</p>
           </div>
 
-          <div class="problem-card mix-card">
-            <div class="mix-badge">6 outils</div>
-            <h3>Pour suivre un seul chantier</h3>
-            <p>Excel pour le planning, emails pour les docs, WhatsApp pour le client, téléphone pour les artisans, Drive pour les photos, papier pour les notes. Aucune vision d'ensemble.</p>
+          <div class="problem-card cout-card">
+            <div class="cout-montant">15 000€</div>
+            <div class="cout-label">de CA non réalisé</div>
+            <h3>Par dossier abandonné</h3>
+            <p>Quand un client abandonne face à la complexité, vous perdez le chantier entier. En moyenne 2 abandons par mois = 30k€ de CA évaporé.</p>
           </div>
 
-          <div class="problem-card mix-card">
-            <div class="mix-badge">1 sur 4</div>
-            <h3>Clients qui abandonnent en cours de route</h3>
-            <p>Complexité administrative, lenteur des démarches, pièces justificatives incompréhensibles. Résultat : des projets de rénovation qui n'aboutissent jamais.</p>
+          <div class="problem-card cout-card">
+            <div class="cout-montant">480€</div>
+            <div class="cout-label">par refus de dossier</div>
+            <h3>Le coût d'un refus ANAH</h3>
+            <p>8h de travail supplémentaire pour corriger + renvoyer à 60€/h. Sans compter le retard sur les autres chantiers et la frustration client.</p>
           </div>
         </div>
       </div>
