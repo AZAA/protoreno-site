@@ -956,128 +956,140 @@
       color: #2563EB;
     }
 
-    /* VARIANTE 14: Card centrale spotlight */
-    .constat-variant-14 .problem-card:nth-child(1),
-    .constat-variant-14 .problem-card:nth-child(3) {
-      transform: scale(0.9);
-      opacity: 0.7;
-      filter: grayscale(40%);
+    /* VARIANTE 14: Profondeur en escalier */
+    .constat-variant-14 .problem-card:nth-child(1) {
+      transform: translateZ(-20px) scale(0.95);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+      opacity: 0.9;
     }
 
     .constat-variant-14 .problem-card:nth-child(2) {
-      transform: scale(1.1);
-      background: linear-gradient(135deg, #EFF6FF 0%, white 100%);
-      border: 3px solid #2563EB;
-      box-shadow: 0 20px 60px rgba(37, 99, 235, 0.25);
-      position: relative;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
       z-index: 2;
+      position: relative;
     }
 
-    .constat-variant-14 .problem-card:nth-child(2) .problem-icon {
-      width: 120px;
-      height: 120px;
+    .constat-variant-14 .problem-card:nth-child(3) {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 16px 48px rgba(37, 99, 235, 0.2);
+      border: 2px solid #2563EB;
+      z-index: 3;
+      position: relative;
+    }
+
+    .constat-variant-14 .problem-card:nth-child(3) .problem-icon {
       background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.3);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
     }
 
-    .constat-variant-14 .problem-card:nth-child(2) .problem-icon svg {
+    .constat-variant-14 .problem-card:nth-child(3) .problem-icon svg {
       color: white;
-      width: 60px;
-      height: 60px;
     }
 
-    .constat-variant-14 .problem-card:nth-child(2) h3 {
-      font-size: 1.875rem;
+    .constat-variant-14 .problem-card:nth-child(3) h3 {
       color: #2563EB;
     }
 
-    .constat-variant-14 .problem-card:nth-child(1):hover,
-    .constat-variant-14 .problem-card:nth-child(3):hover {
-      opacity: 0.85;
-      filter: grayscale(20%);
+    /* VARIANTE 15: Couleurs dégradées par card */
+    .constat-variant-15 .problem-card:nth-child(1) {
+      background: linear-gradient(135deg, #F0F9FF 0%, white 100%);
+      border-color: #DBEAFE;
     }
 
-    /* VARIANTE 15: Décalage vertical */
-    .constat-variant-15 .problem-grid {
-      align-items: center;
+    .constat-variant-15 .problem-card:nth-child(1) .problem-icon {
+      background: white;
+      border: 2px solid #93C5FD;
+    }
+
+    .constat-variant-15 .problem-card:nth-child(1) .problem-icon svg {
+      color: #93C5FD;
     }
 
     .constat-variant-15 .problem-card:nth-child(2) {
-      transform: translateY(-40px);
-      border: 2px solid #2563EB;
-      box-shadow: 0 16px 48px rgba(37, 99, 235, 0.2);
+      background: linear-gradient(135deg, #DBEAFE 0%, white 100%);
+      border: 2px solid #60A5FA;
     }
 
     .constat-variant-15 .problem-card:nth-child(2) .problem-icon {
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      background: linear-gradient(135deg, #93C5FD 0%, #60A5FA 100%);
     }
 
     .constat-variant-15 .problem-card:nth-child(2) .problem-icon svg {
       color: white;
     }
 
-    .constat-variant-15 .problem-card:nth-child(1) .problem-icon,
-    .constat-variant-15 .problem-card:nth-child(3) .problem-icon {
-      background: #EFF6FF;
-      border: 2px solid #DBEAFE;
+    .constat-variant-15 .problem-card:nth-child(3) {
+      background: white;
+      border: 3px solid #1E40AF;
+      box-shadow: 0 12px 32px rgba(30, 64, 175, 0.15);
     }
 
-    .constat-variant-15 .problem-card:nth-child(1) .problem-icon svg,
+    .constat-variant-15 .problem-card:nth-child(3) .problem-icon {
+      background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+    }
+
     .constat-variant-15 .problem-card:nth-child(3) .problem-icon svg {
+      color: white;
+    }
+
+    .constat-variant-15 .problem-card:nth-child(3) h3 {
+      color: #1E40AF;
+    }
+
+    /* VARIANTE 16: Formes d'icônes différenciées */
+    .constat-variant-16 .problem-card:nth-child(1) .problem-icon {
+      border-radius: 50%;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border: 2px solid #93C5FD;
+    }
+
+    .constat-variant-16 .problem-card:nth-child(1) .problem-icon svg {
       color: #2563EB;
     }
 
-    /* VARIANTE 16: Layouts mixtes */
-    .constat-variant-16 .problem-card:nth-child(2) {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      text-align: left;
-      padding: 2.5rem;
-    }
-
     .constat-variant-16 .problem-card:nth-child(2) .problem-icon {
-      margin: 0;
-      min-width: 100px;
-      width: 100px;
-      height: 100px;
+      border-radius: 12px;
       background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      border-radius: 16px;
+      clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+      width: 110px;
+      height: 110px;
     }
 
     .constat-variant-16 .problem-card:nth-child(2) .problem-icon svg {
       color: white;
+      width: 52px;
+      height: 52px;
     }
 
-    .constat-variant-16 .problem-card:nth-child(2) h3 {
-      text-align: left;
-      margin-bottom: 0.75rem;
-    }
-
-    .constat-variant-16 .problem-card:nth-child(2) p {
-      text-align: left;
-    }
-
-    .constat-variant-16 .problem-card:nth-child(1) .problem-icon,
-    .constat-variant-16 .problem-card:nth-child(3) .problem-icon {
-      background: #EFF6FF;
+    .constat-variant-16 .problem-card:nth-child(2) {
       border: 2px solid #2563EB;
     }
 
-    .constat-variant-16 .problem-card:nth-child(1) .problem-icon svg,
-    .constat-variant-16 .problem-card:nth-child(3) .problem-icon svg {
+    .constat-variant-16 .problem-card:nth-child(2) h3 {
       color: #2563EB;
     }
 
-    /* VARIANTE 17: Intensité progressive */
+    .constat-variant-16 .problem-card:nth-child(3) .problem-icon {
+      border-radius: 20px;
+      background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+      border: 3px solid white;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+    }
+
+    .constat-variant-16 .problem-card:nth-child(3) .problem-icon svg {
+      color: white;
+    }
+
+    /* VARIANTE 17: Bordures décoratives différentes */
     .constat-variant-17 .problem-card:nth-child(1) {
-      background: linear-gradient(135deg, #F0F9FF 0%, white 100%);
-      border-color: #DBEAFE;
+      border-left: 6px solid #60A5FA;
+      padding-left: 2rem;
     }
 
     .constat-variant-17 .problem-card:nth-child(1) .problem-icon {
-      background: white;
-      border: 3px solid #93C5FD;
+      background: #EFF6FF;
+      border: 2px solid #60A5FA;
     }
 
     .constat-variant-17 .problem-card:nth-child(1) .problem-icon svg {
@@ -1085,41 +1097,42 @@
     }
 
     .constat-variant-17 .problem-card:nth-child(2) {
-      background: linear-gradient(135deg, #DBEAFE 0%, white 100%);
-      border: 2px solid #60A5FA;
+      border: 3px solid transparent;
+      background-image: linear-gradient(white, white),
+                        linear-gradient(135deg, #93C5FD 0%, #2563EB 50%, #1E40AF 100%);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
     }
 
     .constat-variant-17 .problem-card:nth-child(2) .problem-icon {
-      background: linear-gradient(135deg, #93C5FD 0%, #60A5FA 100%);
-      border: 2px solid white;
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     }
 
     .constat-variant-17 .problem-card:nth-child(2) .problem-icon svg {
       color: white;
     }
 
-    .constat-variant-17 .problem-card:nth-child(3) {
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      border: none;
-      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.25);
-    }
-
-    .constat-variant-17 .problem-card:nth-child(3) .problem-icon {
-      background: white;
-      border: 3px solid white;
-      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
-    }
-
-    .constat-variant-17 .problem-card:nth-child(3) .problem-icon svg {
+    .constat-variant-17 .problem-card:nth-child(2) h3 {
       color: #2563EB;
     }
 
-    .constat-variant-17 .problem-card:nth-child(3) h3 {
+    .constat-variant-17 .problem-card:nth-child(3) {
+      border: 2px solid #2563EB;
+      box-shadow: 0 0 0 4px #DBEAFE, 0 12px 32px rgba(37, 99, 235, 0.15);
+      position: relative;
+    }
+
+    .constat-variant-17 .problem-card:nth-child(3) .problem-icon {
+      background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+      box-shadow: 0 8px 24px rgba(30, 64, 175, 0.3);
+    }
+
+    .constat-variant-17 .problem-card:nth-child(3) .problem-icon svg {
       color: white;
     }
 
-    .constat-variant-17 .problem-card:nth-child(3) p {
-      color: rgba(255, 255, 255, 0.95);
+    .constat-variant-17 .problem-card:nth-child(3) h3 {
+      color: #1E40AF;
     }
 
     /* VARIANTE 18: Rotation asymétrique */
@@ -2035,16 +2048,16 @@
         <label for="constat-v13" class="section-variant-label">Progression taille</label>
 
         <input type="radio" name="constat-variant" id="constat-v14" value="14" class="section-variant-option">
-        <label for="constat-v14" class="section-variant-label">Spotlight central</label>
+        <label for="constat-v14" class="section-variant-label">Profondeur escalier</label>
 
         <input type="radio" name="constat-variant" id="constat-v15" value="15" class="section-variant-option">
-        <label for="constat-v15" class="section-variant-label">Décalage vertical</label>
+        <label for="constat-v15" class="section-variant-label">Couleurs dégradées</label>
 
         <input type="radio" name="constat-variant" id="constat-v16" value="16" class="section-variant-option">
-        <label for="constat-v16" class="section-variant-label">Layouts mixtes</label>
+        <label for="constat-v16" class="section-variant-label">Formes icônes</label>
 
         <input type="radio" name="constat-variant" id="constat-v17" value="17" class="section-variant-option">
-        <label for="constat-v17" class="section-variant-label">Intensité progressive</label>
+        <label for="constat-v17" class="section-variant-label">Bordures décoratives</label>
 
         <input type="radio" name="constat-variant" id="constat-v18" value="18" class="section-variant-option">
         <label for="constat-v18" class="section-variant-label">Rotation asymétrique</label>
@@ -2529,7 +2542,7 @@
         </div>
       </div>
 
-      <!-- VARIANTE 14: Spotlight central -->
+      <!-- VARIANTE 14: Profondeur en escalier -->
       <div class="section-variant constat-variant-14">
         <div class="problem-grid">
           <div class="problem-card">
@@ -2563,7 +2576,7 @@
         </div>
       </div>
 
-      <!-- VARIANTE 15: Décalage vertical -->
+      <!-- VARIANTE 15: Couleurs dégradées -->
       <div class="section-variant constat-variant-15">
         <div class="problem-grid">
           <div class="problem-card">
@@ -2597,7 +2610,7 @@
         </div>
       </div>
 
-      <!-- VARIANTE 16: Layouts mixtes -->
+      <!-- VARIANTE 16: Formes d'icônes différenciées -->
       <div class="section-variant constat-variant-16">
         <div class="problem-grid">
           <div class="problem-card">
@@ -2616,10 +2629,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
             </div>
-            <div>
-              <h3>Inadapté au terrain</h3>
-              <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
-            </div>
+            <h3>Inadapté au terrain</h3>
+            <p>Conçus sans les professionnels, sans comprendre les vrais besoins</p>
           </div>
           <div class="problem-card">
             <div class="problem-icon">
@@ -2633,7 +2644,7 @@
         </div>
       </div>
 
-      <!-- VARIANTE 17: Intensité progressive -->
+      <!-- VARIANTE 17: Bordures décoratives -->
       <div class="section-variant constat-variant-17">
         <div class="problem-grid">
           <div class="problem-card">
