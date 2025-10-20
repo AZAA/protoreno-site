@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Protoreno développe des outils simples et efficaces pour les professionnels de la rénovation énergétique. Participez à la conception de solutions adaptées au terrain.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563EB">
   <title>Protoreno - Des outils pensés pour le terrain | Rénovation énergétique</title>
 
   <!-- Open Graph / Facebook -->
@@ -25,6 +27,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://tally.so">
+  <link rel="dns-prefetch" href="https://usebasin.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -1433,11 +1437,12 @@
       gap: 2rem;
       flex-wrap: wrap;
       padding: 2rem;
-      background: white;
+      background: #FAFBFC;
+      border: 1px solid var(--light-gray);
       border-radius: 12px;
       margin: 0 auto 2.5rem;
       max-width: 800px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     .benefit-stat {
@@ -1476,12 +1481,14 @@
       height: 24px;
       color: var(--green);
       flex-shrink: 0;
+      stroke-width: 2;
     }
 
     .benefit-item-inline span {
       font-size: 0.9375rem;
       font-weight: 600;
       color: var(--navy);
+      white-space: nowrap;
     }
 
     /* Container du sondage */
@@ -2037,8 +2044,15 @@
 
       /* Variante 3: Tally embed */
       .tally-benefits-bar {
-        gap: 1rem;
+        flex-direction: column;
+        gap: 1.5rem;
         padding: 1.5rem;
+      }
+
+      .benefit-stat {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--light-gray);
+        width: 100%;
       }
 
       .benefit-divider {
@@ -2046,7 +2060,9 @@
       }
 
       .benefit-item-inline {
-        font-size: 0.875rem;
+        font-size: 0.9375rem;
+        width: 100%;
+        justify-content: center;
       }
 
       .tally-embed-container {
@@ -2293,6 +2309,24 @@
       }
     }
   </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Protoreno",
+    "url": "https://protoreno.com",
+    "logo": "https://protoreno.com/images/logo-protoreno.png",
+    "description": "Développement collaboratif d'outils numériques pour les professionnels de la rénovation énergétique",
+    "sameAs": [],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contact@protoreno.com",
+      "contactType": "Customer Service"
+    }
+  }
+  </script>
 </head>
 <body>
   <!-- Skip to content pour accessibilité -->
@@ -2781,19 +2815,19 @@
           </div>
           <div class="benefit-divider"></div>
           <div class="benefit-item-inline">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
             <span>1 minute</span>
           </div>
           <div class="benefit-item-inline">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
             <span>Impact direct</span>
           </div>
           <div class="benefit-item-inline">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
             </svg>
             <span>Confidentiel</span>
@@ -2818,7 +2852,7 @@
         <!-- Message de remerciement -->
         <div class="tally-footer">
           <div class="tally-thanks">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
             </svg>
             <p>Merci de prendre le temps de répondre — Chaque retour nous aide à construire de meilleurs outils pour le secteur</p>
