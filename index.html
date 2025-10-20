@@ -1584,8 +1584,7 @@
     }
 
     /* Triangle pointer */
-    .dialogue-card::before,
-    .dialogue-card::after {
+    .dialogue-card::before {
       content: '';
       position: absolute;
       top: 40px;
@@ -1598,40 +1597,22 @@
       border-left: 4px solid #2563EB;
     }
 
-    /* Triangle border (gris) */
-    .dialogue-on .dialogue-card::after {
-      left: -17px;
-      border-width: 12px 17px 12px 0;
-      border-color: transparent #E5E7EB transparent transparent;
-      z-index: 0;
-    }
-
-    /* Triangle bleu par-dessus */
+    /* Triangle bleu */
     .dialogue-on .dialogue-card::before {
       left: -16px;
       border-width: 12px 16px 12px 0;
       border-color: transparent #2563EB transparent transparent;
-      z-index: 1;
     }
 
     .dialogue-vous .dialogue-card {
       border-right: 4px solid #F59E0B;
     }
 
-    /* Triangle border (gris) */
-    .dialogue-vous .dialogue-card::after {
-      right: -17px;
-      border-width: 12px 0 12px 17px;
-      border-color: transparent transparent transparent #E5E7EB;
-      z-index: 0;
-    }
-
-    /* Triangle orange par-dessus */
+    /* Triangle orange */
     .dialogue-vous .dialogue-card::before {
       right: -16px;
       border-width: 12px 0 12px 16px;
       border-color: transparent transparent transparent #F59E0B;
-      z-index: 1;
     }
 
     .dialogue-card:hover {
