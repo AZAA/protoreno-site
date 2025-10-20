@@ -1,4 +1,7 @@
+# robots.txt for protoreno.com
+
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://protoreno.com/sitemap.xml
