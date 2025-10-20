@@ -432,44 +432,46 @@
       display: block;
     }
 
-    /* Variante 1: Badge communauté */
-    .hero-badge {
+    /* Variante 1: Badge avec chiffre impactant */
+    .hero-stats-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.625rem 1.25rem;
+      gap: 1.5rem;
+      padding: 1.25rem 2rem;
       background: var(--blue-light);
-      border: 1.5px solid var(--blue);
-      border-radius: 100px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--blue-dark);
+      border: 2px solid var(--blue);
+      border-radius: 16px;
       margin-bottom: 2rem;
     }
 
-    .hero-badge svg {
-      width: 20px;
-      height: 20px;
+    .stats-number {
+      font-size: 3.5rem;
+      font-weight: 800;
       color: var(--blue);
+      line-height: 1;
     }
 
-    /* Variante 2: Duo d'icônes */
-    .hero-icons-duo {
+    .stats-label {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    /* Variante 2: Synergie Terrain ∩ Tech */
+    .hero-synergy {
+      margin-bottom: 2rem;
+    }
+
+    .synergy-circles {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
+      position: relative;
+      margin-bottom: 1rem;
     }
 
-    .hero-icon-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .hero-icon-circle {
+    .synergy-circle {
       width: 80px;
       height: 80px;
       border-radius: 50%;
@@ -478,84 +480,188 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
 
-    .hero-icon-circle svg {
+    .synergy-circle svg {
       width: 40px;
       height: 40px;
       color: var(--blue);
     }
 
-    .hero-icon-label {
+    .synergy-left {
+      transform: translateX(20px);
+      z-index: 1;
+    }
+
+    .synergy-right {
+      transform: translateX(-20px);
+      z-index: 1;
+    }
+
+    .synergy-overlap {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .synergy-overlap svg {
+      width: 32px;
+      height: 32px;
+      color: white;
+    }
+
+    .synergy-labels {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
       font-size: 0.8125rem;
       font-weight: 600;
       color: var(--slate);
     }
 
-    .hero-arrow {
-      width: 40px;
-      height: 40px;
+    .synergy-center-label {
       color: var(--blue);
-      opacity: 0.6;
+      font-weight: 700;
     }
 
-    /* Variante 4: Diagramme processus */
-    .hero-process {
+    /* Variante 3: Cycle d'amélioration continue */
+    .hero-cycle {
+      margin-bottom: 2rem;
+    }
+
+    .hero-cycle svg {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* Variante 4: Timeline épurée */
+    .hero-timeline {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
       margin-bottom: 2rem;
-      flex-wrap: wrap;
+      gap: 0;
     }
 
-    .hero-process-step {
+    .timeline-step {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.5rem;
-      flex: 1;
-      min-width: 120px;
     }
 
-    .hero-process-number {
-      width: 40px;
-      height: 40px;
+    .timeline-dot {
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
       background: var(--blue);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1.125rem;
+      border: 3px solid var(--blue-light);
     }
 
-    .hero-process-label {
-      font-size: 0.75rem;
+    .timeline-label {
+      font-size: 0.8125rem;
       font-weight: 600;
       color: var(--slate);
       text-align: center;
+      white-space: nowrap;
     }
 
-    .hero-process-arrow {
-      width: 24px;
-      height: 24px;
-      color: var(--blue);
-      opacity: 0.4;
-      flex-shrink: 0;
+    .timeline-line {
+      width: 60px;
+      height: 2px;
+      background: var(--blue);
+      opacity: 0.3;
+      margin: 0 -5px;
+      margin-bottom: 24px;
     }
 
-    /* Variante 5: Isométrique simple */
-    .hero-isometric {
+    /* Variante 5: Dashboard stats */
+    .hero-dashboard {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1.5rem 2.5rem;
+      background: linear-gradient(135deg, var(--blue-light) 0%, rgba(219, 234, 254, 0.5) 100%);
+      border: 2px solid var(--blue);
+      border-radius: 16px;
       margin-bottom: 2rem;
     }
 
-    .hero-isometric svg {
-      width: 200px;
-      height: 140px;
-      margin: 0 auto;
-      display: block;
+    .dashboard-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--blue);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .dashboard-separator {
+      font-size: 2rem;
+      color: var(--blue);
+      opacity: 0.3;
+      font-weight: 300;
+    }
+
+    /* Variante 6: Citation/Testimonial */
+    .hero-testimonial {
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      padding: 1.5rem 2rem;
+      background: var(--bg);
+      border-left: 4px solid var(--blue);
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .quote-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--blue);
+      opacity: 0.2;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .testimonial-text {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: var(--navy);
+      font-style: italic;
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .testimonial-author {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--slate);
+      margin: 0;
     }
 
     /* Mobile responsive */
@@ -564,31 +670,90 @@
         display: none;
       }
 
-      .hero-icons-duo {
-        gap: 1rem;
+      /* Variante 1: Badge stats */
+      .hero-stats-badge {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem 1.5rem;
       }
 
-      .hero-icon-circle {
+      .stats-number {
+        font-size: 2.5rem;
+      }
+
+      .stats-label {
+        font-size: 0.8125rem;
+        text-align: center;
+      }
+
+      /* Variante 2: Synergie */
+      .synergy-circle {
         width: 60px;
         height: 60px;
       }
 
-      .hero-icon-circle svg {
+      .synergy-circle svg {
         width: 30px;
         height: 30px;
       }
 
-      .hero-process {
-        gap: 0.5rem;
+      .synergy-overlap {
+        width: 45px;
+        height: 45px;
       }
 
-      .hero-process-step {
-        min-width: 80px;
+      .synergy-overlap svg {
+        width: 24px;
+        height: 24px;
       }
 
-      .hero-isometric svg {
-        width: 160px;
-        height: 112px;
+      .synergy-labels {
+        gap: 2rem;
+        font-size: 0.75rem;
+      }
+
+      /* Variante 3: Cycle */
+      .hero-cycle svg {
+        width: 180px;
+        height: 180px;
+      }
+
+      /* Variante 4: Timeline */
+      .timeline-line {
+        width: 40px;
+      }
+
+      .timeline-label {
+        font-size: 0.6875rem;
+      }
+
+      /* Variante 5: Dashboard */
+      .hero-dashboard {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.25rem 1.5rem;
+      }
+
+      .dashboard-separator {
+        display: none;
+      }
+
+      .stat-value {
+        font-size: 2rem;
+      }
+
+      /* Variante 6: Testimonial */
+      .hero-testimonial {
+        padding: 1.25rem 1.5rem;
+      }
+
+      .testimonial-text {
+        font-size: 1rem;
+      }
+
+      .quote-icon {
+        width: 24px;
+        height: 24px;
       }
     }
 
@@ -1855,19 +2020,22 @@
         <label for="hero-var-0" class="hero-variant-label">Sans illustration</label>
 
         <input type="radio" name="hero-variant" id="hero-var-1" value="1" class="hero-variant-option">
-        <label for="hero-var-1" class="hero-variant-label">Badge communauté</label>
+        <label for="hero-var-1" class="hero-variant-label">📊 Badge chiffres (45 pros)</label>
 
         <input type="radio" name="hero-variant" id="hero-var-2" value="2" class="hero-variant-option">
-        <label for="hero-var-2" class="hero-variant-label">Duo d'icônes (Terrain ⟷ Tech)</label>
+        <label for="hero-var-2" class="hero-variant-label">⚙️ Synergie Terrain ∩ Tech</label>
 
         <input type="radio" name="hero-variant" id="hero-var-3" value="3" class="hero-variant-option">
-        <label for="hero-var-3" class="hero-variant-label">Badge + Duo d'icônes</label>
+        <label for="hero-var-3" class="hero-variant-label">🔄 Cycle amélioration continue</label>
 
         <input type="radio" name="hero-variant" id="hero-var-4" value="4" class="hero-variant-option">
-        <label for="hero-var-4" class="hero-variant-label">Diagramme processus</label>
+        <label for="hero-var-4" class="hero-variant-label">━━ Timeline épurée</label>
 
         <input type="radio" name="hero-variant" id="hero-var-5" value="5" class="hero-variant-option">
-        <label for="hero-var-5" class="hero-variant-label">Illustration isométrique</label>
+        <label for="hero-var-5" class="hero-variant-label">📈 Dashboard stats (3 chiffres)</label>
+
+        <input type="radio" name="hero-variant" id="hero-var-6" value="6" class="hero-variant-option">
+        <label for="hero-var-6" class="hero-variant-label">💬 Citation artisan RGE</label>
       </div>
     </div>
 
@@ -1875,165 +2043,137 @@
       <!-- Variante 0: Sans illustration (défaut) -->
       <div class="hero-illustration hero-variant-0 active"></div>
 
-      <!-- Variante 1: Badge communauté -->
+      <!-- Variante 1: Badge avec chiffre impactant -->
       <div class="hero-illustration hero-variant-1">
-        <div class="hero-badge">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-          </svg>
-          Co-construit avec des pros du terrain
+        <div class="hero-stats-badge">
+          <div class="stats-number">45</div>
+          <div class="stats-label">professionnels<br>collaborent</div>
         </div>
       </div>
 
-      <!-- Variante 2: Duo d'icônes -->
+      <!-- Variante 2: Synergie Terrain ∩ Tech avec overlap -->
       <div class="hero-illustration hero-variant-2">
-        <div class="hero-icons-duo">
-          <div class="hero-icon-item">
-            <div class="hero-icon-circle">
+        <div class="hero-synergy">
+          <div class="synergy-circles">
+            <div class="synergy-circle synergy-left">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
               </svg>
             </div>
-            <span class="hero-icon-label">Expertise terrain</span>
-          </div>
-
-          <svg class="hero-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-          </svg>
-
-          <div class="hero-icon-item">
-            <div class="hero-icon-circle">
+            <div class="synergy-overlap">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div class="synergy-circle synergy-right">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
               </svg>
             </div>
-            <span class="hero-icon-label">Expertise tech</span>
+          </div>
+          <div class="synergy-labels">
+            <span>Terrain</span>
+            <span class="synergy-center-label">Co-création</span>
+            <span>Tech</span>
           </div>
         </div>
       </div>
 
-      <!-- Variante 3: Badge + Duo -->
+      <!-- Variante 3: Cycle d'amélioration continue -->
       <div class="hero-illustration hero-variant-3">
-        <div class="hero-badge">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-          </svg>
-          Co-construit avec des pros du terrain
-        </div>
-        <div class="hero-icons-duo">
-          <div class="hero-icon-item">
-            <div class="hero-icon-circle">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-              </svg>
-            </div>
-            <span class="hero-icon-label">Expertise terrain</span>
-          </div>
-          <svg class="hero-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-          </svg>
-          <div class="hero-icon-item">
-            <div class="hero-icon-circle">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-              </svg>
-            </div>
-            <span class="hero-icon-label">Expertise tech</span>
-          </div>
-        </div>
-      </div>
+        <div class="hero-cycle">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Cercle principal -->
+            <circle cx="100" cy="100" r="80" stroke="#2563EB" stroke-width="2" fill="none" stroke-dasharray="5,5" opacity="0.3"/>
 
-      <!-- Variante 4: Diagramme processus -->
-      <div class="hero-illustration hero-variant-4">
-        <div class="hero-process">
-          <div class="hero-process-step">
-            <div class="hero-process-number">1</div>
-            <div class="hero-process-label">Vous partagez</div>
-          </div>
-          <svg class="hero-process-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-          </svg>
-          <div class="hero-process-step">
-            <div class="hero-process-number">2</div>
-            <div class="hero-process-label">On développe</div>
-          </div>
-          <svg class="hero-process-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-          </svg>
-          <div class="hero-process-step">
-            <div class="hero-process-number">3</div>
-            <div class="hero-process-label">Vous testez</div>
-          </div>
-          <svg class="hero-process-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-          </svg>
-          <div class="hero-process-step">
-            <div class="hero-process-number">4</div>
-            <div class="hero-process-label">On améliore</div>
-          </div>
-        </div>
-      </div>
+            <!-- Étapes du cycle -->
+            <g>
+              <!-- Étape 1: Terrain (haut) -->
+              <circle cx="100" cy="30" r="28" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+              <text x="100" y="33" text-anchor="middle" font-size="13" font-weight="600" fill="#1E40AF">Terrain</text>
 
-      <!-- Variante 5: Illustration isométrique -->
-      <div class="hero-illustration hero-variant-5">
-        <div class="hero-isometric">
-          <svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Base/Sol -->
-            <ellipse cx="100" cy="120" rx="80" ry="12" fill="#E2E8F0" opacity="0.5"/>
+              <!-- Étape 2: Développe (droite) -->
+              <circle cx="170" cy="100" r="28" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+              <text x="170" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">Dév</text>
+              <text x="170" y="113" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">eloppé</text>
 
-            <!-- Personne 1 (Artisan) - Gauche -->
-            <g transform="translate(50, 80)">
-              <!-- Corps -->
-              <rect x="10" y="20" width="20" height="30" fill="#2563EB" rx="2"/>
-              <!-- Tête -->
-              <circle cx="20" cy="12" r="8" fill="#FCD34D"/>
-              <!-- Casque -->
-              <path d="M 14 8 Q 20 4 26 8" stroke="#F59E0B" stroke-width="2" fill="none"/>
-              <!-- Bras -->
-              <rect x="6" y="22" width="8" height="3" fill="#2563EB" rx="1"/>
-              <rect x="26" y="22" width="8" height="3" fill="#2563EB" rx="1"/>
+              <!-- Étape 3: Teste (bas) -->
+              <circle cx="100" cy="170" r="28" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+              <text x="100" y="173" text-anchor="middle" font-size="13" font-weight="600" fill="#1E40AF">Testé</text>
+
+              <!-- Étape 4: Améliore (gauche) -->
+              <circle cx="30" cy="100" r="28" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+              <text x="30" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">Amé-</text>
+              <text x="30" y="113" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">lioré</text>
             </g>
 
-            <!-- Écran/Interface au centre -->
-            <g transform="translate(80, 50)">
-              <!-- Écran -->
-              <rect x="0" y="0" width="40" height="30" fill="#1E40AF" rx="2" stroke="#2563EB" stroke-width="2"/>
-              <!-- Lignes de code -->
-              <line x1="5" y1="8" x2="25" y2="8" stroke="#60A5FA" stroke-width="1.5"/>
-              <line x1="5" y1="14" x2="30" y2="14" stroke="#60A5FA" stroke-width="1.5"/>
-              <line x1="5" y1="20" x2="20" y2="20" stroke="#60A5FA" stroke-width="1.5"/>
-              <!-- Pied écran -->
-              <rect x="15" y="32" width="10" height="2" fill="#64748B"/>
-              <rect x="18" y="30" width="4" height="4" fill="#64748B"/>
-            </g>
-
-            <!-- Personne 2 (Dev) - Droite -->
-            <g transform="translate(130, 80)">
-              <!-- Corps -->
-              <rect x="10" y="20" width="20" height="30" fill="#10B981" rx="2"/>
-              <!-- Tête -->
-              <circle cx="20" cy="12" r="8" fill="#FCD34D"/>
-              <!-- Lunettes -->
-              <circle cx="17" cy="12" r="3" fill="none" stroke="#334155" stroke-width="1"/>
-              <circle cx="23" cy="12" r="3" fill="none" stroke="#334155" stroke-width="1"/>
-              <!-- Bras -->
-              <rect x="6" y="22" width="8" height="3" fill="#10B981" rx="1"/>
-              <rect x="26" y="22" width="8" height="3" fill="#10B981" rx="1"/>
-            </g>
-
-            <!-- Flèches de collaboration -->
-            <path d="M 70 95 Q 80 85 90 95" stroke="#2563EB" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-            <path d="M 130 95 Q 120 85 110 95" stroke="#10B981" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
-
+            <!-- Flèches de flux -->
             <defs>
-              <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-                <polygon points="0 0, 6 3, 0 6" fill="#2563EB"/>
-              </marker>
-              <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-                <polygon points="0 0, 6 3, 0 6" fill="#10B981"/>
+              <marker id="cycle-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#2563EB"/>
               </marker>
             </defs>
+            <path d="M 122 44 Q 145 60 156 82" stroke="#2563EB" stroke-width="3" fill="none" marker-end="url(#cycle-arrow)"/>
+            <path d="M 156 118 Q 145 140 122 156" stroke="#2563EB" stroke-width="3" fill="none" marker-end="url(#cycle-arrow)"/>
+            <path d="M 78 156 Q 55 140 44 118" stroke="#2563EB" stroke-width="3" fill="none" marker-end="url(#cycle-arrow)"/>
+            <path d="M 44 82 Q 55 60 78 44" stroke="#2563EB" stroke-width="3" fill="none" marker-end="url(#cycle-arrow)"/>
           </svg>
+        </div>
+      </div>
+
+      <!-- Variante 4: Timeline épurée -->
+      <div class="hero-illustration hero-variant-4">
+        <div class="hero-timeline">
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="timeline-label">Vous dites</div>
+          </div>
+          <div class="timeline-line"></div>
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="timeline-label">On code</div>
+          </div>
+          <div class="timeline-line"></div>
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="timeline-label">Vous testez</div>
+          </div>
+          <div class="timeline-line"></div>
+          <div class="timeline-step">
+            <div class="timeline-dot"></div>
+            <div class="timeline-label">On améliore</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 5: Dashboard stats -->
+      <div class="hero-illustration hero-variant-5">
+        <div class="hero-dashboard">
+          <div class="dashboard-stat">
+            <div class="stat-value">45</div>
+            <div class="stat-label">Pros<br>collaborent</div>
+          </div>
+          <div class="dashboard-separator">|</div>
+          <div class="dashboard-stat">
+            <div class="stat-value">2</div>
+            <div class="stat-label">Outils<br>en prod</div>
+          </div>
+          <div class="dashboard-separator">|</div>
+          <div class="dashboard-stat">
+            <div class="stat-value">94%</div>
+            <div class="stat-label">Taux<br>d'adoption</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 6: Citation artisan RGE -->
+      <div class="hero-illustration hero-variant-6">
+        <div class="hero-testimonial">
+          <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+          </svg>
+          <p class="testimonial-text">"Enfin un logiciel qui comprend mon métier"</p>
+          <p class="testimonial-author">- Artisan RGE, Lyon</p>
         </div>
       </div>
 
