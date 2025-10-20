@@ -1297,6 +1297,26 @@
       margin-right: auto;
     }
 
+    /* Séparation entre Conversations et Sondage */
+    #section-sondage {
+      margin-top: 6rem;
+      padding-top: 4rem;
+      border-top: 2px solid var(--light-gray);
+      position: relative;
+    }
+
+    #section-sondage::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue) 0%, var(--green) 100%);
+      border-radius: 2px;
+    }
+
     .conversation-thread {
       padding: 2.5rem;
       display: flex;
@@ -1994,6 +2014,12 @@
         padding: 1.5rem 1rem;
       }
 
+      /* Séparation sections */
+      #section-sondage {
+        margin-top: 4rem;
+        padding-top: 3rem;
+      }
+
       /* Conversations terrain responsive */
       .conversation-thread {
         padding: 1.5rem;
@@ -2593,7 +2619,7 @@
       </div>
 
       <div style="text-align: center; margin-top: 3.5rem;">
-        <a href="https://tally.so/r/wgVWgN" target="_blank" class="btn btn-primary btn-large">Participer au sondage</a>
+        <a href="#section-sondage" class="btn btn-primary btn-large">Donnez votre avis</a>
       </div>
 
     </div>
@@ -2753,12 +2779,12 @@
 
         <div class="testimonial-cta">
           <p class="testimonial-stat">Rejoignez la conversation</p>
-          <a href="https://tally.so/r/wgVWgN" target="_blank" class="btn btn-primary btn-large">Partagez votre expérience</a>
+          <a href="#section-sondage" class="btn btn-primary btn-large">Donnez votre avis</a>
         </div>
       </div>
 
       <!-- Sondage Tally intégré -->
-      <div class="testimonial-box">
+      <div class="testimonial-box" id="section-sondage">
         <div class="section-header">
           <h2>Aidez-nous à créer les bons outils</h2>
           <p class="lead">Remplissez le sondage ci-dessous — Votre voix compte vraiment</p>
