@@ -698,64 +698,15 @@
       margin-right: auto;
     }
 
-    /* Hero title variant selector */
-    .hero-title-selector {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-      padding: 1rem;
-      background: white;
-      border-radius: 10px;
-      border: 1px solid var(--light-gray);
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero-title-option {
-      position: absolute;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .hero-title-label {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: var(--bg);
-      border: 2px solid var(--light-gray);
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--slate);
-      transition: all 0.2s ease;
-      user-select: none;
-    }
-
-    .hero-title-label:hover {
-      background: var(--blue-light);
-      border-color: var(--blue);
-      color: var(--navy);
-    }
-
-    .hero-title-option:checked + .hero-title-label {
-      background: var(--blue);
-      border-color: var(--blue);
-      color: white;
-      font-weight: 600;
-    }
-
-    /* Variante 1 : Souligné épais gradient (bleu clair → foncé) */
-    .hero-title-variant-1 .hero-highlight {
+    /* Hero title styling - Souligné 8px gradient */
+    .hero h1 strong {
       font-weight: 800;
       position: relative;
       display: inline-block;
       padding-bottom: 0.5rem;
     }
 
-    .hero-title-variant-1 .hero-highlight::after {
+    .hero h1 strong::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -764,228 +715,6 @@
       height: 8px;
       background: linear-gradient(90deg, #60A5FA 0%, #2563EB 100%);
       border-radius: 4px;
-    }
-
-    /* Variante 2 : Souligné épais arrondi (plein bleu) */
-    .hero-title-variant-2 .hero-highlight {
-      font-weight: 800;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-    }
-
-    .hero-title-variant-2 .hero-highlight::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 10px;
-      background: #2563EB;
-      border-radius: 5px;
-    }
-
-    /* Variante 3 : Souligné très épais (12px) */
-    .hero-title-variant-3 .hero-highlight {
-      font-weight: 800;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-      color: #1E40AF;
-    }
-
-    .hero-title-variant-3 .hero-highlight::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 12px;
-      background: linear-gradient(90deg, #60A5FA 0%, #1E40AF 100%);
-      border-radius: 6px;
-    }
-
-    /* Variante 4 : Souligné avec trait fin au-dessus */
-    .hero-title-variant-4 .hero-highlight {
-      font-weight: 800;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-    }
-
-    .hero-title-variant-4 .hero-highlight::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 7px;
-      background: #2563EB;
-      border-radius: 3px;
-    }
-
-    .hero-title-variant-4 .hero-highlight::before {
-      content: '';
-      position: absolute;
-      bottom: 12px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #60A5FA;
-    }
-
-    /* Variante 5 : Double trait espacé (bleu clair + foncé) */
-    .hero-title-variant-5 .hero-highlight {
-      font-weight: 800;
-      color: #2563EB;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 0.75rem;
-    }
-
-    .hero-title-variant-5 .hero-highlight::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #2563EB;
-    }
-
-    .hero-title-variant-5 .hero-highlight::before {
-      content: '';
-      position: absolute;
-      bottom: 6px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #60A5FA;
-    }
-
-    /* Variante 6 : Double trait épais (4px + 4px) */
-    .hero-title-variant-6 .hero-highlight {
-      font-weight: 800;
-      color: #1E40AF;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 1rem;
-    }
-
-    .hero-title-variant-6 .hero-highlight::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: #2563EB;
-      border-radius: 2px;
-    }
-
-    .hero-title-variant-6 .hero-highlight::before {
-      content: '';
-      position: absolute;
-      bottom: 8px;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: #60A5FA;
-      border-radius: 2px;
-    }
-
-    /* Variante 7 : Double trait serré (très proche) */
-    .hero-title-variant-7 .hero-highlight {
-      font-weight: 800;
-      color: #2563EB;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 0.625rem;
-    }
-
-    .hero-title-variant-7 .hero-highlight::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: #2563EB;
-    }
-
-    .hero-title-variant-7 .hero-highlight::before {
-      content: '';
-      position: absolute;
-      bottom: 4px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: #60A5FA;
-    }
-
-    /* Variante 8 : Triple trait fin (dégradé d'intensité) */
-    .hero-title-variant-8 .hero-highlight {
-      font-weight: 800;
-      color: #2563EB;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 1rem;
-      box-shadow: 0 8px 0 0 #DBEAFE,
-                  0 11px 0 0 #60A5FA,
-                  0 14px 0 0 #2563EB;
-    }
-
-    /* Variante 9 : Double trait gradient (chaque trait en gradient) */
-    .hero-title-variant-9 .hero-highlight {
-      font-weight: 800;
-      color: #1E40AF;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 0.875rem;
-    }
-
-    .hero-title-variant-9 .hero-highlight::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #60A5FA 0%, #2563EB 100%);
-      border-radius: 1.5px;
-    }
-
-    .hero-title-variant-9 .hero-highlight::before {
-      content: '';
-      position: absolute;
-      bottom: 7px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #DBEAFE 0%, #60A5FA 100%);
-      border-radius: 1.5px;
-    }
-
-    /* Variante 10 : Souligné avec couleur texte + ombre */
-    .hero-title-variant-10 .hero-highlight {
-      color: #2563EB;
-      font-weight: 800;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-      text-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
-    }
-
-    .hero-title-variant-10 .hero-highlight::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 6px;
-      background: linear-gradient(90deg, #60A5FA 0%, #2563EB 100%);
-      border-radius: 3px;
-      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
     }
 
     /* ============================================
@@ -2323,55 +2052,7 @@
         <div class="stats-label">professionnels<br>collaborent</div>
       </div>
 
-      <!-- Sélecteur de variantes titre -->
-      <div class="hero-title-selector">
-        <label>
-          <input type="radio" name="hero-title-variant" value="0" class="hero-title-option" checked>
-          <span class="hero-title-label">Original</span>
-        </label>
-        <label>
-          <input type="radio" name="hero-title-variant" value="1" class="hero-title-option">
-          <span class="hero-title-label">Souligné 8px gradient</span>
-        </label>
-        <label>
-          <input type="radio" name="hero-title-variant" value="2" class="hero-title-option">
-          <span class="hero-title-label">Souligné 10px arrondi</span>
-        </label>
-        <label>
-          <input type="radio" name="hero-title-variant" value="3" class="hero-title-option">
-          <span class="hero-title-label">Souligné 12px XL</span>
-        </label>
-        <label>
-          <input type="radio" name="hero-title-variant" value="4" class="hero-title-option">
-          <span class="hero-title-label">Souligné + trait fin</span>
-        </label>
-        <label>
-          <input type="radio" name="hero-title-variant" value="5" class="hero-title-option">
-          <span class="hero-title-label">Double trait fin</span>
-        </label>
-        <label>
-          <input type="radio" name="hero-title-variant" value="6" class="hero-title-option">
-          <span class="hero-title-label">Double trait épais</span>
-        </label>
-        <label>
-          <input type="radio" name="hero-title-variant" value="7" class="hero-title-option">
-          <span class="hero-title-label">Double trait serré</span>
-        </label>
-        <label>
-          <input type="radio" name="hero-title-variant" value="8" class="hero-title-option">
-          <span class="hero-title-label">Triple trait</span>
-        </label>
-        <label>
-          <input type="radio" name="hero-title-variant" value="9" class="hero-title-option">
-          <span class="hero-title-label">Double gradient</span>
-        </label>
-        <label>
-          <input type="radio" name="hero-title-variant" value="10" class="hero-title-option">
-          <span class="hero-title-label">Souligné + ombre</span>
-        </label>
-      </div>
-
-      <h1 id="hero-title">Par des pros<br><strong class="hero-highlight">pour des <span class="word-accent">pros</span></strong></h1>
+      <h1>Par des pros<br><strong>pour des pros</strong></h1>
       <p class="lead">
         On co-construit avec vous, on teste sur le terrain, on ajuste jusqu'à ce que ça marche vraiment.
       </p>
@@ -2936,24 +2617,6 @@
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
       }
-    });
-
-    // Gestion du sélecteur de variantes du titre hero
-    const heroTitle = document.getElementById('hero-title');
-    const variantRadios = document.querySelectorAll('input[name="hero-title-variant"]');
-
-    variantRadios.forEach(radio => {
-      radio.addEventListener('change', function() {
-        // Retirer toutes les classes de variantes
-        for (let i = 0; i <= 10; i++) {
-          heroTitle.classList.remove(`hero-title-variant-${i}`);
-        }
-
-        // Ajouter la classe de la variante sélectionnée
-        if (this.value !== '0') {
-          heroTitle.classList.add(`hero-title-variant-${this.value}`);
-        }
-      });
     });
   </script>
 </body>
