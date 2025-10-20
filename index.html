@@ -954,14 +954,15 @@
       color: var(--slate);
     }
 
-    /* Variante 6 : Pyramide inversée (1 grand en haut, 2 petits en bas) */
-    .constat-variant-6 .pyramid-layout {
+    /* Section Le constat - Pyramide inversée */
+    .constat-pyramid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
 
-    .constat-variant-6 .big-problem-card {
+    .constat-main-problem {
       background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
       border: 3px solid #2563EB;
       border-radius: 12px;
@@ -970,27 +971,27 @@
       transition: all 0.4s;
     }
 
-    .constat-variant-6 .big-problem-card:hover {
+    .constat-main-problem:hover {
       background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
       border-color: #1E40AF;
       transform: translateY(-4px);
       box-shadow: 0 12px 32px rgba(37, 99, 235, 0.15);
     }
 
-    .constat-variant-6 .big-problem-card .big-icon {
+    .constat-icon-large {
       width: 160px;
       height: 160px;
       margin: 0 auto 2rem;
       color: #2563EB;
     }
 
-    .constat-variant-6 .big-problem-card h3 {
+    .constat-main-problem h3 {
       font-size: 2.25rem;
       margin-bottom: 1.25rem;
       color: var(--navy);
     }
 
-    .constat-variant-6 .big-problem-card p {
+    .constat-main-problem p {
       font-size: 1.25rem;
       color: var(--slate);
       max-width: 640px;
@@ -998,833 +999,88 @@
       line-height: 1.7;
     }
 
-    .constat-variant-6 .small-grid {
+    .constat-impacts {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
-    .constat-variant-6 .small-problem-card {
+    .constat-impact-card {
       background: white;
       border: 2px solid #BFDBFE;
+      border-left: 4px solid #2563EB;
       border-radius: 12px;
       padding: 2.5rem 2rem;
       text-align: center;
       transition: all 0.3s;
     }
 
-    .constat-variant-6 .small-problem-card:hover {
+    .constat-impact-card:hover {
       border-color: #2563EB;
       transform: translateY(-3px);
       box-shadow: 0 8px 24px rgba(37, 99, 235, 0.1);
     }
 
-    .constat-variant-6 .small-problem-card .small-icon {
+    .constat-icon-small {
       width: 80px;
       height: 80px;
       margin: 0 auto 1.5rem;
       color: #60A5FA;
     }
 
-    .constat-variant-6 .small-problem-card h4 {
+    .constat-impact-card h4 {
       font-size: 1.5rem;
       margin-bottom: 0.75rem;
       color: var(--navy);
-    }
-
-    .constat-variant-6 .small-problem-card p {
-      font-size: 1rem;
-      color: var(--slate);
-      margin: 0;
-    }
-
-    /* Différenciation visuelle des cartes */
-    .constat-variant-6 .small-problem-card:nth-child(1) {
-      border-left: 4px solid #10B981;
-    }
-
-    .constat-variant-6 .small-problem-card:nth-child(1):hover {
-      border-left-color: #059669;
-    }
-
-    .constat-variant-6 .small-problem-card:nth-child(2) {
-      border-left: 4px solid #F59E0B;
-    }
-
-    .constat-variant-6 .small-problem-card:nth-child(2):hover {
-      border-left-color: #D97706;
-    }
-
-    /* Variante 7 : Bento Grid asymétrique (tailles différentes) */
-    .constat-variant-7 .bento-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 1.5rem;
-    }
-
-    .constat-variant-7 .bento-card {
-      background: white;
-      border: 2px solid #DBEAFE;
-      border-radius: 12px;
-      padding: 2.5rem 2rem;
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .constat-variant-7 .bento-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, #2563EB 0%, #60A5FA 100%);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s;
-    }
-
-    .constat-variant-7 .bento-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .constat-variant-7 .bento-card:hover {
-      border-color: #2563EB;
-      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
-      transform: translateY(-2px);
-    }
-
-    .constat-variant-7 .bento-large {
-      grid-row: span 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .constat-variant-7 .bento-icon {
-      width: 70px;
-      height: 70px;
-      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .constat-variant-7 .bento-icon svg {
-      width: 35px;
-      height: 35px;
-      color: #2563EB;
-    }
-
-    .constat-variant-7 .bento-large .bento-icon {
-      width: 100px;
-      height: 100px;
-    }
-
-    .constat-variant-7 .bento-large .bento-icon svg {
-      width: 50px;
-      height: 50px;
-    }
-
-    .constat-variant-7 .bento-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-      color: var(--navy);
-    }
-
-    .constat-variant-7 .bento-large h3 {
-      font-size: 2rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .constat-variant-7 .bento-card p {
-      font-size: 1rem;
-      color: var(--slate);
-      line-height: 1.6;
-    }
-
-    .constat-variant-7 .bento-large p {
-      font-size: 1.125rem;
-      line-height: 1.7;
-    }
-
-    /* Variante 8 : Carrés déstructurés/cassés (chaos visuel) */
-    .constat-variant-8 .chaos-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      position: relative;
-    }
-
-    .constat-variant-8 .chaos-card {
-      background: white;
-      border: 3px solid #DBEAFE;
-      border-radius: 12px;
-      padding: 2.5rem 2rem;
-      text-align: center;
-      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      position: relative;
-    }
-
-    .constat-variant-8 .chaos-card:nth-child(1) {
-      transform: rotate(-2deg);
-    }
-
-    .constat-variant-8 .chaos-card:nth-child(2) {
-      transform: rotate(1.5deg) translateY(8px);
-    }
-
-    .constat-variant-8 .chaos-card:nth-child(3) {
-      transform: rotate(-1deg);
-    }
-
-    .constat-variant-8 .chaos-card:hover {
-      transform: rotate(0deg) translateY(-8px) scale(1.02);
-      border-color: #2563EB;
-      box-shadow: 0 16px 40px rgba(37, 99, 235, 0.2);
-      z-index: 10;
-    }
-
-    .constat-variant-8 .chaos-icon-wrapper {
-      position: relative;
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 2rem;
-    }
-
-    .constat-variant-8 .chaos-icon-bg {
-      position: absolute;
-      width: 120px;
-      height: 120px;
-      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-      border: 3px solid #2563EB;
-      border-radius: 12px;
-      transform: rotate(8deg);
-      transition: all 0.4s;
-    }
-
-    .constat-variant-8 .chaos-card:hover .chaos-icon-bg {
-      transform: rotate(0deg);
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-    }
-
-    .constat-variant-8 .chaos-icon {
-      position: relative;
-      z-index: 2;
-      width: 120px;
-      height: 120px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .constat-variant-8 .chaos-icon svg {
-      width: 60px;
-      height: 60px;
-      color: #2563EB;
-      transition: all 0.4s;
-    }
-
-    .constat-variant-8 .chaos-card:hover .chaos-icon svg {
-      color: white;
-    }
-
-    .constat-variant-8 .chaos-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-      color: var(--navy);
-    }
-
-    .constat-variant-8 .chaos-card p {
-      font-size: 1rem;
-      color: var(--slate);
-      line-height: 1.6;
-    }
-
-    /* Variante 9 : Format Email/Inbox (rectangles horizontaux) */
-    .constat-variant-9-new .inbox-container {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .constat-variant-9-new .email-card {
-      background: white;
-      border: 2px solid #E5E7EB;
-      border-left: 4px solid #2563EB;
-      border-radius: 8px;
-      padding: 1.75rem 2rem;
-      display: grid;
-      grid-template-columns: 60px 1fr;
-      gap: 1.5rem;
-      align-items: center;
-      transition: all 0.3s;
-      cursor: pointer;
-    }
-
-    .constat-variant-9-new .email-card:hover {
-      border-color: #2563EB;
-      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
-      transform: translateX(4px);
-    }
-
-    .constat-variant-9-new .email-icon {
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .constat-variant-9-new .email-icon svg {
-      width: 30px;
-      height: 30px;
-      color: #2563EB;
-    }
-
-    .constat-variant-9-new .email-content h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-      color: var(--navy);
-    }
-
-    .constat-variant-9-new .email-content p {
-      font-size: 0.9375rem;
-      color: var(--slate);
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    .constat-variant-9-new .email-badge {
-      display: inline-block;
-      background: #DBEAFE;
-      color: #1E40AF;
-      padding: 0.25rem 0.75rem;
-      border-radius: 12px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-left: 0.75rem;
-    }
-
-    /* Variante 10 : Comparaison split inline (problème vs solution) */
-    .constat-variant-10 .split-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .constat-variant-10 .split-card {
-      background: white;
-      border: 2px solid #E5E7EB;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: all 0.3s;
-    }
-
-    .constat-variant-10 .split-card:hover {
-      border-color: #2563EB;
-      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
-    }
-
-    .constat-variant-10 .split-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .constat-variant-10 .split-problem {
-      background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
-      padding: 2.5rem 2rem;
-      border-right: 2px solid #E5E7EB;
-    }
-
-    .constat-variant-10 .split-solution {
-      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-      padding: 2.5rem 2rem;
-    }
-
-    .constat-variant-10 .split-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .constat-variant-10 .split-problem .split-icon {
-      background: rgba(239, 68, 68, 0.15);
-    }
-
-    .constat-variant-10 .split-problem .split-icon svg {
-      width: 30px;
-      height: 30px;
-      color: #DC2626;
-    }
-
-    .constat-variant-10 .split-solution .split-icon {
-      background: rgba(37, 99, 235, 0.15);
-    }
-
-    .constat-variant-10 .split-solution .split-icon svg {
-      width: 30px;
-      height: 30px;
-      color: #2563EB;
-    }
-
-    .constat-variant-10 .split-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-
-    .constat-variant-10 .split-problem .split-label {
-      color: #DC2626;
-    }
-
-    .constat-variant-10 .split-solution .split-label {
-      color: #2563EB;
-    }
-
-    .constat-variant-10 .split-content h3 {
-      font-size: 1.375rem;
-      margin-bottom: 0.75rem;
-      color: var(--navy);
-    }
-
-    .constat-variant-10 .split-content p {
-      font-size: 0.9375rem;
-      color: var(--slate);
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    /* Variante 11 : Timeline horizontale (flux de travail) */
-    .constat-variant-11 .timeline-horizontal {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 2rem 0;
-    }
-
-    .constat-variant-11 .timeline-step {
-      flex: 1;
-      background: white;
-      border: 2px solid #DBEAFE;
-      border-radius: 12px;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      position: relative;
-      transition: all 0.3s;
-    }
-
-    .constat-variant-11 .timeline-step::after {
-      content: '→';
-      position: absolute;
-      right: -1.5rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      color: #60A5FA;
       font-weight: 700;
     }
 
-    .constat-variant-11 .timeline-step:last-child::after {
-      display: none;
-    }
-
-    .constat-variant-11 .timeline-step:hover {
-      border-color: #2563EB;
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
-    }
-
-    .constat-variant-11 .timeline-number {
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin: 0 auto 1rem;
-    }
-
-    .constat-variant-11 .timeline-step h3 {
-      font-size: 1.125rem;
-      margin-bottom: 0.5rem;
-      color: var(--navy);
-    }
-
-    .constat-variant-11 .timeline-step p {
-      font-size: 0.875rem;
+    .constat-impact-card p {
+      font-size: 1rem;
       color: var(--slate);
       margin: 0;
-      line-height: 1.5;
-    }
-
-    /* Variante 12 : Dashboard/Stats (cartes compactes) */
-    .constat-variant-12 .dashboard-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    .constat-variant-12 .stat-card {
-      background: white;
-      border: 2px solid #E5E7EB;
-      border-radius: 10px;
-      padding: 2rem 1.75rem;
-      transition: all 0.3s;
-    }
-
-    .constat-variant-12 .stat-card:hover {
-      border-color: #2563EB;
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.1);
-      transform: translateY(-3px);
-    }
-
-    .constat-variant-12 .stat-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1.25rem;
-    }
-
-    .constat-variant-12 .stat-icon {
-      width: 44px;
-      height: 44px;
-      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .constat-variant-12 .stat-icon svg {
-      width: 24px;
-      height: 24px;
-      color: #2563EB;
-    }
-
-    .constat-variant-12 .stat-trend {
-      background: #FEE2E2;
-      color: #DC2626;
-      padding: 0.25rem 0.625rem;
-      border-radius: 6px;
-      font-size: 0.75rem;
-      font-weight: 700;
-    }
-
-    .constat-variant-12 .stat-number {
-      font-size: 2.25rem;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 0.5rem;
-      line-height: 1;
-    }
-
-    .constat-variant-12 .stat-label {
-      font-size: 0.875rem;
-      color: var(--slate);
-      margin-bottom: 1rem;
-    }
-
-    .constat-variant-12 .stat-bar {
-      width: 100%;
-      height: 6px;
-      background: #EFF6FF;
-      border-radius: 3px;
-      overflow: hidden;
-    }
-
-    .constat-variant-12 .stat-bar-fill {
-      height: 100%;
-      background: linear-gradient(90deg, #EF4444 0%, #DC2626 100%);
-      border-radius: 3px;
-      transition: width 0.8s ease;
-    }
-
-    /* Variante 13 : Quote/Témoignage (grandes citations) */
-    .constat-variant-13 .quote-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-
-    .constat-variant-13 .quote-card {
-      background: white;
-      border-left: 5px solid #2563EB;
-      border-radius: 12px;
-      padding: 3rem 3rem 3rem 4rem;
-      position: relative;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-      transition: all 0.3s;
-    }
-
-    .constat-variant-13 .quote-card:hover {
-      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
-      transform: translateX(4px);
-    }
-
-    .constat-variant-13 .quote-icon {
-      position: absolute;
-      top: 2.5rem;
-      left: -1.5rem;
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      color: white;
-      font-family: Georgia, serif;
-    }
-
-    .constat-variant-13 .quote-text {
-      font-size: 1.375rem;
-      font-style: italic;
-      color: var(--navy);
       line-height: 1.6;
-      margin-bottom: 1.5rem;
     }
 
-    .constat-variant-13 .quote-author {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
+    /* Responsive mobile */
+    @media (max-width: 768px) {
+      .constat-impacts {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
 
-    .constat-variant-13 .quote-avatar {
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+      .constat-main-problem {
+        padding: 2.5rem 2rem;
+      }
 
-    .constat-variant-13 .quote-avatar svg {
-      width: 24px;
-      height: 24px;
-      color: #2563EB;
-    }
+      .constat-icon-large {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1.5rem;
+      }
 
-    .constat-variant-13 .quote-author-info strong {
-      display: block;
-      font-size: 1rem;
-      color: var(--navy);
-      margin-bottom: 0.25rem;
-    }
+      .constat-main-problem h3 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+      }
 
-    .constat-variant-13 .quote-author-info span {
-      font-size: 0.875rem;
-      color: var(--slate);
-    }
+      .constat-main-problem p {
+        font-size: 1.125rem;
+      }
 
-    /* Variante 14 : Checklist négative (liste avec X) */
-    .constat-variant-14 .checklist-container {
-      background: white;
-      border: 2px solid #E5E7EB;
-      border-radius: 12px;
-      padding: 2.5rem 3rem;
-      max-width: 720px;
-      margin: 0 auto;
-    }
+      .constat-impact-card {
+        padding: 2rem 1.5rem;
+      }
 
-    .constat-variant-14 .checklist-header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
+      .constat-icon-small {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 1.25rem;
+      }
 
-    .constat-variant-14 .checklist-header h3 {
-      font-size: 2rem;
-      color: var(--navy);
-      margin-bottom: 0.75rem;
-    }
-
-    .constat-variant-14 .checklist-header p {
-      font-size: 1.125rem;
-      color: var(--slate);
-    }
-
-    .constat-variant-14 .checklist-items {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .constat-variant-14 .checklist-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.25rem;
-      padding: 1.25rem 1.5rem;
-      background: #FAFAFA;
-      border-radius: 8px;
-      transition: all 0.3s;
-    }
-
-    .constat-variant-14 .checklist-item:hover {
-      background: #FEF2F2;
-      transform: translateX(4px);
-    }
-
-    .constat-variant-14 .checklist-icon {
-      width: 32px;
-      height: 32px;
-      background: #FEE2E2;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .constat-variant-14 .checklist-icon svg {
-      width: 18px;
-      height: 18px;
-      color: #DC2626;
-      stroke-width: 3;
-    }
-
-    .constat-variant-14 .checklist-text {
-      flex: 1;
-    }
-
-    .constat-variant-14 .checklist-text h4 {
-      font-size: 1.125rem;
-      color: var(--navy);
-      margin-bottom: 0.375rem;
-    }
-
-    .constat-variant-14 .checklist-text p {
-      font-size: 0.9375rem;
-      color: var(--slate);
-      margin: 0;
-      line-height: 1.5;
-    }
-
-    /* Variante 15 : Layout radial/circulaire (problème central) */
-    .constat-variant-15 .radial-container {
-      position: relative;
-      padding: 4rem 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .constat-variant-15 .radial-center {
-      width: 240px;
-      height: 240px;
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      border-radius: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-      z-index: 10;
-      box-shadow: 0 12px 40px rgba(37, 99, 235, 0.3);
-    }
-
-    .constat-variant-15 .radial-center-icon {
-      width: 80px;
-      height: 80px;
-      color: white;
-      margin-bottom: 1rem;
-    }
-
-    .constat-variant-15 .radial-center h3 {
-      font-size: 1.5rem;
-      color: white;
-      font-weight: 800;
-      margin: 0;
-    }
-
-    .constat-variant-15 .radial-satellites {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
-
-    .constat-variant-15 .radial-satellite {
-      position: absolute;
-      width: 160px;
-      background: white;
-      border: 2px solid #DBEAFE;
-      border-radius: 12px;
-      padding: 1.5rem 1.25rem;
-      text-align: center;
-      transition: all 0.3s;
-    }
-
-    .constat-variant-15 .radial-satellite:hover {
-      border-color: #2563EB;
-      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
-      transform: scale(1.05);
-      z-index: 20;
-    }
-
-    .constat-variant-15 .radial-satellite:nth-child(1) {
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .constat-variant-15 .radial-satellite:nth-child(2) {
-      top: 25%;
-      right: 5%;
-    }
-
-    .constat-variant-15 .radial-satellite:nth-child(3) {
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .constat-variant-15 .radial-satellite:nth-child(4) {
-      top: 25%;
-      left: 5%;
-    }
-
-    .constat-variant-15 .satellite-icon {
-      width: 40px;
-      height: 40px;
-      margin: 0 auto 0.75rem;
-      color: #60A5FA;
-    }
-
-    .constat-variant-15 .radial-satellite h4 {
-      font-size: 1rem;
-      color: var(--navy);
-      margin-bottom: 0.5rem;
-    }
-
-    .constat-variant-15 .radial-satellite p {
-      font-size: 0.8125rem;
-      color: var(--slate);
-      margin: 0;
-      line-height: 1.4;
+      .constat-impact-card h4 {
+        font-size: 1.25rem;
+      }
     }
 
     .section-variant-selector {
@@ -2939,33 +2195,30 @@
         <p class="lead">Les professionnels du bâtiment manquent d'outils adaptés</p>
       </div>
 
-      <!-- Variante 6 : Pyramide inversée (1 grand problème en haut, 2 impacts en bas) -->
-      <div class="constat-variant-6 active">
-        <div class="pyramid-layout">
-          <div class="big-problem-card">
-            <svg class="big-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      <div class="constat-pyramid">
+        <div class="constat-main-problem">
+          <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <h3>La complexité administrative paralyse votre activité</h3>
+          <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
+        </div>
+
+        <div class="constat-impacts">
+          <div class="constat-impact-card constat-time">
+            <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <h3>La complexité administrative paralyse votre activité</h3>
-            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
+            <h4>14h par semaine perdues</h4>
+            <p>en administration au lieu d'être sur le terrain</p>
           </div>
 
-          <div class="small-grid">
-            <div class="small-problem-card">
-              <svg class="small-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <h4>14h par semaine perdues</h4>
-              <p>en administration au lieu d'être sur le terrain</p>
-            </div>
-
-            <div class="small-problem-card">
-              <svg class="small-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-              <h4>1 client sur 3 abandonne</h4>
-              <p>face à la complexité des démarches</p>
-            </div>
+          <div class="constat-impact-card constat-clients">
+            <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <h4>1 client sur 3 abandonne</h4>
+            <p>face à la complexité des démarches</p>
           </div>
         </div>
       </div>
