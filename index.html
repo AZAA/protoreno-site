@@ -954,357 +954,860 @@
       color: var(--slate);
     }
 
-    /* Variante 6 : Chiffre dans carré gradient (style variante 1) */
-    .constat-variant-6 .problem-card {
-      padding: 3rem 2rem;
+    /* Variante 6 : Pyramide inversée (1 grand en haut, 2 petits en bas) */
+    .constat-variant-6 .pyramid-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
 
-    .constat-variant-6 .chiffre-box {
-      width: 140px;
-      height: 140px;
+    .constat-variant-6 .big-problem-card {
       background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
       border: 3px solid #2563EB;
       border-radius: 12px;
-      margin: 0 auto 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 3.5rem 3rem;
+      text-align: center;
       transition: all 0.4s;
     }
 
-    .constat-variant-6 .chiffre-display {
-      font-size: 3.5rem;
-      font-weight: 800;
-      color: #2563EB;
-      line-height: 1;
+    .constat-variant-6 .big-problem-card:hover {
+      background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
+      border-color: #1E40AF;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.15);
     }
 
-    .constat-variant-6 .problem-card:hover .chiffre-box {
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      border-color: #1D4ED8;
-      transform: scale(1.05);
-    }
-
-    .constat-variant-6 .problem-card:hover .chiffre-display {
-      color: white;
-    }
-
-    .constat-variant-6 .problem-card h3 {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .constat-variant-6 .problem-card p {
-      font-size: 1.0625rem;
-      color: var(--slate);
-    }
-
-    /* Variante 7 : Icône + Badge chiffré superposé */
-    .constat-variant-7 .problem-card {
-      padding: 3rem 2rem;
-      position: relative;
-    }
-
-    .constat-variant-7 .problem-icon {
-      width: 140px;
-      height: 140px;
-      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-      border: 3px solid #2563EB;
-      border-radius: 12px;
-      margin: 0 auto 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      transition: all 0.4s;
-    }
-
-    .constat-variant-7 .problem-icon svg {
-      width: 70px;
-      height: 70px;
+    .constat-variant-6 .big-problem-card .big-icon {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 2rem;
       color: #2563EB;
     }
 
-    .constat-variant-7 .badge-chiffre {
-      position: absolute;
-      top: -12px;
-      right: -12px;
-      width: 56px;
-      height: 56px;
-      background: #1E40AF;
-      border: 3px solid white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .constat-variant-6 .big-problem-card h3 {
+      font-size: 2.25rem;
+      margin-bottom: 1.25rem;
+      color: var(--navy);
+    }
+
+    .constat-variant-6 .big-problem-card p {
       font-size: 1.25rem;
-      font-weight: 800;
-      color: white;
-      box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
-    }
-
-    .constat-variant-7 .problem-card:hover .problem-icon {
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      border-color: #1D4ED8;
-      transform: scale(1.05);
-    }
-
-    .constat-variant-7 .problem-card:hover .problem-icon svg {
-      color: white;
-    }
-
-    .constat-variant-7 .problem-card:hover .badge-chiffre {
-      transform: scale(1.15);
-      background: #2563EB;
-    }
-
-    .constat-variant-7 .problem-card h3 {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .constat-variant-7 .problem-card p {
-      font-size: 1.0625rem;
       color: var(--slate);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.7;
     }
 
-    /* Variante 8 : Double niveau (petit problème / GROS impact) */
-    .constat-variant-8 .problem-card {
+    .constat-variant-6 .small-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .constat-variant-6 .small-problem-card {
+      background: white;
+      border: 2px solid #BFDBFE;
+      border-radius: 12px;
       padding: 2.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
+      text-align: center;
+      transition: all 0.3s;
     }
 
-    .constat-variant-8 .petit-carre {
+    .constat-variant-6 .small-problem-card:hover {
+      border-color: #2563EB;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.1);
+    }
+
+    .constat-variant-6 .small-problem-card .small-icon {
       width: 80px;
       height: 80px;
-      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-      border: 2px solid #2563EB;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.4s;
+      margin: 0 auto 1.5rem;
+      color: #60A5FA;
     }
 
-    .constat-variant-8 .petit-carre svg {
-      width: 40px;
-      height: 40px;
-      color: #2563EB;
-    }
-
-    .constat-variant-8 .gros-carre {
-      width: 180px;
-      height: 180px;
-      background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
-      border: 3px solid #1E40AF;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.4s;
-    }
-
-    .constat-variant-8 .gros-chiffre {
-      font-size: 4rem;
-      font-weight: 900;
-      color: #1E40AF;
-      line-height: 1;
-    }
-
-    .constat-variant-8 .problem-card:hover .petit-carre {
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      transform: translateY(-5px);
-    }
-
-    .constat-variant-8 .problem-card:hover .petit-carre svg {
-      color: white;
-    }
-
-    .constat-variant-8 .problem-card:hover .gros-carre {
-      background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
-      border-color: #1E3A8A;
-      transform: scale(1.05);
-    }
-
-    .constat-variant-8 .problem-card:hover .gros-chiffre {
-      color: white;
-    }
-
-    .constat-variant-8 .problem-card h3 {
+    .constat-variant-6 .small-problem-card h4 {
       font-size: 1.5rem;
-      margin: 0.5rem 0;
+      margin-bottom: 0.75rem;
+      color: var(--navy);
     }
 
-    .constat-variant-8 .problem-card p {
+    .constat-variant-6 .small-problem-card p {
       font-size: 1rem;
       color: var(--slate);
       margin: 0;
     }
 
-    /* Variante 9 : Barres quantifiées bleues */
-    .constat-variant-9-new .problem-card {
-      padding: 3rem 2rem;
+    /* Variante 7 : Bento Grid asymétrique (tailles différentes) */
+    .constat-variant-7 .bento-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1.5rem;
     }
 
-    .constat-variant-9-new .problem-icon {
-      width: 100px;
-      height: 100px;
-      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-      border: 3px solid #2563EB;
+    .constat-variant-7 .bento-card {
+      background: white;
+      border: 2px solid #DBEAFE;
       border-radius: 12px;
-      margin: 0 auto 2rem;
+      padding: 2.5rem 2rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .constat-variant-7 .bento-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #2563EB 0%, #60A5FA 100%);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+    }
+
+    .constat-variant-7 .bento-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .constat-variant-7 .bento-card:hover {
+      border-color: #2563EB;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .constat-variant-7 .bento-large {
+      grid-row: span 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .constat-variant-7 .bento-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.4s;
+      margin-bottom: 1.5rem;
     }
 
-    .constat-variant-9-new .problem-icon svg {
-      width: 50px;
-      height: 50px;
+    .constat-variant-7 .bento-icon svg {
+      width: 35px;
+      height: 35px;
       color: #2563EB;
     }
 
-    .constat-variant-9-new .barre-bleue {
-      width: 100%;
-      height: 32px;
-      background: #EFF6FF;
-      border: 2px solid #BFDBFE;
-      border-radius: 16px;
-      position: relative;
-      overflow: hidden;
-      margin: 1.5rem 0;
+    .constat-variant-7 .bento-large .bento-icon {
+      width: 100px;
+      height: 100px;
     }
 
-    .constat-variant-9-new .barre-fill {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      background: linear-gradient(90deg, #60A5FA 0%, #2563EB 100%);
-      border-radius: 16px;
-      transition: width 0.6s ease;
+    .constat-variant-7 .bento-large .bento-icon svg {
+      width: 50px;
+      height: 50px;
     }
 
-    .constat-variant-9-new .barre-label {
-      position: absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1rem;
-      font-weight: 700;
-      color: #1E40AF;
-    }
-
-    .constat-variant-9-new .problem-card:hover .problem-icon {
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      border-color: #1D4ED8;
-      transform: scale(1.05);
-    }
-
-    .constat-variant-9-new .problem-card:hover .problem-icon svg {
-      color: white;
-    }
-
-    .constat-variant-9-new .problem-card h3 {
+    .constat-variant-7 .bento-card h3 {
       font-size: 1.5rem;
       margin-bottom: 0.75rem;
+      color: var(--navy);
     }
 
-    .constat-variant-9-new .problem-card p {
+    .constat-variant-7 .bento-large h3 {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .constat-variant-7 .bento-card p {
       font-size: 1rem;
       color: var(--slate);
+      line-height: 1.6;
     }
 
-    /* Variante 10 : 1 grande icône + 3 micro-chiffres */
-    .constat-variant-10 .problem-card {
-      padding: 3rem 2rem;
+    .constat-variant-7 .bento-large p {
+      font-size: 1.125rem;
+      line-height: 1.7;
     }
 
-    .constat-variant-10 .icone-principale {
+    /* Variante 8 : Carrés déstructurés/cassés (chaos visuel) */
+    .constat-variant-8 .chaos-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      position: relative;
+    }
+
+    .constat-variant-8 .chaos-card {
+      background: white;
+      border: 3px solid #DBEAFE;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      position: relative;
+    }
+
+    .constat-variant-8 .chaos-card:nth-child(1) {
+      transform: rotate(-2deg);
+    }
+
+    .constat-variant-8 .chaos-card:nth-child(2) {
+      transform: rotate(1.5deg) translateY(8px);
+    }
+
+    .constat-variant-8 .chaos-card:nth-child(3) {
+      transform: rotate(-1deg);
+    }
+
+    .constat-variant-8 .chaos-card:hover {
+      transform: rotate(0deg) translateY(-8px) scale(1.02);
+      border-color: #2563EB;
+      box-shadow: 0 16px 40px rgba(37, 99, 235, 0.2);
+      z-index: 10;
+    }
+
+    .constat-variant-8 .chaos-icon-wrapper {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2rem;
+    }
+
+    .constat-variant-8 .chaos-icon-bg {
+      position: absolute;
       width: 120px;
       height: 120px;
       background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
       border: 3px solid #2563EB;
       border-radius: 12px;
-      margin: 0 auto 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      transform: rotate(8deg);
       transition: all 0.4s;
     }
 
-    .constat-variant-10 .icone-principale svg {
+    .constat-variant-8 .chaos-card:hover .chaos-icon-bg {
+      transform: rotate(0deg);
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+    }
+
+    .constat-variant-8 .chaos-icon {
+      position: relative;
+      z-index: 2;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .constat-variant-8 .chaos-icon svg {
       width: 60px;
       height: 60px;
       color: #2563EB;
+      transition: all 0.4s;
     }
 
-    .constat-variant-10 .micro-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 1.5rem;
+    .constat-variant-8 .chaos-card:hover .chaos-icon svg {
+      color: white;
     }
 
-    .constat-variant-10 .micro-carre {
+    .constat-variant-8 .chaos-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--navy);
+    }
+
+    .constat-variant-8 .chaos-card p {
+      font-size: 1rem;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    /* Variante 9 : Format Email/Inbox (rectangles horizontaux) */
+    .constat-variant-9-new .inbox-container {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
+      gap: 1.25rem;
     }
 
-    .constat-variant-10 .micro-box {
+    .constat-variant-9-new .email-card {
+      background: white;
+      border: 2px solid #E5E7EB;
+      border-left: 4px solid #2563EB;
+      border-radius: 8px;
+      padding: 1.75rem 2rem;
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 1.5rem;
+      align-items: center;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .constat-variant-9-new .email-card:hover {
+      border-color: #2563EB;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
+      transform: translateX(4px);
+    }
+
+    .constat-variant-9-new .email-icon {
       width: 60px;
       height: 60px;
-      background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
-      border: 2px solid #60A5FA;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .constat-variant-9-new .email-icon svg {
+      width: 30px;
+      height: 30px;
+      color: #2563EB;
+    }
+
+    .constat-variant-9-new .email-content h3 {
       font-size: 1.25rem;
-      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: var(--navy);
+    }
+
+    .constat-variant-9-new .email-content p {
+      font-size: 0.9375rem;
+      color: var(--slate);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .constat-variant-9-new .email-badge {
+      display: inline-block;
+      background: #DBEAFE;
       color: #1E40AF;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-left: 0.75rem;
+    }
+
+    /* Variante 10 : Comparaison split inline (problème vs solution) */
+    .constat-variant-10 .split-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .constat-variant-10 .split-card {
+      background: white;
+      border: 2px solid #E5E7EB;
+      border-radius: 12px;
+      overflow: hidden;
       transition: all 0.3s;
     }
 
-    .constat-variant-10 .micro-label {
+    .constat-variant-10 .split-card:hover {
+      border-color: #2563EB;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+    }
+
+    .constat-variant-10 .split-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .constat-variant-10 .split-problem {
+      background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
+      padding: 2.5rem 2rem;
+      border-right: 2px solid #E5E7EB;
+    }
+
+    .constat-variant-10 .split-solution {
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      padding: 2.5rem 2rem;
+    }
+
+    .constat-variant-10 .split-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .constat-variant-10 .split-problem .split-icon {
+      background: rgba(239, 68, 68, 0.15);
+    }
+
+    .constat-variant-10 .split-problem .split-icon svg {
+      width: 30px;
+      height: 30px;
+      color: #DC2626;
+    }
+
+    .constat-variant-10 .split-solution .split-icon {
+      background: rgba(37, 99, 235, 0.15);
+    }
+
+    .constat-variant-10 .split-solution .split-icon svg {
+      width: 30px;
+      height: 30px;
+      color: #2563EB;
+    }
+
+    .constat-variant-10 .split-label {
       font-size: 0.75rem;
-      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .constat-variant-10 .split-problem .split-label {
+      color: #DC2626;
+    }
+
+    .constat-variant-10 .split-solution .split-label {
+      color: #2563EB;
+    }
+
+    .constat-variant-10 .split-content h3 {
+      font-size: 1.375rem;
+      margin-bottom: 0.75rem;
+      color: var(--navy);
+    }
+
+    .constat-variant-10 .split-content p {
+      font-size: 0.9375rem;
       color: var(--slate);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Variante 11 : Timeline horizontale (flux de travail) */
+    .constat-variant-11 .timeline-horizontal {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 2rem 0;
+    }
+
+    .constat-variant-11 .timeline-step {
+      flex: 1;
+      background: white;
+      border: 2px solid #DBEAFE;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
       text-align: center;
+      position: relative;
+      transition: all 0.3s;
     }
 
-    .constat-variant-10 .problem-card:hover .icone-principale {
+    .constat-variant-11 .timeline-step::after {
+      content: '→';
+      position: absolute;
+      right: -1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #60A5FA;
+      font-weight: 700;
+    }
+
+    .constat-variant-11 .timeline-step:last-child::after {
+      display: none;
+    }
+
+    .constat-variant-11 .timeline-step:hover {
+      border-color: #2563EB;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+    }
+
+    .constat-variant-11 .timeline-number {
+      width: 48px;
+      height: 48px;
       background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      border-color: #1D4ED8;
-      transform: scale(1.05);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 auto 1rem;
     }
 
-    .constat-variant-10 .problem-card:hover .icone-principale svg {
-      color: white;
+    .constat-variant-11 .timeline-step h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+      color: var(--navy);
     }
 
-    .constat-variant-10 .problem-card:hover .micro-box {
-      background: linear-gradient(135deg, #60A5FA 0%, #2563EB 100%);
-      border-color: #1E40AF;
-      color: white;
+    .constat-variant-11 .timeline-step p {
+      font-size: 0.875rem;
+      color: var(--slate);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Variante 12 : Dashboard/Stats (cartes compactes) */
+    .constat-variant-12 .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .constat-variant-12 .stat-card {
+      background: white;
+      border: 2px solid #E5E7EB;
+      border-radius: 10px;
+      padding: 2rem 1.75rem;
+      transition: all 0.3s;
+    }
+
+    .constat-variant-12 .stat-card:hover {
+      border-color: #2563EB;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.1);
       transform: translateY(-3px);
     }
 
-    .constat-variant-10 .problem-card h3 {
-      font-size: 1.5rem;
-      margin: 1.5rem 0 0.75rem;
+    .constat-variant-12 .stat-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.25rem;
     }
 
-    .constat-variant-10 .problem-card p {
+    .constat-variant-12 .stat-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .constat-variant-12 .stat-icon svg {
+      width: 24px;
+      height: 24px;
+      color: #2563EB;
+    }
+
+    .constat-variant-12 .stat-trend {
+      background: #FEE2E2;
+      color: #DC2626;
+      padding: 0.25rem 0.625rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .constat-variant-12 .stat-number {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+
+    .constat-variant-12 .stat-label {
+      font-size: 0.875rem;
+      color: var(--slate);
+      margin-bottom: 1rem;
+    }
+
+    .constat-variant-12 .stat-bar {
+      width: 100%;
+      height: 6px;
+      background: #EFF6FF;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .constat-variant-12 .stat-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #EF4444 0%, #DC2626 100%);
+      border-radius: 3px;
+      transition: width 0.8s ease;
+    }
+
+    /* Variante 13 : Quote/Témoignage (grandes citations) */
+    .constat-variant-13 .quote-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .constat-variant-13 .quote-card {
+      background: white;
+      border-left: 5px solid #2563EB;
+      border-radius: 12px;
+      padding: 3rem 3rem 3rem 4rem;
+      position: relative;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s;
+    }
+
+    .constat-variant-13 .quote-card:hover {
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+      transform: translateX(4px);
+    }
+
+    .constat-variant-13 .quote-icon {
+      position: absolute;
+      top: 2.5rem;
+      left: -1.5rem;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: white;
+      font-family: Georgia, serif;
+    }
+
+    .constat-variant-13 .quote-text {
+      font-size: 1.375rem;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .constat-variant-13 .quote-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .constat-variant-13 .quote-avatar {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .constat-variant-13 .quote-avatar svg {
+      width: 24px;
+      height: 24px;
+      color: #2563EB;
+    }
+
+    .constat-variant-13 .quote-author-info strong {
+      display: block;
       font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+
+    .constat-variant-13 .quote-author-info span {
+      font-size: 0.875rem;
+      color: var(--slate);
+    }
+
+    /* Variante 14 : Checklist négative (liste avec X) */
+    .constat-variant-14 .checklist-container {
+      background: white;
+      border: 2px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 2.5rem 3rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .constat-variant-14 .checklist-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .constat-variant-14 .checklist-header h3 {
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .constat-variant-14 .checklist-header p {
+      font-size: 1.125rem;
+      color: var(--slate);
+    }
+
+    .constat-variant-14 .checklist-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .constat-variant-14 .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      background: #FAFAFA;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .constat-variant-14 .checklist-item:hover {
+      background: #FEF2F2;
+      transform: translateX(4px);
+    }
+
+    .constat-variant-14 .checklist-icon {
+      width: 32px;
+      height: 32px;
+      background: #FEE2E2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .constat-variant-14 .checklist-icon svg {
+      width: 18px;
+      height: 18px;
+      color: #DC2626;
+      stroke-width: 3;
+    }
+
+    .constat-variant-14 .checklist-text {
+      flex: 1;
+    }
+
+    .constat-variant-14 .checklist-text h4 {
+      font-size: 1.125rem;
+      color: var(--navy);
+      margin-bottom: 0.375rem;
+    }
+
+    .constat-variant-14 .checklist-text p {
+      font-size: 0.9375rem;
       color: var(--slate);
       margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Variante 15 : Layout radial/circulaire (problème central) */
+    .constat-variant-15 .radial-container {
+      position: relative;
+      padding: 4rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .constat-variant-15 .radial-center {
+      width: 240px;
+      height: 240px;
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 12px 40px rgba(37, 99, 235, 0.3);
+    }
+
+    .constat-variant-15 .radial-center-icon {
+      width: 80px;
+      height: 80px;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .constat-variant-15 .radial-center h3 {
+      font-size: 1.5rem;
+      color: white;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .constat-variant-15 .radial-satellites {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .constat-variant-15 .radial-satellite {
+      position: absolute;
+      width: 160px;
+      background: white;
+      border: 2px solid #DBEAFE;
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .constat-variant-15 .radial-satellite:hover {
+      border-color: #2563EB;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+      transform: scale(1.05);
+      z-index: 20;
+    }
+
+    .constat-variant-15 .radial-satellite:nth-child(1) {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .constat-variant-15 .radial-satellite:nth-child(2) {
+      top: 25%;
+      right: 5%;
+    }
+
+    .constat-variant-15 .radial-satellite:nth-child(3) {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .constat-variant-15 .radial-satellite:nth-child(4) {
+      top: 25%;
+      left: 5%;
+    }
+
+    .constat-variant-15 .satellite-icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 0.75rem;
+      color: #60A5FA;
+    }
+
+    .constat-variant-15 .radial-satellite h4 {
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .constat-variant-15 .radial-satellite p {
+      font-size: 0.8125rem;
+      color: var(--slate);
+      margin: 0;
+      line-height: 1.4;
     }
 
     .section-variant-selector {
@@ -2445,23 +2948,43 @@
           </label>
           <label style="display: inline-block;">
             <input type="radio" name="constat-variant" value="6" style="display: none;">
-            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">6. Chiffre géant</span>
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">6. Pyramide inversée</span>
           </label>
           <label style="display: inline-block;">
             <input type="radio" name="constat-variant" value="7" style="display: none;">
-            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">7. Problème → Impact</span>
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">7. Bento Grid</span>
           </label>
           <label style="display: inline-block;">
             <input type="radio" name="constat-variant" value="8" style="display: none;">
-            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">8. Badge + barre</span>
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">8. Carrés déstructurés</span>
           </label>
           <label style="display: inline-block;">
             <input type="radio" name="constat-variant" value="9" style="display: none;">
-            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">9. Icône + bullets</span>
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">9. Format Email</span>
           </label>
           <label style="display: inline-block;">
             <input type="radio" name="constat-variant" value="10" style="display: none;">
-            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">10. Gauge circulaire</span>
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">10. Split Avant/Après</span>
+          </label>
+          <label style="display: inline-block;">
+            <input type="radio" name="constat-variant" value="11" style="display: none;">
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">11. Timeline horizontale</span>
+          </label>
+          <label style="display: inline-block;">
+            <input type="radio" name="constat-variant" value="12" style="display: none;">
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">12. Dashboard Stats</span>
+          </label>
+          <label style="display: inline-block;">
+            <input type="radio" name="constat-variant" value="13" style="display: none;">
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">13. Témoignages</span>
+          </label>
+          <label style="display: inline-block;">
+            <input type="radio" name="constat-variant" value="14" style="display: none;">
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">14. Checklist négative</span>
+          </label>
+          <label style="display: inline-block;">
+            <input type="radio" name="constat-variant" value="15" style="display: none;">
+            <span style="display: block; padding: 0.5rem 1rem; background: white; color: var(--slate); border: 1.5px solid var(--light-gray); border-radius: 8px; font-size: 0.8125rem; font-weight: 500; cursor: pointer;">15. Layout radial</span>
           </label>
         </div>
       </div>
@@ -2622,236 +3145,485 @@
         </div>
       </div>
 
-      <!-- Variante 6 : Chiffre dans carré gradient -->
+      <!-- Variante 6 : Pyramide inversée (1 grand problème en haut, 2 impacts en bas) -->
       <div class="constat-variant-6">
-        <div class="problem-grid">
-          <div class="problem-card">
-            <div class="chiffre-box">
-              <div class="chiffre-display">14h</div>
-            </div>
-            <h3>Temps perdu chaque semaine</h3>
-            <p>En paperasse administrative au lieu d'être sur vos chantiers</p>
+        <div class="pyramid-layout">
+          <div class="big-problem-card">
+            <svg class="big-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            <h3>La complexité administrative paralyse votre activité</h3>
+            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
           </div>
 
-          <div class="problem-card">
-            <div class="chiffre-box">
-              <div class="chiffre-display">47%</div>
-            </div>
-            <h3>De dossiers incomplets</h3>
-            <p>Refus au premier envoi par manque de pièces justificatives</p>
-          </div>
-
-          <div class="problem-card">
-            <div class="chiffre-box">
-              <div class="chiffre-display">3.2k€</div>
-            </div>
-            <h3>Perdus par abandon client</h3>
-            <p>Quand la complexité administrative fait renoncer à un projet</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Variante 7 : Icône + Badge chiffré superposé -->
-      <div class="constat-variant-7">
-        <div class="problem-grid">
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="small-grid">
+            <div class="small-problem-card">
+              <svg class="small-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <div class="badge-chiffre">14h</div>
+              <h4>14h par semaine</h4>
+              <p>perdues en administration au lieu d'être sur le terrain</p>
             </div>
-            <h3>Temps perdu en paperasse</h3>
-            <p>Chaque semaine passée en administration au lieu du terrain</p>
-          </div>
 
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            <div class="small-problem-card">
+              <svg class="small-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
-              <div class="badge-chiffre">6</div>
+              <h4>1 client sur 3</h4>
+              <p>abandonne face à la complexité des démarches</p>
             </div>
-            <h3>Outils différents par chantier</h3>
-            <p>Excel, emails, WhatsApp, Drive... aucune vision d'ensemble</p>
-          </div>
-
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-              </svg>
-              <div class="badge-chiffre">1/3</div>
-            </div>
-            <h3>Clients qui abandonnent</h3>
-            <p>Face à la complexité des démarches administratives</p>
           </div>
         </div>
       </div>
 
-      <!-- Variante 8 : Double niveau (petit problème / GROS impact) -->
-      <div class="constat-variant-8">
-        <div class="problem-grid">
-          <div class="problem-card">
-            <div class="petit-carre">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      <!-- Variante 7 : Bento Grid asymétrique (tailles différentes) -->
+      <div class="constat-variant-7">
+        <div class="bento-grid">
+          <div class="bento-card bento-large">
+            <div class="bento-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3>Emails dispersés</h3>
-            <div class="gros-carre">
-              <div class="gros-chiffre">2h</div>
-            </div>
-            <p>perdues chaque jour à chercher des documents</p>
+            <h3>Le temps qui vous échappe</h3>
+            <p>14 heures par semaine passées à gérer la paperasse administrative, les relances clients et la recherche de documents. C'est presque 2 jours complets perdus chaque semaine au lieu d'être sur vos chantiers ou en prospection.</p>
           </div>
 
-          <div class="problem-card">
-            <div class="petit-carre">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="bento-card">
+            <div class="bento-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
-            <h3>Dossiers incomplets</h3>
-            <div class="gros-carre">
-              <div class="gros-chiffre">47%</div>
-            </div>
-            <p>de refus au premier envoi à l'ANAH</p>
+            <h3>47% de refus</h3>
+            <p>Dossiers incomplets refusés au premier envoi par l'ANAH</p>
           </div>
 
-          <div class="problem-card">
-            <div class="petit-carre">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="bento-card">
+            <div class="bento-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
+            </div>
+            <h3>3.2k€ par abandon</h3>
+            <p>Chiffre d'affaires perdu quand un client renonce</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 8 : Carrés déstructurés/cassés (chaos visuel) -->
+      <div class="constat-variant-8">
+        <div class="chaos-container">
+          <div class="chaos-card">
+            <div class="chaos-icon-wrapper">
+              <div class="chaos-icon-bg"></div>
+              <div class="chaos-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+            </div>
+            <h3>Documents éparpillés</h3>
+            <p>Emails, Drive, WhatsApp, Excel... Impossible de retrouver la bonne information au bon moment</p>
+          </div>
+
+          <div class="chaos-card">
+            <div class="chaos-icon-wrapper">
+              <div class="chaos-icon-bg"></div>
+              <div class="chaos-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+            </div>
+            <h3>Process incertain</h3>
+            <p>Chaque dossier est une aventure : quelles pièces ? Quel format ? Quelle version du formulaire ?</p>
+          </div>
+
+          <div class="chaos-card">
+            <div class="chaos-icon-wrapper">
+              <div class="chaos-icon-bg"></div>
+              <div class="chaos-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
             </div>
             <h3>Clients perdus</h3>
-            <div class="gros-carre">
-              <div class="gros-chiffre">3.2k€</div>
-            </div>
-            <p>d'aides non touchées par abandon</p>
+            <p>Face au chaos administratif, 1 client sur 3 abandonne son projet avant même de commencer</p>
           </div>
         </div>
       </div>
 
-      <!-- Variante 9 : Barres quantifiées bleues -->
+      <!-- Variante 9 : Format Email/Inbox (rectangles horizontaux) -->
       <div class="constat-variant-9-new">
-        <div class="problem-grid">
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="inbox-container">
+          <div class="email-card">
+            <div class="email-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3>Temps en administration</h3>
-            <div class="barre-bleue">
-              <div class="barre-fill" style="width: 73%;"></div>
-              <div class="barre-label">73%</div>
+            <div class="email-content">
+              <h3>⏰ Relance : "C'est quand qu'on envoie le dossier ANAH ?"<span class="email-badge">14h/sem</span></h3>
+              <p>Vous attendez 3 pièces depuis 10 jours. Le client relance. Vous passez 30 minutes à re-expliquer ce qu'il manque.</p>
             </div>
-            <p>de votre temps passé en paperasse au lieu du terrain</p>
           </div>
 
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          <div class="email-card">
+            <div class="email-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
             </div>
-            <h3>Dossiers refusés</h3>
-            <div class="barre-bleue">
-              <div class="barre-fill" style="width: 47%;"></div>
-              <div class="barre-label">47%</div>
+            <div class="email-content">
+              <h3>❌ Refus ANAH : "Justificatif non conforme"<span class="email-badge">47%</span></h3>
+              <p>Aucun détail. Lequel ? Pourquoi ? 3 semaines perdues pour comprendre qu'il manquait une signature.</p>
             </div>
-            <p>de refus au premier envoi par pièce manquante ou erreur</p>
           </div>
 
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          <div class="email-card">
+            <div class="email-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-            <h3>Clients qui abandonnent</h3>
-            <div class="barre-bleue">
-              <div class="barre-fill" style="width: 33%;"></div>
-              <div class="barre-label">1/3</div>
+            <div class="email-content">
+              <h3>🔍 Recherche désespérée d'une attestation RGE<span class="email-badge">2h</span></h3>
+              <p>Vous l'avez envoyée il y a 2 semaines. Elle est noyée dans 127 emails entre devis, factures et photos de chantier.</p>
             </div>
-            <p>renoncent face à la complexité administrative</p>
           </div>
         </div>
       </div>
 
-      <!-- Variante 10 : 1 grande icône + 3 micro-chiffres -->
+      <!-- Variante 10 : Comparaison split inline (problème vs solution) -->
       <div class="constat-variant-10">
-        <div class="problem-grid">
-          <div class="problem-card">
-            <div class="icone-principale">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="split-container">
+          <div class="split-card">
+            <div class="split-content">
+              <div class="split-problem">
+                <div class="split-icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <div class="split-label">Aujourd'hui</div>
+                <h3>Documents perdus</h3>
+                <p>127 emails non lus, fichiers dispersés entre Drive/bureau/WhatsApp, 2h par jour à chercher une facture</p>
+              </div>
+              <div class="split-solution">
+                <div class="split-icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div class="split-label">Solution</div>
+                <h3>Tout centralisé</h3>
+                <p>Tous les documents au même endroit, recherche instantanée, alertes si pièce manquante</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="split-card">
+            <div class="split-content">
+              <div class="split-problem">
+                <div class="split-icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <div class="split-label">Aujourd'hui</div>
+                <h3>Dossiers refusés</h3>
+                <p>47% refusés au premier envoi. Raisons floues. "Devis non conforme" sans précision. 3 semaines perdues.</p>
+              </div>
+              <div class="split-solution">
+                <div class="split-icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div class="split-label">Solution</div>
+                <h3>Vérification avant envoi</h3>
+                <p>Validation automatique des formats, checklist complète, zéro refus pour erreur évitable</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="split-card">
+            <div class="split-content">
+              <div class="split-problem">
+                <div class="split-icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <div class="split-label">Aujourd'hui</div>
+                <h3>Clients frustrés</h3>
+                <p>Relances constantes, processus incompréhensible, 1 sur 3 abandonne = 3.2k€ de CA perdu</p>
+              </div>
+              <div class="split-solution">
+                <div class="split-icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div class="split-label">Solution</div>
+                <h3>Autonomie client</h3>
+                <p>Le client dépose ses docs lui-même, suivi transparent, zéro friction administrative</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 11 : Timeline horizontale (flux de travail problématique) -->
+      <div class="constat-variant-11">
+        <div class="timeline-horizontal">
+          <div class="timeline-step">
+            <div class="timeline-number">1</div>
+            <h3>Client relance</h3>
+            <p>Appel pour savoir où en est le dossier ANAH</p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-number">2</div>
+            <h3>Recherche docs</h3>
+            <p>1h à fouiller dans les emails et Drive</p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-number">3</div>
+            <h3>Pièce manquante</h3>
+            <p>On découvre qu'il manque une attestation</p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-number">4</div>
+            <h3>Dossier bloqué</h3>
+            <p>3 semaines de retard et client mécontent</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 12 : Dashboard/Stats (style tableau de bord) -->
+      <div class="constat-variant-12">
+        <div class="dashboard-grid">
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div class="stat-trend">↗ +18%</div>
+            </div>
+            <div class="stat-number">14h</div>
+            <div class="stat-label">Temps admin par semaine</div>
+            <div class="stat-bar">
+              <div class="stat-bar-fill" style="width: 73%;"></div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div class="stat-trend">↗ +12%</div>
+            </div>
+            <div class="stat-number">47%</div>
+            <div class="stat-label">Taux de refus au 1er envoi</div>
+            <div class="stat-bar">
+              <div class="stat-bar-fill" style="width: 47%;"></div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div class="stat-trend">↗ +8%</div>
+            </div>
+            <div class="stat-number">3.2k€</div>
+            <div class="stat-label">CA perdu par abandon</div>
+            <div class="stat-bar">
+              <div class="stat-bar-fill" style="width: 33%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 13 : Quote/Témoignage (grandes citations de pros) -->
+      <div class="constat-variant-13">
+        <div class="quote-container">
+          <div class="quote-card">
+            <div class="quote-icon">"</div>
+            <p class="quote-text">J'ai passé 3 heures hier à chercher une facture pour l'ANAH. Elle était dans un email de février, noyée entre 200 autres messages. Pendant ce temps, j'aurais pu avancer sur deux chantiers.</p>
+            <div class="quote-author">
+              <div class="quote-avatar">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <div class="quote-author-info">
+                <strong>Thomas</strong>
+                <span>Artisan RGE, Bordeaux</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="quote-card">
+            <div class="quote-icon">"</div>
+            <p class="quote-text">Le pire, c'est quand un dossier est refusé sans explication claire. "Devis non conforme" — OK, mais pourquoi ? J'ai dû rappeler 4 fois l'instructeur pour comprendre qu'il manquait juste une mention obligatoire.</p>
+            <div class="quote-author">
+              <div class="quote-avatar">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <div class="quote-author-info">
+                <strong>Sophie</strong>
+                <span>Entreprise de rénovation, Lyon</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="quote-card">
+            <div class="quote-icon">"</div>
+            <p class="quote-text">Un client sur trois abandonne son projet MaPrimeRénov' parce que c'est "trop compliqué". Je perds pas loin de 40k€ de CA par an à cause de ça. C'est démoralisant.</p>
+            <div class="quote-author">
+              <div class="quote-avatar">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <div class="quote-author-info">
+                <strong>Marc</strong>
+                <span>Artisan multi-services, Nantes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 14 : Checklist négative (X rouges pour problèmes) -->
+      <div class="constat-variant-14">
+        <div class="checklist-container">
+          <div class="checklist-header">
+            <h3>Ce qui ne fonctionne pas aujourd'hui</h3>
+            <p>Les frictions quotidiennes qui ralentissent votre activité</p>
+          </div>
+
+          <div class="checklist-items">
+            <div class="checklist-item">
+              <div class="checklist-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <div class="checklist-text">
+                <h4>Documents éparpillés dans 6 outils différents</h4>
+                <p>Emails, Drive, WhatsApp, Excel, Dropbox, bureau de l'ordinateur... Impossible d'avoir une vue d'ensemble.</p>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <div class="checklist-text">
+                <h4>Aucune vérification avant l'envoi du dossier</h4>
+                <p>Vous découvrez qu'il manque une pièce seulement quand l'ANAH refuse le dossier 3 semaines plus tard.</p>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <div class="checklist-text">
+                <h4>Clients qui ne comprennent pas où en est leur dossier</h4>
+                <p>Relances par téléphone, SMS, WhatsApp... Vous passez votre temps à réexpliquer ce qui manque.</p>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <div class="checklist-text">
+                <h4>Processus différent pour chaque chantier</h4>
+                <p>Pas de méthode standardisée, chaque projet est une improvisation chronophage.</p>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <div class="checklist-text">
+                <h4>Zéro visibilité sur votre charge de travail globale</h4>
+                <p>Combien de dossiers en cours ? Lesquels sont bloqués ? Impossible de prioriser efficacement.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variante 15 : Layout radial/circulaire (problème central + impacts autour) -->
+      <div class="constat-variant-15">
+        <div class="radial-container">
+          <div class="radial-center">
+            <svg class="radial-center-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            <h3>Chaos administratif</h3>
+          </div>
+
+          <div class="radial-satellites">
+            <div class="radial-satellite">
+              <svg class="satellite-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
+              <h4>14h perdues</h4>
+              <p>par semaine en admin</p>
             </div>
-            <h3>Gestion du temps</h3>
-            <p>La paperasse grignote votre productivité quotidienne</p>
-            <div class="micro-grid">
-              <div class="micro-carre">
-                <div class="micro-box">14h</div>
-                <div class="micro-label">par semaine</div>
-              </div>
-              <div class="micro-carre">
-                <div class="micro-box">2h</div>
-                <div class="micro-label">par jour</div>
-              </div>
-              <div class="micro-carre">
-                <div class="micro-box">73%</div>
-                <div class="micro-label">de votre temps</div>
-              </div>
-            </div>
-          </div>
 
-          <div class="problem-card">
-            <div class="icone-principale">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="radial-satellite">
+              <svg class="satellite-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
+              <h4>47% de refus</h4>
+              <p>au premier envoi ANAH</p>
             </div>
-            <h3>Complexité des dossiers</h3>
-            <p>Les refus et erreurs qui s'accumulent et font perdre du temps</p>
-            <div class="micro-grid">
-              <div class="micro-carre">
-                <div class="micro-box">47%</div>
-                <div class="micro-label">refusés</div>
-              </div>
-              <div class="micro-carre">
-                <div class="micro-box">3sem</div>
-                <div class="micro-label">par dossier</div>
-              </div>
-              <div class="micro-carre">
-                <div class="micro-box">6</div>
-                <div class="micro-label">outils</div>
-              </div>
-            </div>
-          </div>
 
-          <div class="problem-card">
-            <div class="icone-principale">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="radial-satellite">
+              <svg class="satellite-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
+              <h4>1/3 d'abandons</h4>
+              <p>clients qui renoncent</p>
             </div>
-            <h3>Impact sur les clients</h3>
-            <p>La complexité fait fuir et génère des pertes financières</p>
-            <div class="micro-grid">
-              <div class="micro-carre">
-                <div class="micro-box">1/3</div>
-                <div class="micro-label">abandons</div>
-              </div>
-              <div class="micro-carre">
-                <div class="micro-box">3.2k€</div>
-                <div class="micro-label">perdus</div>
-              </div>
-              <div class="micro-carre">
-                <div class="micro-box">10j</div>
-                <div class="micro-label">de retard</div>
-              </div>
+
+            <div class="radial-satellite">
+              <svg class="satellite-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <h4>6 outils dispersés</h4>
+              <p>aucune centralisation</p>
             </div>
           </div>
         </div>
