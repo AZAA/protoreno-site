@@ -221,6 +221,16 @@
     }
 
     /* ============================================
+       BASE CARD COMPONENT
+       ============================================ */
+    .card {
+      background: white;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--light-gray);
+      transition: var(--transition-base);
+    }
+
+    /* ============================================
        NAVIGATION
        ============================================ */
     nav {
@@ -701,10 +711,6 @@
     .problem-card {
       text-align: center;
       padding: 2.5rem 2rem;
-      background: white;
-      border-radius: 12px;
-      border: 1px solid var(--light-gray);
-      transition: all 0.3s;
     }
 
     .problem-card:hover {
@@ -996,12 +1002,9 @@
     }
 
     .constat-impact-card {
-      background: white;
       border: 2px solid #E5E7EB;
-      border-radius: 12px;
       padding: 2.5rem 2rem;
       text-align: center;
-      transition: all 0.3s;
     }
 
     .constat-impact-card:hover {
@@ -1599,12 +1602,10 @@
     }
 
     .dialogue-card {
-      background: white;
       padding: 3rem;
       border-radius: 20px;
       box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
       position: relative;
-      border: 1px solid #E5E7EB;
     }
 
     /* Triangle pointer */
@@ -1693,12 +1694,8 @@
     }
 
     .participate-card {
-      background: white;
       padding: 3rem 2.5rem;
-      border-radius: 12px;
-      border: 1px solid var(--light-gray);
       text-align: center;
-      transition: all 0.3s;
     }
 
     .participate-card:hover {
@@ -1961,12 +1958,8 @@
     }
 
     .value-card {
-      background: white;
       padding: 3rem 2.5rem;
-      border-radius: 12px;
-      border: 1px solid var(--light-gray);
       text-align: center;
-      transition: all 0.3s;
     }
 
     .value-card:hover {
@@ -2188,7 +2181,7 @@
       }
     }
 
-    @media (max-width: 968px) {
+    @media (max-width: 1024px) {
       .screenshots-gallery {
         grid-template-columns: 1fr;
       }
@@ -2506,11 +2499,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 0;
       margin-bottom: 4rem;
-      background: white;
-      border-radius: 12px;
-      border: 1px solid var(--light-gray);
       position: relative;
-      transition: all 0.3s;
       border-left: 6px solid #10B981;
     }
 
@@ -2610,7 +2599,7 @@
     }
 
     /* Responsive adjustments */
-    @media (max-width: 968px) {
+    @media (max-width: 1024px) {
       .tools-grid .tool-card {
         grid-template-columns: 1fr;
       }
@@ -2787,7 +2776,7 @@
         </div>
 
         <div class="constat-impacts">
-          <div class="constat-impact-card constat-time">
+          <div class="card constat-impact-card constat-time">
             <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -2795,7 +2784,7 @@
             <p>en administration au lieu d'être sur le terrain</p>
           </div>
 
-          <div class="constat-impact-card constat-clients">
+          <div class="card constat-impact-card constat-clients">
             <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
@@ -2840,7 +2829,7 @@
             </div>
             <div class="dialogue-bubble">
               <h3 class="dialogue-title">Vous dites</h3>
-              <div class="dialogue-card">
+              <div class="card dialogue-card">
                 <p class="dialogue-text">
                   <strong>"J'en peux plus de la paperasse..."</strong><br>
                   Entre <em>MaPrimeRénov</em>, l'<em>ANAH</em>, les <em>CEE</em> et les clients qui comprennent rien, je perds <strong>2-3 heures par dossier</strong> juste en admin.
@@ -2869,7 +2858,7 @@
             </div>
             <div class="dialogue-bubble">
               <h3 class="dialogue-title">On crée</h3>
-              <div class="dialogue-card">
+              <div class="card dialogue-card">
                 <p class="dialogue-text">
                   <strong>Un module de devis intelligent</strong> qui pré-remplit automatiquement les données techniques, calcule les aides <em>MaPrimeRénov</em> selon les barèmes en vigueur, et génère un <strong>PDF professionnel</strong> en 2 clics.
                 </p>
@@ -2888,7 +2877,7 @@
             </div>
             <div class="dialogue-bubble">
               <h3 class="dialogue-title">Vous testez</h3>
-              <div class="dialogue-card">
+              <div class="card dialogue-card">
                 <p class="dialogue-text">
                   <strong>"C'est déjà pas mal, mais..."</strong><br>
                   Il faudrait aussi pouvoir <em>sauvegarder mes barèmes personnalisés</em> (j'ai des tarifs spécifiques selon les chantiers), et si possible <strong>exporter en Excel</strong> pour mon comptable.
@@ -2916,7 +2905,7 @@
             </div>
             <div class="dialogue-bubble">
               <h3 class="dialogue-title">On ajuste</h3>
-              <div class="dialogue-card">
+              <div class="card dialogue-card">
                 <p class="dialogue-text">
                   On ajoute la <strong>sauvegarde de barèmes</strong>, l'<strong>export Excel</strong> multi-formats, et un <strong>système de checklist CEE</strong> avec suivi automatique des documents manquants.
                   On itère jusqu'à ce que l'outil soit <em>parfaitement adapté</em> à votre façon de travailler.
@@ -2960,7 +2949,7 @@
       </div>
 
       <div class="participate-grid">
-        <div class="participate-card">
+        <div class="card participate-card">
           <div class="participate-icon">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -2972,7 +2961,7 @@
           </p>
         </div>
 
-        <div class="participate-card">
+        <div class="card participate-card">
           <div class="participate-icon">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
@@ -2984,7 +2973,7 @@
           </p>
         </div>
 
-        <div class="participate-card">
+        <div class="card participate-card">
           <div class="participate-icon">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -3021,7 +3010,7 @@
 
       <!-- VARIANT 5: Split 50/50 avec Bordure Latérale Colorée -->
       <div class="tools-grid" >
-        <div class="tool-card">
+        <div class="card tool-card">
           <div class="tool-image">
             <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
           </div>
@@ -3038,7 +3027,7 @@
           </div>
         </div>
 
-        <div class="tool-card">
+        <div class="card tool-card">
           <div class="tool-image">
             <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
           </div>
@@ -3055,7 +3044,7 @@
           </div>
         </div>
 
-        <div class="tool-card">
+        <div class="card tool-card">
           <div class="tool-image">
             <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
           </div>
@@ -3165,7 +3154,7 @@
 
       <!-- Values Grid -->
       <div class="values-grid">
-        <div class="value-card">
+        <div class="card value-card">
           <div class="value-icon">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -3177,7 +3166,7 @@
           </p>
         </div>
 
-        <div class="value-card">
+        <div class="card value-card">
           <div class="value-icon">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -3189,7 +3178,7 @@
           </p>
         </div>
 
-        <div class="value-card">
+        <div class="card value-card">
           <div class="value-icon">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
