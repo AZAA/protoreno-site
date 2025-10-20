@@ -1115,114 +1115,155 @@
       display: block;
     }
 
-    #approche-v1:checked ~ .approche-v1,
-    #approche-v2:checked ~ .approche-v2,
-    #approche-v3:checked ~ .approche-v3 {
-      display: block;
+    /* VARIANTE 1 : Style conversation SMS/iMessage */
+    .sms-conversation {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: linear-gradient(180deg, #F3F4F6 0%, #E5E7EB 100%);
+      border-radius: 24px;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
     }
 
-    /* VARIANTE 1 : Timeline verticale avec grandes icônes */
-    .approach-timeline {
-      position: relative;
-      padding-left: 100px;
+    .sms-message {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-end;
     }
 
-    .approach-timeline::before {
-      content: '';
-      position: absolute;
-      left: 60px;
-      top: 80px;
-      bottom: 80px;
-      width: 4px;
-      background: linear-gradient(180deg, #DBEAFE 0%, #2563EB 50%, #1E40AF 100%);
-      border-radius: 2px;
+    .sms-client {
+      flex-direction: row;
     }
 
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 3rem;
-      margin-bottom: 4rem;
-      position: relative;
+    .sms-proto {
+      flex-direction: row-reverse;
     }
 
-    .timeline-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .timeline-icon-wrapper {
-      position: relative;
-      width: 140px;
-      height: 140px;
+    .sms-avatar {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
       background: white;
-      border: 4px solid #E5E7EB;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.4s;
-      z-index: 2;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    .timeline-item:nth-child(1) .timeline-icon-wrapper {
-      border-color: #60A5FA;
-      background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
+    .sms-bubble {
+      max-width: 75%;
+      padding: 1rem 1.25rem;
+      border-radius: 18px;
+      position: relative;
+      animation: messageSlideIn 0.3s ease-out;
     }
 
-    .timeline-item:nth-child(2) .timeline-icon-wrapper {
-      border-color: #2563EB;
-      background: linear-gradient(135deg, #DBEAFE 0%, #FFFFFF 100%);
+    @keyframes messageSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    .timeline-item:nth-child(3) .timeline-icon-wrapper {
-      border-color: #1E40AF;
-      background: linear-gradient(135deg, #BFDBFE 0%, #FFFFFF 100%);
+    .sms-bubble-client {
+      background: white;
+      border-bottom-left-radius: 4px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
 
-    .timeline-icon-wrapper:hover {
-      transform: scale(1.08) rotate(5deg);
-      box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
-    }
-
-    .timeline-number {
-      position: absolute;
-      top: -8px;
-      right: -8px;
-      width: 36px;
-      height: 36px;
-      background: var(--blue);
+    .sms-bubble-proto {
+      background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
       color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.125rem;
-      border: 3px solid white;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      border-bottom-right-radius: 4px;
+      box-shadow: 0 2px 12px rgba(37, 99, 235, 0.3);
     }
 
-    .timeline-icon {
-      width: 70px;
-      height: 70px;
-      color: var(--blue);
+    .sms-sender {
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    .timeline-content {
-      padding-top: 1rem;
+    .sms-bubble-proto .sms-sender {
+      color: rgba(255,255,255,0.9);
     }
 
-    .timeline-content h3 {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
+    .sms-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+
+    .sms-bubble-client .sms-text {
       color: var(--navy);
     }
 
-    .timeline-content p {
-      font-size: 1.0625rem;
-      line-height: 1.7;
-      color: var(--slate);
-      margin: 0;
+    .sms-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 0.375rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .sms-time {
+      font-size: 0.6875rem;
+      opacity: 0.5;
+      margin-top: 0.25rem;
+    }
+
+    .sms-bubble-proto .sms-time {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* Animation typing */
+    .sms-typing {
+      background: white;
+      padding: 1rem 1.5rem;
+      display: flex;
+      gap: 0.375rem;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      min-width: 60px;
+    }
+
+    .sms-typing span {
+      width: 8px;
+      height: 8px;
+      background: #9CA3AF;
+      border-radius: 50%;
+      animation: typingBounce 1.4s infinite;
+    }
+
+    .sms-typing span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .sms-typing span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes typingBounce {
+      0%, 60%, 100% {
+        transform: translateY(0);
+      }
+      30% {
+        transform: translateY(-10px);
+      }
     }
 
     /* VARIANTE 2 : Bento Grid asymétrique */
@@ -2013,48 +2054,28 @@
       }
 
       /* Approche variantes responsive */
-      .approach-timeline {
-        padding-left: 0;
+      .sms-conversation {
+        padding: 1.5rem 1rem;
       }
 
-      .approach-timeline::before {
-        display: none;
+      .sms-bubble {
+        max-width: 85%;
+        padding: 0.875rem 1rem;
       }
 
-      .timeline-item {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-bottom: 3rem;
+      .sms-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 1.125rem;
       }
 
-      .timeline-icon-wrapper {
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
-      }
-
-      .timeline-icon {
-        width: 50px;
-        height: 50px;
-      }
-
-      .timeline-number {
-        width: 28px;
-        height: 28px;
+      .sms-text {
         font-size: 0.9375rem;
       }
 
-      .timeline-content {
-        text-align: center;
-        padding-top: 0;
-      }
-
-      .timeline-content h3 {
-        font-size: 1.5rem;
-      }
-
-      .timeline-content p {
-        font-size: 1rem;
+      .sms-badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.625rem;
       }
 
       /* Bento Grid responsive */
@@ -2524,62 +2545,91 @@
 
       <!-- Toggle variantes -->
       <div class="section-variant-selector">
-        <input type="radio" name="approche-variant" id="approche-v1" class="section-variant-option" checked>
-        <label for="approche-v1" class="section-variant-label">Timeline icônes</label>
+        <input type="radio" name="approche-variant" id="approche-v1" class="section-variant-option" value="1" checked>
+        <label for="approche-v1" class="section-variant-label"><span>Convo SMS</span></label>
 
-        <input type="radio" name="approche-variant" id="approche-v2" class="section-variant-option">
-        <label for="approche-v2" class="section-variant-label">Bento Grid</label>
+        <input type="radio" name="approche-variant" id="approche-v2" class="section-variant-option" value="2">
+        <label for="approche-v2" class="section-variant-label"><span>Bento Grid</span></label>
 
-        <input type="radio" name="approche-variant" id="approche-v3" class="section-variant-option">
-        <label for="approche-v3" class="section-variant-label">Cycle continu</label>
+        <input type="radio" name="approche-variant" id="approche-v3" class="section-variant-option" value="3">
+        <label for="approche-v3" class="section-variant-label"><span>Cycle continu</span></label>
       </div>
 
-      <!-- VARIANTE 1 : Timeline verticale avec grandes icônes -->
-      <div class="approche-variant approche-v1 active">
-        <div class="approach-timeline">
-          <div class="timeline-item">
-            <div class="timeline-icon-wrapper">
-              <div class="timeline-number">1</div>
-              <svg class="timeline-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
-              </svg>
-            </div>
-            <div class="timeline-content">
-              <h3>Écouter le terrain</h3>
-              <p>Nous recueillons vos retours pour identifier les vrais blocages. Chaque fonctionnalité est priorisée selon son utilité réelle pour gagner du temps au quotidien.</p>
+      <!-- VARIANTE 1 : Conversation SMS style -->
+      <div class="approche-variant approche-variant-1 active">
+        <div class="sms-conversation">
+          <!-- Message 1 : Vous -->
+          <div class="sms-message sms-client">
+            <div class="sms-avatar">👷</div>
+            <div class="sms-bubble sms-bubble-client">
+              <div class="sms-sender">Vous</div>
+              <div class="sms-text">J'ai besoin d'un outil pour gérer mes dossiers MaPrimeRénov, c'est le chaos total là...</div>
+              <div class="sms-time">Aujourd'hui 10:23</div>
             </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-icon-wrapper">
-              <div class="timeline-number">2</div>
-              <svg class="timeline-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-              </svg>
+          <!-- Message 2 : Protoreno -->
+          <div class="sms-message sms-proto">
+            <div class="sms-bubble sms-bubble-proto">
+              <div class="sms-sender">Protoreno</div>
+              <div class="sms-text">On vous écoute ! Dites-nous exactement ce qui vous bloque au quotidien. Chaque retour compte pour prioriser les bonnes fonctionnalités.</div>
+              <div class="sms-badge">1. Écouter le terrain</div>
+              <div class="sms-time">Aujourd'hui 10:25</div>
             </div>
-            <div class="timeline-content">
-              <h3>Développer des solutions ciblées</h3>
-              <p>Nous créons des outils SaaS sans superflu, avec une interface claire et des fonctionnalités essentielles. Performance, fiabilité et simplicité sont nos priorités.</p>
+            <div class="sms-avatar">🛠️</div>
+          </div>
+
+          <!-- Message 3 : Vous -->
+          <div class="sms-message sms-client">
+            <div class="sms-avatar">👷</div>
+            <div class="sms-bubble sms-bubble-client">
+              <div class="sms-sender">Vous</div>
+              <div class="sms-text">Ok nickel ! Et après vous faites comment ?</div>
+              <div class="sms-time">Aujourd'hui 10:27</div>
             </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-icon-wrapper">
-              <div class="timeline-number">3</div>
-              <svg class="timeline-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-              </svg>
+          <!-- Message 4 : Protoreno -->
+          <div class="sms-message sms-proto">
+            <div class="sms-bubble sms-bubble-proto">
+              <div class="sms-text">On développe un outil SaaS simple et efficace. Pas de superflu, juste ce dont vous avez vraiment besoin. Performance et fiabilité avant tout.</div>
+              <div class="sms-badge">2. Développer ciblé</div>
+              <div class="sms-time">Aujourd'hui 10:28</div>
             </div>
-            <div class="timeline-content">
-              <h3>Améliorer en continu</h3>
-              <p>Grâce à vos retours réguliers lors des phases de tests, nous ajustons et améliorons nos outils de manière itérative pour qu'ils soient vraiment utiles.</p>
+            <div class="sms-avatar">🛠️</div>
+          </div>
+
+          <!-- Message 5 : Vous testez -->
+          <div class="sms-message sms-client">
+            <div class="sms-avatar">👷</div>
+            <div class="sms-bubble sms-bubble-client">
+              <div class="sms-text">Et si ça marche pas pour moi ?</div>
+              <div class="sms-time">Aujourd'hui 10:30</div>
             </div>
+          </div>
+
+          <!-- Message 6 : Protoreno -->
+          <div class="sms-message sms-proto">
+            <div class="sms-bubble sms-bubble-proto">
+              <div class="sms-text">On ajuste ensemble ! Vous testez, vous nous dites ce qui cloche, on améliore. C'est un cycle continu jusqu'à ce que ce soit parfait pour vous.</div>
+              <div class="sms-badge">3. Améliorer en continu</div>
+              <div class="sms-time">Aujourd'hui 10:31</div>
+            </div>
+            <div class="sms-avatar">🛠️</div>
+          </div>
+
+          <!-- Message final typing -->
+          <div class="sms-message sms-proto">
+            <div class="sms-bubble sms-typing">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="sms-avatar">🛠️</div>
           </div>
         </div>
       </div>
 
       <!-- VARIANTE 2 : Bento Grid asymétrique -->
-      <div class="approche-variant approche-v2">
+      <div class="approche-variant approche-variant-2">
         <div class="bento-approach">
           <div class="bento-card bento-large">
             <div class="bento-badge">01</div>
@@ -2611,7 +2661,7 @@
       </div>
 
       <!-- VARIANTE 3 : Cycle horizontal avec flèches -->
-      <div class="approche-variant approche-v3">
+      <div class="approche-variant approche-variant-3">
         <div class="cycle-approach">
           <div class="cycle-step">
             <div class="cycle-number">1</div>
