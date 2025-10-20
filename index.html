@@ -365,74 +365,7 @@
       z-index: 2;
     }
 
-    /* Toggle Hero Variantes */
-    .hero-variant-toggle {
-      position: fixed;
-      top: 90px;
-      right: 1rem;
-      z-index: 9999;
-      background: white;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      max-width: 280px;
-    }
-
-    .hero-variant-toggle h4 {
-      font-size: 0.875rem;
-      margin-bottom: 0.75rem;
-      color: var(--navy);
-      font-weight: 600;
-    }
-
-    .hero-variant-options {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .hero-variant-option {
-      display: none;
-    }
-
-    .hero-variant-label {
-      display: block;
-      padding: 0.625rem 1rem;
-      background: white;
-      border: 1.5px solid var(--light-gray);
-      border-radius: 8px;
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--slate);
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-align: left;
-    }
-
-    .hero-variant-label:hover {
-      background: var(--blue-light);
-      border-color: var(--blue);
-      color: var(--navy);
-    }
-
-    .hero-variant-option:checked + .hero-variant-label {
-      background: var(--blue);
-      border-color: var(--blue);
-      color: white;
-      font-weight: 600;
-    }
-
-    /* Illustrations Hero */
-    .hero-illustration {
-      display: none;
-      margin-bottom: 2rem;
-    }
-
-    .hero-illustration.active {
-      display: block;
-    }
-
-    /* Variante 1: Badge avec chiffre impactant */
+    /* Badge avec chiffre impactant */
     .hero-stats-badge {
       display: inline-flex;
       align-items: center;
@@ -532,19 +465,7 @@
       font-weight: 700;
     }
 
-    /* Variante 3: Cycle d'amélioration continue */
-    .hero-cycle {
-      margin-bottom: 2rem;
-    }
-
-    .hero-cycle svg {
-      width: 200px;
-      height: 200px;
-      margin: 0 auto;
-      display: block;
-    }
-
-    /* Variante 4: Timeline épurée */
+    /* Timeline épurée */
     .hero-timeline {
       display: flex;
       align-items: center;
@@ -585,92 +506,9 @@
       margin-bottom: 24px;
     }
 
-    /* Variante 5: Dashboard stats */
-    .hero-dashboard {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1.5rem 2.5rem;
-      background: linear-gradient(135deg, var(--blue-light) 0%, rgba(219, 234, 254, 0.5) 100%);
-      border: 2px solid var(--blue);
-      border-radius: 16px;
-      margin-bottom: 2rem;
-    }
-
-    .dashboard-stat {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    .stat-value {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--blue);
-      line-height: 1;
-    }
-
-    .stat-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--navy);
-      text-align: center;
-      line-height: 1.2;
-    }
-
-    .dashboard-separator {
-      font-size: 2rem;
-      color: var(--blue);
-      opacity: 0.3;
-      font-weight: 300;
-    }
-
-    /* Variante 6: Citation/Testimonial */
-    .hero-testimonial {
-      max-width: 500px;
-      margin: 0 auto 2rem;
-      padding: 1.5rem 2rem;
-      background: var(--bg);
-      border-left: 4px solid var(--blue);
-      border-radius: 8px;
-      position: relative;
-    }
-
-    .quote-icon {
-      width: 32px;
-      height: 32px;
-      color: var(--blue);
-      opacity: 0.2;
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-    }
-
-    .testimonial-text {
-      font-size: 1.125rem;
-      font-weight: 500;
-      color: var(--navy);
-      font-style: italic;
-      margin-bottom: 0.75rem;
-      line-height: 1.5;
-    }
-
-    .testimonial-author {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--slate);
-      margin: 0;
-    }
-
     /* Mobile responsive */
     @media (max-width: 768px) {
-      .hero-variant-toggle {
-        display: none;
-      }
-
-      /* Variante 1: Badge stats */
+      /* Badge stats */
       .hero-stats-badge {
         flex-direction: column;
         gap: 0.5rem;
@@ -712,48 +550,13 @@
         font-size: 0.75rem;
       }
 
-      /* Variante 3: Cycle */
-      .hero-cycle svg {
-        width: 180px;
-        height: 180px;
-      }
-
-      /* Variante 4: Timeline */
+      /* Timeline */
       .timeline-line {
         width: 40px;
       }
 
       .timeline-label {
         font-size: 0.6875rem;
-      }
-
-      /* Variante 5: Dashboard */
-      .hero-dashboard {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1.25rem 1.5rem;
-      }
-
-      .dashboard-separator {
-        display: none;
-      }
-
-      .stat-value {
-        font-size: 2rem;
-      }
-
-      /* Variante 6: Testimonial */
-      .hero-testimonial {
-        padding: 1.25rem 1.5rem;
-      }
-
-      .testimonial-text {
-        font-size: 1rem;
-      }
-
-      .quote-icon {
-        width: 24px;
-        height: 24px;
       }
     }
 
@@ -2012,169 +1815,11 @@
       <rect x="700" y="400" width="250" height="180" fill="#2563EB" opacity="0.08"/>
     </svg>
 
-    <!-- Toggle Hero Variantes -->
-    <div class="hero-variant-toggle">
-      <h4>🎨 Illustration Hero</h4>
-      <div class="hero-variant-options">
-        <input type="radio" name="hero-variant" id="hero-var-0" value="0" class="hero-variant-option" checked>
-        <label for="hero-var-0" class="hero-variant-label">Sans illustration</label>
-
-        <input type="radio" name="hero-variant" id="hero-var-1" value="1" class="hero-variant-option">
-        <label for="hero-var-1" class="hero-variant-label">📊 Badge chiffres (45 pros)</label>
-
-        <input type="radio" name="hero-variant" id="hero-var-2" value="2" class="hero-variant-option">
-        <label for="hero-var-2" class="hero-variant-label">⚙️ Synergie Terrain ∩ Tech</label>
-
-        <input type="radio" name="hero-variant" id="hero-var-3" value="3" class="hero-variant-option">
-        <label for="hero-var-3" class="hero-variant-label">🔄 Cycle amélioration continue</label>
-
-        <input type="radio" name="hero-variant" id="hero-var-4" value="4" class="hero-variant-option">
-        <label for="hero-var-4" class="hero-variant-label">━━ Timeline épurée</label>
-
-        <input type="radio" name="hero-variant" id="hero-var-5" value="5" class="hero-variant-option">
-        <label for="hero-var-5" class="hero-variant-label">📈 Dashboard stats (3 chiffres)</label>
-
-        <input type="radio" name="hero-variant" id="hero-var-6" value="6" class="hero-variant-option">
-        <label for="hero-var-6" class="hero-variant-label">💬 Citation artisan RGE</label>
-      </div>
-    </div>
-
     <div class="container-narrow">
-      <!-- Variante 0: Sans illustration (défaut) -->
-      <div class="hero-illustration hero-variant-0 active"></div>
-
-      <!-- Variante 1: Badge avec chiffre impactant -->
-      <div class="hero-illustration hero-variant-1">
-        <div class="hero-stats-badge">
-          <div class="stats-number">45</div>
-          <div class="stats-label">professionnels<br>collaborent</div>
-        </div>
-      </div>
-
-      <!-- Variante 2: Synergie Terrain ∩ Tech avec overlap -->
-      <div class="hero-illustration hero-variant-2">
-        <div class="hero-synergy">
-          <div class="synergy-circles">
-            <div class="synergy-circle synergy-left">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-              </svg>
-            </div>
-            <div class="synergy-overlap">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-            <div class="synergy-circle synergy-right">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-              </svg>
-            </div>
-          </div>
-          <div class="synergy-labels">
-            <span>Terrain</span>
-            <span class="synergy-center-label">Co-création</span>
-            <span>Tech</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Variante 3: Cycle d'amélioration continue -->
-      <div class="hero-illustration hero-variant-3">
-        <div class="hero-cycle">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Cercle principal -->
-            <circle cx="100" cy="100" r="80" stroke="#2563EB" stroke-width="2" fill="none" stroke-dasharray="5,5" opacity="0.3"/>
-
-            <!-- Étapes du cycle -->
-            <g>
-              <!-- Étape 1: Terrain (haut) -->
-              <circle cx="100" cy="30" r="28" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
-              <text x="100" y="33" text-anchor="middle" font-size="13" font-weight="600" fill="#1E40AF">Terrain</text>
-
-              <!-- Étape 2: Développe (droite) -->
-              <circle cx="170" cy="100" r="28" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
-              <text x="170" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">Dév</text>
-              <text x="170" y="113" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">eloppé</text>
-
-              <!-- Étape 3: Teste (bas) -->
-              <circle cx="100" cy="170" r="28" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
-              <text x="100" y="173" text-anchor="middle" font-size="13" font-weight="600" fill="#1E40AF">Testé</text>
-
-              <!-- Étape 4: Améliore (gauche) -->
-              <circle cx="30" cy="100" r="28" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
-              <text x="30" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">Amé-</text>
-              <text x="30" y="113" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF">lioré</text>
-            </g>
-
-            <!-- Flèches de flux -->
-            <defs>
-              <marker id="cycle-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                <polygon points="0 0, 10 3, 0 6" fill="#2563EB"/>
-              </marker>
-            </defs>
-            <path d="M 122 44 Q 145 60 156 82" stroke="#2563EB" stroke-width="3" fill="none" marker-end="url(#cycle-arrow)"/>
-            <path d="M 156 118 Q 145 140 122 156" stroke="#2563EB" stroke-width="3" fill="none" marker-end="url(#cycle-arrow)"/>
-            <path d="M 78 156 Q 55 140 44 118" stroke="#2563EB" stroke-width="3" fill="none" marker-end="url(#cycle-arrow)"/>
-            <path d="M 44 82 Q 55 60 78 44" stroke="#2563EB" stroke-width="3" fill="none" marker-end="url(#cycle-arrow)"/>
-          </svg>
-        </div>
-      </div>
-
-      <!-- Variante 4: Timeline épurée -->
-      <div class="hero-illustration hero-variant-4">
-        <div class="hero-timeline">
-          <div class="timeline-step">
-            <div class="timeline-dot"></div>
-            <div class="timeline-label">Vous dites</div>
-          </div>
-          <div class="timeline-line"></div>
-          <div class="timeline-step">
-            <div class="timeline-dot"></div>
-            <div class="timeline-label">On code</div>
-          </div>
-          <div class="timeline-line"></div>
-          <div class="timeline-step">
-            <div class="timeline-dot"></div>
-            <div class="timeline-label">Vous testez</div>
-          </div>
-          <div class="timeline-line"></div>
-          <div class="timeline-step">
-            <div class="timeline-dot"></div>
-            <div class="timeline-label">On améliore</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Variante 5: Dashboard stats -->
-      <div class="hero-illustration hero-variant-5">
-        <div class="hero-dashboard">
-          <div class="dashboard-stat">
-            <div class="stat-value">45</div>
-            <div class="stat-label">Pros<br>collaborent</div>
-          </div>
-          <div class="dashboard-separator">|</div>
-          <div class="dashboard-stat">
-            <div class="stat-value">2</div>
-            <div class="stat-label">Outils<br>en prod</div>
-          </div>
-          <div class="dashboard-separator">|</div>
-          <div class="dashboard-stat">
-            <div class="stat-value">94%</div>
-            <div class="stat-label">Taux<br>d'adoption</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Variante 6: Citation artisan RGE -->
-      <div class="hero-illustration hero-variant-6">
-        <div class="hero-testimonial">
-          <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-          </svg>
-          <p class="testimonial-text">"Enfin un logiciel qui comprend mon métier"</p>
-          <p class="testimonial-author">- Artisan RGE, Lyon</p>
-        </div>
+      <!-- Badge avec chiffre impactant -->
+      <div class="hero-stats-badge">
+        <div class="stats-number">45</div>
+        <div class="stats-label">professionnels<br>collaborent</div>
       </div>
 
       <h1>Par des pros<br><strong>pour des pros</strong></h1>
@@ -2262,6 +1907,29 @@
       <div class="section-header">
         <h2 id="heading-approche">Notre approche</h2>
         <p class="lead">Développement collaboratif avec les professionnels</p>
+      </div>
+
+      <!-- Timeline épurée -->
+      <div class="hero-timeline">
+        <div class="timeline-step">
+          <div class="timeline-dot"></div>
+          <div class="timeline-label">Vous dites</div>
+        </div>
+        <div class="timeline-line"></div>
+        <div class="timeline-step">
+          <div class="timeline-dot"></div>
+          <div class="timeline-label">On crée</div>
+        </div>
+        <div class="timeline-line"></div>
+        <div class="timeline-step">
+          <div class="timeline-dot"></div>
+          <div class="timeline-label">Vous testez</div>
+        </div>
+        <div class="timeline-line"></div>
+        <div class="timeline-step">
+          <div class="timeline-dot"></div>
+          <div class="timeline-label">On ajuste</div>
+        </div>
       </div>
 
       <div class="approche-variant-2">
@@ -2451,6 +2119,28 @@
     <div class="container">
       <div class="cta-box">
         <div class="cta-content">
+          <!-- Synergie Terrain ∩ Tech -->
+          <div class="hero-synergy">
+            <div class="synergy-circles">
+              <div class="synergy-circle synergy-left">
+                <span style="font-size: 1.5rem;">🏗️</span>
+              </div>
+              <div class="synergy-overlap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+              </div>
+              <div class="synergy-circle synergy-right">
+                <span style="font-size: 1.5rem;">💻</span>
+              </div>
+            </div>
+            <div class="synergy-labels">
+              <span>Terrain</span>
+              <span class="synergy-center-label">Synergie</span>
+              <span>Tech</span>
+            </div>
+          </div>
+
           <h2>Aidez-nous à créer les bons outils</h2>
           <p>
             Répondez à notre sondage en 1 minute et influencez nos prochains développements
@@ -2692,7 +2382,6 @@
       // Initialiser les sections avec variantes
       setupVariantSelector('constat');
       setupVariantSelector('approche');
-      setupVariantSelector('hero');
     });
 
   </script>
