@@ -1483,6 +1483,196 @@
     }
 
     /* ============================================
+       TOGGLE VARIANTES TITRE CONSTAT
+       ============================================ */
+
+    .constat-title-toggle-container {
+      position: relative;
+      top: 0;
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 0.75rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--light-gray);
+      margin-bottom: 2rem;
+    }
+
+    .constat-title-toggle-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--slate);
+      background: white;
+      border: 1px solid var(--light-gray);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-sans);
+    }
+
+    .constat-title-toggle-btn:hover {
+      background: var(--light-gray);
+      color: var(--navy);
+    }
+
+    .constat-title-toggle-btn.active {
+      background: var(--blue);
+      color: white;
+    }
+
+    .constat-title-variant {
+      display: none;
+    }
+
+    .constat-title-variant.active {
+      display: block;
+    }
+
+    /* VARIANTE 1: Angle émotionnel (rouge/orange) */
+    .constat-title-emotional {
+      font-size: 2rem;
+      color: #DC2626;
+      background: rgba(239, 68, 68, 0.08);
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+    }
+
+    .constat-title-emotional::after {
+      display: none;
+    }
+
+    /* VARIANTE 2: Interpellation question */
+    .constat-title-question {
+      font-size: 1.875rem;
+      color: #1e40af;
+      font-style: italic;
+    }
+
+    /* VARIANTE 3: Stat choc */
+    .constat-title-stat-hero {
+      text-align: center;
+      margin: 3rem 0 2.5rem 0;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(220, 38, 38, 0.08) 100%);
+      border-radius: 16px;
+      border: 2px solid rgba(220, 38, 38, 0.2);
+    }
+
+    .stat-hero-number {
+      font-size: 4rem;
+      font-weight: 800;
+      color: #DC2626;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-hero-label {
+      font-size: 1.25rem;
+      color: #475569;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .stat-hero-subtitle {
+      font-size: 1rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    /* VARIANTE 4: Badge bleu avec barre latérale */
+    .constat-title-badge-blue {
+      font-size: 2rem;
+      color: #1e3a8a;
+      padding: 1.5rem 2rem;
+      background: rgba(37, 99, 235, 0.04);
+      border-left: 6px solid #2563EB;
+      border-radius: 0 8px 8px 0;
+      text-align: left;
+    }
+
+    .constat-title-badge-blue::after {
+      display: none;
+    }
+
+    /* VARIANTE 5: Badge alerte rouge */
+    .constat-title-alert-box {
+      text-align: center;
+      margin: 3rem 0 2.5rem 0;
+      padding: 2rem;
+      background: rgba(239, 68, 68, 0.1);
+      border: 2px solid #EF4444;
+      border-radius: 12px;
+    }
+
+    .alert-box-header {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #991b1b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .alert-box-subtitle {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #DC2626;
+    }
+
+    /* VARIANTE 6: Fusion (texte simple) */
+    .constat-fusion-text {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1e40af;
+      margin: 2rem 0 2.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .constat-title-toggle-container {
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .constat-title-toggle-btn {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.75rem;
+      }
+
+      .constat-title-emotional,
+      .constat-title-badge-blue {
+        font-size: 1.5rem;
+        padding: 1rem 1.5rem;
+      }
+
+      .stat-hero-number {
+        font-size: 3rem;
+      }
+
+      .stat-hero-label {
+        font-size: 1rem;
+      }
+
+      .alert-box-header {
+        font-size: 1.25rem;
+      }
+
+      .alert-box-subtitle {
+        font-size: 1rem;
+      }
+
+      .constat-fusion-text {
+        font-size: 1.25rem;
+      }
+    }
+
+    /* ============================================
        VARIANTE 9: BADGES PRONONCÉS ET BORDURES ÉPAISSES
        ============================================ */
 
@@ -4300,17 +4490,67 @@
         <p class="lead">Les professionnels du bâtiment manquent d'outils adaptés</p>
       </div>
 
+      <!-- Toggle pour variantes titre transition -->
+      <div class="constat-title-toggle-container">
+        <button class="constat-title-toggle-btn active" onclick="switchConstatTitleVariant(0)">V1 Actuelle</button>
+        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(1)">V2 Émotionnel</button>
+        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(2)">V3 Question</button>
+        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(3)">V4 Stat choc</button>
+        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(4)">V5 Badge bleu</button>
+        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(5)">V6 Alerte rouge</button>
+        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(6)">V7 Fusion</button>
+      </div>
+
       <!-- Bloc principal -->
         <div class="constat-main-problem" style="margin-bottom: 3rem;">
           <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
-          <h3>La complexité administrative paralyse votre activité</h3>
-          <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
+          <h3>L'administratif paralyse votre activité</h3>
+          <p>Paperasse chronophage, outils dispersés : vous perdez un temps précieux au détriment de vos chantiers.</p>
         </div>
 
-        <!-- Titre intermédiaire -->
-        <h3 class="constat-section-title">L'impact en chiffres</h3>
+        <!-- VARIANTE 0: Titre actuel amélioré -->
+        <div class="constat-title-variant active" data-title-variant="0">
+          <h3 class="constat-section-title">L'impact en chiffres</h3>
+        </div>
+
+        <!-- VARIANTE 1: Angle émotionnel -->
+        <div class="constat-title-variant" data-title-variant="1">
+          <h3 class="constat-section-title constat-title-emotional">⚠️ Ce que ça vous coûte vraiment</h3>
+        </div>
+
+        <!-- VARIANTE 2: Interpellation question -->
+        <div class="constat-title-variant" data-title-variant="2">
+          <h3 class="constat-section-title constat-title-question">💬 Et vous, combien perdez-vous ?</h3>
+        </div>
+
+        <!-- VARIANTE 3: Stat choc -->
+        <div class="constat-title-variant" data-title-variant="3">
+          <div class="constat-title-stat-hero">
+            <div class="stat-hero-number">14h</div>
+            <div class="stat-hero-label">perdues chaque semaine</div>
+            <div class="stat-hero-subtitle">Voici le détail complet ↓</div>
+          </div>
+        </div>
+
+        <!-- VARIANTE 4: Narratif avec badge bleu -->
+        <div class="constat-title-variant" data-title-variant="4">
+          <h3 class="constat-section-title constat-title-badge-blue">📊 Votre réalité en chiffres</h3>
+        </div>
+
+        <!-- VARIANTE 5: Badge alerte rouge -->
+        <div class="constat-title-variant" data-title-variant="5">
+          <div class="constat-title-alert-box">
+            <div class="alert-box-header">⚠️ CONSTAT ALARMANT</div>
+            <div class="alert-box-subtitle">L'impact sur votre activité</div>
+          </div>
+        </div>
+
+        <!-- VARIANTE 6: Fusion (pas de titre, texte ajouté au bloc) -->
+        <div class="constat-title-variant" data-title-variant="6">
+          <p class="constat-fusion-text">Voici ce que ça vous coûte :</p>
+        </div>
 
         <!-- Avant/Après avec UI moderne emphase -->
         <div class="constat-ba-modern constat-ba-bold">
@@ -4940,6 +5180,26 @@
 
       // Ajouter la classe active à la variante sélectionnée
       const selectedVariant = document.querySelector(`.hero-variant[data-variant="${variantIndex}"]`);
+      if (selectedVariant) {
+        selectedVariant.classList.add('active');
+      }
+    }
+
+    // Toggle variantes titre Constat
+    function switchConstatTitleVariant(variantIndex) {
+      // Retirer la classe active de tous les boutons
+      const buttons = document.querySelectorAll('.constat-title-toggle-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      // Ajouter la classe active au bouton cliqué
+      buttons[variantIndex].classList.add('active');
+
+      // Retirer la classe active de toutes les variantes
+      const variants = document.querySelectorAll('.constat-title-variant');
+      variants.forEach(variant => variant.classList.remove('active'));
+
+      // Ajouter la classe active à la variante sélectionnée
+      const selectedVariant = document.querySelector(`.constat-title-variant[data-title-variant="${variantIndex}"]`);
       if (selectedVariant) {
         selectedVariant.classList.add('active');
       }
