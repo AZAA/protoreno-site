@@ -2145,6 +2145,330 @@
       }
     }
 
+    /* Toggle FAQ Variantes */
+    .faq-toggle-container {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 2rem auto 3rem;
+      flex-wrap: wrap;
+    }
+
+    .faq-toggle-btn {
+      padding: 0.625rem 1.25rem;
+      border: 2px solid #E2E8F0;
+      background: white;
+      color: var(--slate);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .faq-toggle-btn:hover {
+      border-color: #2563EB;
+      color: #2563EB;
+      transform: translateY(-2px);
+    }
+
+    .faq-toggle-btn.active {
+      background: #2563EB;
+      color: white;
+      border-color: #2563EB;
+    }
+
+    /* Système de variantes */
+    .faq-variant {
+      display: none;
+    }
+
+    .faq-variant.active {
+      display: block;
+    }
+
+    /* VARIANTE 1: Accordéon */
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-accordion-item {
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .faq-accordion-header {
+      width: 100%;
+      padding: 1.5rem;
+      background: transparent;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .faq-accordion-header:hover {
+      background: rgba(37, 99, 235, 0.05);
+    }
+
+    .faq-accordion-header h3 {
+      font-size: 1.125rem;
+      margin: 0;
+      color: var(--navy);
+      flex: 1;
+    }
+
+    .accordion-icon {
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: #2563EB;
+      transition: transform 0.3s ease;
+      margin-left: 1rem;
+    }
+
+    .faq-accordion-item.active .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 1.5rem;
+    }
+
+    .faq-accordion-item.active .faq-accordion-content {
+      max-height: 500px;
+      padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    .faq-accordion-content p {
+      margin: 0;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: var(--slate);
+    }
+
+    /* VARIANTE 2: Par catégories */
+    .faq-categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .faq-category {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .faq-category-header {
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .category-icon {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-category-header h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .faq-category-content {
+      padding: 1.5rem;
+    }
+
+    .faq-cat-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .faq-cat-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .faq-cat-item h4 {
+      font-size: 1rem;
+      margin: 0 0 0.5rem 0;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .faq-cat-item p {
+      margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--slate);
+    }
+
+    @media (max-width: 1024px) {
+      .faq-categories {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* VARIANTE 3: Timeline */
+    .faq-timeline {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-phase {
+      margin-bottom: 3rem;
+    }
+
+    .faq-phase:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-phase-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .phase-number {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .faq-phase-header h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .faq-phase-questions {
+      display: grid;
+      gap: 1rem;
+      padding-left: 64px;
+    }
+
+    .faq-timeline-item {
+      padding: 1.5rem;
+      border-left: 4px solid #2563EB;
+    }
+
+    .faq-timeline-item h4 {
+      font-size: 1.125rem;
+      margin: 0 0 0.75rem 0;
+      color: var(--navy);
+    }
+
+    .faq-timeline-item p {
+      margin: 0;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: var(--slate);
+    }
+
+    @media (max-width: 768px) {
+      .faq-phase-questions {
+        padding-left: 0;
+      }
+    }
+
+    /* VARIANTE 4: Split 50/50 */
+    .faq-split {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .faq-split-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .faq-split-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .faq-split-question {
+      position: sticky;
+      top: 100px;
+    }
+
+    .split-icon {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .faq-split-question h3 {
+      font-size: 1.25rem;
+      margin: 0;
+      color: var(--navy);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .faq-split-answer {
+      padding: 1.5rem;
+    }
+
+    .faq-split-answer p {
+      margin: 0;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: var(--slate);
+    }
+
+    @media (max-width: 768px) {
+      .faq-split-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .faq-split-question {
+        position: relative;
+        top: 0;
+      }
+
+      .split-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .faq-split-question h3 {
+        font-size: 1.125rem;
+      }
+    }
+
     /* ============================================
        FORM
        ============================================ */
@@ -3266,9 +3590,9 @@
   </section>
 
   <!-- ============================================
-       COMMENT PARTICIPER
+       CTA - CONVERSATIONS & SONDAGE
        ============================================ -->
-  <section class="section-alt" id="section-participer" aria-labelledby="heading-participer">
+  <section class="section-alt">
     <!-- Réseau maillé (collaboration) -->
     <svg class="section-bg-svg participer-bg active" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
@@ -3284,61 +3608,6 @@
       <rect width="1200" height="800" fill="url(#network)"/>
     </svg>
 
-    <div class="container">
-      <div class="section-header">
-        <h2 id="heading-participer">Comment participer</h2>
-        <p class="lead">Trois façons de contribuer aux outils de demain</p>
-      </div>
-
-      <div class="participate-grid">
-        <div class="card participate-card">
-          <div class="participate-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-            </svg>
-          </div>
-          <h3>Influencer la conception</h3>
-          <p>
-            Partagez vos besoins réels et vos points de blocage pour orienter le développement
-          </p>
-        </div>
-
-        <div class="card participate-card">
-          <div class="participate-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-            </svg>
-          </div>
-          <h3>Tester en avant-première</h3>
-          <p>
-            Accédez aux nouvelles fonctionnalités avant leur sortie et contribuez à leur amélioration
-          </p>
-        </div>
-
-        <div class="card participate-card">
-          <div class="participate-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-          </div>
-          <h3>Rejoindre la communauté</h3>
-          <p>
-            Intégrez un réseau de professionnels qui construisent ensemble les solutions adaptées
-          </p>
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 3.5rem;">
-        <a href="#section-sondage" class="btn btn-primary btn-large">Commencer à contribuer</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================
-       CTA
-       ============================================ -->
-  <section class="section-alt">
     <div class="container">
       <!-- Conversations terrain -->
       <div class="testimonial-box">
@@ -3569,7 +3838,18 @@
         <p class="lead">Les réponses aux questions que vous vous posez</p>
       </div>
 
-      <div class="faq-grid">
+      <!-- Toggle FAQ Variantes -->
+      <div class="faq-toggle-container">
+        <button class="faq-toggle-btn active" onclick="switchFaqVariant(0)">Grille 2 col</button>
+        <button class="faq-toggle-btn" onclick="switchFaqVariant(1)">Accordéon</button>
+        <button class="faq-toggle-btn" onclick="switchFaqVariant(2)">Catégories</button>
+        <button class="faq-toggle-btn" onclick="switchFaqVariant(3)">Timeline</button>
+        <button class="faq-toggle-btn" onclick="switchFaqVariant(4)">Split 50/50</button>
+      </div>
+
+      <!-- VARIANTE 0: Grille 2 colonnes (actuelle) -->
+      <div class="faq-variant active" data-variant="0">
+        <div class="faq-grid">
         <div class="faq-item card">
           <div class="faq-question">
             <h3>Combien ça coûte ?</h3>
@@ -3642,6 +3922,312 @@
           </div>
         </div>
       </div>
+      </div>
+
+      <!-- VARIANTE 1: Accordéon -->
+      <div class="faq-variant" data-variant="1">
+        <div class="faq-accordion">
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>💰 Combien ça coûte ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous privilégions des abonnements simples et transparents, sans engagement long terme. Contactez-nous pour un devis personnalisé selon vos besoins réels.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>🔒 Mes données sont-elles sécurisées ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Absolument. Vos données clients et projets sont hébergées en France, chiffrées et sauvegardées quotidiennement. Nous sommes en conformité RGPD et ne revendons jamais vos informations à des tiers.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>⏱️ Combien de temps faut-il pour prendre en main les outils ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Nos outils sont pensés pour être intuitifs. La plupart des utilisateurs sont opérationnels en moins d'une heure. Nous proposons aussi un accompagnement personnalisé pour démarrer et répondre à vos questions.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>💻 Dois-je avoir des compétences techniques particulières ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Non. Si vous utilisez un navigateur web et votre messagerie, vous saurez utiliser nos outils. L'interface est simple, claire, sans jargon technique inutile.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>💡 Puis-je proposer des améliorations ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>C'est même le principe ! Chaque retour compte. Vous pouvez nous contacter directement, participer aux sondages ou rejoindre les ateliers utilisateurs pour co-construire les évolutions.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>🎨 Les outils sont-ils personnalisables ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Oui, dans une certaine mesure. Nous adaptons les fonctionnalités aux besoins réels du terrain. Si une personnalisation spécifique peut bénéficier à plusieurs professionnels, nous l'étudions sérieusement.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>🆘 Que se passe-t-il si j'ai un problème ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Vous nous contactez directement par email ou téléphone. Pas de ticket perdu dans un support automatisé : vous parlez à de vraies personnes qui connaissent les outils et votre métier.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>🧪 Peut-on tester avant de s'engager ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 2: Par catégories (3 colonnes) -->
+      <div class="faq-variant" data-variant="2">
+        <div class="faq-categories">
+          <!-- Colonne 1: Tarifs & Engagement -->
+          <div class="faq-category">
+            <div class="faq-category-header">
+              <span class="category-icon">💳</span>
+              <h3>Tarifs & Engagement</h3>
+            </div>
+            <div class="faq-category-content">
+              <div class="faq-cat-item">
+                <h4>Combien ça coûte ?</h4>
+                <p>Tarifs adaptés aux professionnels, abonnements simples sans engagement long terme. Devis personnalisé selon vos besoins.</p>
+              </div>
+              <div class="faq-cat-item">
+                <h4>Peut-on tester avant ?</h4>
+                <p>Démonstrations et périodes d'essai disponibles pour évaluer les outils avant de vous abonner.</p>
+              </div>
+              <div class="faq-cat-item">
+                <h4>Données sécurisées ?</h4>
+                <p>Hébergement France, chiffrement, sauvegardes quotidiennes. Conformité RGPD garantie.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne 2: Utilisation -->
+          <div class="faq-category">
+            <div class="faq-category-header">
+              <span class="category-icon">🛠️</span>
+              <h3>Utilisation</h3>
+            </div>
+            <div class="faq-category-content">
+              <div class="faq-cat-item">
+                <h4>Temps de prise en main ?</h4>
+                <p>Moins d'une heure pour être opérationnel. Accompagnement personnalisé disponible.</p>
+              </div>
+              <div class="faq-cat-item">
+                <h4>Compétences requises ?</h4>
+                <p>Si vous utilisez un navigateur et votre messagerie, c'est suffisant. Interface simple et claire.</p>
+              </div>
+              <div class="faq-cat-item">
+                <h4>Support en cas de problème ?</h4>
+                <p>Contact direct par email ou téléphone. Vous parlez à de vraies personnes qui connaissent votre métier.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne 3: Personnalisation -->
+          <div class="faq-category">
+            <div class="faq-category-header">
+              <span class="category-icon">⚙️</span>
+              <h3>Personnalisation</h3>
+            </div>
+            <div class="faq-category-content">
+              <div class="faq-cat-item">
+                <h4>Proposer des améliorations ?</h4>
+                <p>C'est le principe ! Contactez-nous, participez aux sondages ou ateliers utilisateurs.</p>
+              </div>
+              <div class="faq-cat-item">
+                <h4>Outils personnalisables ?</h4>
+                <p>Fonctionnalités adaptées aux besoins terrain. Personnalisations étudiées si elles bénéficient à plusieurs pros.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 3: Timeline (Avant/Pendant/Après) -->
+      <div class="faq-variant" data-variant="3">
+        <div class="faq-timeline">
+          <!-- Phase 1: Avant d'utiliser -->
+          <div class="faq-phase">
+            <div class="faq-phase-header">
+              <span class="phase-number">1</span>
+              <h3>Avant d'utiliser</h3>
+            </div>
+            <div class="faq-phase-questions">
+              <div class="card faq-timeline-item">
+                <h4>💰 Combien ça coûte ?</h4>
+                <p>Tarifs adaptés aux professionnels, abonnements simples et transparents sans engagement long terme.</p>
+              </div>
+              <div class="card faq-timeline-item">
+                <h4>🧪 Peut-on tester avant de s'engager ?</h4>
+                <p>Tout à fait. Démonstrations et périodes d'essai pour évaluer si nos outils correspondent à vos besoins.</p>
+              </div>
+              <div class="card faq-timeline-item">
+                <h4>💻 Dois-je avoir des compétences techniques ?</h4>
+                <p>Non. Si vous utilisez un navigateur web et votre messagerie, vous saurez utiliser nos outils.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 2: Pendant l'utilisation -->
+          <div class="faq-phase">
+            <div class="faq-phase-header">
+              <span class="phase-number">2</span>
+              <h3>Pendant l'utilisation</h3>
+            </div>
+            <div class="faq-phase-questions">
+              <div class="card faq-timeline-item">
+                <h4>⏱️ Combien de temps pour prendre en main ?</h4>
+                <p>La plupart des utilisateurs sont opérationnels en moins d'une heure.</p>
+              </div>
+              <div class="card faq-timeline-item">
+                <h4>🆘 Que se passe-t-il si j'ai un problème ?</h4>
+                <p>Contact direct par email ou téléphone. Vous parlez à de vraies personnes.</p>
+              </div>
+              <div class="card faq-timeline-item">
+                <h4>🔒 Mes données sont-elles sécurisées ?</h4>
+                <p>Hébergement France, chiffrement, sauvegardes quotidiennes. Conformité RGPD.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 3: Évolution -->
+          <div class="faq-phase">
+            <div class="faq-phase-header">
+              <span class="phase-number">3</span>
+              <h3>Évolution & Personnalisation</h3>
+            </div>
+            <div class="faq-phase-questions">
+              <div class="card faq-timeline-item">
+                <h4>💡 Puis-je proposer des améliorations ?</h4>
+                <p>C'est le principe ! Chaque retour compte. Sondages, ateliers utilisateurs, contact direct.</p>
+              </div>
+              <div class="card faq-timeline-item">
+                <h4>🎨 Les outils sont-ils personnalisables ?</h4>
+                <p>Oui. Nous adaptons les fonctionnalités aux besoins réels du terrain.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 4: Split 50/50 (Question gauche / Réponse droite) -->
+      <div class="faq-variant" data-variant="4">
+        <div class="faq-split">
+          <div class="faq-split-item">
+            <div class="faq-split-question">
+              <span class="split-icon">💰</span>
+              <h3>Combien ça coûte ?</h3>
+            </div>
+            <div class="faq-split-answer card">
+              <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous privilégions des abonnements simples et transparents, sans engagement long terme. Contactez-nous pour un devis personnalisé selon vos besoins réels.</p>
+            </div>
+          </div>
+
+          <div class="faq-split-item">
+            <div class="faq-split-question">
+              <span class="split-icon">🔒</span>
+              <h3>Mes données sont-elles sécurisées ?</h3>
+            </div>
+            <div class="faq-split-answer card">
+              <p>Absolument. Vos données clients et projets sont hébergées en France, chiffrées et sauvegardées quotidiennement. Nous sommes en conformité RGPD et ne revendons jamais vos informations à des tiers.</p>
+            </div>
+          </div>
+
+          <div class="faq-split-item">
+            <div class="faq-split-question">
+              <span class="split-icon">⏱️</span>
+              <h3>Combien de temps pour prendre en main ?</h3>
+            </div>
+            <div class="faq-split-answer card">
+              <p>Nos outils sont pensés pour être intuitifs. La plupart des utilisateurs sont opérationnels en moins d'une heure. Nous proposons aussi un accompagnement personnalisé pour démarrer.</p>
+            </div>
+          </div>
+
+          <div class="faq-split-item">
+            <div class="faq-split-question">
+              <span class="split-icon">💻</span>
+              <h3>Compétences techniques requises ?</h3>
+            </div>
+            <div class="faq-split-answer card">
+              <p>Non. Si vous utilisez un navigateur web et votre messagerie, vous saurez utiliser nos outils. L'interface est simple, claire, sans jargon technique inutile.</p>
+            </div>
+          </div>
+
+          <div class="faq-split-item">
+            <div class="faq-split-question">
+              <span class="split-icon">💡</span>
+              <h3>Puis-je proposer des améliorations ?</h3>
+            </div>
+            <div class="faq-split-answer card">
+              <p>C'est même le principe ! Chaque retour compte. Vous pouvez nous contacter directement, participer aux sondages ou rejoindre les ateliers utilisateurs.</p>
+            </div>
+          </div>
+
+          <div class="faq-split-item">
+            <div class="faq-split-question">
+              <span class="split-icon">🎨</span>
+              <h3>Outils personnalisables ?</h3>
+            </div>
+            <div class="faq-split-answer card">
+              <p>Oui, dans une certaine mesure. Nous adaptons les fonctionnalités aux besoins réels du terrain. Personnalisations étudiées si elles bénéficient à plusieurs professionnels.</p>
+            </div>
+          </div>
+
+          <div class="faq-split-item">
+            <div class="faq-split-question">
+              <span class="split-icon">🆘</span>
+              <h3>Problème ? On fait quoi ?</h3>
+            </div>
+            <div class="faq-split-answer card">
+              <p>Vous nous contactez directement par email ou téléphone. Pas de ticket perdu : vous parlez à de vraies personnes qui connaissent les outils et votre métier.</p>
+            </div>
+          </div>
+
+          <div class="faq-split-item">
+            <div class="faq-split-question">
+              <span class="split-icon">🧪</span>
+              <h3>Tester avant de s'engager ?</h3>
+            </div>
+            <div class="faq-split-answer card">
+              <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -3754,6 +4340,41 @@
       const selectedVariant = document.querySelector(`.constat-variant[data-variant="${variantIndex}"]`);
       if (selectedVariant) {
         selectedVariant.classList.add('active');
+      }
+    }
+
+    // Toggle FAQ variantes
+    function switchFaqVariant(variantIndex) {
+      // Retirer la classe active de tous les boutons
+      const buttons = document.querySelectorAll('.faq-toggle-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      // Ajouter la classe active au bouton cliqué
+      buttons[variantIndex].classList.add('active');
+
+      // Retirer la classe active de toutes les variantes
+      const variants = document.querySelectorAll('.faq-variant');
+      variants.forEach(variant => variant.classList.remove('active'));
+
+      // Ajouter la classe active à la variante sélectionnée
+      const selectedVariant = document.querySelector(`.faq-variant[data-variant="${variantIndex}"]`);
+      if (selectedVariant) {
+        selectedVariant.classList.add('active');
+      }
+    }
+
+    // Accordéon FAQ
+    function toggleAccordion(button) {
+      const item = button.closest('.faq-accordion-item');
+      const wasActive = item.classList.contains('active');
+
+      // Fermer tous les items (comportement accordéon - un seul ouvert à la fois)
+      const allItems = document.querySelectorAll('.faq-accordion-item');
+      allItems.forEach(i => i.classList.remove('active'));
+
+      // Si l'item n'était pas actif, l'ouvrir
+      if (!wasActive) {
+        item.classList.add('active');
       }
     }
 
