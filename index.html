@@ -1482,217 +1482,6 @@
       }
     }
 
-    /* ============================================
-       TOGGLE VARIANTES TITRE CONSTAT
-       ============================================ */
-
-    .constat-title-toggle-container {
-      position: relative;
-      top: 0;
-      display: flex;
-      gap: 0.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-      padding: 0.75rem;
-      border-radius: 12px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--light-gray);
-      margin-bottom: 2rem;
-    }
-
-    .constat-title-toggle-btn {
-      padding: 0.5rem 1rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--slate);
-      background: white;
-      border: 1px solid var(--light-gray);
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-family: var(--font-sans);
-    }
-
-    .constat-title-toggle-btn:hover {
-      background: var(--light-gray);
-      color: var(--navy);
-    }
-
-    .constat-title-toggle-btn.active {
-      background: var(--blue);
-      color: white;
-    }
-
-    .constat-title-variant {
-      display: none;
-    }
-
-    .constat-title-variant.active {
-      display: block;
-    }
-
-    /* ============================================
-       OPTIONS TITRE CONSTAT - ÉPURÉES
-       ============================================ */
-
-    /* Base commune : Options 1, 2, 3 */
-    .constat-title-simple {
-      text-align: center;
-      margin: 3rem 0 2.5rem 0;
-      padding: 2rem;
-      background: rgba(239, 68, 68, 0.06);
-      border: 1px solid rgba(220, 38, 38, 0.2);
-      border-radius: 12px;
-    }
-
-    .constat-title-simple .warning-icon {
-      display: block;
-      margin: 0 auto 1rem auto;
-    }
-
-    .constat-title-simple h3 {
-      font-size: 1.875rem;
-      font-weight: 700;
-      color: #991B1B;
-      margin: 0;
-    }
-
-    /* OPTION 2: Avec ombre douce */
-    .constat-title-shadow {
-      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
-    }
-
-    /* OPTION 3: Accent latéral subtil */
-    .constat-title-accent {
-      border-left: 3px solid #DC2626;
-      background: rgba(239, 68, 68, 0.04);
-    }
-
-    /* OPTION 4: Minimaliste (pas de fond) */
-    .constat-title-minimal {
-      text-align: center;
-      margin: 3rem 0 2.5rem 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-    }
-
-    .constat-title-minimal h3 {
-      font-size: 1.875rem;
-      font-weight: 700;
-      color: #991B1B;
-      margin: 0;
-    }
-
-    .warning-icon-inline {
-      flex-shrink: 0;
-    }
-
-    /* OPTION 5: Icône prononcée */
-    .constat-title-icon-large {
-      text-align: center;
-      margin: 3rem 0 2.5rem 0;
-      padding: 2.5rem 2rem 2rem 2rem;
-      background: rgba(239, 68, 68, 0.06);
-      border-radius: 16px;
-    }
-
-    .warning-icon-big {
-      display: block;
-      margin: 0 auto 1.5rem auto;
-    }
-
-    .constat-title-icon-large h3 {
-      font-size: 1.875rem;
-      font-weight: 700;
-      color: #991B1B;
-      margin: 0;
-    }
-
-    /* ============================================
-       RESPONSIVE
-       ============================================ */
-    @media (max-width: 768px) {
-      .constat-title-toggle-container {
-        max-width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .constat-title-toggle-btn {
-        font-size: 0.7rem;
-        padding: 0.4rem 0.6rem;
-      }
-
-      .constat-title-simple h3,
-      .constat-title-minimal h3,
-      .constat-title-icon-large h3 {
-        font-size: 1.5rem;
-      }
-
-      .constat-title-simple,
-      .constat-title-icon-large {
-        padding: 1.5rem 1rem;
-      }
-
-      .constat-title-minimal {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-    }
-
-    /* ============================================
-       TOGGLE VARIANTES MÉTRIQUES
-       ============================================ */
-
-    .metrics-toggle-container {
-      display: flex;
-      gap: 0.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-      padding: 0.75rem;
-      border-radius: 12px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--light-gray);
-      margin-bottom: 2rem;
-    }
-
-    .metrics-toggle-btn {
-      padding: 0.5rem 1rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--slate);
-      background: white;
-      border: 1px solid var(--light-gray);
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-family: var(--font-sans);
-    }
-
-    .metrics-toggle-btn:hover {
-      background: var(--light-gray);
-      color: var(--navy);
-    }
-
-    .metrics-toggle-btn.active {
-      background: var(--blue);
-      color: white;
-    }
-
-    .metrics-variant {
-      display: none;
-    }
-
-    .metrics-variant.active {
-      display: grid;
-    }
-
     /* STYLES COMMUNS: Focus principal (1 hero + 2 secondaires) */
     .metric-hero {
       padding: 2rem 1.5rem;
@@ -1729,84 +1518,6 @@
       font-size: 0.8125rem;
     }
 
-    /* VARIANTE 0: Hero avec fond subtil */
-    .metric-hero-v0 {
-      background: rgba(239, 68, 68, 0.05);
-    }
-
-    .ba-modern-col.ba-modern-after .metric-hero-v0 {
-      background: rgba(34, 197, 94, 0.05);
-    }
-
-    /* VARIANTE 1: Hero avec bordure épaisse */
-    .metric-hero-v1 {
-      background: rgba(239, 68, 68, 0.02);
-      border: 3px solid #DC2626;
-    }
-
-    .ba-modern-col.ba-modern-after .metric-hero-v1 {
-      background: rgba(34, 197, 94, 0.02);
-      border-color: #16a34a;
-    }
-
-    /* VARIANTE 2: Hero avec ombre prononcée */
-    .metric-hero-v2 {
-      background: rgba(239, 68, 68, 0.03);
-      box-shadow: 0 8px 24px rgba(220, 38, 38, 0.15);
-    }
-
-    .ba-modern-col.ba-modern-after .metric-hero-v2 {
-      background: rgba(34, 197, 94, 0.03);
-      box-shadow: 0 8px 24px rgba(22, 163, 74, 0.15);
-    }
-
-    /* VARIANTE 3: Hero minimaliste (pas de fond) */
-    .metric-hero-v3 {
-      background: transparent;
-      padding: 1.5rem 0;
-      border-bottom: 2px solid rgba(220, 38, 38, 0.2);
-    }
-
-    .ba-modern-col.ba-modern-after .metric-hero-v3 {
-      border-bottom-color: rgba(22, 163, 74, 0.2);
-    }
-
-    /* VARIANTE 4: Hero avec gradient */
-    .metric-hero-v4 {
-      background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(239, 68, 68, 0.02) 100%);
-    }
-
-    .ba-modern-col.ba-modern-after .metric-hero-v4 {
-      background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, rgba(34, 197, 94, 0.02) 100%);
-    }
-
-    /* ============================================
-       VARIANTES UI MÉTRIQUES SECONDAIRES
-       ============================================ */
-
-    /* V1: Hiérarchie (Grande + Petite) */
-    .metrics-hierarchy {
-      gap: 0.75rem;
-    }
-
-    .metric-large-secondary {
-      flex: 1.5;
-      padding: 1.5rem 1.25rem;
-    }
-
-    .metric-large-secondary .ba-modern-metric-value {
-      font-size: 2.25rem;
-    }
-
-    .metric-small-secondary {
-      flex: 1;
-      padding: 1rem;
-    }
-
-    .metric-small-secondary .ba-modern-metric-value {
-      font-size: 1.5rem;
-    }
-
     /* V2: Contraste (Fond coloré + Transparent) */
     .metric-with-background {
       background: rgba(0, 0, 0, 0.06);
@@ -1828,68 +1539,8 @@
       border: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    /* V3: Mix styles (Bordure gauche + Ombre) */
-    .metric-with-border-left {
-      border-left: 4px solid #DC2626;
-      background: rgba(0, 0, 0, 0.02);
-    }
-
-    .ba-modern-col.ba-modern-after .metric-with-border-left {
-      border-left-color: #16a34a;
-    }
-
-    .metric-with-shadow {
-      background: white;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    .ba-modern-col.ba-modern-before .metric-with-shadow {
-      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.12);
-    }
-
-    .ba-modern-col.ba-modern-after .metric-with-shadow {
-      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.12);
-    }
-
-    /* V4: Layout vertical */
-    .metrics-vertical {
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .metric-stacked-top {
-      background: rgba(0, 0, 0, 0.04);
-      border-top: 3px solid rgba(0, 0, 0, 0.15);
-    }
-
-    .ba-modern-col.ba-modern-before .metric-stacked-top {
-      border-top-color: #DC2626;
-    }
-
-    .ba-modern-col.ba-modern-after .metric-stacked-top {
-      border-top-color: #16a34a;
-    }
-
-    .metric-stacked-bottom {
-      background: transparent;
-      border: 1px dashed rgba(0, 0, 0, 0.2);
-    }
-
-    .ba-modern-col.ba-modern-before .metric-stacked-bottom {
-      border-color: rgba(220, 38, 38, 0.3);
-    }
-
-    .ba-modern-col.ba-modern-after .metric-stacked-bottom {
-      border-color: rgba(22, 163, 74, 0.3);
-    }
-
     /* Responsive métriques */
     @media (max-width: 768px) {
-      .metrics-toggle-btn {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.75rem;
-      }
-
       .metric-hero .ba-modern-metric-value {
         font-size: 2.75rem;
       }
@@ -1899,59 +1550,6 @@
       }
     }
 
-    /* ============================================
-       VISUALISATIONS MÉTRIQUES
-       ============================================ */
-
-    /* V1: Barres comparatives */
-    .metric-with-bar {
-      position: relative;
-    }
-
-    .metric-comparison-bar {
-      width: 100%;
-      height: 6px;
-      background: rgba(0, 0, 0, 0.05);
-      border-radius: 3px;
-      margin-top: 0.5rem;
-      overflow: hidden;
-    }
-
-    .metric-comparison-fill {
-      height: 100%;
-      border-radius: 3px;
-      transition: width 0.3s ease;
-    }
-
-    .metric-comparison-negative {
-      background: linear-gradient(90deg, #DC2626, #EF4444);
-    }
-
-    .metric-comparison-positive {
-      background: linear-gradient(90deg, #16a34a, #22c55e);
-    }
-
-    /* V2: Delta avec flèches */
-    .metric-delta {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-      margin-top: 0.5rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      width: fit-content;
-    }
-
-    .metric-delta-positive {
-      color: #16a34a;
-      background: rgba(22, 163, 74, 0.1);
-    }
-
-    .metric-delta-arrow {
-      flex-shrink: 0;
-    }
 
     /* V3: Icônes multiples */
     .metric-icons {
@@ -1977,36 +1575,6 @@
       color: rgba(0, 0, 0, 0.2);
     }
 
-    /* V4: Jauges circulaires */
-    .metric-with-gauge {
-      position: relative;
-    }
-
-    .metric-gauge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 0.5rem;
-      position: relative;
-    }
-
-    .metric-gauge-circle {
-      display: block;
-    }
-
-    .metric-gauge-badge {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: #16a34a;
-      background: white;
-      padding: 0.15rem 0.35rem;
-      border-radius: 4px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
 
     /* ============================================
        VARIANTE 9: BADGES PRONONCÉS ET BORDURES ÉPAISSES
@@ -4826,15 +4394,6 @@
         <p class="lead">Les professionnels du bâtiment manquent d'outils adaptés</p>
       </div>
 
-      <!-- Toggle pour variantes UI titre transition -->
-      <div class="constat-title-toggle-container">
-        <button class="constat-title-toggle-btn active" onclick="switchConstatTitleVariant(0)">Épuré</button>
-        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(1)">Avec ombre</button>
-        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(2)">Accent</button>
-        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(3)">Minimal</button>
-        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(4)">Icône grande</button>
-      </div>
-
       <!-- Bloc principal -->
         <div class="constat-main-problem" style="margin-bottom: 3rem;">
           <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
@@ -4844,84 +4403,17 @@
           <p>Paperasse chronophage, outils dispersés : vous perdez un temps précieux au détriment de l'essentiel.</p>
         </div>
 
-        <!-- OPTION 1: Épuré centré (simple) -->
-        <div class="constat-title-variant active" data-title-variant="0">
-          <div class="constat-title-simple">
-            <svg class="warning-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 3.5L3.5 19.5h17L12 3.5z" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M12 9v5" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="12" cy="17" r="0.75" fill="#DC2626"/>
-            </svg>
-            <h3>Ce que ça vous coûte vraiment</h3>
-          </div>
-        </div>
 
-        <!-- OPTION 2: Avec ombre douce -->
-        <div class="constat-title-variant" data-title-variant="1">
-          <div class="constat-title-simple constat-title-shadow">
-            <svg class="warning-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 3.5L3.5 19.5h17L12 3.5z" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M12 9v5" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="12" cy="17" r="0.75" fill="#DC2626"/>
-            </svg>
-            <h3>Ce que ça vous coûte vraiment</h3>
-          </div>
-        </div>
+        <h3>Ce que ça vous coûte vraiment</h3>
 
-        <!-- OPTION 3: Accent latéral subtil -->
-        <div class="constat-title-variant" data-title-variant="2">
-          <div class="constat-title-simple constat-title-accent">
-            <svg class="warning-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 3.5L3.5 19.5h17L12 3.5z" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M12 9v5" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="12" cy="17" r="0.75" fill="#DC2626"/>
-            </svg>
-            <h3>Ce que ça vous coûte vraiment</h3>
-          </div>
-        </div>
-
-        <!-- OPTION 4: Minimaliste (pas de fond) -->
-        <div class="constat-title-variant" data-title-variant="3">
-          <div class="constat-title-minimal">
-            <svg class="warning-icon-inline" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 3.5L3.5 19.5h17L12 3.5z" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M12 9v5" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="12" cy="17" r="0.75" fill="#DC2626"/>
-            </svg>
-            <h3>Ce que ça vous coûte vraiment</h3>
-          </div>
-        </div>
-
-        <!-- OPTION 5: Icône prononcée -->
-        <div class="constat-title-variant" data-title-variant="4">
-          <div class="constat-title-icon-large">
-            <svg class="warning-icon-big" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 3.5L3.5 19.5h17L12 3.5z" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M12 9v5" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="12" cy="17" r="0.75" fill="#DC2626"/>
-            </svg>
-            <h3>Ce que ça vous coûte vraiment</h3>
-          </div>
-        </div>
-
-        <!-- Toggle pour variantes métriques -->
-        <div class="metrics-toggle-container">
-          <button class="metrics-toggle-btn active" onclick="switchMetricsVariant(0)">Chiffres simples</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(1)">Barres comparatives</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(2)">Delta avec flèches</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(3)">Icônes multiples</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(4)">Jauges circulaires</button>
-        </div>
-
-        <!-- Avant/Après avec UI moderne emphase -->
-        <div class="constat-ba-modern constat-ba-bold">
-          <!-- VARIANTE 0: Clients / CA -->
-          <div class="ba-modern-grid metrics-variant active" data-metrics-variant="0">
+        <!-- Avant/Après avec icônes proportionnelles -->
+        <div class="constat-ba-modern">
+          <div class="ba-modern-grid">
             <!-- AVANT -->
-            <div class="ba-modern-col ba-modern-before ba-bold">
+            <div class="ba-modern-col ba-modern-before">
               <div class="ba-modern-header">
-                <div class="ba-modern-badge ba-modern-badge-negative ba-badge-large">
-                  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="ba-modern-badge ba-modern-badge-negative">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                   Sans solution adaptée
@@ -4930,7 +4422,7 @@
               </div>
 
               <div class="ba-modern-metrics">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v1">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-hero">
                   <div class="ba-modern-metric-value">14h</div>
                   <div class="ba-modern-metric-label">Admin par semaine</div>
                   <div class="ba-modern-metric-bar">
@@ -4938,21 +4430,111 @@
                   </div>
                 </div>
 
-                <div class="metrics-secondary metrics-contrast">
-                  <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background">
+                <div class="metrics-secondary">
+                  <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background metric-with-icons">
                     <div class="ba-modern-metric-value">33%</div>
                     <div class="ba-modern-metric-label">Clients abandonnent</div>
+                    <div class="metric-icons">
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                    </div>
                   </div>
 
-                  <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent">
+                  <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent metric-with-icons">
                     <div class="ba-modern-metric-value">-15k€</div>
                     <div class="ba-modern-metric-label">Manque à gagner / an</div>
+                    <div class="metric-icons">
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Flèche de transformation -->
+            <!-- Flèche -->
             <div class="ba-modern-arrow">
               <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -4960,10 +4542,10 @@
             </div>
 
             <!-- APRÈS -->
-            <div class="ba-modern-col ba-modern-after ba-bold">
+            <div class="ba-modern-col ba-modern-after">
               <div class="ba-modern-header">
-                <div class="ba-modern-badge ba-modern-badge-positive ba-badge-large">
-                  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="ba-modern-badge ba-modern-badge-positive">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                   </svg>
                   Avec Protoreno
@@ -4972,7 +4554,7 @@
               </div>
 
               <div class="ba-modern-metrics">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v1">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-hero">
                   <div class="ba-modern-metric-value">2h</div>
                   <div class="ba-modern-metric-label">Admin par semaine</div>
                   <div class="ba-modern-metric-bar">
@@ -4981,550 +4563,86 @@
                 </div>
 
                 <div class="metrics-secondary">
-                  <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
+                  <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-background metric-with-icons">
                     <div class="ba-modern-metric-value">5%</div>
                     <div class="ba-modern-metric-label">Clients abandonnent</div>
+                    <div class="metric-icons">
+                      <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                      </svg>
+                    </div>
                   </div>
 
-                  <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
+                  <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-transparent metric-with-icons">
                     <div class="ba-modern-metric-value">+8k€</div>
                     <div class="ba-modern-metric-label">CA retrouvé / an</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        <!-- VARIANTE 1: Hiérarchie (Grande + Petite) -->
-        <div class="ba-modern-grid metrics-variant" data-metrics-variant="1">
-          <!-- AVANT -->
-          <div class="ba-modern-col ba-modern-before ba-bold">
-            <div class="ba-modern-header">
-              <div class="ba-modern-badge ba-modern-badge-negative ba-badge-large">
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                Sans solution adaptée
-              </div>
-              <h3>La réalité quotidienne</h3>
-            </div>
-
-            <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v1">
-                <div class="ba-modern-metric-value">14h</div>
-                <div class="ba-modern-metric-label">Admin par semaine</div>
-                <div class="ba-modern-metric-bar">
-                  <div class="ba-modern-metric-fill" style="width: 93%;"></div>
-                </div>
-              </div>
-
-              <div class="metrics-secondary metrics-contrast">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background metric-with-bar">
-                  <div class="ba-modern-metric-value">33%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="metric-comparison-bar">
-                    <div class="metric-comparison-fill metric-comparison-negative" style="width: 33%;"></div>
-                  </div>
-                </div>
-
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent metric-with-bar">
-                  <div class="ba-modern-metric-value">-15k€</div>
-                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
-                  <div class="metric-comparison-bar">
-                    <div class="metric-comparison-fill metric-comparison-negative" style="width: 65%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Flèche -->
-          <div class="ba-modern-arrow">
-            <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </div>
-
-          <!-- APRÈS -->
-          <div class="ba-modern-col ba-modern-after ba-bold">
-            <div class="ba-modern-header">
-              <div class="ba-modern-badge ba-modern-badge-positive ba-badge-large">
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                </svg>
-                Avec Protoreno
-              </div>
-              <h3>La transformation concrète</h3>
-            </div>
-
-            <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v1">
-                <div class="ba-modern-metric-value">2h</div>
-                <div class="ba-modern-metric-label">Admin par semaine</div>
-                <div class="ba-modern-metric-bar">
-                  <div class="ba-modern-metric-fill" style="width: 13%;"></div>
-                </div>
-              </div>
-
-              <div class="metrics-secondary metrics-contrast">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-background metric-with-bar">
-                  <div class="ba-modern-metric-value">5%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="metric-comparison-bar">
-                    <div class="metric-comparison-fill metric-comparison-positive" style="width: 5%;"></div>
-                  </div>
-                </div>
-
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-transparent metric-with-bar">
-                  <div class="ba-modern-metric-value">+8k€</div>
-                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
-                  <div class="metric-comparison-bar">
-                    <div class="metric-comparison-fill metric-comparison-positive" style="width: 35%;"></div>
+                    <div class="metric-icons">
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                      <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- VARIANTE 2: Projets gagnés -->
-        <div class="ba-modern-grid metrics-variant" data-metrics-variant="2">
-          <!-- AVANT -->
-          <div class="ba-modern-col ba-modern-before ba-bold">
-            <div class="ba-modern-header">
-              <div class="ba-modern-badge ba-modern-badge-negative ba-badge-large">
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                Sans solution adaptée
-              </div>
-              <h3>La réalité quotidienne</h3>
-            </div>
-
-            <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v1">
-                <div class="ba-modern-metric-value">14h</div>
-                <div class="ba-modern-metric-label">Admin par semaine</div>
-                <div class="ba-modern-metric-bar">
-                  <div class="ba-modern-metric-fill" style="width: 93%;"></div>
-                </div>
-              </div>
-
-              <div class="metrics-secondary metrics-contrast">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background metric-with-delta">
-                  <div class="ba-modern-metric-value">33%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
-                </div>
-
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent metric-with-delta">
-                  <div class="ba-modern-metric-value">-15k€</div>
-                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Flèche -->
-          <div class="ba-modern-arrow">
-            <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </div>
-
-          <!-- APRÈS -->
-          <div class="ba-modern-col ba-modern-after ba-bold">
-            <div class="ba-modern-header">
-              <div class="ba-modern-badge ba-modern-badge-positive ba-badge-large">
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                </svg>
-                Avec Protoreno
-              </div>
-              <h3>La transformation concrète</h3>
-            </div>
-
-            <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v1">
-                <div class="ba-modern-metric-value">2h</div>
-                <div class="ba-modern-metric-label">Admin par semaine</div>
-                <div class="ba-modern-metric-bar">
-                  <div class="ba-modern-metric-fill" style="width: 13%;"></div>
-                </div>
-              </div>
-
-              <div class="metrics-secondary metrics-contrast">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-background metric-with-delta">
-                  <div class="ba-modern-metric-value">5%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="metric-delta metric-delta-positive">
-                    <svg class="metric-delta-arrow" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7-7m0 0l-7 7m7-7v18" />
-                    </svg>
-                    <span>-28 pts</span>
-                  </div>
-                </div>
-
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-transparent metric-with-delta">
-                  <div class="ba-modern-metric-value">+8k€</div>
-                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
-                  <div class="metric-delta metric-delta-positive">
-                    <svg class="metric-delta-arrow" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                    </svg>
-                    <span>+23k€</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- VARIANTE 3: Efficacité opérationnelle -->
-        <div class="ba-modern-grid metrics-variant" data-metrics-variant="3">
-          <!-- AVANT -->
-          <div class="ba-modern-col ba-modern-before ba-bold">
-            <div class="ba-modern-header">
-              <div class="ba-modern-badge ba-modern-badge-negative ba-badge-large">
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                Sans solution adaptée
-              </div>
-              <h3>La réalité quotidienne</h3>
-            </div>
-
-            <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v1">
-                <div class="ba-modern-metric-value">14h</div>
-                <div class="ba-modern-metric-label">Admin par semaine</div>
-                <div class="ba-modern-metric-bar">
-                  <div class="ba-modern-metric-fill" style="width: 93%;"></div>
-                </div>
-              </div>
-
-              <div class="metrics-secondary metrics-contrast">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background metric-with-icons">
-                  <div class="ba-modern-metric-value">33%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="metric-icons">
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-neutral" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                  </div>
-                </div>
-
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent metric-with-icons">
-                  <div class="ba-modern-metric-value">-15k€</div>
-                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
-                  <div class="metric-icons">
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Flèche -->
-          <div class="ba-modern-arrow">
-            <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </div>
-
-          <!-- APRÈS -->
-          <div class="ba-modern-col ba-modern-after ba-bold">
-            <div class="ba-modern-header">
-              <div class="ba-modern-badge ba-modern-badge-positive ba-badge-large">
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                </svg>
-                Avec Protoreno
-              </div>
-              <h3>La transformation concrète</h3>
-            </div>
-
-            <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v1">
-                <div class="ba-modern-metric-value">2h</div>
-                <div class="ba-modern-metric-label">Admin par semaine</div>
-                <div class="ba-modern-metric-bar">
-                  <div class="ba-modern-metric-fill" style="width: 13%;"></div>
-                </div>
-              </div>
-
-              <div class="metrics-secondary metrics-contrast">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-background metric-with-icons">
-                  <div class="ba-modern-metric-value">5%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="metric-icons">
-                    <svg class="metric-icon metric-icon-negative" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
-                    </svg>
-                  </div>
-                </div>
-
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-transparent metric-with-icons">
-                  <div class="ba-modern-metric-value">+8k€</div>
-                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
-                  <div class="metric-icons">
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                    <svg class="metric-icon metric-icon-positive" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- VARIANTE 4: Business & satisfaction -->
-        <div class="ba-modern-grid metrics-variant" data-metrics-variant="4">
-          <!-- AVANT -->
-          <div class="ba-modern-col ba-modern-before ba-bold">
-            <div class="ba-modern-header">
-              <div class="ba-modern-badge ba-modern-badge-negative ba-badge-large">
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                Sans solution adaptée
-              </div>
-              <h3>La réalité quotidienne</h3>
-            </div>
-
-            <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v1">
-                <div class="ba-modern-metric-value">14h</div>
-                <div class="ba-modern-metric-label">Admin par semaine</div>
-                <div class="ba-modern-metric-bar">
-                  <div class="ba-modern-metric-fill" style="width: 93%;"></div>
-                </div>
-              </div>
-
-              <div class="metrics-secondary metrics-contrast">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background metric-with-gauge">
-                  <div class="ba-modern-metric-value">33%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="metric-gauge">
-                    <svg class="metric-gauge-circle" width="48" height="48" viewBox="0 0 48 48">
-                      <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="4"/>
-                      <circle cx="24" cy="24" r="20" fill="none" stroke="#DC2626" stroke-width="4"
-                              stroke-dasharray="126" stroke-dashoffset="84"
-                              transform="rotate(-90 24 24)" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent metric-with-gauge">
-                  <div class="ba-modern-metric-value">-15k€</div>
-                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
-                  <div class="metric-gauge">
-                    <svg class="metric-gauge-circle" width="48" height="48" viewBox="0 0 48 48">
-                      <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="4"/>
-                      <circle cx="24" cy="24" r="20" fill="none" stroke="#DC2626" stroke-width="4"
-                              stroke-dasharray="126" stroke-dashoffset="44"
-                              transform="rotate(-90 24 24)" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Flèche -->
-          <div class="ba-modern-arrow">
-            <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </div>
-
-          <!-- APRÈS -->
-          <div class="ba-modern-col ba-modern-after ba-bold">
-            <div class="ba-modern-header">
-              <div class="ba-modern-badge ba-modern-badge-positive ba-badge-large">
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                </svg>
-                Avec Protoreno
-              </div>
-              <h3>La transformation concrète</h3>
-            </div>
-
-            <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v1">
-                <div class="ba-modern-metric-value">2h</div>
-                <div class="ba-modern-metric-label">Admin par semaine</div>
-                <div class="ba-modern-metric-bar">
-                  <div class="ba-modern-metric-fill" style="width: 13%;"></div>
-                </div>
-              </div>
-
-              <div class="metrics-secondary metrics-contrast">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-background metric-with-gauge">
-                  <div class="ba-modern-metric-value">5%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="metric-gauge">
-                    <svg class="metric-gauge-circle" width="48" height="48" viewBox="0 0 48 48">
-                      <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="4"/>
-                      <circle cx="24" cy="24" r="20" fill="none" stroke="#16a34a" stroke-width="4"
-                              stroke-dasharray="126" stroke-dashoffset="120"
-                              transform="rotate(-90 24 24)" stroke-linecap="round"/>
-                    </svg>
-                    <div class="metric-gauge-badge">-85%</div>
-                  </div>
-                </div>
-
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-transparent metric-with-gauge">
-                  <div class="ba-modern-metric-value">+8k€</div>
-                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
-                  <div class="metric-gauge">
-                    <svg class="metric-gauge-circle" width="48" height="48" viewBox="0 0 48 48">
-                      <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="4"/>
-                      <circle cx="24" cy="24" r="20" fill="none" stroke="#16a34a" stroke-width="4"
-                              stroke-dasharray="126" stroke-dashoffset="31"
-                              transform="rotate(-90 24 24)" stroke-linecap="round"/>
-                    </svg>
-                    <div class="metric-gauge-badge">+153%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <!-- Sources -->
       <div class="constat-sources">
@@ -6069,45 +5187,6 @@
       }
     }
 
-    // Toggle variantes titre Constat
-    function switchConstatTitleVariant(variantIndex) {
-      // Retirer la classe active de tous les boutons
-      const buttons = document.querySelectorAll('.constat-title-toggle-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
-
-      // Ajouter la classe active au bouton cliqué
-      buttons[variantIndex].classList.add('active');
-
-      // Retirer la classe active de toutes les variantes
-      const variants = document.querySelectorAll('.constat-title-variant');
-      variants.forEach(variant => variant.classList.remove('active'));
-
-      // Ajouter la classe active à la variante sélectionnée
-      const selectedVariant = document.querySelector(`.constat-title-variant[data-title-variant="${variantIndex}"]`);
-      if (selectedVariant) {
-        selectedVariant.classList.add('active');
-      }
-    }
-
-    // Toggle variantes métriques
-    function switchMetricsVariant(variantIndex) {
-      // Retirer la classe active de tous les boutons
-      const buttons = document.querySelectorAll('.metrics-toggle-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
-
-      // Ajouter la classe active au bouton cliqué
-      buttons[variantIndex].classList.add('active');
-
-      // Retirer la classe active de toutes les variantes
-      const variants = document.querySelectorAll('.metrics-variant');
-      variants.forEach(variant => variant.classList.remove('active'));
-
-      // Ajouter la classe active à la variante sélectionnée
-      const selectedVariant = document.querySelector(`.metrics-variant[data-metrics-variant="${variantIndex}"]`);
-      if (selectedVariant) {
-        selectedVariant.classList.add('active');
-      }
-    }
 
     // Toggle FAQ variantes
     function switchFaqVariant(variantIndex) {
