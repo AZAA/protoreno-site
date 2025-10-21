@@ -3883,573 +3883,88 @@
         <p class="lead">Les réponses aux questions que vous vous posez</p>
       </div>
 
-      <!-- Toggle FAQ Variantes -->
-      <div class="faq-toggle-container">
-        <button class="faq-toggle-btn active" onclick="switchFaqVariant(0)">Accordéon</button>
-        <button class="faq-toggle-btn" onclick="switchFaqVariant(1)">Minimal</button>
-        <button class="faq-toggle-btn" onclick="switchFaqVariant(2)">Minimal 2 Col</button>
-        <button class="faq-toggle-btn" onclick="switchFaqVariant(3)">Minimal Spacieux</button>
-        <button class="faq-toggle-btn" onclick="switchFaqVariant(4)">Minimal Tags</button>
-        <button class="faq-toggle-btn" onclick="switchFaqVariant(5)">Catégories</button>
-      </div>
-
-      <!-- VARIANTE 0: Accordéon avec emojis -->
-      <div class="faq-variant active" data-variant="0">
-        <div class="faq-accordion">
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>💰 Combien ça coûte ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous privilégions des abonnements simples et transparents, sans engagement long terme.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>🔒 Mes données sont-elles sécurisées ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Absolument. Vos données clients et projets sont hébergées en France, chiffrées et sauvegardées quotidiennement. Nous sommes en conformité RGPD et ne revendons jamais vos informations à des tiers.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>⏱️ Combien de temps faut-il pour prendre en main les outils ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Nos outils sont pensés pour être intuitifs. La plupart des utilisateurs sont opérationnels en moins d'une heure. Nous proposons aussi un accompagnement personnalisé pour démarrer et répondre à vos questions.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>💻 Dois-je avoir des compétences techniques particulières ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Non. Si vous utilisez un navigateur web et votre messagerie, vous saurez utiliser nos outils. L'interface est simple, claire, sans jargon technique inutile.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>💡 Puis-je proposer des améliorations ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>C'est même le principe ! Chaque retour compte. Vous pouvez nous contacter directement, participer aux sondages ou rejoindre les ateliers utilisateurs pour co-construire les évolutions.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>🎨 Les outils sont-ils personnalisables ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Oui, dans une certaine mesure. Nous adaptons les fonctionnalités aux besoins réels du terrain. Si une personnalisation spécifique peut bénéficier à plusieurs professionnels, nous l'étudions sérieusement.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>🆘 Que se passe-t-il si j'ai un problème ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Vous nous contactez directement par email ou téléphone. Pas de ticket perdu dans un support automatisé : vous parlez à de vraies personnes qui connaissent les outils et votre métier.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>🧪 Peut-on tester avant de s'engager ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
-            </div>
+      <div class="faq-accordion-spacious">
+        <!-- Tarif & Engagement -->
+        <div class="faq-accordion-item card">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+            <h3>Combien ça coûte ?</h3>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous proposons des abonnements simples et transparents, sans engagement long terme ni frais cachés.</p>
           </div>
         </div>
-      </div>
 
-      <!-- VARIANTE 1: Accordéon Minimal (sans emojis) -->
-      <div class="faq-variant" data-variant="1">
-        <div class="faq-accordion faq-accordion-minimal">
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Combien ça coûte ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous proposons des abonnements simples et transparents, sans engagement long terme ni frais cachés.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Mes données sont-elles sécurisées ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Oui. Hébergement en France, chiffrement des données sensibles, sauvegardes quotidiennes. Nous sommes conformes au RGPD et vos données restent votre propriété exclusive.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Combien de temps pour prendre en main les outils ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Moins d'une heure pour être opérationnel sur l'essentiel. Les interfaces sont conçues pour être intuitives et vous pouvez bénéficier d'un accompagnement personnalisé au démarrage si besoin.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Quelles compétences techniques sont requises ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Si vous savez utiliser un navigateur web et votre messagerie, vous avez déjà tout ce qu'il faut. Nos interfaces sont pensées pour le terrain, pas pour des informaticiens.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Comment proposer des améliorations ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>C'est tout le principe de Protoreno ! Contactez-nous directement, participez aux sondages réguliers ou aux ateliers utilisateurs. Vos retours terrain façonnent l'évolution des outils.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Les outils sont-ils personnalisables ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Les fonctionnalités sont conçues à partir des besoins exprimés sur le terrain. Les personnalisations spécifiques sont étudiées si elles peuvent bénéficier à plusieurs professionnels du secteur.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Qui contacter en cas de problème ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Contact direct par email ou téléphone. Vous parlez directement à de vraies personnes qui connaissent votre métier et qui comprennent vos contraintes.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Peut-on tester avant de s'engager ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
-            </div>
+        <div class="faq-accordion-item card">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+            <h3>Peut-on tester avant de s'engager ?</h3>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
           </div>
         </div>
-      </div>
 
-      <!-- VARIANTE 2: Accordéon Minimal 2 Colonnes -->
-      <div class="faq-variant" data-variant="2">
-        <div class="faq-accordion-2col">
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Combien ça coûte ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous proposons des abonnements simples et transparents, sans engagement long terme ni frais cachés.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Mes données sont-elles sécurisées ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Oui. Hébergement en France, chiffrement des données sensibles, sauvegardes quotidiennes. Nous sommes conformes au RGPD et vos données restent votre propriété exclusive.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Combien de temps pour prendre en main ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Moins d'une heure pour être opérationnel sur l'essentiel. Les interfaces sont conçues pour être intuitives et vous pouvez bénéficier d'un accompagnement personnalisé au démarrage si besoin.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Quelles compétences techniques sont requises ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Si vous savez utiliser un navigateur web et votre messagerie, vous avez déjà tout ce qu'il faut. Nos interfaces sont pensées pour le terrain, pas pour des informaticiens.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Comment proposer des améliorations ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>C'est tout le principe de Protoreno ! Contactez-nous directement, participez aux sondages réguliers ou aux ateliers utilisateurs. Vos retours terrain façonnent l'évolution des outils.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Les outils sont-ils personnalisables ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Les fonctionnalités sont conçues à partir des besoins exprimés sur le terrain. Les personnalisations spécifiques sont étudiées si elles peuvent bénéficier à plusieurs professionnels du secteur.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Qui contacter en cas de problème ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Contact direct par email ou téléphone. Vous parlez directement à de vraies personnes qui connaissent votre métier et qui comprennent vos contraintes.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Peut-on tester avant de s'engager ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
-            </div>
+        <!-- Pré-requis & Démarrage -->
+        <div class="faq-accordion-item card">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+            <h3>Quelles compétences techniques sont requises ?</h3>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p>Si vous savez utiliser un navigateur web et votre messagerie, vous avez déjà tout ce qu'il faut. Nos interfaces sont pensées pour le terrain, pas pour des informaticiens.</p>
           </div>
         </div>
-      </div>
 
-      <!-- VARIANTE 3: Accordéon Minimal Spacieux -->
-      <div class="faq-variant" data-variant="3">
-        <div class="faq-accordion-spacious">
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Combien ça coûte ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous proposons des abonnements simples et transparents, sans engagement long terme ni frais cachés.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Mes données sont-elles sécurisées ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Oui. Hébergement en France, chiffrement des données sensibles, sauvegardes quotidiennes. Nous sommes conformes au RGPD et vos données restent votre propriété exclusive.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Combien de temps pour prendre en main ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Moins d'une heure pour être opérationnel sur l'essentiel. Les interfaces sont conçues pour être intuitives et vous pouvez bénéficier d'un accompagnement personnalisé au démarrage si besoin.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Quelles compétences techniques sont requises ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Si vous savez utiliser un navigateur web et votre messagerie, vous avez déjà tout ce qu'il faut. Nos interfaces sont pensées pour le terrain, pas pour des informaticiens.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Comment proposer des améliorations ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>C'est tout le principe de Protoreno ! Contactez-nous directement, participez aux sondages réguliers ou aux ateliers utilisateurs. Vos retours terrain façonnent l'évolution des outils.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Les outils sont-ils personnalisables ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Les fonctionnalités sont conçues à partir des besoins exprimés sur le terrain. Les personnalisations spécifiques sont étudiées si elles peuvent bénéficier à plusieurs professionnels du secteur.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Qui contacter en cas de problème ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Contact direct par email ou téléphone. Vous parlez directement à de vraies personnes qui connaissent votre métier et qui comprennent vos contraintes.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <h3>Peut-on tester avant de s'engager ?</h3>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
-            </div>
+        <div class="faq-accordion-item card">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+            <h3>Combien de temps pour prendre en main ?</h3>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p>Moins d'une heure pour être opérationnel sur l'essentiel. Les interfaces sont conçues pour être intuitives et vous pouvez bénéficier d'un accompagnement personnalisé au démarrage si besoin.</p>
           </div>
         </div>
-      </div>
 
-      <!-- VARIANTE 4: Accordéon Minimal avec Tags -->
-      <div class="faq-variant" data-variant="4">
-        <div class="faq-accordion-tags">
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <div class="faq-header-content">
-                <span class="faq-tag faq-tag-tarif">Tarif</span>
-                <h3>Combien ça coûte ?</h3>
-              </div>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous proposons des abonnements simples et transparents, sans engagement long terme ni frais cachés.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <div class="faq-header-content">
-                <span class="faq-tag faq-tag-securite">Sécurité</span>
-                <h3>Mes données sont-elles sécurisées ?</h3>
-              </div>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Oui. Hébergement en France, chiffrement des données sensibles, sauvegardes quotidiennes. Nous sommes conformes au RGPD et vos données restent votre propriété exclusive.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <div class="faq-header-content">
-                <span class="faq-tag faq-tag-usage">Usage</span>
-                <h3>Combien de temps pour prendre en main ?</h3>
-              </div>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Moins d'une heure pour être opérationnel sur l'essentiel. Les interfaces sont conçues pour être intuitives et vous pouvez bénéficier d'un accompagnement personnalisé au démarrage si besoin.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <div class="faq-header-content">
-                <span class="faq-tag faq-tag-usage">Usage</span>
-                <h3>Quelles compétences techniques sont requises ?</h3>
-              </div>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Si vous savez utiliser un navigateur web et votre messagerie, vous avez déjà tout ce qu'il faut. Nos interfaces sont pensées pour le terrain, pas pour des informaticiens.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <div class="faq-header-content">
-                <span class="faq-tag faq-tag-perso">Personnalisation</span>
-                <h3>Comment proposer des améliorations ?</h3>
-              </div>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>C'est tout le principe de Protoreno ! Contactez-nous directement, participez aux sondages réguliers ou aux ateliers utilisateurs. Vos retours terrain façonnent l'évolution des outils.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <div class="faq-header-content">
-                <span class="faq-tag faq-tag-perso">Personnalisation</span>
-                <h3>Les outils sont-ils personnalisables ?</h3>
-              </div>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Les fonctionnalités sont conçues à partir des besoins exprimés sur le terrain. Les personnalisations spécifiques sont étudiées si elles peuvent bénéficier à plusieurs professionnels du secteur.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <div class="faq-header-content">
-                <span class="faq-tag faq-tag-support">Support</span>
-                <h3>Qui contacter en cas de problème ?</h3>
-              </div>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Contact direct par email ou téléphone. Vous parlez directement à de vraies personnes qui connaissent votre métier et qui comprennent vos contraintes.</p>
-            </div>
-          </div>
-
-          <div class="faq-accordion-item card">
-            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-              <div class="faq-header-content">
-                <span class="faq-tag faq-tag-tarif">Tarif</span>
-                <h3>Peut-on tester avant de s'engager ?</h3>
-              </div>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="faq-accordion-content">
-              <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
-            </div>
+        <!-- Sécurité & Support -->
+        <div class="faq-accordion-item card">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+            <h3>Mes données sont-elles sécurisées ?</h3>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p>Oui. Hébergement en France, chiffrement des données sensibles, sauvegardes quotidiennes. Nous sommes conformes au RGPD et vos données restent votre propriété exclusive.</p>
           </div>
         </div>
-      </div>
 
-      <!-- VARIANTE 5: Accordéon par Catégories -->
-      <div class="faq-variant" data-variant="5">
-        <div class="faq-accordion-categories">
-          <!-- Catégorie 1: Tarifs & Engagement -->
-          <div class="faq-category-section">
-            <div class="category-header-acc">
-              <span class="category-icon-acc">💳</span>
-              <h3>Tarifs & Engagement</h3>
-            </div>
-            <div class="category-accordion">
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>💰 Combien ça coûte ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous proposons des abonnements simples et transparents, sans engagement long terme ni frais cachés.</p>
-                </div>
-              </div>
-
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>🧪 Peut-on tester avant de s'engager ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
-                </div>
-              </div>
-
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>🔒 Mes données sont-elles sécurisées ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Oui. Hébergement en France, chiffrement des données sensibles, sauvegardes quotidiennes. Nous sommes conformes au RGPD et vos données restent votre propriété exclusive.</p>
-                </div>
-              </div>
-            </div>
+        <div class="faq-accordion-item card">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+            <h3>Qui contacter en cas de problème ?</h3>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p>Contact direct par email ou téléphone. Vous parlez directement à de vraies personnes qui connaissent votre métier et qui comprennent vos contraintes.</p>
           </div>
+        </div>
 
-          <!-- Catégorie 2: Utilisation -->
-          <div class="faq-category-section">
-            <div class="category-header-acc">
-              <span class="category-icon-acc">🛠️</span>
-              <h3>Utilisation</h3>
-            </div>
-            <div class="category-accordion">
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>⏱️ Combien de temps pour prendre en main ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Moins d'une heure pour être opérationnel sur l'essentiel. Les interfaces sont conçues pour être intuitives et vous pouvez bénéficier d'un accompagnement personnalisé au démarrage si besoin.</p>
-                </div>
-              </div>
-
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>💻 Quelles compétences techniques sont requises ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Si vous savez utiliser un navigateur web et votre messagerie, vous avez déjà tout ce qu'il faut. Nos interfaces sont pensées pour le terrain, pas pour des informaticiens.</p>
-                </div>
-              </div>
-
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>🆘 Qui contacter en cas de problème ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Contact direct par email ou téléphone. Vous parlez directement à de vraies personnes qui connaissent votre métier et qui comprennent vos contraintes.</p>
-                </div>
-              </div>
-            </div>
+        <!-- Évolution & Personnalisation -->
+        <div class="faq-accordion-item card">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+            <h3>Comment proposer des améliorations ?</h3>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p>C'est tout le principe de Protoreno ! Contactez-nous directement, participez aux sondages réguliers ou aux ateliers utilisateurs. Vos retours terrain façonnent l'évolution des outils.</p>
           </div>
+        </div>
 
-          <!-- Catégorie 3: Personnalisation -->
-          <div class="faq-category-section">
-            <div class="category-header-acc">
-              <span class="category-icon-acc">⚙️</span>
-              <h3>Personnalisation</h3>
-            </div>
-            <div class="category-accordion">
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>💡 Comment proposer des améliorations ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>C'est tout le principe de Protoreno ! Contactez-nous directement, participez aux sondages réguliers ou aux ateliers utilisateurs. Vos retours terrain façonnent l'évolution des outils.</p>
-                </div>
-              </div>
-
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>🎨 Les outils sont-ils personnalisables ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Les fonctionnalités sont conçues à partir des besoins exprimés sur le terrain. Les personnalisations spécifiques sont étudiées si elles peuvent bénéficier à plusieurs professionnels du secteur.</p>
-                </div>
-              </div>
-            </div>
+        <div class="faq-accordion-item card">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+            <h3>Les outils sont-ils personnalisables ?</h3>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p>Les fonctionnalités sont conçues à partir des besoins exprimés sur le terrain. Les personnalisations spécifiques sont étudiées si elles peuvent bénéficier à plusieurs professionnels du secteur.</p>
           </div>
         </div>
       </div>
