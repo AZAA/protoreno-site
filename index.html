@@ -1872,6 +1872,38 @@
       }
     }
 
+    /* ============================================
+       TITRE INTERMÉDIAIRE CONSTAT
+       ============================================ */
+
+    .constat-section-title {
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--slate);
+      margin: 3rem 0 2rem 0;
+      padding-bottom: 1rem;
+      position: relative;
+    }
+
+    .constat-section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue) 0%, #1e40af 100%);
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .constat-section-title {
+        font-size: 1.5rem;
+      }
+    }
+
     /* Responsive pour nouvelles variantes */
     @media (max-width: 1200px) {
       .stat-mega {
@@ -4771,6 +4803,9 @@
           <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
         </div>
 
+        <!-- Titre intermédiaire -->
+        <h3 class="constat-section-title">L'impact en chiffres</h3>
+
         <!-- Avant/Après de la variante 6 -->
         <div class="constat-before-after">
           <div class="before-after-split">
@@ -4882,6 +4917,9 @@
           <h3>La complexité administrative paralyse votre activité</h3>
           <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
         </div>
+
+        <!-- Titre intermédiaire -->
+        <h3 class="constat-section-title">L'impact en chiffres</h3>
 
         <!-- Avant/Après avec UI moderne -->
         <div class="constat-ba-modern">
