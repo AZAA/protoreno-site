@@ -1568,6 +1568,7 @@
     .conversation-chat .conversation-message.user {
       flex-direction: row;
       justify-content: flex-start;
+      max-width: 80%;
     }
 
     .conversation-chat .conversation-message.reply {
@@ -1575,6 +1576,20 @@
       justify-content: flex-start;
       margin-left: 0;
       margin-right: 0;
+      max-width: 80%;
+      align-self: flex-end;
+    }
+
+    /* Bulles adaptées au contenu dans le chat */
+    .conversation-chat .message-content {
+      flex: 0 1 auto;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .conversation-chat .message-content p {
+      display: inline-block;
+      max-width: 100%;
     }
 
     .message-avatar {
