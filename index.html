@@ -782,111 +782,6 @@
     }
 
     /* ============================================
-       TOGGLE SVG BACKGROUNDS
-       ============================================ */
-    .svg-toggle {
-      position: fixed;
-      top: 140px;
-      right: 20px;
-      z-index: 1000;
-      background: white;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      border: 1px solid var(--light-gray);
-    }
-
-    .svg-toggle-label {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .svg-toggle-text {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--slate);
-    }
-
-    /* Hide default checkbox */
-    #svg-toggle-checkbox {
-      display: none;
-    }
-
-    /* Custom toggle slider */
-    .svg-toggle-slider {
-      position: relative;
-      width: 44px;
-      height: 24px;
-      background: #cbd5e1;
-      border-radius: 24px;
-      transition: background 0.3s ease;
-    }
-
-    .svg-toggle-slider::before {
-      content: '';
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 20px;
-      height: 20px;
-      background: white;
-      border-radius: 50%;
-      transition: transform 0.3s ease;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Checked state */
-    #svg-toggle-checkbox:checked + .svg-toggle-slider {
-      background: var(--blue);
-    }
-
-    #svg-toggle-checkbox:checked + .svg-toggle-slider::before {
-      transform: translateX(20px);
-    }
-
-    /* Hidden SVG state */
-    body.svg-hidden .section-bg-svg,
-    body.svg-hidden .hero-bg-svg {
-      opacity: 0 !important;
-      visibility: hidden !important;
-    }
-
-    @media (max-width: 1200px) {
-      .svg-toggle {
-        right: 10px;
-        top: 130px;
-        padding: 0.5rem 0.75rem;
-      }
-
-      .svg-toggle-text {
-        font-size: 0.75rem;
-      }
-
-      .svg-toggle-slider {
-        width: 38px;
-        height: 20px;
-      }
-
-      .svg-toggle-slider::before {
-        width: 16px;
-        height: 16px;
-      }
-
-      #svg-toggle-checkbox:checked + .svg-toggle-slider::before {
-        transform: translateX(18px);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .svg-toggle {
-        top: 120px;
-      }
-    }
-
-    /* ============================================
        OPTIONS DE FOND (4 VARIANTES)
        ============================================ */
 
@@ -4024,17 +3919,6 @@
   </div>
 
   <!-- ============================================
-       TOGGLE SVG BACKGROUNDS
-       ============================================ -->
-  <div class="svg-toggle">
-    <label class="svg-toggle-label">
-      <input type="checkbox" id="svg-toggle-checkbox" checked onchange="toggleSVGBackgrounds()">
-      <span class="svg-toggle-slider"></span>
-      <span class="svg-toggle-text">Fonds SVG</span>
-    </label>
-  </div>
-
-  <!-- ============================================
        HERO
        ============================================ -->
   <section class="hero" id="main-content">
@@ -4524,17 +4408,6 @@
        NOTRE APPROCHE
        ============================================ -->
   <section id="section-approche" aria-labelledby="heading-approche">
-    <!-- Croix légères (neutre) -->
-    <svg class="section-bg-svg approche-bg active" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="crosses" width="60" height="60" patternUnits="userSpaceOnUse">
-          <line x1="30" y1="25" x2="30" y2="35" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-          <line x1="25" y1="30" x2="35" y2="30" stroke="#2563EB" stroke-width="0.5" opacity="0.08"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#crosses)"/>
-    </svg>
-
     <div class="container">
       <div class="section-header">
         <h2 id="heading-approche">Notre approche</h2>
@@ -4650,21 +4523,6 @@
        CONVERSATIONS TERRAIN
        ============================================ -->
   <section class="section-alt" id="section-conversations">
-    <!-- Réseau maillé (collaboration) - motif de base extra petit -->
-    <svg class="section-bg-svg participer-bg active" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="network" width="50" height="50" patternUnits="userSpaceOnUse">
-          <line x1="10" y1="10" x2="25" y2="25" stroke="#2563EB" stroke-width="0.3" opacity="0.04"/>
-          <line x1="25" y1="25" x2="40" y2="10" stroke="#2563EB" stroke-width="0.3" opacity="0.04"/>
-          <line x1="10" y1="10" x2="40" y2="10" stroke="#2563EB" stroke-width="0.3" opacity="0.04"/>
-          <circle cx="10" cy="10" r="1" fill="#2563EB" opacity="0.06"/>
-          <circle cx="25" cy="25" r="1" fill="#2563EB" opacity="0.06"/>
-          <circle cx="40" cy="10" r="1" fill="#2563EB" opacity="0.06"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#network)"/>
-    </svg>
-
     <div class="container">
       <div class="testimonial-box">
         <div class="section-header">
@@ -4748,20 +4606,6 @@
        SONDAGE
        ============================================ -->
   <section class="section-alt" id="section-sondage">
-    <!-- Points connectés (participation) -->
-    <svg class="section-bg-svg sondage-bg active" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="dots-pattern" width="60" height="60" patternUnits="userSpaceOnUse">
-          <circle cx="15" cy="15" r="1.5" fill="#2563EB" opacity="0.08"/>
-          <circle cx="45" cy="15" r="1.5" fill="#2563EB" opacity="0.08"/>
-          <circle cx="15" cy="45" r="1.5" fill="#2563EB" opacity="0.08"/>
-          <circle cx="45" cy="45" r="1.5" fill="#2563EB" opacity="0.08"/>
-          <circle cx="30" cy="30" r="1" fill="#2563EB" opacity="0.05"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#dots-pattern)"/>
-    </svg>
-
     <div class="container">
       <div class="testimonial-box">
         <div class="section-header">
@@ -5134,38 +4978,10 @@
       localStorage.setItem('protoreno-theme', theme);
     }
 
-    // Toggle pour afficher/masquer les fonds SVG
-    function toggleSVGBackgrounds() {
-      const checkbox = document.getElementById('svg-toggle-checkbox');
-      const isChecked = checkbox.checked;
-
-      if (isChecked) {
-        // Afficher les SVG
-        document.body.classList.remove('svg-hidden');
-        localStorage.setItem('protoreno-svg-visible', 'true');
-      } else {
-        // Masquer les SVG
-        document.body.classList.add('svg-hidden');
-        localStorage.setItem('protoreno-svg-visible', 'false');
-      }
-    }
-
     // Charger le thème sauvegardé au chargement de la page
     document.addEventListener('DOMContentLoaded', function() {
       const savedTheme = localStorage.getItem('protoreno-theme') || 'A';
       switchGlobalTheme(savedTheme);
-
-      // Restaurer l'état des SVG
-      const svgVisible = localStorage.getItem('protoreno-svg-visible');
-      const checkbox = document.getElementById('svg-toggle-checkbox');
-
-      if (svgVisible === 'false') {
-        checkbox.checked = false;
-        document.body.classList.add('svg-hidden');
-      } else {
-        checkbox.checked = true;
-        document.body.classList.remove('svg-hidden');
-      }
     });
 
     // Toggle FAQ variantes
