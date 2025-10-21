@@ -1532,12 +1532,13 @@
       margin-top: 2rem;
     }
 
-    .conversation-result {
+    /* OPTION A - Border gauche épais */
+    .conversation-result.style-a {
       padding: 1.75rem 2rem;
-      background: white;
-      border: 2px solid #22c55e;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(34, 197, 94, 0.15);
+      background: linear-gradient(to right, rgba(34, 197, 94, 0.02), white);
+      border-left: 8px solid #22c55e;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(34, 197, 94, 0.15);
       display: flex;
       align-items: center;
       gap: 1.5rem;
@@ -1545,16 +1546,16 @@
       transition: all 0.3s ease;
     }
 
-    .conversation-result:hover {
-      box-shadow: 0 6px 24px rgba(34, 197, 94, 0.25);
-      transform: translateY(-2px);
+    .conversation-result.style-a:hover {
+      box-shadow: 0 6px 28px rgba(34, 197, 94, 0.25);
+      transform: translateX(4px);
     }
 
-    .conversation-result::before {
+    .conversation-result.style-a::before {
       content: '✓';
       flex-shrink: 0;
-      width: 44px;
-      height: 44px;
+      width: 48px;
+      height: 48px;
       background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
       color: white;
       border-radius: 50%;
@@ -1566,21 +1567,245 @@
       box-shadow: 0 3px 12px rgba(34, 197, 94, 0.4);
     }
 
-    .conversation-result-content {
+    .conversation-result.style-a .conversation-result-content {
       flex: 1;
       display: flex;
       flex-direction: column;
       gap: 0.25rem;
     }
 
-    .conversation-result-metric {
+    .conversation-result.style-a .conversation-result-metric {
       font-size: 1.5rem;
       font-weight: 800;
       color: #15803d;
       line-height: 1.2;
     }
 
-    .conversation-result-description {
+    .conversation-result.style-a .conversation-result-description {
+      font-size: 0.9375rem;
+      color: #166534;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* OPTION B - Metrics Dashboard */
+    .conversation-result.style-b {
+      padding: 2.5rem 3rem;
+      background: white;
+      border-radius: 24px;
+      box-shadow:
+        0 8px 32px rgba(34, 197, 94, 0.15),
+        0 2px 8px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.75rem;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .conversation-result.style-b:hover {
+      box-shadow:
+        0 12px 40px rgba(34, 197, 94, 0.2),
+        0 4px 12px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .conversation-result.style-b::before {
+      content: '✓';
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.125rem;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+    }
+
+    .conversation-result.style-b .conversation-result-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .conversation-result.style-b .conversation-result-metric {
+      font-size: 2rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #15803d, #22c55e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .conversation-result.style-b .conversation-result-description {
+      font-size: 0.9375rem;
+      color: #166534;
+      font-weight: 500;
+      line-height: 1.5;
+      max-width: 600px;
+    }
+
+    /* OPTION C - Bannière horizontale accent coloré */
+    .conversation-result.style-c {
+      padding: 1.75rem 2rem;
+      background: linear-gradient(to bottom, rgba(34, 197, 94, 0.08), rgba(34, 197, 94, 0.02));
+      border-top: 4px solid #15803d;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .conversation-result.style-c:hover {
+      box-shadow: 0 8px 28px rgba(34, 197, 94, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .conversation-result.style-c::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, #15803d 0%, #22c55e 100%);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(34, 197, 94, 0.4);
+    }
+
+    .conversation-result.style-c::after {
+      content: '';
+      position: absolute;
+      left: 88px;
+      top: 1.25rem;
+      bottom: 1.25rem;
+      width: 2px;
+      background: linear-gradient(to bottom, #22c55e, transparent);
+      opacity: 0.3;
+    }
+
+    .conversation-result.style-c .conversation-result-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      padding-left: 1rem;
+    }
+
+    .conversation-result.style-c .conversation-result-metric {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #15803d;
+      line-height: 1.2;
+    }
+
+    .conversation-result.style-c .conversation-result-description {
+      font-size: 0.9375rem;
+      color: #166534;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* OPTION D - Glassmorphism premium */
+    .conversation-result.style-d {
+      padding: 2rem 2.5rem;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-left: 8px solid;
+      border-image: linear-gradient(to bottom, #22c55e, #16a34a) 1;
+      border-radius: 20px;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.6),
+        0 8px 32px rgba(34, 197, 94, 0.2),
+        0 2px 8px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      position: relative;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .conversation-result.style-d::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.3), transparent);
+      opacity: 0.6;
+    }
+
+    .conversation-result.style-d:hover {
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 12px 40px rgba(34, 197, 94, 0.25),
+        0 4px 12px rgba(0, 0, 0, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .conversation-result.style-d::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.625rem;
+      font-weight: 700;
+      box-shadow:
+        0 4px 16px rgba(34, 197, 94, 0.4),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+      animation: pulse-subtle 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse-subtle {
+      0%, 100% { box-shadow: 0 4px 16px rgba(34, 197, 94, 0.4), inset 0 -2px 4px rgba(0, 0, 0, 0.1); }
+      50% { box-shadow: 0 4px 20px rgba(34, 197, 94, 0.6), inset 0 -2px 4px rgba(0, 0, 0, 0.1); }
+    }
+
+    .conversation-result.style-d .conversation-result-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.375rem;
+    }
+
+    .conversation-result.style-d .conversation-result-metric {
+      font-size: 1.625rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #15803d, #22c55e, #15803d);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .conversation-result.style-d .conversation-result-description {
       font-size: 0.9375rem;
       color: #166534;
       font-weight: 500;
@@ -3187,7 +3412,7 @@
             </div>
           </div>
           <div class="conversation-result-wrapper">
-            <div class="conversation-result">
+            <div class="conversation-result style-a">
               <div class="conversation-result-content">
                 <div class="conversation-result-metric">85% de temps gagné</div>
                 <div class="conversation-result-description">Marc passe maintenant 2h/semaine au lieu de 14h sur les devis</div>
@@ -3220,7 +3445,7 @@
             </div>
           </div>
           <div class="conversation-result-wrapper">
-            <div class="conversation-result">
+            <div class="conversation-result style-b">
               <div class="conversation-result-content">
                 <div class="conversation-result-metric">0 client perdu</div>
                 <div class="conversation-result-description">Depuis 6 mois - taux de satisfaction client : 98%</div>
@@ -3253,7 +3478,7 @@
             </div>
           </div>
           <div class="conversation-result-wrapper">
-            <div class="conversation-result">
+            <div class="conversation-result style-c">
               <div class="conversation-result-content">
                 <div class="conversation-result-metric">100% de dossiers acceptés</div>
                 <div class="conversation-result-description">Du premier coup - 0 rejet depuis 4 mois</div>
@@ -3286,7 +3511,7 @@
             </div>
           </div>
           <div class="conversation-result-wrapper">
-            <div class="conversation-result">
+            <div class="conversation-result style-d">
               <div class="conversation-result-content">
                 <div class="conversation-result-metric">90% moins de sollicitations</div>
                 <div class="conversation-result-description">Tableau de bord consulté 200 fois/mois</div>
