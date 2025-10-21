@@ -2085,6 +2085,79 @@
       }
     }
 
+    /* CSS de base Accordéon FAQ */
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-accordion-item {
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .faq-accordion-header {
+      width: 100%;
+      padding: 1.5rem;
+      background: transparent;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s ease;
+    }
+
+    .faq-accordion-header:hover {
+      background: rgba(37, 99, 235, 0.05);
+    }
+
+    .faq-accordion-header h3 {
+      font-size: 1.125rem;
+      margin: 0;
+      color: var(--navy);
+      flex: 1;
+    }
+
+    .accordion-icon {
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: #2563EB;
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-left: 1rem;
+    }
+
+    .faq-accordion-item.active .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 1.5rem;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                  opacity 0.3s ease 0.05s,
+                  transform 0.3s ease 0.05s,
+                  padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-accordion-item.active .faq-accordion-content {
+      max-height: 600px;
+      opacity: 1;
+      transform: translateY(0);
+      padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    .faq-accordion-content p {
+      margin: 0;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: var(--slate);
+    }
+
     /* VARIANTE 3: Accordéon Minimal Spacieux */
     .faq-accordion-spacious {
       max-width: 900px;
