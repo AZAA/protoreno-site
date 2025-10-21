@@ -1665,6 +1665,194 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
+    /* ============================================
+       VARIANTE 8: UI MODERNE AVANT/APRÈS
+       ============================================ */
+
+    .constat-ba-modern {
+      margin-top: 2rem;
+    }
+
+    .ba-modern-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .ba-modern-col {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .ba-modern-before {
+      border: 2px solid rgba(239, 68, 68, 0.2);
+    }
+
+    .ba-modern-after {
+      border: 2px solid rgba(34, 197, 94, 0.2);
+    }
+
+    .ba-modern-header {
+      margin-bottom: 2rem;
+    }
+
+    .ba-modern-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .ba-modern-badge-negative {
+      background: rgba(239, 68, 68, 0.1);
+      color: #dc2626;
+    }
+
+    .ba-modern-badge-negative svg {
+      stroke: #dc2626;
+    }
+
+    .ba-modern-badge-positive {
+      background: rgba(34, 197, 94, 0.1);
+      color: #16a34a;
+    }
+
+    .ba-modern-badge-positive svg {
+      stroke: #16a34a;
+    }
+
+    .ba-modern-header h3 {
+      font-size: 1.5rem;
+      margin: 0;
+      color: var(--slate);
+    }
+
+    .ba-modern-metrics {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .ba-modern-metric {
+      padding: 1.25rem;
+      border-radius: 12px;
+      transition: transform 0.2s ease;
+    }
+
+    .ba-modern-metric:hover {
+      transform: translateX(4px);
+    }
+
+    .ba-modern-metric-negative {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(239, 68, 68, 0.02) 100%);
+      border-left: 4px solid #ef4444;
+    }
+
+    .ba-modern-metric-positive {
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(34, 197, 94, 0.02) 100%);
+      border-left: 4px solid #22c55e;
+    }
+
+    .ba-modern-metric-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .ba-modern-metric-negative .ba-modern-metric-value {
+      color: #dc2626;
+    }
+
+    .ba-modern-metric-positive .ba-modern-metric-value {
+      color: #16a34a;
+    }
+
+    .ba-modern-metric-label {
+      font-size: 0.875rem;
+      color: var(--slate);
+      margin-bottom: 0.75rem;
+    }
+
+    .ba-modern-metric-bar {
+      height: 6px;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .ba-modern-metric-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.8s ease-out;
+    }
+
+    .ba-modern-metric-negative .ba-modern-metric-fill {
+      background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+    }
+
+    .ba-modern-metric-positive .ba-modern-metric-fill {
+      background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
+    }
+
+    .ba-modern-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .ba-modern-tags span {
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .ba-modern-tags-negative span {
+      background: rgba(239, 68, 68, 0.1);
+      color: #991b1b;
+    }
+
+    .ba-modern-tags-positive span {
+      background: rgba(34, 197, 94, 0.1);
+      color: #166534;
+    }
+
+    .ba-modern-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 6rem;
+    }
+
+    .ba-modern-arrow svg {
+      stroke: var(--blue);
+      opacity: 0.3;
+    }
+
+    @media (max-width: 1200px) {
+      .ba-modern-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .ba-modern-arrow {
+        padding-top: 0;
+        padding: 1rem 0;
+      }
+
+      .ba-modern-arrow svg {
+        transform: rotate(90deg);
+      }
+    }
+
     /* Responsive pour nouvelles variantes */
     @media (max-width: 1200px) {
       .stat-mega {
@@ -4210,6 +4398,8 @@
       <button class="constat-toggle-btn" onclick="switchConstatVariant(4)">Data XXL</button>
       <button class="constat-toggle-btn" onclick="switchConstatVariant(5)">Story</button>
       <button class="constat-toggle-btn" onclick="switchConstatVariant(6)">Avant/Après</button>
+      <button class="constat-toggle-btn" onclick="switchConstatVariant(7)">Bloc + BA</button>
+      <button class="constat-toggle-btn" onclick="switchConstatVariant(8)">Moderne</button>
     </div>
 
     <div class="container">
@@ -4544,6 +4734,234 @@
                 <div class="ba-zen">
                   <p>😊 Sérénité • ⚡ Rapidité • ✓ Précision • 📈 Croissance</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 7: Bloc principal + Avant/Après (original) -->
+      <div class="constat-variant" data-variant="7">
+        <!-- Bloc principal de la variante 0 -->
+        <div class="constat-main-problem" style="margin-bottom: 3rem;">
+          <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <h3>La complexité administrative paralyse votre activité</h3>
+          <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
+        </div>
+
+        <!-- Avant/Après de la variante 6 -->
+        <div class="constat-before-after">
+          <div class="before-after-split">
+            <!-- AVANT (Sans Protoreno) -->
+            <div class="before-section">
+              <div class="ba-header ba-header-before">
+                <span class="ba-icon">❌</span>
+                <h3>Sans Protoreno</h3>
+              </div>
+
+              <div class="ba-content">
+                <div class="ba-item ba-negative">
+                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="ba-stat">14h/semaine</div>
+                    <p>perdues en admin</p>
+                  </div>
+                </div>
+
+                <div class="ba-item ba-negative">
+                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  <div>
+                    <div class="ba-stat">33%</div>
+                    <p>de clients perdus</p>
+                  </div>
+                </div>
+
+                <div class="ba-item ba-negative">
+                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="ba-stat">-15k€</div>
+                    <p>de CA annuel</p>
+                  </div>
+                </div>
+
+                <div class="ba-chaos">
+                  <p>😫 Stress • 📄 Paperasse • ❌ Erreurs • ⏰ Retards</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Séparateur -->
+            <div class="ba-separator">
+              <div class="ba-separator-line"></div>
+              <div class="ba-separator-icon">VS</div>
+              <div class="ba-separator-line"></div>
+            </div>
+
+            <!-- APRÈS (Avec Protoreno) -->
+            <div class="after-section">
+              <div class="ba-header ba-header-after">
+                <span class="ba-icon">✅</span>
+                <h3>Avec Protoreno</h3>
+              </div>
+
+              <div class="ba-content">
+                <div class="ba-item ba-positive">
+                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="ba-stat">2h/semaine</div>
+                    <p>pour toute l'admin</p>
+                  </div>
+                </div>
+
+                <div class="ba-item ba-positive">
+                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  <div>
+                    <div class="ba-stat">5%</div>
+                    <p>d'abandon client</p>
+                  </div>
+                </div>
+
+                <div class="ba-item ba-positive">
+                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="ba-stat">+8k€</div>
+                    <p>de CA retrouvé</p>
+                  </div>
+                </div>
+
+                <div class="ba-zen">
+                  <p>😊 Sérénité • ⚡ Rapidité • ✓ Précision • 📈 Croissance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 8: Bloc principal + Avant/Après (UI moderne retravaillé) -->
+      <div class="constat-variant" data-variant="8">
+        <!-- Bloc principal de la variante 0 -->
+        <div class="constat-main-problem" style="margin-bottom: 3rem;">
+          <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <h3>La complexité administrative paralyse votre activité</h3>
+          <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
+        </div>
+
+        <!-- Avant/Après avec UI moderne -->
+        <div class="constat-ba-modern">
+          <div class="ba-modern-grid">
+            <!-- AVANT -->
+            <div class="ba-modern-col ba-modern-before">
+              <div class="ba-modern-header">
+                <div class="ba-modern-badge ba-modern-badge-negative">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  Sans solution
+                </div>
+                <h3>La réalité du terrain</h3>
+              </div>
+
+              <div class="ba-modern-metrics">
+                <div class="ba-modern-metric ba-modern-metric-negative">
+                  <div class="ba-modern-metric-value">14h</div>
+                  <div class="ba-modern-metric-label">Admin par semaine</div>
+                  <div class="ba-modern-metric-bar">
+                    <div class="ba-modern-metric-fill" style="width: 93%;"></div>
+                  </div>
+                </div>
+
+                <div class="ba-modern-metric ba-modern-metric-negative">
+                  <div class="ba-modern-metric-value">33%</div>
+                  <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="ba-modern-metric-bar">
+                    <div class="ba-modern-metric-fill" style="width: 66%;"></div>
+                  </div>
+                </div>
+
+                <div class="ba-modern-metric ba-modern-metric-negative">
+                  <div class="ba-modern-metric-value">-15k€</div>
+                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
+                  <div class="ba-modern-metric-bar">
+                    <div class="ba-modern-metric-fill" style="width: 75%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ba-modern-tags ba-modern-tags-negative">
+                <span>😫 Stress constant</span>
+                <span>📄 Paperasse</span>
+                <span>❌ Erreurs fréquentes</span>
+                <span>⏰ Retards</span>
+              </div>
+            </div>
+
+            <!-- Flèche de transformation -->
+            <div class="ba-modern-arrow">
+              <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </div>
+
+            <!-- APRÈS -->
+            <div class="ba-modern-col ba-modern-after">
+              <div class="ba-modern-header">
+                <div class="ba-modern-badge ba-modern-badge-positive">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Avec Protoreno
+                </div>
+                <h3>La transformation</h3>
+              </div>
+
+              <div class="ba-modern-metrics">
+                <div class="ba-modern-metric ba-modern-metric-positive">
+                  <div class="ba-modern-metric-value">2h</div>
+                  <div class="ba-modern-metric-label">Admin par semaine</div>
+                  <div class="ba-modern-metric-bar">
+                    <div class="ba-modern-metric-fill" style="width: 13%;"></div>
+                  </div>
+                </div>
+
+                <div class="ba-modern-metric ba-modern-metric-positive">
+                  <div class="ba-modern-metric-value">5%</div>
+                  <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="ba-modern-metric-bar">
+                    <div class="ba-modern-metric-fill" style="width: 10%;"></div>
+                  </div>
+                </div>
+
+                <div class="ba-modern-metric ba-modern-metric-positive">
+                  <div class="ba-modern-metric-value">+8k€</div>
+                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
+                  <div class="ba-modern-metric-bar">
+                    <div class="ba-modern-metric-fill" style="width: 53%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ba-modern-tags ba-modern-tags-positive">
+                <span>😊 Sérénité</span>
+                <span>⚡ Rapidité</span>
+                <span>✓ Précision</span>
+                <span>📈 Croissance</span>
               </div>
             </div>
           </div>
