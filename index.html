@@ -1434,6 +1434,92 @@
       gap: 1.5rem;
     }
 
+    /* Profil utilisateur - Layout horizontal */
+    .conversation-profile-horizontal {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .conversation-profile-horizontal .profile-avatar {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      box-shadow: 0 2px 12px rgba(8, 78, 154, 0.3);
+      border: 3px solid white;
+      text-transform: uppercase;
+    }
+
+    .conversation-profile-horizontal .profile-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .conversation-profile-horizontal .profile-name {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .conversation-profile-horizontal .profile-separator {
+      color: #cbd5e1;
+      font-weight: 300;
+    }
+
+    .conversation-profile-horizontal .profile-title {
+      font-size: 1rem;
+      color: var(--slate);
+      font-weight: 400;
+    }
+
+    /* Profil utilisateur - Layout vertical */
+    .conversation-profile-vertical {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .conversation-profile-vertical .profile-avatar {
+      flex-shrink: 0;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 12px rgba(8, 78, 154, 0.3);
+      border: 3px solid white;
+      text-transform: uppercase;
+    }
+
+    .conversation-profile-vertical .profile-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .conversation-profile-vertical .profile-title {
+      font-size: 1rem;
+      color: var(--slate);
+      font-weight: 400;
+    }
+
     /* Séparation entre Conversations et Sondage */
     #section-sondage {
       margin-top: 8rem;
@@ -3177,18 +3263,28 @@
         <div class="testimonials-conversations">
           <!-- Conversation 1 : Douleur €€€ -->
           <div class="conversation-group">
+            <!-- Profil horizontal -->
+            <div class="conversation-profile-horizontal">
+              <div class="profile-avatar">M</div>
+              <div class="profile-info">
+                <span class="profile-name">Marc</span>
+                <span class="profile-separator">|</span>
+                <span class="profile-title">Conducteur de travaux</span>
+              </div>
+            </div>
+
             <div class="conversation-thread card">
               <div class="conversation-message user">
                 <div class="message-avatar">M</div>
                 <div class="message-content">
-                  <div class="message-author">Marc, conducteur de travaux</div>
+                  <div class="message-author">Marc</div>
                   <p>Je passe <strong>14 heures par semaine</strong> sur les devis et l'admin... Ça me coûte facilement <strong>15k€ de manque à gagner par an</strong>. C'est insoutenable.</p>
                 </div>
               </div>
               <div class="conversation-message reply">
                 <div class="message-avatar">P</div>
                 <div class="message-content">
-                  <div class="message-author">Équipe Protoreno</div>
+                  <div class="message-author">Protoreno</div>
                   <p>On a développé un système de templates intelligents. Devis automatisés, données pré-remplies. Tu veux tester ?</p>
                 </div>
               </div>
@@ -3212,23 +3308,27 @@
 
           <!-- Conversation 2 : Amélioration outil - Scan intelligent -->
           <div class="conversation-group">
+            <!-- Profil vertical -->
+            <div class="conversation-profile-vertical">
+              <div class="profile-avatar">L</div>
+              <span class="profile-name">Lucie</span>
+              <span class="profile-title">Conductrice de travaux</span>
+            </div>
+
             <div class="conversation-thread card">
               <div class="conversation-message user">
-                <div class="message-avatar">L</div>
                 <div class="message-content">
-                  <div class="message-author">Lucie, conductrice de travaux</div>
+                  <div class="message-author">Lucie</div>
                   <p>L'outil collecte fonctionne bien. Mais <strong>mes clients galèrent à prendre des photos nettes</strong> de leurs documents. La moitié est illisible, je dois redemander...</p>
                 </div>
               </div>
               <div class="conversation-message reply">
-                <div class="message-avatar">P</div>
                 <div class="message-content">
-                  <div class="message-author">Équipe Protoreno</div>
+                  <div class="message-author">Protoreno</div>
                   <p>On intègre scan intelligent : détection auto des bords, amélioration qualité, reconnaissance du type de doc ?</p>
                 </div>
               </div>
               <div class="conversation-message user">
-                <div class="message-avatar">L</div>
                 <div class="message-content">
                   <div class="message-author">Lucie</div>
                   <p>Si c'est automatique et que ça guide le client, je vais gagner un temps fou en allers-retours !</p>
