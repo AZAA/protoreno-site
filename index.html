@@ -1543,6 +1543,13 @@
       box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
     }
 
+    /* Style chat sans carte blanche */
+    .conversation-chat {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
     .conversation-message {
       display: flex;
       gap: 1.25rem;
@@ -1555,6 +1562,19 @@
 
     .conversation-message.reply {
       margin-left: 2rem;
+    }
+
+    /* Layout chat - messages à droite pour les réponses */
+    .conversation-chat .conversation-message.user {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .conversation-chat .conversation-message.reply {
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      margin-left: 0;
+      margin-right: 0;
     }
 
     .message-avatar {
@@ -3273,25 +3293,22 @@
               </div>
             </div>
 
-            <div class="conversation-thread card">
+            <div class="conversation-chat">
               <div class="conversation-message user">
                 <div class="message-avatar">M</div>
                 <div class="message-content">
-                  <div class="message-author">Marc</div>
                   <p>Je passe <strong>14 heures par semaine</strong> sur les devis et l'admin... Ça me coûte facilement <strong>15k€ de manque à gagner par an</strong>. C'est insoutenable.</p>
                 </div>
               </div>
               <div class="conversation-message reply">
                 <div class="message-avatar">P</div>
                 <div class="message-content">
-                  <div class="message-author">Protoreno</div>
                   <p>On a développé un système de templates intelligents. Devis automatisés, données pré-remplies. Tu veux tester ?</p>
                 </div>
               </div>
               <div class="conversation-message user">
                 <div class="message-avatar">M</div>
                 <div class="message-content">
-                  <div class="message-author">Marc</div>
                   <p>Si ça peut me faire gagner ne serait-ce que 5h par semaine, je prends !</p>
                 </div>
               </div>
