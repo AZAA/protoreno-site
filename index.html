@@ -2349,232 +2349,119 @@
       color: #475569;
     }
 
-    /* VARIANTE 3: Timeline */
-    .faq-timeline {
-      max-width: 900px;
+    /* VARIANTE 2: Accordéon Minimal 2 Colonnes */
+    .faq-accordion-2col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
-    .faq-phase {
-      margin-bottom: 3rem;
-    }
-
-    .faq-phase:last-child {
+    .faq-accordion-2col .faq-accordion-item {
       margin-bottom: 0;
     }
 
-    .faq-phase-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .phase-number {
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .faq-phase-header h3 {
-      margin: 0;
-      font-size: 1.5rem;
-      color: var(--navy);
-      font-weight: 700;
-    }
-
-    .faq-phase-questions {
-      display: grid;
-      gap: 1rem;
-      padding-left: 64px;
-    }
-
-    .faq-timeline-item {
-      padding: 1.5rem;
-      border-left: 4px solid #2563EB;
-    }
-
-    .faq-timeline-item h4 {
-      font-size: 1.125rem;
-      margin: 0 0 0.75rem 0;
-      color: var(--navy);
-    }
-
-    .faq-timeline-item p {
-      margin: 0;
-      font-size: 0.9375rem;
-      line-height: 1.6;
-      color: var(--slate);
-    }
-
-    @media (max-width: 768px) {
-      .faq-phase-questions {
-        padding-left: 0;
-      }
-    }
-
-    /* VARIANTE 3: Timeline Horizontal */
-    .faq-timeline-horizontal {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    .faq-timeline-horizontal::before {
-      content: '';
-      position: absolute;
-      top: 32px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, #2563EB 0%, #60A5FA 100%);
-      z-index: 0;
-    }
-
-    .faq-journey-step {
-      position: relative;
-      z-index: 1;
-    }
-
-    .journey-step-number {
-      width: 64px;
-      height: 64px;
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin: 0 auto 1rem;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-      border: 4px solid white;
-    }
-
-    .journey-step-title {
-      text-align: center;
-      font-size: 1.125rem;
-      color: var(--navy);
-      margin: 0 0 1.5rem 0;
-      font-weight: 700;
-    }
-
-    .journey-questions {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .journey-question {
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .journey-question h4 {
-      font-size: 0.9375rem;
-      margin: 0 0 0.5rem 0;
-      color: var(--navy);
-      font-weight: 600;
-    }
-
-    .journey-question p {
-      font-size: 0.8125rem;
-      margin: 0;
-      color: var(--slate);
-      line-height: 1.5;
-    }
-
-    @media (max-width: 1024px) {
-      .faq-timeline-horizontal {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .faq-timeline-horizontal::before {
-        display: none;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .faq-timeline-horizontal {
+    @media (max-width: 900px) {
+      .faq-accordion-2col {
         grid-template-columns: 1fr;
       }
-
-      .journey-step-number {
-        width: 56px;
-        height: 56px;
-        font-size: 1.5rem;
-      }
     }
 
-    /* VARIANTE 4: Timeline Accordéon */
-    .faq-timeline-accordion {
+    /* VARIANTE 3: Accordéon Minimal Spacieux */
+    .faq-accordion-spacious {
       max-width: 900px;
       margin: 0 auto;
     }
 
-    .faq-phase-acc {
-      margin-bottom: 3rem;
-      position: relative;
-    }
-
-    .faq-phase-acc:last-child {
-      margin-bottom: 0;
-    }
-
-    .faq-phase-header-acc {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+    .faq-accordion-spacious .faq-accordion-item {
       margin-bottom: 1.5rem;
+      padding: 0.5rem;
     }
 
-    .phase-number-acc {
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      color: white;
-      border-radius: 50%;
+    .faq-accordion-spacious .faq-accordion-header {
+      padding: 2rem;
+    }
+
+    .faq-accordion-spacious .faq-accordion-header h3 {
+      font-size: 1.25rem;
+    }
+
+    .faq-accordion-spacious .faq-accordion-content p {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .faq-accordion-spacious .faq-accordion-item.active .faq-accordion-content {
+      padding: 0 2rem 2rem 2rem;
+    }
+
+    /* VARIANTE 4: Accordéon Minimal avec Tags */
+    .faq-accordion-tags {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-accordion-tags .faq-accordion-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-accordion-tags .faq-accordion-header {
+      padding: 1.25rem 1.5rem;
+    }
+
+    .faq-header-content {
+      flex: 1;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: 700;
-      flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
     }
 
-    .faq-phase-header-acc h3 {
+    .faq-tag {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .faq-tag-tarif {
+      background: #DBEAFE;
+      color: #1E40AF;
+    }
+
+    .faq-tag-securite {
+      background: #DCFCE7;
+      color: #166534;
+    }
+
+    .faq-tag-usage {
+      background: #FEF3C7;
+      color: #92400E;
+    }
+
+    .faq-tag-perso {
+      background: #F3E8FF;
+      color: #6B21A8;
+    }
+
+    .faq-tag-support {
+      background: #FFE4E6;
+      color: #9F1239;
+    }
+
+    .faq-header-content h3 {
       margin: 0;
-      font-size: 1.5rem;
-      color: var(--navy);
-      font-weight: 700;
-    }
-
-    .faq-phase-questions-acc {
-      display: grid;
-      gap: 0.75rem;
-      padding-left: 64px;
-    }
-
-    .faq-phase-questions-acc .faq-accordion-item {
-      border-left: 3px solid #2563EB;
+      font-size: 1.0625rem;
     }
 
     @media (max-width: 768px) {
-      .faq-phase-questions-acc {
-        padding-left: 0;
+      .faq-tag {
+        font-size: 0.6875rem;
+        padding: 0.2rem 0.6rem;
       }
     }
 
@@ -3999,11 +3886,11 @@
       <!-- Toggle FAQ Variantes -->
       <div class="faq-toggle-container">
         <button class="faq-toggle-btn active" onclick="switchFaqVariant(0)">Accordéon</button>
-        <button class="faq-toggle-btn" onclick="switchFaqVariant(1)">Accordéon Minimal</button>
-        <button class="faq-toggle-btn" onclick="switchFaqVariant(2)">Timeline Vertical</button>
-        <button class="faq-toggle-btn" onclick="switchFaqVariant(3)">Timeline Horizontal</button>
-        <button class="faq-toggle-btn" onclick="switchFaqVariant(4)">Timeline Accordéon</button>
-        <button class="faq-toggle-btn" onclick="switchFaqVariant(5)">Accordéon Catégories</button>
+        <button class="faq-toggle-btn" onclick="switchFaqVariant(1)">Minimal</button>
+        <button class="faq-toggle-btn" onclick="switchFaqVariant(2)">Minimal 2 Col</button>
+        <button class="faq-toggle-btn" onclick="switchFaqVariant(3)">Minimal Spacieux</button>
+        <button class="faq-toggle-btn" onclick="switchFaqVariant(4)">Minimal Tags</button>
+        <button class="faq-toggle-btn" onclick="switchFaqVariant(5)">Catégories</button>
       </div>
 
       <!-- VARIANTE 0: Accordéon avec emojis -->
@@ -4176,245 +4063,280 @@
         </div>
       </div>
 
-      <!-- VARIANTE 2: Timeline Vertical (Avant/Pendant/Après) -->
+      <!-- VARIANTE 2: Accordéon Minimal 2 Colonnes -->
       <div class="faq-variant" data-variant="2">
-        <div class="faq-timeline">
-          <!-- Phase 1: Avant d'utiliser -->
-          <div class="faq-phase">
-            <div class="faq-phase-header">
-              <span class="phase-number">1</span>
-              <h3>Avant d'utiliser</h3>
-            </div>
-            <div class="faq-phase-questions">
-              <div class="card faq-timeline-item">
-                <h4>💰 Combien ça coûte ?</h4>
-                <p>Tarifs adaptés aux professionnels, abonnements simples et transparents sans engagement long terme.</p>
-              </div>
-              <div class="card faq-timeline-item">
-                <h4>🧪 Peut-on tester avant de s'engager ?</h4>
-                <p>Tout à fait. Démonstrations et périodes d'essai pour évaluer si nos outils correspondent à vos besoins.</p>
-              </div>
-              <div class="card faq-timeline-item">
-                <h4>💻 Dois-je avoir des compétences techniques ?</h4>
-                <p>Non. Si vous utilisez un navigateur web et votre messagerie, vous saurez utiliser nos outils.</p>
-              </div>
+        <div class="faq-accordion-2col">
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Combien ça coûte ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous proposons des abonnements simples et transparents, sans engagement long terme ni frais cachés. Contactez-nous pour un devis personnalisé selon vos besoins réels.</p>
             </div>
           </div>
 
-          <!-- Phase 2: Pendant l'utilisation -->
-          <div class="faq-phase">
-            <div class="faq-phase-header">
-              <span class="phase-number">2</span>
-              <h3>Pendant l'utilisation</h3>
-            </div>
-            <div class="faq-phase-questions">
-              <div class="card faq-timeline-item">
-                <h4>⏱️ Combien de temps pour prendre en main ?</h4>
-                <p>La plupart des utilisateurs sont opérationnels en moins d'une heure.</p>
-              </div>
-              <div class="card faq-timeline-item">
-                <h4>🆘 Que se passe-t-il si j'ai un problème ?</h4>
-                <p>Contact direct par email ou téléphone. Vous parlez à de vraies personnes.</p>
-              </div>
-              <div class="card faq-timeline-item">
-                <h4>🔒 Mes données sont-elles sécurisées ?</h4>
-                <p>Hébergement France, chiffrement, sauvegardes quotidiennes. Conformité RGPD.</p>
-              </div>
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Mes données sont-elles sécurisées ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Oui. Hébergement en France, chiffrement des données sensibles, sauvegardes quotidiennes. Nous sommes conformes au RGPD et vos données restent votre propriété exclusive.</p>
             </div>
           </div>
 
-          <!-- Phase 3: Évolution -->
-          <div class="faq-phase">
-            <div class="faq-phase-header">
-              <span class="phase-number">3</span>
-              <h3>Évolution & Personnalisation</h3>
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Combien de temps pour prendre en main ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Moins d'une heure pour être opérationnel sur l'essentiel. Les interfaces sont conçues pour être intuitives et vous pouvez bénéficier d'un accompagnement personnalisé au démarrage si besoin.</p>
             </div>
-            <div class="faq-phase-questions">
-              <div class="card faq-timeline-item">
-                <h4>💡 Puis-je proposer des améliorations ?</h4>
-                <p>C'est le principe ! Chaque retour compte. Sondages, ateliers utilisateurs, contact direct.</p>
-              </div>
-              <div class="card faq-timeline-item">
-                <h4>🎨 Les outils sont-ils personnalisables ?</h4>
-                <p>Oui. Nous adaptons les fonctionnalités aux besoins réels du terrain.</p>
-              </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Quelles compétences techniques sont requises ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Si vous savez utiliser un navigateur web et votre messagerie, vous avez déjà tout ce qu'il faut. Nos interfaces sont pensées pour le terrain, pas pour des informaticiens.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Comment proposer des améliorations ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>C'est tout le principe de Protoreno ! Contactez-nous directement, participez aux sondages réguliers ou aux ateliers utilisateurs. Vos retours terrain façonnent l'évolution des outils.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Les outils sont-ils personnalisables ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Les fonctionnalités sont conçues à partir des besoins exprimés sur le terrain. Les personnalisations spécifiques sont étudiées si elles peuvent bénéficier à plusieurs professionnels du secteur.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Qui contacter en cas de problème ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Contact direct par email ou téléphone. Vous parlez directement à de vraies personnes qui connaissent votre métier et qui comprennent vos contraintes.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Peut-on tester avant de s'engager ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- VARIANTE 3: Timeline Horizontal (parcours utilisateur) -->
+      <!-- VARIANTE 3: Accordéon Minimal Spacieux -->
       <div class="faq-variant" data-variant="3">
-        <div class="faq-timeline-horizontal">
-          <div class="faq-journey-step">
-            <div class="journey-step-number">1</div>
-            <h3 class="journey-step-title">Découverte</h3>
-            <div class="journey-questions">
-              <div class="journey-question card">
-                <h4>💰 Combien ça coûte ?</h4>
-                <p>Tarifs adaptés, abonnements simples, sans engagement.</p>
-              </div>
-              <div class="journey-question card">
-                <h4>🧪 Peut-on tester ?</h4>
-                <p>Démonstrations et essais disponibles.</p>
-              </div>
+        <div class="faq-accordion-spacious">
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Combien ça coûte ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous proposons des abonnements simples et transparents, sans engagement long terme ni frais cachés. Contactez-nous pour un devis personnalisé selon vos besoins réels.</p>
             </div>
           </div>
 
-          <div class="faq-journey-step">
-            <div class="journey-step-number">2</div>
-            <h3 class="journey-step-title">Démarrage</h3>
-            <div class="journey-questions">
-              <div class="journey-question card">
-                <h4>⏱️ Temps de prise en main ?</h4>
-                <p>Moins d'une heure pour être opérationnel.</p>
-              </div>
-              <div class="journey-question card">
-                <h4>💻 Compétences requises ?</h4>
-                <p>Navigateur web et messagerie suffisent.</p>
-              </div>
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Mes données sont-elles sécurisées ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Oui. Hébergement en France, chiffrement des données sensibles, sauvegardes quotidiennes. Nous sommes conformes au RGPD et vos données restent votre propriété exclusive.</p>
             </div>
           </div>
 
-          <div class="faq-journey-step">
-            <div class="journey-step-number">3</div>
-            <h3 class="journey-step-title">Utilisation</h3>
-            <div class="journey-questions">
-              <div class="journey-question card">
-                <h4>🔒 Données sécurisées ?</h4>
-                <p>Hébergement France, chiffrement, RGPD.</p>
-              </div>
-              <div class="journey-question card">
-                <h4>🆘 Support disponible ?</h4>
-                <p>Contact direct, vraies personnes.</p>
-              </div>
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Combien de temps pour prendre en main ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Moins d'une heure pour être opérationnel sur l'essentiel. Les interfaces sont conçues pour être intuitives et vous pouvez bénéficier d'un accompagnement personnalisé au démarrage si besoin.</p>
             </div>
           </div>
 
-          <div class="faq-journey-step">
-            <div class="journey-step-number">4</div>
-            <h3 class="journey-step-title">Évolution</h3>
-            <div class="journey-questions">
-              <div class="journey-question card">
-                <h4>💡 Proposer des idées ?</h4>
-                <p>C'est le principe ! Chaque retour compte.</p>
-              </div>
-              <div class="journey-question card">
-                <h4>🎨 Personnalisation ?</h4>
-                <p>Adaptations selon besoins terrain.</p>
-              </div>
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Quelles compétences techniques sont requises ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Si vous savez utiliser un navigateur web et votre messagerie, vous avez déjà tout ce qu'il faut. Nos interfaces sont pensées pour le terrain, pas pour des informaticiens.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Comment proposer des améliorations ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>C'est tout le principe de Protoreno ! Contactez-nous directement, participez aux sondages réguliers ou aux ateliers utilisateurs. Vos retours terrain façonnent l'évolution des outils.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Les outils sont-ils personnalisables ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Les fonctionnalités sont conçues à partir des besoins exprimés sur le terrain. Les personnalisations spécifiques sont étudiées si elles peuvent bénéficier à plusieurs professionnels du secteur.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Qui contacter en cas de problème ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Contact direct par email ou téléphone. Vous parlez directement à de vraies personnes qui connaissent votre métier et qui comprennent vos contraintes.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <h3>Peut-on tester avant de s'engager ?</h3>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- VARIANTE 4: Timeline Accordéon (Timeline vertical + interaction accordéon) -->
+      <!-- VARIANTE 4: Accordéon Minimal avec Tags -->
       <div class="faq-variant" data-variant="4">
-        <div class="faq-timeline-accordion">
-          <!-- Phase 1: Avant d'utiliser -->
-          <div class="faq-phase-acc">
-            <div class="faq-phase-header-acc">
-              <span class="phase-number-acc">1</span>
-              <h3>Avant d'utiliser</h3>
-            </div>
-            <div class="faq-phase-questions-acc">
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>💰 Combien ça coûte ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous proposons des abonnements simples et transparents, sans engagement long terme ni frais cachés. Contactez-nous pour un devis personnalisé selon vos besoins réels.</p>
-                </div>
+        <div class="faq-accordion-tags">
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <div class="faq-header-content">
+                <span class="faq-tag faq-tag-tarif">Tarif</span>
+                <h3>Combien ça coûte ?</h3>
               </div>
-
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>🧪 Peut-on tester avant de s'engager ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
-                </div>
-              </div>
-
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>💻 Quelles compétences techniques sont requises ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Si vous savez utiliser un navigateur web et votre messagerie, vous avez déjà tout ce qu'il faut. Nos interfaces sont pensées pour le terrain, pas pour des informaticiens.</p>
-                </div>
-              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous proposons des abonnements simples et transparents, sans engagement long terme ni frais cachés. Contactez-nous pour un devis personnalisé selon vos besoins réels.</p>
             </div>
           </div>
 
-          <!-- Phase 2: Pendant l'utilisation -->
-          <div class="faq-phase-acc">
-            <div class="faq-phase-header-acc">
-              <span class="phase-number-acc">2</span>
-              <h3>Pendant l'utilisation</h3>
-            </div>
-            <div class="faq-phase-questions-acc">
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>⏱️ Combien de temps pour prendre en main ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Moins d'une heure pour être opérationnel sur l'essentiel. Les interfaces sont conçues pour être intuitives et vous pouvez bénéficier d'un accompagnement personnalisé au démarrage si besoin.</p>
-                </div>
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <div class="faq-header-content">
+                <span class="faq-tag faq-tag-securite">Sécurité</span>
+                <h3>Mes données sont-elles sécurisées ?</h3>
               </div>
-
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>🆘 Qui contacter en cas de problème ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Contact direct par email ou téléphone. Vous parlez directement à de vraies personnes qui connaissent votre métier et qui comprennent vos contraintes.</p>
-                </div>
-              </div>
-
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>🔒 Mes données sont-elles sécurisées ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Oui. Hébergement en France, chiffrement des données sensibles, sauvegardes quotidiennes. Nous sommes conformes au RGPD et vos données restent votre propriété exclusive.</p>
-                </div>
-              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Oui. Hébergement en France, chiffrement des données sensibles, sauvegardes quotidiennes. Nous sommes conformes au RGPD et vos données restent votre propriété exclusive.</p>
             </div>
           </div>
 
-          <!-- Phase 3: Évolution & Personnalisation -->
-          <div class="faq-phase-acc">
-            <div class="faq-phase-header-acc">
-              <span class="phase-number-acc">3</span>
-              <h3>Évolution & Personnalisation</h3>
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <div class="faq-header-content">
+                <span class="faq-tag faq-tag-usage">Usage</span>
+                <h3>Combien de temps pour prendre en main ?</h3>
+              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Moins d'une heure pour être opérationnel sur l'essentiel. Les interfaces sont conçues pour être intuitives et vous pouvez bénéficier d'un accompagnement personnalisé au démarrage si besoin.</p>
             </div>
-            <div class="faq-phase-questions-acc">
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>💡 Comment proposer des améliorations ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>C'est tout le principe de Protoreno ! Contactez-nous directement, participez aux sondages réguliers ou aux ateliers utilisateurs. Vos retours terrain façonnent l'évolution des outils.</p>
-                </div>
-              </div>
+          </div>
 
-              <div class="faq-accordion-item card">
-                <button class="faq-accordion-header" onclick="toggleAccordion(this)">
-                  <h3>🎨 Les outils sont-ils personnalisables ?</h3>
-                  <span class="accordion-icon">+</span>
-                </button>
-                <div class="faq-accordion-content">
-                  <p>Les fonctionnalités sont conçues à partir des besoins exprimés sur le terrain. Les personnalisations spécifiques sont étudiées si elles peuvent bénéficier à plusieurs professionnels du secteur.</p>
-                </div>
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <div class="faq-header-content">
+                <span class="faq-tag faq-tag-usage">Usage</span>
+                <h3>Quelles compétences techniques sont requises ?</h3>
               </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Si vous savez utiliser un navigateur web et votre messagerie, vous avez déjà tout ce qu'il faut. Nos interfaces sont pensées pour le terrain, pas pour des informaticiens.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <div class="faq-header-content">
+                <span class="faq-tag faq-tag-perso">Personnalisation</span>
+                <h3>Comment proposer des améliorations ?</h3>
+              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>C'est tout le principe de Protoreno ! Contactez-nous directement, participez aux sondages réguliers ou aux ateliers utilisateurs. Vos retours terrain façonnent l'évolution des outils.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <div class="faq-header-content">
+                <span class="faq-tag faq-tag-perso">Personnalisation</span>
+                <h3>Les outils sont-ils personnalisables ?</h3>
+              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Les fonctionnalités sont conçues à partir des besoins exprimés sur le terrain. Les personnalisations spécifiques sont étudiées si elles peuvent bénéficier à plusieurs professionnels du secteur.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <div class="faq-header-content">
+                <span class="faq-tag faq-tag-support">Support</span>
+                <h3>Qui contacter en cas de problème ?</h3>
+              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Contact direct par email ou téléphone. Vous parlez directement à de vraies personnes qui connaissent votre métier et qui comprennent vos contraintes.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item card">
+            <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+              <div class="faq-header-content">
+                <span class="faq-tag faq-tag-tarif">Tarif</span>
+                <h3>Peut-on tester avant de s'engager ?</h3>
+              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="faq-accordion-content">
+              <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
             </div>
           </div>
         </div>
