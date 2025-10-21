@@ -629,6 +629,277 @@
     }
 
     /* ============================================
+       TOGGLE VARIANTS (Hero & Constat)
+       ============================================ */
+    .hero-toggle-container,
+    .constat-toggle-container {
+      position: absolute;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 0.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--light-gray);
+    }
+
+    .constat-toggle-container {
+      top: 20px;
+    }
+
+    .hero-toggle-btn,
+    .constat-toggle-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--slate);
+      background: transparent;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-family: var(--font-sans);
+    }
+
+    .hero-toggle-btn:hover,
+    .constat-toggle-btn:hover {
+      background: var(--light-gray);
+      color: var(--navy);
+    }
+
+    .hero-toggle-btn.active,
+    .constat-toggle-btn.active {
+      background: var(--blue);
+      color: white;
+    }
+
+    .hero-variant,
+    .constat-variant {
+      display: none;
+    }
+
+    .hero-variant.active,
+    .constat-variant.active {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .hero-toggle-container,
+      .constat-toggle-container {
+        top: 80px;
+        flex-wrap: wrap;
+        max-width: 90%;
+      }
+
+      .constat-toggle-container {
+        top: 10px;
+      }
+
+      .hero-toggle-btn,
+      .constat-toggle-btn {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.75rem;
+      }
+    }
+
+    /* ============================================
+       CONSTAT VARIANTS STYLES
+       ============================================ */
+    /* Palette harmonisée */
+    :root {
+      --alert-orange: #F97316;
+      --alert-red: #EF4444;
+    }
+
+    /* Variante 1 : Mix (base - chiffres grands + bordures) */
+    .constat-variant[data-variant="1"] .constat-impact-card h4 {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .constat-variant[data-variant="1"] .constat-impact-card h4 .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .constat-variant[data-variant="1"] .constat-time {
+      border-left: 4px solid var(--alert-orange);
+    }
+
+    .constat-variant[data-variant="1"] .constat-time .stat-number {
+      color: var(--alert-orange);
+    }
+
+    .constat-variant[data-variant="1"] .constat-clients {
+      border-left: 4px solid var(--alert-red);
+    }
+
+    .constat-variant[data-variant="1"] .constat-clients .stat-number {
+      color: var(--alert-red);
+    }
+
+    /* Variante 2 : Mix + Icons colorés */
+    .constat-variant[data-variant="2"] .constat-impact-card h4 {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .constat-variant[data-variant="2"] .constat-impact-card h4 .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .constat-variant[data-variant="2"] .constat-time {
+      border-left: 4px solid var(--alert-orange);
+    }
+
+    .constat-variant[data-variant="2"] .constat-time .stat-number {
+      color: var(--alert-orange);
+    }
+
+    .constat-variant[data-variant="2"] .constat-time .constat-icon-small {
+      color: var(--alert-orange);
+    }
+
+    .constat-variant[data-variant="2"] .constat-clients {
+      border-left: 4px solid var(--alert-red);
+    }
+
+    .constat-variant[data-variant="2"] .constat-clients .stat-number {
+      color: var(--alert-red);
+    }
+
+    .constat-variant[data-variant="2"] .constat-clients .constat-icon-small {
+      color: var(--alert-red);
+    }
+
+    /* Variante 3 : Mix + Background teinté */
+    .constat-variant[data-variant="3"] .constat-impact-card h4 {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .constat-variant[data-variant="3"] .constat-impact-card h4 .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .constat-variant[data-variant="3"] .constat-time {
+      border-left: 4px solid var(--alert-orange);
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.03) 0%, white 100%);
+    }
+
+    .constat-variant[data-variant="3"] .constat-time .stat-number {
+      color: var(--alert-orange);
+    }
+
+    .constat-variant[data-variant="3"] .constat-clients {
+      border-left: 4px solid var(--alert-red);
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.03) 0%, white 100%);
+    }
+
+    .constat-variant[data-variant="3"] .constat-clients .stat-number {
+      color: var(--alert-red);
+    }
+
+    /* Variante 4 : Mix + Shadow colorée */
+    .constat-variant[data-variant="4"] .constat-impact-card h4 {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .constat-variant[data-variant="4"] .constat-impact-card h4 .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .constat-variant[data-variant="4"] .constat-time {
+      border-left: 4px solid var(--alert-orange);
+      box-shadow: 0 4px 20px rgba(249, 115, 22, 0.15);
+    }
+
+    .constat-variant[data-variant="4"] .constat-time .stat-number {
+      color: var(--alert-orange);
+    }
+
+    .constat-variant[data-variant="4"] .constat-clients {
+      border-left: 4px solid var(--alert-red);
+      box-shadow: 0 4px 20px rgba(239, 68, 68, 0.15);
+    }
+
+    .constat-variant[data-variant="4"] .constat-clients .stat-number {
+      color: var(--alert-red);
+    }
+
+    /* Variante 5 : Mix + Badge alerte */
+    .constat-variant[data-variant="5"] .constat-impact-card h4 {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .constat-variant[data-variant="5"] .constat-impact-card h4 .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .constat-variant[data-variant="5"] .constat-time {
+      border-left: 4px solid var(--alert-orange);
+      position: relative;
+    }
+
+    .constat-variant[data-variant="5"] .constat-time .stat-number {
+      color: var(--alert-orange);
+    }
+
+    .constat-variant[data-variant="5"] .constat-clients {
+      border-left: 4px solid var(--alert-red);
+      position: relative;
+    }
+
+    .constat-variant[data-variant="5"] .constat-clients .stat-number {
+      color: var(--alert-red);
+    }
+
+    .alert-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .alert-badge-urgent {
+      background: rgba(249, 115, 22, 0.1);
+      color: var(--alert-orange);
+      border: 1px solid var(--alert-orange);
+    }
+
+    .alert-badge-critique {
+      background: rgba(239, 68, 68, 0.1);
+      color: var(--alert-red);
+      border: 1px solid var(--alert-red);
+    }
+
+    /* ============================================
        SECTION BACKGROUNDS
        ============================================ */
     section {
@@ -1317,6 +1588,22 @@
       background: white;
       border-radius: 16px;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      position: relative;
+    }
+
+    .conversation-date {
+      font-size: 0.8125rem;
+      color: var(--gray);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .conversation-date::before {
+      content: '📅';
+      font-size: 0.875rem;
     }
 
     .conversation-message {
@@ -2327,6 +2614,16 @@
     }
   }
   </script>
+
+  <!-- Cloudflare Web Analytics - Privacy-friendly, gratuit, sans cookies -->
+  <!-- Pour activer :
+       1. Connectez-vous à https://dash.cloudflare.com
+       2. Allez dans "Analytics & Logs" > "Web Analytics"
+       3. Ajoutez votre site protoreno.com
+       4. Copiez le token généré et remplacez YOUR_TOKEN_HERE ci-dessous
+       5. Décommentez la ligne suivante
+  -->
+  <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script> -->
 </head>
 <body>
   <!-- Skip to content pour accessibilité -->
@@ -2384,18 +2681,94 @@
       <rect x="700" y="400" width="250" height="180" fill="#2563EB" opacity="0.08"/>
     </svg>
 
+    <!-- Toggle pour changer de variante -->
+    <div class="hero-toggle-container">
+      <button class="hero-toggle-btn active" onclick="switchHeroVariant(0)">Original</button>
+      <button class="hero-toggle-btn" onclick="switchHeroVariant(1)">Action</button>
+      <button class="hero-toggle-btn" onclick="switchHeroVariant(2)">Impact</button>
+      <button class="hero-toggle-btn" onclick="switchHeroVariant(3)">Processus</button>
+      <button class="hero-toggle-btn" onclick="switchHeroVariant(4)">Mouvement</button>
+      <button class="hero-toggle-btn" onclick="switchHeroVariant(5)">4 étapes</button>
+    </div>
+
     <div class="container-narrow">
-      <!-- Badge avec chiffre impactant -->
-      <div class="hero-stats-badge">
-        <div class="stats-number">45</div>
-        <div class="stats-label">professionnels<br>collaborent</div>
+      <!-- VARIANTE 0: Original (par défaut) -->
+      <div class="hero-variant active" data-variant="0">
+        <div class="hero-stats-badge">
+          <div class="stats-number">45</div>
+          <div class="stats-label">professionnels<br>collaborent</div>
+        </div>
+        <h1>Par des pros<br><strong>pour des pros</strong></h1>
+        <p class="lead">
+          On co-construit avec vous, on teste sur le terrain, on ajuste jusqu'à ce que ça marche vraiment.
+        </p>
+        <a href="#section-sondage" class="btn btn-primary btn-large">Participer au projet</a>
       </div>
 
-      <h1>Par des pros<br><strong>pour des pros</strong></h1>
-      <p class="lead">
-        On co-construit avec vous, on teste sur le terrain, on ajuste jusqu'à ce que ça marche vraiment.
-      </p>
-      <a href="#section-sondage" class="btn btn-primary btn-large">Participer au projet</a>
+      <!-- VARIANTE 1: Concrète - Action -->
+      <div class="hero-variant" data-variant="1">
+        <div class="hero-stats-badge">
+          <div class="stats-number">45</div>
+          <div class="stats-label">pros du bâtiment<br>co-construisent</div>
+        </div>
+        <h1>Développez vos outils<br><strong>avec nous</strong></h1>
+        <p class="lead">
+          Partagez vos besoins, testez les prototypes, façonnez les outils de demain.
+        </p>
+        <a href="#section-sondage" class="btn btn-primary btn-large">Participer au projet</a>
+      </div>
+
+      <!-- VARIANTE 2: Concrète - Impact -->
+      <div class="hero-variant" data-variant="2">
+        <div class="hero-stats-badge">
+          <div class="stats-number">45</div>
+          <div class="stats-label">pros du bâtiment<br>co-construisent</div>
+        </div>
+        <h1>Développez vos outils<br><strong>avec nous</strong></h1>
+        <p class="lead">
+          Vos retours terrain deviennent des fonctionnalités en quelques semaines.
+        </p>
+        <a href="#section-sondage" class="btn btn-primary btn-large">Participer au projet</a>
+      </div>
+
+      <!-- VARIANTE 3: Concrète - Processus -->
+      <div class="hero-variant" data-variant="3">
+        <div class="hero-stats-badge">
+          <div class="stats-number">45</div>
+          <div class="stats-label">pros du bâtiment<br>co-construisent</div>
+        </div>
+        <h1>Développez vos outils<br><strong>avec nous</strong></h1>
+        <p class="lead">
+          Du chantier au code : on écoute, on développe, on ajuste ensemble.
+        </p>
+        <a href="#section-sondage" class="btn btn-primary btn-large">Participer au projet</a>
+      </div>
+
+      <!-- VARIANTE 4: Concrète - Mouvement -->
+      <div class="hero-variant" data-variant="4">
+        <div class="hero-stats-badge">
+          <div class="stats-number">45</div>
+          <div class="stats-label">pros du bâtiment<br>co-construisent</div>
+        </div>
+        <h1>Développez vos outils<br><strong>avec nous</strong></h1>
+        <p class="lead">
+          Rejoignez le mouvement, influencez chaque fonctionnalité, testez en avant-première.
+        </p>
+        <a href="#section-sondage" class="btn btn-primary btn-large">Participer au projet</a>
+      </div>
+
+      <!-- VARIANTE 5: Concrète - 4 étapes -->
+      <div class="hero-variant" data-variant="5">
+        <div class="hero-stats-badge">
+          <div class="stats-number">45</div>
+          <div class="stats-label">pros du bâtiment<br>co-construisent</div>
+        </div>
+        <h1>Développez vos outils<br><strong>avec nous</strong></h1>
+        <p class="lead">
+          Vous dites, On crée, Vous testez, On ajuste.
+        </p>
+        <a href="#section-sondage" class="btn btn-primary btn-large">Participer au projet</a>
+      </div>
     </div>
   </section>
 
@@ -2414,36 +2787,206 @@
       <rect width="1200" height="800" fill="url(#broken-squares)"/>
     </svg>
 
+    <!-- Toggle pour changer de variante -->
+    <div class="constat-toggle-container">
+      <button class="constat-toggle-btn active" onclick="switchConstatVariant(0)">Original</button>
+      <button class="constat-toggle-btn" onclick="switchConstatVariant(1)">Mix</button>
+      <button class="constat-toggle-btn" onclick="switchConstatVariant(2)">+ Icons</button>
+      <button class="constat-toggle-btn" onclick="switchConstatVariant(3)">+ Fond</button>
+      <button class="constat-toggle-btn" onclick="switchConstatVariant(4)">+ Shadow</button>
+      <button class="constat-toggle-btn" onclick="switchConstatVariant(5)">+ Badge</button>
+    </div>
+
     <div class="container">
       <div class="section-header">
         <h2 id="heading-constat">Le constat</h2>
         <p class="lead">Les professionnels du bâtiment manquent d'outils adaptés</p>
       </div>
 
-      <div class="constat-pyramid">
-        <div class="constat-main-problem">
-          <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          <h3>La complexité administrative paralyse votre activité</h3>
-          <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
-        </div>
-
-        <div class="constat-impacts">
-          <div class="card constat-impact-card constat-time">
-            <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <!-- VARIANTE 0: Original (par défaut) -->
+      <div class="constat-variant active" data-variant="0">
+        <div class="constat-pyramid">
+          <div class="constat-main-problem">
+            <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            <h4>14h par semaine perdues</h4>
-            <p>en administration au lieu d'être sur le terrain</p>
+            <h3>La complexité administrative paralyse votre activité</h3>
+            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
           </div>
 
-          <div class="card constat-impact-card constat-clients">
-            <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          <div class="constat-impacts">
+            <div class="card constat-impact-card constat-time">
+              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h4>14h par semaine perdues</h4>
+              <p>en administration au lieu d'être sur le terrain</p>
+            </div>
+
+            <div class="card constat-impact-card constat-clients">
+              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <h4>1 client sur 3 abandonne</h4>
+              <p>face à la complexité des démarches</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 1: Mix (base - chiffres grands + bordures) -->
+      <div class="constat-variant" data-variant="1">
+        <div class="constat-pyramid">
+          <div class="constat-main-problem">
+            <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            <h4>1 client sur 3 abandonne</h4>
-            <p>face à la complexité des démarches</p>
+            <h3>La complexité administrative paralyse votre activité</h3>
+            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
+          </div>
+
+          <div class="constat-impacts">
+            <div class="card constat-impact-card constat-time">
+              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h4><span class="stat-number">14h</span>par semaine perdues</h4>
+              <p>en administration au lieu d'être sur le terrain</p>
+            </div>
+
+            <div class="card constat-impact-card constat-clients">
+              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <h4><span class="stat-number">1/3</span>des clients abandonnent</h4>
+              <p>face à la complexité des démarches</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 2: Mix + Icons colorés -->
+      <div class="constat-variant" data-variant="2">
+        <div class="constat-pyramid">
+          <div class="constat-main-problem">
+            <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <h3>La complexité administrative paralyse votre activité</h3>
+            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
+          </div>
+
+          <div class="constat-impacts">
+            <div class="card constat-impact-card constat-time">
+              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h4><span class="stat-number">14h</span>par semaine perdues</h4>
+              <p>en administration au lieu d'être sur le terrain</p>
+            </div>
+
+            <div class="card constat-impact-card constat-clients">
+              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <h4><span class="stat-number">1/3</span>des clients abandonnent</h4>
+              <p>face à la complexité des démarches</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 3: Mix + Background teinté -->
+      <div class="constat-variant" data-variant="3">
+        <div class="constat-pyramid">
+          <div class="constat-main-problem">
+            <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <h3>La complexité administrative paralyse votre activité</h3>
+            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
+          </div>
+
+          <div class="constat-impacts">
+            <div class="card constat-impact-card constat-time">
+              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h4><span class="stat-number">14h</span>par semaine perdues</h4>
+              <p>en administration au lieu d'être sur le terrain</p>
+            </div>
+
+            <div class="card constat-impact-card constat-clients">
+              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <h4><span class="stat-number">1/3</span>des clients abandonnent</h4>
+              <p>face à la complexité des démarches</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 4: Mix + Shadow colorée -->
+      <div class="constat-variant" data-variant="4">
+        <div class="constat-pyramid">
+          <div class="constat-main-problem">
+            <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <h3>La complexité administrative paralyse votre activité</h3>
+            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
+          </div>
+
+          <div class="constat-impacts">
+            <div class="card constat-impact-card constat-time">
+              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h4><span class="stat-number">14h</span>par semaine perdues</h4>
+              <p>en administration au lieu d'être sur le terrain</p>
+            </div>
+
+            <div class="card constat-impact-card constat-clients">
+              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <h4><span class="stat-number">1/3</span>des clients abandonnent</h4>
+              <p>face à la complexité des démarches</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 5: Mix + Badge alerte -->
+      <div class="constat-variant" data-variant="5">
+        <div class="constat-pyramid">
+          <div class="constat-main-problem">
+            <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <h3>La complexité administrative paralyse votre activité</h3>
+            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
+          </div>
+
+          <div class="constat-impacts">
+            <div class="card constat-impact-card constat-time">
+              <span class="alert-badge alert-badge-urgent">⚠️ Urgent</span>
+              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h4><span class="stat-number">14h</span>par semaine perdues</h4>
+              <p>en administration au lieu d'être sur le terrain</p>
+            </div>
+
+            <div class="card constat-impact-card constat-clients">
+              <span class="alert-badge alert-badge-critique">❗ Critique</span>
+              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <h4><span class="stat-number">1/3</span>des clients abandonnent</h4>
+              <p>face à la complexité des démarches</p>
+            </div>
           </div>
         </div>
       </div>
@@ -2641,7 +3184,7 @@
       </div>
 
       <div style="text-align: center; margin-top: 3.5rem;">
-        <a href="#section-sondage" class="btn btn-primary btn-large">Donnez votre avis</a>
+        <a href="#section-sondage" class="btn btn-primary btn-large">Commencer à contribuer</a>
       </div>
 
     </div>
@@ -2735,6 +3278,7 @@
 
         <div class="testimonials-conversations">
           <div class="conversation-thread card">
+            <div class="conversation-date">Il y a 3 semaines</div>
             <div class="conversation-message user">
               <div class="message-avatar">M</div>
               <div class="message-content">
@@ -2759,6 +3303,7 @@
           </div>
 
           <div class="conversation-thread card">
+            <div class="conversation-date">Il y a 2 semaines</div>
             <div class="conversation-message user">
               <div class="message-avatar">S</div>
               <div class="message-content">
@@ -2779,6 +3324,7 @@
           </div>
 
           <div class="conversation-thread card">
+            <div class="conversation-date">Il y a 1 mois</div>
             <div class="conversation-message user">
               <div class="message-avatar">A</div>
               <div class="message-content">
@@ -3017,6 +3563,46 @@
        JAVASCRIPT
        ============================================ -->
   <script>
+    // Gestion du toggle des variantes Hero
+    function switchHeroVariant(variantIndex) {
+      // Retirer la classe active de tous les boutons
+      const buttons = document.querySelectorAll('.hero-toggle-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      // Ajouter la classe active au bouton cliqué
+      buttons[variantIndex].classList.add('active');
+
+      // Retirer la classe active de toutes les variantes
+      const variants = document.querySelectorAll('.hero-variant');
+      variants.forEach(variant => variant.classList.remove('active'));
+
+      // Ajouter la classe active à la variante sélectionnée
+      const selectedVariant = document.querySelector(`.hero-variant[data-variant="${variantIndex}"]`);
+      if (selectedVariant) {
+        selectedVariant.classList.add('active');
+      }
+    }
+
+    // Gestion du toggle des variantes Constat
+    function switchConstatVariant(variantIndex) {
+      // Retirer la classe active de tous les boutons
+      const buttons = document.querySelectorAll('.constat-toggle-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      // Ajouter la classe active au bouton cliqué
+      buttons[variantIndex].classList.add('active');
+
+      // Retirer la classe active de toutes les variantes
+      const variants = document.querySelectorAll('.constat-variant');
+      variants.forEach(variant => variant.classList.remove('active'));
+
+      // Ajouter la classe active à la variante sélectionnée
+      const selectedVariant = document.querySelector(`.constat-variant[data-variant="${variantIndex}"]`);
+      if (selectedVariant) {
+        selectedVariant.classList.add('active');
+      }
+    }
+
     // Gestion du formulaire de contact
     const form = document.getElementById('contact-form');
     const status = document.getElementById('form-status');
