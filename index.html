@@ -1839,6 +1839,33 @@
       margin-bottom: 0;
     }
 
+    /* Subsection titles */
+    .subsection-title {
+      text-align: center;
+      margin: 4rem auto 2.5rem;
+      max-width: 600px;
+    }
+
+    .subsection-title h3 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0;
+      position: relative;
+      display: inline-block;
+    }
+
+    .subsection-title h3::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #2563EB, transparent);
+    }
+
     /* Story Timeline */
     .story-timeline {
       max-width: 800px;
@@ -2869,6 +2896,80 @@
   </section>
 
   <!-- ============================================
+       NOS OUTILS
+       ============================================ -->
+  <section id="section-outils" aria-labelledby="heading-outils">
+    <!-- Neutre (vide) -->
+    <svg class="section-bg-svg outils-bg active" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    </svg>
+
+    <div class="container">
+      <div class="section-header">
+        <h2 id="heading-outils">Des outils déjà opérationnels</h2>
+        <p class="lead">Plusieurs solutions utilisées par des professionnels</p>
+      </div>
+
+
+      <!-- VARIANT 5: Split 50/50 avec Bordure Latérale Colorée -->
+      <div class="tools-grid" >
+        <div class="card tool-card">
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
+          <div class="tool-content">
+            <div class="tool-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <div class="tool-text">
+              <h3>Simulation de projets <span style="display: inline-block; font-size: 0.75rem; background: #10B981; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-weight: 600; margin-left: 0.5rem;">Disponible</span></h3>
+              <p>Calculez rapidement les performances énergétiques de vos projets de rénovation. Modélisation thermique, estimation des gains énergétiques et calcul des économies prévisionnelles en quelques clics.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card tool-card">
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
+          <div class="tool-content">
+            <div class="tool-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div class="tool-text">
+              <h3>Collecte de documents <span style="display: inline-block; font-size: 0.75rem; background: #10B981; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-weight: 600; margin-left: 0.5rem;">Disponible</span></h3>
+              <p>Simplifiez la collecte des pièces justificatives auprès de vos clients. Interface intuitive, rappels automatiques et validation des documents pour constituer vos dossiers de financement plus rapidement.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card tool-card">
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
+          </div>
+          <div class="tool-content">
+            <div class="tool-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 15l2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="tool-text">
+              <h3>Pilotage de chantiers <span style="display: inline-block; font-size: 0.75rem; background: #F59E0B; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-weight: 600; margin-left: 0.5rem;">Bientôt</span></h3>
+              <p>Suivez l'avancement de vos chantiers en temps réel avec des tableaux de bord clairs. Gestion des plannings, suivi budgétaire et communication facilitée avec vos équipes et sous-traitants.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ============================================
        LE CONSTAT
        ============================================ -->
   <section class="section-alt" id="section-constat" aria-labelledby="heading-constat">
@@ -3156,80 +3257,6 @@
   </section>
 
   <!-- ============================================
-       NOS OUTILS
-       ============================================ -->
-  <section id="section-outils" aria-labelledby="heading-outils">
-    <!-- Neutre (vide) -->
-    <svg class="section-bg-svg outils-bg active" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    </svg>
-
-    <div class="container">
-      <div class="section-header">
-        <h2 id="heading-outils">Des outils déjà opérationnels</h2>
-        <p class="lead">Plusieurs solutions utilisées par des professionnels</p>
-      </div>
-
-
-      <!-- VARIANT 5: Split 50/50 avec Bordure Latérale Colorée -->
-      <div class="tools-grid" >
-        <div class="card tool-card">
-          <div class="tool-image">
-            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
-          </div>
-          <div class="tool-content">
-            <div class="tool-icon">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            </div>
-            <div class="tool-text">
-              <h3>Simulation de projets <span style="display: inline-block; font-size: 0.75rem; background: #10B981; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-weight: 600; margin-left: 0.5rem;">Disponible</span></h3>
-              <p>Calculez rapidement les performances énergétiques de vos projets de rénovation. Modélisation thermique, estimation des gains énergétiques et calcul des économies prévisionnelles en quelques clics.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card tool-card">
-          <div class="tool-image">
-            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
-          </div>
-          <div class="tool-content">
-            <div class="tool-icon">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
-            <div class="tool-text">
-              <h3>Collecte de documents <span style="display: inline-block; font-size: 0.75rem; background: #10B981; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-weight: 600; margin-left: 0.5rem;">Disponible</span></h3>
-              <p>Simplifiez la collecte des pièces justificatives auprès de vos clients. Interface intuitive, rappels automatiques et validation des documents pour constituer vos dossiers de financement plus rapidement.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card tool-card">
-          <div class="tool-image">
-            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
-          </div>
-          <div class="tool-content">
-            <div class="tool-icon">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 15l2 2 4-4"/>
-              </svg>
-            </div>
-            <div class="tool-text">
-              <h3>Pilotage de chantiers <span style="display: inline-block; font-size: 0.75rem; background: #F59E0B; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-weight: 600; margin-left: 0.5rem;">Bientôt</span></h3>
-              <p>Suivez l'avancement de vos chantiers en temps réel avec des tableaux de bord clairs. Gestion des plannings, suivi budgétaire et communication facilitée avec vos équipes et sous-traitants.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- ============================================
        COMMENT PARTICIPER
        ============================================ -->
   <section class="section-alt" id="section-participer" aria-labelledby="heading-participer">
@@ -3463,15 +3490,29 @@
     <div class="container">
       <div class="section-header">
         <h2 id="heading-about">Qui sommes-nous</h2>
-      </div>
-
-      <div class="about-intro">
         <p class="lead">
-          Une jeune société numérique indépendante, spécialisée dans la rénovation énergétique
+          Deux personnes qui connaissent vos problèmes. Parce que l'un vient du terrain, l'autre du code.
         </p>
       </div>
 
+      <!-- L'équipe -->
+      <div class="team-avatars">
+        <div class="team-member">
+          <img src="images/avatar1.png" alt="Renaud - Expert métier" class="team-avatar" loading="lazy">
+          <div class="team-member-name">Renaud</div>
+          <div class="team-member-role">Expert métier</div>
+        </div>
+        <div class="team-member">
+          <img src="images/avatar2.png" alt="Alexandre - Développeur web" class="team-avatar" loading="lazy">
+          <div class="team-member-name">Alexandre</div>
+          <div class="team-member-role">Développeur web</div>
+        </div>
+      </div>
+
       <!-- Notre histoire -->
+      <div class="subsection-title">
+        <h3>Notre histoire</h3>
+      </div>
       <div class="story-timeline">
         <div class="story-step">
           <div class="story-year">2022</div>
@@ -3506,21 +3547,10 @@
         </div>
       </div>
 
-      <!-- Avatars photo avec filtre N&B -->
-      <div class="team-avatars">
-        <div class="team-member">
-          <img src="images/avatar1.png" alt="Renaud - Expert métier" class="team-avatar" loading="lazy">
-          <div class="team-member-name">Renaud</div>
-          <div class="team-member-role">Expert métier</div>
-        </div>
-        <div class="team-member">
-          <img src="images/avatar2.png" alt="Alexandre - Développeur web" class="team-avatar" loading="lazy">
-          <div class="team-member-name">Alexandre</div>
-          <div class="team-member-role">Développeur web</div>
-        </div>
+      <!-- Nos valeurs -->
+      <div class="subsection-title">
+        <h3>Nos valeurs</h3>
       </div>
-
-      <!-- Values Grid -->
       <div class="values-grid">
         <div class="card value-card">
           <div class="value-icon">
