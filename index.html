@@ -468,14 +468,6 @@
       color: white;
     }
 
-    .hero-variant {
-      display: none;
-    }
-
-    .hero-variant.active {
-      display: block;
-    }
-
     @media (max-width: 768px) {
       .hero-toggle-container {
         top: 80px;
@@ -523,7 +515,7 @@
     }
 
     /* ============================================
-       VARIANTE 8: UI MODERNE AVANT/APRÈS
+       SECTION CONSTAT: UI AVANT/APRÈS
        ============================================ */
 
     .constat-ba-modern {
@@ -735,104 +727,12 @@
       font-size: 1.25rem;
     }
 
-    .metric-impact-text {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      font-size: 0.9375rem;
-      color: var(--slate);
-      font-style: italic;
-      line-height: 1.6;
-    }
-
-    .ba-modern-col.ba-modern-before .metric-impact-text {
-      color: #991b1b;
-    }
-
-    .ba-modern-col.ba-modern-after .metric-impact-text {
-      color: #15803d;
-    }
-
-    .metrics-secondary {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .metric-compact {
-      flex: 1;
-      padding: 1rem;
-      background: rgba(0, 0, 0, 0.02);
-      border-radius: 8px;
-    }
-
-    .metric-compact .ba-modern-metric-value {
-      font-size: 1.75rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .metric-compact .ba-modern-metric-label {
-      font-size: 0.8125rem;
-    }
-
-    /* V2: Contraste (Fond coloré + Transparent) */
-    .metric-with-background {
-      background: rgba(0, 0, 0, 0.06);
-      border: 1px solid rgba(0, 0, 0, 0.08);
-    }
-
-    .ba-modern-col.ba-modern-before .metric-with-background {
-      background: rgba(220, 38, 38, 0.08);
-      border-color: rgba(220, 38, 38, 0.15);
-    }
-
-    .ba-modern-col.ba-modern-after .metric-with-background {
-      background: rgba(22, 163, 74, 0.08);
-      border-color: rgba(22, 163, 74, 0.15);
-    }
-
-    .metric-transparent {
-      background: transparent;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
     /* Responsive métriques */
     @media (max-width: 768px) {
       .metric-hero .ba-modern-metric-value {
         font-size: 2.75rem;
       }
-
-      .metrics-secondary {
-        flex-direction: column;
-      }
     }
-
-
-    /* V3: Icônes multiples */
-    .metric-icons {
-      display: flex;
-      gap: 0.25rem;
-      margin-top: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .metric-icon {
-      opacity: 0.7;
-    }
-
-    .metric-icon-negative {
-      color: #DC2626;
-    }
-
-    .metric-icon-positive {
-      color: #16a34a;
-    }
-
-    .metric-icon-neutral {
-      color: rgba(0, 0, 0, 0.2);
-    }
-
-
-
 
     /* ============================================
        SECTION BACKGROUNDS
@@ -1668,7 +1568,7 @@
       min-width: fit-content;
     }
 
-    /* VARIANTE 3: Sondage Tally intégré (amélioré) */
+    /* Sondage Tally intégré */
 
     /* Barre de bénéfices */
     .tally-benefits-bar {
@@ -2175,7 +2075,7 @@
       color: var(--slate);
     }
 
-    /* VARIANTE 3: Accordéon Minimal Spacieux */
+    /* FAQ: Accordéon Minimal Spacieux */
     .faq-accordion-spacious {
       max-width: 900px;
       margin: 0 auto;
@@ -2596,7 +2496,7 @@
         font-size: 1rem;
       }
 
-      /* Variante 3: Tally embed */
+      /* Tally embed responsive */
       .tally-benefits-bar {
         flex-direction: column;
         gap: 1.5rem;
@@ -2977,8 +2877,7 @@
       </div>
 
 
-      <!-- VARIANT 5: Split 50/50 avec Bordure Latérale Colorée -->
-      <div class="tools-grid" >
+      <div class="tools-grid">
         <div class="card tool-card">
           <div class="tool-image">
             <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
