@@ -877,6 +877,436 @@
       opacity: 0.8;
     }
 
+    /* Variante 4 : Data dramatique XXL */
+    .constat-data-dramatic {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .constat-impacts-dramatic {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .constat-impact-card-dramatic {
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border-left: 6px solid transparent;
+    }
+
+    .constat-impact-card-dramatic:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .stat-mega {
+      font-size: 6rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--blue) 0%, #1e40af 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .constat-impact-card-dramatic.constat-time {
+      border-left-color: var(--alert-orange);
+    }
+
+    .constat-impact-card-dramatic.constat-time .stat-mega {
+      background: linear-gradient(135deg, var(--alert-orange) 0%, #ea580c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .constat-impact-card-dramatic.constat-clients {
+      border-left-color: var(--alert-red);
+    }
+
+    .constat-impact-card-dramatic.constat-clients .stat-mega {
+      background: linear-gradient(135deg, var(--alert-red) 0%, #dc2626 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .constat-impact-card-dramatic.constat-revenue {
+      border-left-color: #8b5cf6;
+    }
+
+    .constat-impact-card-dramatic.constat-revenue .stat-mega {
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-progress {
+      height: 8px;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 999px;
+      margin-top: 1.5rem;
+      overflow: hidden;
+    }
+
+    .stat-progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--blue) 0%, #1e40af 100%);
+      border-radius: 999px;
+      transition: width 1s ease-out;
+    }
+
+    .constat-impact-card-dramatic.constat-time .stat-progress-bar {
+      background: linear-gradient(90deg, var(--alert-orange) 0%, #ea580c 100%);
+    }
+
+    .constat-impact-card-dramatic.constat-clients .stat-progress-bar {
+      background: linear-gradient(90deg, var(--alert-red) 0%, #dc2626 100%);
+    }
+
+    .constat-impact-card-dramatic.constat-revenue .stat-progress-bar {
+      background: linear-gradient(90deg, #8b5cf6 0%, #7c3aed 100%);
+    }
+
+    .constat-source-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(30, 64, 175, 0.05) 100%);
+      border-radius: 999px;
+      border: 2px solid rgba(37, 99, 235, 0.2);
+      max-width: fit-content;
+      margin: 0 auto;
+    }
+
+    .badge-icon {
+      width: 24px;
+      height: 24px;
+      color: var(--blue);
+    }
+
+    .constat-source-badge span {
+      font-weight: 600;
+      color: var(--blue);
+      font-size: 0.9375rem;
+    }
+
+    /* Variante 5 : Storytelling progressif */
+    .constat-story {
+      padding: 2rem 0;
+    }
+
+    .story-timeline-horizontal {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      overflow-x: auto;
+      padding: 1rem 0;
+    }
+
+    .story-step-h {
+      flex: 0 0 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .story-step-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue) 0%, #1e40af 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 auto;
+    }
+
+    .story-step-card {
+      padding: 2rem;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+    }
+
+    .story-step-icon {
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    .story-step-card h4 {
+      color: var(--slate);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .story-quote {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.0625rem;
+      color: var(--slate);
+      margin: 0;
+    }
+
+    .story-desc {
+      font-size: 0.9375rem;
+      color: var(--gray);
+      margin: 0;
+    }
+
+    .story-step-card.story-warning {
+      border-left-color: #fbbf24;
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
+    }
+
+    .story-step-card.story-alert {
+      border-left-color: var(--alert-orange);
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, transparent 50%);
+    }
+
+    .story-step-card.story-danger {
+      border-left-color: var(--alert-red);
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, transparent 50%);
+    }
+
+    .story-step-card.story-critical {
+      border-left-color: #dc2626;
+      background: linear-gradient(135deg, rgba(220, 38, 38, 0.08) 0%, transparent 50%);
+    }
+
+    .story-arrow {
+      font-size: 2.5rem;
+      color: var(--gray);
+      margin-top: 80px;
+      flex: 0 0 auto;
+      opacity: 0.5;
+    }
+
+    .story-conclusion {
+      margin-top: 2rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, transparent 50%);
+      border-left: 4px solid var(--blue);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .story-conclusion p {
+      font-size: 1.125rem;
+      color: var(--slate);
+      margin: 0;
+    }
+
+    /* Variante 6 : Avant/Après visuel */
+    .constat-before-after {
+      padding: 2rem 0;
+    }
+
+    .before-after-split {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .before-section,
+    .after-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .ba-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      border-radius: 8px;
+      justify-content: center;
+    }
+
+    .ba-header-before {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.05) 100%);
+      border: 2px solid rgba(239, 68, 68, 0.2);
+    }
+
+    .ba-header-after {
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%);
+      border: 2px solid rgba(34, 197, 94, 0.2);
+    }
+
+    .ba-header .ba-icon {
+      font-size: 2rem;
+    }
+
+    .ba-header h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--slate);
+    }
+
+    .ba-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .ba-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+    }
+
+    .ba-item:hover {
+      transform: translateX(4px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .ba-item-negative {
+      border-left-color: var(--alert-red);
+    }
+
+    .ba-item-positive {
+      border-left-color: #22c55e;
+    }
+
+    .ba-icon-svg {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+
+    .ba-item.ba-negative .ba-icon-svg {
+      color: var(--alert-red);
+    }
+
+    .ba-item.ba-positive .ba-icon-svg {
+      color: #22c55e;
+    }
+
+    .ba-stat {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .ba-item.ba-negative .ba-stat {
+      color: var(--alert-red);
+    }
+
+    .ba-item.ba-positive .ba-stat {
+      color: #22c55e;
+    }
+
+    .ba-item p {
+      margin: 0;
+      color: var(--gray);
+      font-size: 0.9375rem;
+    }
+
+    .ba-chaos,
+    .ba-zen {
+      padding: 1.25rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .ba-chaos {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, transparent 50%);
+      border: 1px dashed rgba(239, 68, 68, 0.3);
+    }
+
+    .ba-zen {
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, transparent 50%);
+      border: 1px dashed rgba(34, 197, 94, 0.3);
+    }
+
+    .ba-chaos p,
+    .ba-zen p {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .ba-separator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 2rem 0;
+    }
+
+    .ba-separator-line {
+      width: 2px;
+      height: 80px;
+      background: linear-gradient(180deg, transparent 0%, var(--gray) 50%, transparent 100%);
+    }
+
+    .ba-separator-icon {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--slate);
+      background: white;
+      padding: 1rem;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive pour nouvelles variantes */
+    @media (max-width: 1200px) {
+      .stat-mega {
+        font-size: 4.5rem;
+      }
+
+      .story-timeline-horizontal {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+      }
+
+      .story-step-h {
+        scroll-snap-align: start;
+      }
+
+      .before-after-split {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .ba-separator {
+        flex-direction: row;
+        padding: 0;
+      }
+
+      .ba-separator-line {
+        width: 80px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent 0%, var(--gray) 50%, transparent 100%);
+      }
+    }
+
     /* ============================================
        SECTION BACKGROUNDS
        ============================================ */
@@ -3365,6 +3795,9 @@
       <button class="constat-toggle-btn" onclick="switchConstatVariant(1)">+ Icons</button>
       <button class="constat-toggle-btn" onclick="switchConstatVariant(2)">+ Hover</button>
       <button class="constat-toggle-btn" onclick="switchConstatVariant(3)">+ Compact</button>
+      <button class="constat-toggle-btn" onclick="switchConstatVariant(4)">Data XXL</button>
+      <button class="constat-toggle-btn" onclick="switchConstatVariant(5)">Story</button>
+      <button class="constat-toggle-btn" onclick="switchConstatVariant(6)">Avant/Après</button>
     </div>
 
     <div class="container">
@@ -3492,6 +3925,214 @@
               </svg>
               <h4><span class="stat-number">1/3</span>des clients abandonnent</h4>
               <p>face à la complexité des démarches</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 4: Data dramatique XXL -->
+      <div class="constat-variant" data-variant="4">
+        <div class="constat-data-dramatic">
+          <div class="constat-main-problem">
+            <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <h3>La complexité administrative paralyse votre activité</h3>
+            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
+          </div>
+
+          <div class="constat-impacts-dramatic">
+            <div class="card constat-impact-card-dramatic constat-time">
+              <div class="stat-mega">2j</div>
+              <h4>par mois perdus</h4>
+              <p>en administration au lieu d'être sur le terrain</p>
+              <div class="stat-progress">
+                <div class="stat-progress-bar" style="width: 58%;"></div>
+              </div>
+            </div>
+
+            <div class="card constat-impact-card-dramatic constat-clients">
+              <div class="stat-mega">33%</div>
+              <h4>de clients perdus</h4>
+              <p>face à la complexité des démarches administratives</p>
+              <div class="stat-progress">
+                <div class="stat-progress-bar" style="width: 33%;"></div>
+              </div>
+            </div>
+
+            <div class="card constat-impact-card-dramatic constat-revenue">
+              <div class="stat-mega">-15k€</div>
+              <h4>de CA/an en moins</h4>
+              <p>à cause du temps perdu et des clients abandonnés</p>
+              <div class="stat-progress">
+                <div class="stat-progress-bar" style="width: 45%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="constat-source-badge">
+            <svg class="badge-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Enquête terrain auprès de 45 professionnels (2024)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 5: Storytelling progressif -->
+      <div class="constat-variant" data-variant="5">
+        <div class="constat-story">
+          <div class="story-timeline-horizontal">
+            <div class="story-step-h">
+              <div class="story-step-number">1</div>
+              <div class="card story-step-card story-warning">
+                <div class="story-step-icon">📅</div>
+                <h4>Lundi matin</h4>
+                <p class="story-quote">"Nouveau dossier MaPrimeRénov à monter..."</p>
+                <p class="story-desc">Démarrage de la semaine avec un dossier administratif complexe</p>
+              </div>
+            </div>
+
+            <div class="story-arrow">→</div>
+
+            <div class="story-step-h">
+              <div class="story-step-number">2</div>
+              <div class="card story-step-card story-alert">
+                <div class="story-step-icon">⏰</div>
+                <h4>Mardi après-midi</h4>
+                <p class="story-quote">"3h passées sur les formulaires ANAH..."</p>
+                <p class="story-desc">Le temps s'envole, le chantier attend</p>
+              </div>
+            </div>
+
+            <div class="story-arrow">→</div>
+
+            <div class="story-step-h">
+              <div class="story-step-number">3</div>
+              <div class="card story-step-card story-danger">
+                <div class="story-step-icon">📞</div>
+                <h4>Jeudi soir</h4>
+                <p class="story-quote">"Le client rappelle, il comprend rien..."</p>
+                <p class="story-desc">Frustration montante, client dépassé</p>
+              </div>
+            </div>
+
+            <div class="story-arrow">→</div>
+
+            <div class="story-step-h">
+              <div class="story-step-number">4</div>
+              <div class="card story-step-card story-critical">
+                <div class="story-step-icon">❌</div>
+                <h4>Vendredi</h4>
+                <p class="story-quote">"Trop compliqué, j'abandonne..."</p>
+                <p class="story-desc">Le client renonce, vous perdez le contrat</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-conclusion">
+            <p><strong>Résultat :</strong> 1 semaine perdue, 1 client perdu, des centaines d'euros envolés</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 6: Avant/Après visuel -->
+      <div class="constat-variant" data-variant="6">
+        <div class="constat-before-after">
+          <div class="before-after-split">
+            <!-- AVANT (Sans Protoreno) -->
+            <div class="before-section">
+              <div class="ba-header ba-header-before">
+                <span class="ba-icon">❌</span>
+                <h3>Sans Protoreno</h3>
+              </div>
+
+              <div class="ba-content">
+                <div class="ba-item ba-negative">
+                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="ba-stat">14h/semaine</div>
+                    <p>perdues en admin</p>
+                  </div>
+                </div>
+
+                <div class="ba-item ba-negative">
+                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  <div>
+                    <div class="ba-stat">33%</div>
+                    <p>de clients perdus</p>
+                  </div>
+                </div>
+
+                <div class="ba-item ba-negative">
+                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="ba-stat">-15k€</div>
+                    <p>de CA annuel</p>
+                  </div>
+                </div>
+
+                <div class="ba-chaos">
+                  <p>😫 Stress • 📄 Paperasse • ❌ Erreurs • ⏰ Retards</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Séparateur -->
+            <div class="ba-separator">
+              <div class="ba-separator-line"></div>
+              <div class="ba-separator-icon">VS</div>
+              <div class="ba-separator-line"></div>
+            </div>
+
+            <!-- APRÈS (Avec Protoreno) -->
+            <div class="after-section">
+              <div class="ba-header ba-header-after">
+                <span class="ba-icon">✅</span>
+                <h3>Avec Protoreno</h3>
+              </div>
+
+              <div class="ba-content">
+                <div class="ba-item ba-positive">
+                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="ba-stat">2h/semaine</div>
+                    <p>pour toute l'admin</p>
+                  </div>
+                </div>
+
+                <div class="ba-item ba-positive">
+                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  <div>
+                    <div class="ba-stat">5%</div>
+                    <p>d'abandon client</p>
+                  </div>
+                </div>
+
+                <div class="ba-item ba-positive">
+                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="ba-stat">+8k€</div>
+                    <p>de CA retrouvé</p>
+                  </div>
+                </div>
+
+                <div class="ba-zen">
+                  <p>😊 Sérénité • ⚡ Rapidité • ✓ Précision • 📈 Croissance</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -3635,19 +4276,16 @@
        CTA - CONVERSATIONS & SONDAGE
        ============================================ -->
   <section class="section-alt">
-    <!-- Réseau maillé (collaboration) - éléments plus petits -->
+    <!-- Réseau maillé (collaboration) - motif de base extra petit -->
     <svg class="section-bg-svg participer-bg active" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
-        <pattern id="network" width="80" height="70" patternUnits="userSpaceOnUse">
-          <line x1="15" y1="15" x2="40" y2="35" stroke="#2563EB" stroke-width="0.4" opacity="0.05"/>
-          <line x1="40" y1="35" x2="65" y2="15" stroke="#2563EB" stroke-width="0.4" opacity="0.05"/>
-          <line x1="15" y1="15" x2="65" y2="15" stroke="#2563EB" stroke-width="0.4" opacity="0.05"/>
-          <line x1="15" y1="15" x2="40" y2="55" stroke="#2563EB" stroke-width="0.3" opacity="0.04"/>
-          <line x1="65" y1="15" x2="40" y2="55" stroke="#2563EB" stroke-width="0.3" opacity="0.04"/>
-          <circle cx="15" cy="15" r="2" fill="#2563EB" opacity="0.08"/>
-          <circle cx="40" cy="35" r="2" fill="#2563EB" opacity="0.08"/>
-          <circle cx="65" cy="15" r="2" fill="#2563EB" opacity="0.08"/>
-          <circle cx="40" cy="55" r="1.5" fill="#2563EB" opacity="0.06"/>
+        <pattern id="network" width="50" height="50" patternUnits="userSpaceOnUse">
+          <line x1="10" y1="10" x2="25" y2="25" stroke="#2563EB" stroke-width="0.3" opacity="0.04"/>
+          <line x1="25" y1="25" x2="40" y2="10" stroke="#2563EB" stroke-width="0.3" opacity="0.04"/>
+          <line x1="10" y1="10" x2="40" y2="10" stroke="#2563EB" stroke-width="0.3" opacity="0.04"/>
+          <circle cx="10" cy="10" r="1" fill="#2563EB" opacity="0.06"/>
+          <circle cx="25" cy="25" r="1" fill="#2563EB" opacity="0.06"/>
+          <circle cx="40" cy="10" r="1" fill="#2563EB" opacity="0.06"/>
         </pattern>
       </defs>
       <rect width="1200" height="800" fill="url(#network)"/>
