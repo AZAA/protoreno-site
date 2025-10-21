@@ -1780,6 +1780,109 @@
       background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, rgba(34, 197, 94, 0.02) 100%);
     }
 
+    /* ============================================
+       VARIANTES UI MÉTRIQUES SECONDAIRES
+       ============================================ */
+
+    /* V1: Hiérarchie (Grande + Petite) */
+    .metrics-hierarchy {
+      gap: 0.75rem;
+    }
+
+    .metric-large-secondary {
+      flex: 1.5;
+      padding: 1.5rem 1.25rem;
+    }
+
+    .metric-large-secondary .ba-modern-metric-value {
+      font-size: 2.25rem;
+    }
+
+    .metric-small-secondary {
+      flex: 1;
+      padding: 1rem;
+    }
+
+    .metric-small-secondary .ba-modern-metric-value {
+      font-size: 1.5rem;
+    }
+
+    /* V2: Contraste (Fond coloré + Transparent) */
+    .metric-with-background {
+      background: rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .ba-modern-col.ba-modern-before .metric-with-background {
+      background: rgba(220, 38, 38, 0.08);
+      border-color: rgba(220, 38, 38, 0.15);
+    }
+
+    .ba-modern-col.ba-modern-after .metric-with-background {
+      background: rgba(22, 163, 74, 0.08);
+      border-color: rgba(22, 163, 74, 0.15);
+    }
+
+    .metric-transparent {
+      background: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    /* V3: Mix styles (Bordure gauche + Ombre) */
+    .metric-with-border-left {
+      border-left: 4px solid #DC2626;
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .ba-modern-col.ba-modern-after .metric-with-border-left {
+      border-left-color: #16a34a;
+    }
+
+    .metric-with-shadow {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .ba-modern-col.ba-modern-before .metric-with-shadow {
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.12);
+    }
+
+    .ba-modern-col.ba-modern-after .metric-with-shadow {
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.12);
+    }
+
+    /* V4: Layout vertical */
+    .metrics-vertical {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .metric-stacked-top {
+      background: rgba(0, 0, 0, 0.04);
+      border-top: 3px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .ba-modern-col.ba-modern-before .metric-stacked-top {
+      border-top-color: #DC2626;
+    }
+
+    .ba-modern-col.ba-modern-after .metric-stacked-top {
+      border-top-color: #16a34a;
+    }
+
+    .metric-stacked-bottom {
+      background: transparent;
+      border: 1px dashed rgba(0, 0, 0, 0.2);
+    }
+
+    .ba-modern-col.ba-modern-before .metric-stacked-bottom {
+      border-color: rgba(220, 38, 38, 0.3);
+    }
+
+    .ba-modern-col.ba-modern-after .metric-stacked-bottom {
+      border-color: rgba(22, 163, 74, 0.3);
+    }
+
     /* Responsive métriques */
     @media (max-width: 768px) {
       .metrics-toggle-btn {
@@ -4694,11 +4797,11 @@
 
         <!-- Toggle pour variantes métriques -->
         <div class="metrics-toggle-container">
-          <button class="metrics-toggle-btn active" onclick="switchMetricsVariant(0)">Clients / CA</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(1)">Dossiers / Délai</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(2)">Projets / Succès</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(3)">Erreur / Réactivité</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(4)">CA / Satisfaction</button>
+          <button class="metrics-toggle-btn active" onclick="switchMetricsVariant(0)">2 cartes égales</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(1)">Grande + Petite</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(2)">Fond + Transparent</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(3)">Bordure + Ombre</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(4)">Layout vertical</button>
         </div>
 
         <!-- Avant/Après avec UI moderne emphase -->
@@ -4783,7 +4886,7 @@
             </div>
           </div>
 
-        <!-- VARIANTE 1: Dossiers traités -->
+        <!-- VARIANTE 1: Hiérarchie (Grande + Petite) -->
         <div class="ba-modern-grid metrics-variant" data-metrics-variant="1">
           <!-- AVANT -->
           <div class="ba-modern-col ba-modern-before ba-bold">
@@ -4806,15 +4909,15 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">12</div>
-                  <div class="ba-modern-metric-label">Dossiers traités / mois</div>
+              <div class="metrics-secondary metrics-hierarchy">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-large-secondary">
+                  <div class="ba-modern-metric-value">33%</div>
+                  <div class="ba-modern-metric-label">Clients abandonnent</div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">8 jours</div>
-                  <div class="ba-modern-metric-label">Délai moyen</div>
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-small-secondary">
+                  <div class="ba-modern-metric-value">-15k€</div>
+                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
                 </div>
               </div>
             </div>
@@ -4848,15 +4951,15 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">35</div>
-                  <div class="ba-modern-metric-label">Dossiers traités / mois</div>
+              <div class="metrics-secondary metrics-hierarchy">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-large-secondary">
+                  <div class="ba-modern-metric-value">5%</div>
+                  <div class="ba-modern-metric-label">Clients abandonnent</div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">2 jours</div>
-                  <div class="ba-modern-metric-label">Délai moyen</div>
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-small-secondary">
+                  <div class="ba-modern-metric-value">+8k€</div>
+                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
                 </div>
               </div>
             </div>
@@ -4886,15 +4989,15 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">45%</div>
-                  <div class="ba-modern-metric-label">Taux de succès</div>
+              <div class="metrics-secondary metrics-contrast">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background">
+                  <div class="ba-modern-metric-value">33%</div>
+                  <div class="ba-modern-metric-label">Clients abandonnent</div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">6</div>
-                  <div class="ba-modern-metric-label">Projets gagnés / mois</div>
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent">
+                  <div class="ba-modern-metric-value">-15k€</div>
+                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
                 </div>
               </div>
             </div>
@@ -4928,15 +5031,15 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">78%</div>
-                  <div class="ba-modern-metric-label">Taux de succès</div>
+              <div class="metrics-secondary metrics-contrast">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-background">
+                  <div class="ba-modern-metric-value">5%</div>
+                  <div class="ba-modern-metric-label">Clients abandonnent</div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">15</div>
-                  <div class="ba-modern-metric-label">Projets gagnés / mois</div>
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-transparent">
+                  <div class="ba-modern-metric-value">+8k€</div>
+                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
                 </div>
               </div>
             </div>
@@ -4966,15 +5069,15 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">18%</div>
-                  <div class="ba-modern-metric-label">Taux d'erreur</div>
+              <div class="metrics-secondary metrics-mix-styles">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-border-left">
+                  <div class="ba-modern-metric-value">33%</div>
+                  <div class="ba-modern-metric-label">Clients abandonnent</div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">3 jours</div>
-                  <div class="ba-modern-metric-label">Délai de réponse</div>
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-shadow">
+                  <div class="ba-modern-metric-value">-15k€</div>
+                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
                 </div>
               </div>
             </div>
@@ -5008,15 +5111,15 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">3%</div>
-                  <div class="ba-modern-metric-label">Taux d'erreur</div>
+              <div class="metrics-secondary metrics-mix-styles">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-border-left">
+                  <div class="ba-modern-metric-value">5%</div>
+                  <div class="ba-modern-metric-label">Clients abandonnent</div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">4h</div>
-                  <div class="ba-modern-metric-label">Délai de réponse</div>
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-shadow">
+                  <div class="ba-modern-metric-value">+8k€</div>
+                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
                 </div>
               </div>
             </div>
@@ -5046,15 +5149,15 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">8k€</div>
-                  <div class="ba-modern-metric-label">CA mensuel</div>
+              <div class="metrics-secondary metrics-vertical">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-stacked-top">
+                  <div class="ba-modern-metric-value">33%</div>
+                  <div class="ba-modern-metric-label">Clients abandonnent</div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">62%</div>
-                  <div class="ba-modern-metric-label">Satisfaction client</div>
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-stacked-bottom">
+                  <div class="ba-modern-metric-value">-15k€</div>
+                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
                 </div>
               </div>
             </div>
@@ -5088,15 +5191,15 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">28k€</div>
-                  <div class="ba-modern-metric-label">CA mensuel</div>
+              <div class="metrics-secondary metrics-vertical">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-stacked-top">
+                  <div class="ba-modern-metric-value">5%</div>
+                  <div class="ba-modern-metric-label">Clients abandonnent</div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">94%</div>
-                  <div class="ba-modern-metric-label">Satisfaction client</div>
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-stacked-bottom">
+                  <div class="ba-modern-metric-value">+8k€</div>
+                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
                 </div>
               </div>
             </div>
