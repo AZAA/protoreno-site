@@ -1533,106 +1533,181 @@
       display: block;
     }
 
-    /* VARIANTE 1: Angle émotionnel (rouge/orange) */
-    .constat-title-emotional {
+    /* ============================================
+       OPTION 1: SVG Triangle + Barre latérale rouge
+       ============================================ */
+    .constat-title-option1 {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 2rem 1.5rem 1.5rem;
+      margin: 3rem 0 2.5rem 0;
+      background: linear-gradient(90deg, rgba(239, 68, 68, 0.12) 0%, rgba(239, 68, 68, 0.04) 100%);
+      border-left: 8px solid #DC2626;
+      border-radius: 0 12px 12px 0;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+    }
+
+    .constat-title-option1 span {
       font-size: 2rem;
-      color: #DC2626;
-      background: rgba(239, 68, 68, 0.08);
-      padding: 1.5rem 2rem;
-      border-radius: 12px;
+      font-weight: 700;
+      color: #991B1B;
     }
 
-    .constat-title-emotional::after {
-      display: none;
+    .warning-icon-svg {
+      flex-shrink: 0;
     }
 
-    /* VARIANTE 2: Interpellation question */
-    .constat-title-question {
-      font-size: 1.875rem;
-      color: #1e40af;
-      font-style: italic;
-    }
-
-    /* VARIANTE 3: Stat choc */
-    .constat-title-stat-hero {
+    /* ============================================
+       OPTION 2: Icône flottante + Double bordure
+       ============================================ */
+    .constat-title-option2 {
       text-align: center;
       margin: 3rem 0 2.5rem 0;
-      padding: 2rem;
-      background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(220, 38, 38, 0.08) 100%);
-      border-radius: 16px;
-      border: 2px solid rgba(220, 38, 38, 0.2);
+      position: relative;
     }
 
-    .stat-hero-number {
-      font-size: 4rem;
-      font-weight: 800;
-      color: #DC2626;
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-
-    .stat-hero-label {
-      font-size: 1.25rem;
-      color: #475569;
-      font-weight: 600;
+    .warning-icon-floating {
       margin-bottom: 1rem;
+      filter: drop-shadow(0 4px 8px rgba(220, 38, 38, 0.2));
     }
 
-    .stat-hero-subtitle {
-      font-size: 1rem;
-      color: #64748b;
-      font-weight: 500;
-    }
-
-    /* VARIANTE 4: Badge bleu avec barre latérale */
-    .constat-title-badge-blue {
-      font-size: 2rem;
-      color: #1e3a8a;
-      padding: 1.5rem 2rem;
-      background: rgba(37, 99, 235, 0.04);
-      border-left: 6px solid #2563EB;
-      border-radius: 0 8px 8px 0;
-      text-align: left;
-    }
-
-    .constat-title-badge-blue::after {
-      display: none;
-    }
-
-    /* VARIANTE 5: Badge alerte rouge */
-    .constat-title-alert-box {
-      text-align: center;
-      margin: 3rem 0 2.5rem 0;
-      padding: 2rem;
-      background: rgba(239, 68, 68, 0.1);
-      border: 2px solid #EF4444;
+    .title-box-double-border {
+      display: inline-block;
+      padding: 1.25rem 2.5rem;
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: #991B1B;
+      background: white;
+      border: 3px solid #DC2626;
+      box-shadow: 0 0 0 1px white, 0 0 0 4px #DC2626;
       border-radius: 12px;
     }
 
-    .alert-box-header {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: #991b1b;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.5rem;
+    /* ============================================
+       OPTION 3: Layout horizontal Icône + Texte
+       ============================================ */
+    .constat-title-option3 {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin: 3rem 0 2.5rem 0;
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.05) 100%);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.12);
     }
 
-    .alert-box-subtitle {
-      font-size: 1.25rem;
+    .icon-zone {
+      background: rgba(220, 38, 38, 0.15);
+      padding: 2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid rgba(220, 38, 38, 0.3);
+    }
+
+    .text-zone {
+      padding: 1.5rem 2rem;
+      flex: 1;
+    }
+
+    .text-zone .line1 {
+      font-size: 1.5rem;
       font-weight: 600;
       color: #DC2626;
+      line-height: 1.2;
     }
 
-    /* VARIANTE 6: Fusion (texte simple) */
-    .constat-fusion-text {
+    .text-zone .line2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #991B1B;
+      line-height: 1.2;
+    }
+
+    /* ============================================
+       OPTION 4: Badge Alert style système
+       ============================================ */
+    .constat-title-option4 {
+      margin: 3rem 0 2.5rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(127, 29, 29, 0.2);
+    }
+
+    .alert-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1rem 1.5rem;
+      background: #991B1B;
+      border-bottom: 2px solid #7F1D1D;
+    }
+
+    .alert-header span {
+      font-size: 0.875rem;
+      font-weight: 800;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .alert-body {
+      padding: 1.75rem 2rem;
+      background: rgba(239, 68, 68, 0.08);
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: #991B1B;
       text-align: center;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #1e40af;
-      margin: 2rem 0 2.5rem 0;
     }
 
+    /* ============================================
+       OPTION 5: Barre diagonale (RECOMMANDÉE)
+       ============================================ */
+    .constat-title-option5 {
+      position: relative;
+      margin: 3rem 0 2.5rem 0;
+      padding: 2rem 2.5rem;
+      background: radial-gradient(circle at top left, rgba(239, 68, 68, 0.12) 0%, rgba(239, 68, 68, 0.04) 60%, transparent 100%);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(220, 38, 38, 0.15);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .diagonal-accent {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 120px;
+      height: 120px;
+      background: #DC2626;
+      opacity: 0.15;
+      transform: rotate(45deg);
+    }
+
+    .warning-icon-diagonal {
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+      filter: drop-shadow(0 2px 6px rgba(220, 38, 38, 0.3));
+    }
+
+    .constat-title-option5 .title-text {
+      position: relative;
+      z-index: 1;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #991B1B;
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
     @media (max-width: 768px) {
       .constat-title-toggle-container {
         max-width: 95%;
@@ -1641,34 +1716,62 @@
       }
 
       .constat-title-toggle-btn {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.75rem;
+        font-size: 0.7rem;
+        padding: 0.4rem 0.6rem;
       }
 
-      .constat-title-emotional,
-      .constat-title-badge-blue {
+      .constat-title-option1 {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+      }
+
+      .constat-title-option1 span {
+        font-size: 1.5rem;
+      }
+
+      .title-box-double-border {
         font-size: 1.5rem;
         padding: 1rem 1.5rem;
       }
 
-      .stat-hero-number {
-        font-size: 3rem;
+      .constat-title-option3 {
+        flex-direction: column;
       }
 
-      .stat-hero-label {
-        font-size: 1rem;
+      .icon-zone {
+        border-right: none;
+        border-bottom: 1px solid rgba(220, 38, 38, 0.3);
+        padding: 1.5rem;
+        width: 100%;
       }
 
-      .alert-box-header {
+      .text-zone {
+        padding: 1.5rem 1rem;
+        text-align: center;
+      }
+
+      .text-zone .line1 {
         font-size: 1.25rem;
       }
 
-      .alert-box-subtitle {
-        font-size: 1rem;
+      .text-zone .line2 {
+        font-size: 1.5rem;
       }
 
-      .constat-fusion-text {
-        font-size: 1.25rem;
+      .alert-body {
+        font-size: 1.5rem;
+        padding: 1.5rem 1rem;
+      }
+
+      .constat-title-option5 {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+
+      .constat-title-option5 .title-text {
+        font-size: 1.5rem;
       }
     }
 
@@ -4490,15 +4593,13 @@
         <p class="lead">Les professionnels du bâtiment manquent d'outils adaptés</p>
       </div>
 
-      <!-- Toggle pour variantes titre transition -->
+      <!-- Toggle pour variantes UI titre transition -->
       <div class="constat-title-toggle-container">
-        <button class="constat-title-toggle-btn active" onclick="switchConstatTitleVariant(0)">V1 Actuelle</button>
-        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(1)">V2 Émotionnel</button>
-        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(2)">V3 Question</button>
-        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(3)">V4 Stat choc</button>
-        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(4)">V5 Badge bleu</button>
-        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(5)">V6 Alerte rouge</button>
-        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(6)">V7 Fusion</button>
+        <button class="constat-title-toggle-btn active" onclick="switchConstatTitleVariant(0)">Option 1 - Barre latérale</button>
+        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(1)">Option 2 - Icône flottante</button>
+        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(2)">Option 3 - Horizontal</button>
+        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(3)">Option 4 - Badge alert</button>
+        <button class="constat-title-toggle-btn" onclick="switchConstatTitleVariant(4)">Option 5 - Diagonale</button>
       </div>
 
       <!-- Bloc principal -->
@@ -4507,49 +4608,75 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
           <h3>L'administratif paralyse votre activité</h3>
-          <p>Paperasse chronophage, outils dispersés : vous perdez un temps précieux au détriment de vos chantiers.</p>
+          <p>Paperasse chronophage, outils dispersés : vous perdez un temps précieux au détriment de l'essentiel.</p>
         </div>
 
-        <!-- VARIANTE 0: Titre actuel amélioré -->
+        <!-- OPTION 1: SVG Triangle + Barre latérale rouge épaisse -->
         <div class="constat-title-variant active" data-title-variant="0">
-          <h3 class="constat-section-title">L'impact en chiffres</h3>
+          <div class="constat-title-option1">
+            <svg class="warning-icon-svg" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 20h20L12 2z" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+              <path d="M12 8v5M12 16h.01" stroke="#991B1B" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span>Ce que ça vous coûte vraiment</span>
+          </div>
         </div>
 
-        <!-- VARIANTE 1: Angle émotionnel -->
+        <!-- OPTION 2: Icône SVG flottante + Double bordure -->
         <div class="constat-title-variant" data-title-variant="1">
-          <h3 class="constat-section-title constat-title-emotional">⚠️ Ce que ça vous coûte vraiment</h3>
+          <div class="constat-title-option2">
+            <svg class="warning-icon-floating" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 20h20L12 2z" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+              <path d="M12 8v5M12 16h.01" stroke="#991B1B" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div class="title-box-double-border">
+              Ce que ça vous coûte vraiment
+            </div>
+          </div>
         </div>
 
-        <!-- VARIANTE 2: Interpellation question -->
+        <!-- OPTION 3: Layout horizontal Icône + Texte -->
         <div class="constat-title-variant" data-title-variant="2">
-          <h3 class="constat-section-title constat-title-question">💬 Et vous, combien perdez-vous ?</h3>
+          <div class="constat-title-option3">
+            <div class="icon-zone">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 20h20L12 2z" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+                <path d="M12 8v5M12 16h.01" stroke="#991B1B" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="text-zone">
+              <div class="line1">Ce que ça vous</div>
+              <div class="line2">coûte vraiment</div>
+            </div>
+          </div>
         </div>
 
-        <!-- VARIANTE 3: Stat choc -->
+        <!-- OPTION 4: Badge "Alert" style système -->
         <div class="constat-title-variant" data-title-variant="3">
-          <div class="constat-title-stat-hero">
-            <div class="stat-hero-number">14h</div>
-            <div class="stat-hero-label">perdues chaque semaine</div>
-            <div class="stat-hero-subtitle">Voici le détail complet ↓</div>
+          <div class="constat-title-option4">
+            <div class="alert-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 20h20L12 2z" fill="#FEE2E2" stroke="#7F1D1D" stroke-width="2"/>
+                <path d="M12 8v5M12 16h.01" stroke="#7F1D1D" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <span>ATTENTION</span>
+            </div>
+            <div class="alert-body">
+              Ce que ça vous coûte vraiment
+            </div>
           </div>
         </div>
 
-        <!-- VARIANTE 4: Narratif avec badge bleu -->
+        <!-- OPTION 5: Icône + Texte avec accent diagonal (MA PRÉFÉRÉE) -->
         <div class="constat-title-variant" data-title-variant="4">
-          <h3 class="constat-section-title constat-title-badge-blue">📊 Votre réalité en chiffres</h3>
-        </div>
-
-        <!-- VARIANTE 5: Badge alerte rouge -->
-        <div class="constat-title-variant" data-title-variant="5">
-          <div class="constat-title-alert-box">
-            <div class="alert-box-header">⚠️ CONSTAT ALARMANT</div>
-            <div class="alert-box-subtitle">L'impact sur votre activité</div>
+          <div class="constat-title-option5">
+            <div class="diagonal-accent"></div>
+            <svg class="warning-icon-diagonal" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 20h20L12 2z" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+              <path d="M12 8v5M12 16h.01" stroke="#991B1B" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span class="title-text">Ce que ça vous coûte vraiment</span>
           </div>
-        </div>
-
-        <!-- VARIANTE 6: Fusion (pas de titre, texte ajouté au bloc) -->
-        <div class="constat-title-variant" data-title-variant="6">
-          <p class="constat-fusion-text">Voici ce que ça vous coûte :</p>
         </div>
 
         <!-- Avant/Après avec UI moderne emphase -->
