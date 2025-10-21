@@ -1529,53 +1529,31 @@
     }
 
     .conversation-result-wrapper {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
+      padding-left: 0;
     }
 
-    /* Style unifié : Bannière vert pastel (inspiré Style C+) */
+    /* Style ultra minimaliste - Focus sur le contenu */
     .conversation-result {
-      padding: 1.75rem 2rem;
-      background: linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%);
-      border-top: 4px solid #15803d;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.12);
       display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .conversation-result:hover {
-      box-shadow: 0 8px 28px rgba(34, 197, 94, 0.2);
-      transform: translateY(-2px);
+      align-items: flex-start;
+      gap: 0.75rem;
     }
 
     .conversation-result::before {
       content: '✓';
       flex-shrink: 0;
-      width: 52px;
-      height: 52px;
-      background: linear-gradient(135deg, #15803d 0%, #22c55e 100%);
+      width: 24px;
+      height: 24px;
+      background: #22c55e;
       color: white;
-      border-radius: 12px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.75rem;
+      font-size: 0.875rem;
       font-weight: 700;
-      box-shadow: 0 4px 16px rgba(34, 197, 94, 0.4);
-    }
-
-    .conversation-result::after {
-      content: '';
-      position: absolute;
-      left: 88px;
-      top: 1.25rem;
-      bottom: 1.25rem;
-      width: 2px;
-      background: linear-gradient(to bottom, #22c55e, transparent);
-      opacity: 0.3;
+      margin-top: 0.125rem;
     }
 
     .conversation-result-content {
@@ -1583,21 +1561,20 @@
       display: flex;
       flex-direction: column;
       gap: 0.25rem;
-      padding-left: 1rem;
     }
 
     .conversation-result-metric {
-      font-size: 1.5rem;
-      font-weight: 800;
+      font-size: 1.125rem;
+      font-weight: 700;
       color: #15803d;
-      line-height: 1.2;
+      line-height: 1.4;
     }
 
     .conversation-result-description {
       font-size: 0.9375rem;
-      color: #166534;
-      font-weight: 500;
-      line-height: 1.4;
+      color: #64748b;
+      font-weight: 400;
+      line-height: 1.5;
     }
 
     /* Sondage Tally intégré */
@@ -3181,21 +3158,21 @@
               <div class="message-avatar">M</div>
               <div class="message-content">
                 <div class="message-author">Marc, conducteur de travaux</div>
-                <p>"Je passe <strong>14 heures par semaine</strong> sur les devis et l'admin... Ça me coûte facilement <strong>15k€ de manque à gagner par an</strong>. C'est insoutenable."</p>
+                <p>Je passe <strong>14 heures par semaine</strong> sur les devis et l'admin... Ça me coûte facilement <strong>15k€ de manque à gagner par an</strong>. C'est insoutenable.</p>
               </div>
             </div>
             <div class="conversation-message reply">
               <div class="message-avatar">P</div>
               <div class="message-content">
                 <div class="message-author">Équipe Protoreno</div>
-                <p>"On a développé un système de templates intelligents. Devis automatisés, données pré-remplies. Tu veux tester ?"</p>
+                <p>On a développé un système de templates intelligents. Devis automatisés, données pré-remplies. Tu veux tester ?</p>
               </div>
             </div>
             <div class="conversation-message user">
               <div class="message-avatar">M</div>
               <div class="message-content">
                 <div class="message-author">Marc</div>
-                <p>"Si ça peut me faire gagner ne serait-ce que 5h par semaine, je prends !"</p>
+                <p>Si ça peut me faire gagner ne serait-ce que 5h par semaine, je prends !</p>
               </div>
             </div>
           </div>
@@ -3214,21 +3191,21 @@
               <div class="message-avatar">S</div>
               <div class="message-content">
                 <div class="message-author">Sophie, architecte</div>
-                <p>"J'ai <strong>perdu un client</strong> la semaine dernière. Il en avait marre d'attendre mes réponses sur les questions admin... Je suis dégoutée."</p>
+                <p>J'ai <strong>perdu un client</strong> la semaine dernière. Il en avait marre d'attendre mes réponses sur les questions admin... Je suis dégoutée.</p>
               </div>
             </div>
             <div class="conversation-message reply">
               <div class="message-avatar">P</div>
               <div class="message-content">
                 <div class="message-author">Équipe Protoreno</div>
-                <p>"On a justement créé un système de réponses automatiques pour les questions fréquentes. 2 clics, et ton client a sa réponse. On teste ensemble ?"</p>
+                <p>On a justement créé un système de réponses automatiques pour les questions fréquentes. 2 clics, et ton client a sa réponse. On teste ensemble ?</p>
               </div>
             </div>
             <div class="conversation-message user">
               <div class="message-avatar">S</div>
               <div class="message-content">
                 <div class="message-author">Sophie</div>
-                <p>"Oui ! Je ne veux plus jamais revivre ça."</p>
+                <p>Oui ! Je ne veux plus jamais revivre ça.</p>
               </div>
             </div>
           </div>
@@ -3247,21 +3224,21 @@
               <div class="message-avatar">T</div>
               <div class="message-content">
                 <div class="message-author">Thomas, chef d'entreprise</div>
-                <p>"J'ai refait <strong>3 fois le même dossier CEE</strong> à cause d'erreurs de saisie... J'en peux plus de cette paperasse !"</p>
+                <p>J'ai refait <strong>3 fois le même dossier CEE</strong> à cause d'erreurs de saisie... J'en peux plus de cette paperasse !</p>
               </div>
             </div>
             <div class="conversation-message reply">
               <div class="message-avatar">P</div>
               <div class="message-content">
                 <div class="message-author">Équipe Protoreno</div>
-                <p>"On a créé un système de validation en temps réel. Les erreurs sont détectées avant envoi. Plus de rejets !"</p>
+                <p>On a créé un système de validation en temps réel. Les erreurs sont détectées avant envoi. Plus de rejets !</p>
               </div>
             </div>
             <div class="conversation-message user">
               <div class="message-avatar">T</div>
               <div class="message-content">
                 <div class="message-author">Thomas</div>
-                <p>"Enfin ! Ça m'éviterait des heures de galère..."</p>
+                <p>Enfin ! Ça m'éviterait des heures de galère...</p>
               </div>
             </div>
           </div>
@@ -3280,21 +3257,21 @@
               <div class="message-avatar">L</div>
               <div class="message-content">
                 <div class="message-author">Laurent, conducteur de travaux</div>
-                <p>"Mes sous-traitants me harcèlent par SMS pour savoir où en est le chantier. <strong>Je passe ma journée à répondre</strong> aux mêmes questions..."</p>
+                <p>Mes sous-traitants me harcèlent par SMS pour savoir où en est le chantier. <strong>Je passe ma journée à répondre</strong> aux mêmes questions...</p>
               </div>
             </div>
             <div class="conversation-message reply">
               <div class="message-avatar">P</div>
               <div class="message-content">
                 <div class="message-author">Équipe Protoreno</div>
-                <p>"Et si on créait un tableau de bord partagé ? Chacun voit l'avancement en temps réel, sans te solliciter."</p>
+                <p>Et si on créait un tableau de bord partagé ? Chacun voit l'avancement en temps réel, sans te solliciter.</p>
               </div>
             </div>
             <div class="conversation-message user">
               <div class="message-avatar">L</div>
               <div class="message-content">
                 <div class="message-author">Laurent</div>
-                <p>"Ce serait un soulagement énorme !"</p>
+                <p>Ce serait un soulagement énorme !</p>
               </div>
             </div>
           </div>
@@ -3313,21 +3290,21 @@
               <div class="message-avatar">C</div>
               <div class="message-content">
                 <div class="message-author">Claire, gérante</div>
-                <p>"J'ai raté une <strong>subvention de 8k€</strong> parce que je n'ai pas vu la date limite... C'est rageant."</p>
+                <p>J'ai raté une <strong>subvention de 8k€</strong> parce que je n'ai pas vu la date limite... C'est rageant.</p>
               </div>
             </div>
             <div class="conversation-message reply">
               <div class="message-avatar">P</div>
               <div class="message-content">
                 <div class="message-author">Équipe Protoreno</div>
-                <p>"On peut intégrer un calendrier avec rappels automatiques pour toutes les échéances importantes ?"</p>
+                <p>On peut intégrer un calendrier avec rappels automatiques pour toutes les échéances importantes ?</p>
               </div>
             </div>
             <div class="conversation-message user">
               <div class="message-avatar">C</div>
               <div class="message-content">
                 <div class="message-author">Claire</div>
-                <p>"Oui ! Je ne veux plus louper aucune opportunité."</p>
+                <p>Oui ! Je ne veux plus louper aucune opportunité.</p>
               </div>
             </div>
           </div>
@@ -3346,21 +3323,21 @@
               <div class="message-avatar">A</div>
               <div class="message-content">
                 <div class="message-author">Ahmed, artisan plombier</div>
-                <p>"Mon client m'appelle tous les jours : 'C'est pour quand ?' <strong>Je n'ai pas de visibilité</strong> sur l'avancement global du chantier..."</p>
+                <p>Mon client m'appelle tous les jours : 'C'est pour quand ?' <strong>Je n'ai pas de visibilité</strong> sur l'avancement global du chantier...</p>
               </div>
             </div>
             <div class="conversation-message reply">
               <div class="message-avatar">P</div>
               <div class="message-content">
                 <div class="message-author">Équipe Protoreno</div>
-                <p>"On développe un espace client avec suivi photo et % d'avancement. Ton client voit tout en temps réel."</p>
+                <p>On développe un espace client avec suivi photo et % d'avancement. Ton client voit tout en temps réel.</p>
               </div>
             </div>
             <div class="conversation-message user">
               <div class="message-avatar">A</div>
               <div class="message-content">
                 <div class="message-author">Ahmed</div>
-                <p>"Ça changerait tout ! Fini les appels quotidiens."</p>
+                <p>Ça changerait tout ! Fini les appels quotidiens.</p>
               </div>
             </div>
           </div>
@@ -3379,21 +3356,21 @@
               <div class="message-avatar">J</div>
               <div class="message-content">
                 <div class="message-author">Julien, entrepreneur général</div>
-                <p>"J'ai <strong>28k€ de factures impayées</strong> en ce moment. Je passe mon temps à relancer, ça me bouffe un temps fou et c'est super gênant..."</p>
+                <p>J'ai <strong>28k€ de factures impayées</strong> en ce moment. Je passe mon temps à relancer, ça me bouffe un temps fou et c'est super gênant...</p>
               </div>
             </div>
             <div class="conversation-message reply">
               <div class="message-avatar">P</div>
               <div class="message-content">
                 <div class="message-author">Équipe Protoreno</div>
-                <p>"On peut automatiser les relances avec un système intelligent : relances progressives, modèles personnalisables, tracking complet ?"</p>
+                <p>On peut automatiser les relances avec un système intelligent : relances progressives, modèles personnalisables, tracking complet ?</p>
               </div>
             </div>
             <div class="conversation-message user">
               <div class="message-avatar">J</div>
               <div class="message-content">
                 <div class="message-author">Julien</div>
-                <p>"Ça m'enlèverait une épine du pied. Les relances, c'est la partie que je déteste le plus."</p>
+                <p>Ça m'enlèverait une épine du pied. Les relances, c'est la partie que je déteste le plus.</p>
               </div>
             </div>
           </div>
@@ -3412,21 +3389,21 @@
               <div class="message-avatar">N</div>
               <div class="message-content">
                 <div class="message-author">Nadia, cheffe de projet</div>
-                <p>"Entre les <strong>4 corps de métier, le client, et les fournisseurs</strong>, c'est un enfer à coordonner. Je jongle entre 6 groupes WhatsApp différents !"</p>
+                <p>Entre les <strong>4 corps de métier, le client, et les fournisseurs</strong>, c'est un enfer à coordonner. Je jongle entre 6 groupes WhatsApp différents !</p>
               </div>
             </div>
             <div class="conversation-message reply">
               <div class="message-avatar">P</div>
               <div class="message-content">
                 <div class="message-author">Équipe Protoreno</div>
-                <p>"Et si on centralisait tout ? Un seul espace où chacun voit les infos qui le concernent, avec notifications ciblées."</p>
+                <p>Et si on centralisait tout ? Un seul espace où chacun voit les infos qui le concernent, avec notifications ciblées.</p>
               </div>
             </div>
             <div class="conversation-message user">
               <div class="message-avatar">N</div>
               <div class="message-content">
                 <div class="message-author">Nadia</div>
-                <p>"Ce serait le rêve ! Plus de messages perdus, plus de malentendus..."</p>
+                <p>Ce serait le rêve ! Plus de messages perdus, plus de malentendus...</p>
               </div>
             </div>
           </div>
@@ -3445,21 +3422,21 @@
               <div class="message-avatar">R</div>
               <div class="message-content">
                 <div class="message-author">Raphaël, artisan électricien</div>
-                <p>"Chaque fois que <strong>je prends un apprenti, ça me prend 3 semaines</strong> avant qu'il soit autonome. Je dois tout réexpliquer à chaque fois..."</p>
+                <p>Chaque fois que <strong>je prends un apprenti, ça me prend 3 semaines</strong> avant qu'il soit autonome. Je dois tout réexpliquer à chaque fois...</p>
               </div>
             </div>
             <div class="conversation-message reply">
               <div class="message-avatar">P</div>
               <div class="message-content">
                 <div class="message-author">Équipe Protoreno</div>
-                <p>"On peut créer une base de connaissances avec tes procédures, photos, et vidéos ? Ton apprenti se forme en autonomie."</p>
+                <p>On peut créer une base de connaissances avec tes procédures, photos, et vidéos ? Ton apprenti se forme en autonomie.</p>
               </div>
             </div>
             <div class="conversation-message user">
               <div class="message-avatar">R</div>
               <div class="message-content">
                 <div class="message-author">Raphaël</div>
-                <p>"Génial ! Je pourrais documenter mes méthodes une bonne fois pour toutes."</p>
+                <p>Génial ! Je pourrais documenter mes méthodes une bonne fois pour toutes.</p>
               </div>
             </div>
           </div>
@@ -3473,12 +3450,6 @@
           </div>
         </div>
 
-        <!-- CTA Conversation -->
-        <div style="text-align: center; margin-top: 3rem; padding: 2.5rem 2rem; background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); border-radius: 16px; border: 1px solid rgba(37, 99, 235, 0.1);">
-          <h3 style="margin-bottom: 1rem; color: #1E40AF; font-size: 1.5rem; font-weight: 700;">Vous aussi, partagez vos besoins</h3>
-          <p style="margin-bottom: 1.5rem; color: #475569; font-size: 1.0625rem; max-width: 600px; margin-left: auto; margin-right: auto;">Rejoignez les 45+ professionnels qui co-construisent leurs outils</p>
-          <a href="#section-sondage" class="btn btn-primary btn-large">Participer à la conversation</a>
-        </div>
       </div>
     </div>
   </section>
