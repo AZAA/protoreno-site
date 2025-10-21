@@ -4694,16 +4694,16 @@
 
         <!-- Toggle pour variantes métriques -->
         <div class="metrics-toggle-container">
-          <button class="metrics-toggle-btn active" onclick="switchMetricsVariant(0)">Fond subtil</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(1)">Bordure</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(2)">Ombre</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(3)">Minimal</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(4)">Gradient</button>
+          <button class="metrics-toggle-btn active" onclick="switchMetricsVariant(0)">Clients / CA</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(1)">Dossiers / Délai</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(2)">Projets / Succès</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(3)">Erreur / Réactivité</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(4)">CA / Satisfaction</button>
         </div>
 
         <!-- Avant/Après avec UI moderne emphase -->
         <div class="constat-ba-modern constat-ba-bold">
-          <!-- VARIANTE 0: Hero avec fond subtil -->
+          <!-- VARIANTE 0: Clients / CA -->
           <div class="ba-modern-grid metrics-variant active" data-metrics-variant="0">
             <!-- AVANT -->
             <div class="ba-modern-col ba-modern-before ba-bold">
@@ -4718,7 +4718,7 @@
               </div>
 
               <div class="ba-modern-metrics">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v0">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v1">
                   <div class="ba-modern-metric-value">14h</div>
                   <div class="ba-modern-metric-label">Admin par semaine</div>
                   <div class="ba-modern-metric-bar">
@@ -4760,7 +4760,7 @@
               </div>
 
               <div class="ba-modern-metrics">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v0">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v1">
                   <div class="ba-modern-metric-value">2h</div>
                   <div class="ba-modern-metric-label">Admin par semaine</div>
                   <div class="ba-modern-metric-bar">
@@ -4783,7 +4783,7 @@
             </div>
           </div>
 
-        <!-- VARIANTE 1: Hero avec bordure épaisse -->
+        <!-- VARIANTE 1: Dossiers traités -->
         <div class="ba-modern-grid metrics-variant" data-metrics-variant="1">
           <!-- AVANT -->
           <div class="ba-modern-col ba-modern-before ba-bold">
@@ -4808,13 +4808,13 @@
 
               <div class="metrics-secondary">
                 <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">33%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="ba-modern-metric-value">12</div>
+                  <div class="ba-modern-metric-label">Dossiers traités / mois</div>
                 </div>
 
                 <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">-15k€</div>
-                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
+                  <div class="ba-modern-metric-value">8 jours</div>
+                  <div class="ba-modern-metric-label">Délai moyen</div>
                 </div>
               </div>
             </div>
@@ -4850,20 +4850,20 @@
 
               <div class="metrics-secondary">
                 <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">5%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="ba-modern-metric-value">35</div>
+                  <div class="ba-modern-metric-label">Dossiers traités / mois</div>
                 </div>
 
                 <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">+8k€</div>
-                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
+                  <div class="ba-modern-metric-value">2 jours</div>
+                  <div class="ba-modern-metric-label">Délai moyen</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- VARIANTE 2: Hero avec ombre prononcée -->
+        <!-- VARIANTE 2: Projets gagnés -->
         <div class="ba-modern-grid metrics-variant" data-metrics-variant="2">
           <!-- AVANT -->
           <div class="ba-modern-col ba-modern-before ba-bold">
@@ -4878,7 +4878,7 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v2">
+              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v1">
                 <div class="ba-modern-metric-value">14h</div>
                 <div class="ba-modern-metric-label">Admin par semaine</div>
                 <div class="ba-modern-metric-bar">
@@ -4888,13 +4888,13 @@
 
               <div class="metrics-secondary">
                 <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">33%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="ba-modern-metric-value">45%</div>
+                  <div class="ba-modern-metric-label">Taux de succès</div>
                 </div>
 
                 <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">-15k€</div>
-                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
+                  <div class="ba-modern-metric-value">6</div>
+                  <div class="ba-modern-metric-label">Projets gagnés / mois</div>
                 </div>
               </div>
             </div>
@@ -4920,7 +4920,7 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v2">
+              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v1">
                 <div class="ba-modern-metric-value">2h</div>
                 <div class="ba-modern-metric-label">Admin par semaine</div>
                 <div class="ba-modern-metric-bar">
@@ -4930,20 +4930,20 @@
 
               <div class="metrics-secondary">
                 <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">5%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="ba-modern-metric-value">78%</div>
+                  <div class="ba-modern-metric-label">Taux de succès</div>
                 </div>
 
                 <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">+8k€</div>
-                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
+                  <div class="ba-modern-metric-value">15</div>
+                  <div class="ba-modern-metric-label">Projets gagnés / mois</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- VARIANTE 3: Hero minimaliste -->
+        <!-- VARIANTE 3: Efficacité opérationnelle -->
         <div class="ba-modern-grid metrics-variant" data-metrics-variant="3">
           <!-- AVANT -->
           <div class="ba-modern-col ba-modern-before ba-bold">
@@ -4958,7 +4958,7 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v3">
+              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v1">
                 <div class="ba-modern-metric-value">14h</div>
                 <div class="ba-modern-metric-label">Admin par semaine</div>
                 <div class="ba-modern-metric-bar">
@@ -4968,13 +4968,13 @@
 
               <div class="metrics-secondary">
                 <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">33%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="ba-modern-metric-value">18%</div>
+                  <div class="ba-modern-metric-label">Taux d'erreur</div>
                 </div>
 
                 <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">-15k€</div>
-                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
+                  <div class="ba-modern-metric-value">3 jours</div>
+                  <div class="ba-modern-metric-label">Délai de réponse</div>
                 </div>
               </div>
             </div>
@@ -5000,7 +5000,7 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v3">
+              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v1">
                 <div class="ba-modern-metric-value">2h</div>
                 <div class="ba-modern-metric-label">Admin par semaine</div>
                 <div class="ba-modern-metric-bar">
@@ -5010,20 +5010,20 @@
 
               <div class="metrics-secondary">
                 <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">5%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="ba-modern-metric-value">3%</div>
+                  <div class="ba-modern-metric-label">Taux d'erreur</div>
                 </div>
 
                 <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">+8k€</div>
-                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
+                  <div class="ba-modern-metric-value">4h</div>
+                  <div class="ba-modern-metric-label">Délai de réponse</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- VARIANTE 4: Hero avec gradient -->
+        <!-- VARIANTE 4: Business & satisfaction -->
         <div class="ba-modern-grid metrics-variant" data-metrics-variant="4">
           <!-- AVANT -->
           <div class="ba-modern-col ba-modern-before ba-bold">
@@ -5038,7 +5038,7 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v4">
+              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v1">
                 <div class="ba-modern-metric-value">14h</div>
                 <div class="ba-modern-metric-label">Admin par semaine</div>
                 <div class="ba-modern-metric-bar">
@@ -5048,13 +5048,13 @@
 
               <div class="metrics-secondary">
                 <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">33%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="ba-modern-metric-value">8k€</div>
+                  <div class="ba-modern-metric-label">CA mensuel</div>
                 </div>
 
                 <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
-                  <div class="ba-modern-metric-value">-15k€</div>
-                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
+                  <div class="ba-modern-metric-value">62%</div>
+                  <div class="ba-modern-metric-label">Satisfaction client</div>
                 </div>
               </div>
             </div>
@@ -5080,7 +5080,7 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v4">
+              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v1">
                 <div class="ba-modern-metric-value">2h</div>
                 <div class="ba-modern-metric-label">Admin par semaine</div>
                 <div class="ba-modern-metric-bar">
@@ -5090,13 +5090,13 @@
 
               <div class="metrics-secondary">
                 <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">5%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="ba-modern-metric-value">28k€</div>
+                  <div class="ba-modern-metric-label">CA mensuel</div>
                 </div>
 
                 <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
-                  <div class="ba-modern-metric-value">+8k€</div>
-                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
+                  <div class="ba-modern-metric-value">94%</div>
+                  <div class="ba-modern-metric-label">Satisfaction client</div>
                 </div>
               </div>
             </div>
