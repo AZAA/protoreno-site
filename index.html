@@ -631,8 +631,7 @@
     /* ============================================
        TOGGLE VARIANTS (Hero & Constat)
        ============================================ */
-    .hero-toggle-container,
-    .constat-toggle-container {
+    .hero-toggle-container {
       position: absolute;
       top: 90px;
       left: 50%;
@@ -648,12 +647,7 @@
       border: 1px solid var(--light-gray);
     }
 
-    .constat-toggle-container {
-      top: 20px;
-    }
-
-    .hero-toggle-btn,
-    .constat-toggle-btn {
+    .hero-toggle-btn {
       padding: 0.5rem 1rem;
       font-size: 0.875rem;
       font-weight: 600;
@@ -666,42 +660,32 @@
       font-family: var(--font-sans);
     }
 
-    .hero-toggle-btn:hover,
-    .constat-toggle-btn:hover {
+    .hero-toggle-btn:hover {
       background: var(--light-gray);
       color: var(--navy);
     }
 
-    .hero-toggle-btn.active,
-    .constat-toggle-btn.active {
+    .hero-toggle-btn.active {
       background: var(--blue);
       color: white;
     }
 
-    .hero-variant,
-    .constat-variant {
+    .hero-variant {
       display: none;
     }
 
-    .hero-variant.active,
-    .constat-variant.active {
+    .hero-variant.active {
       display: block;
     }
 
     @media (max-width: 768px) {
-      .hero-toggle-container,
-      .constat-toggle-container {
+      .hero-toggle-container {
         top: 80px;
         flex-wrap: wrap;
         max-width: 90%;
       }
 
-      .constat-toggle-container {
-        top: 10px;
-      }
-
-      .hero-toggle-btn,
-      .constat-toggle-btn {
+      .hero-toggle-btn {
         font-size: 0.75rem;
         padding: 0.4rem 0.75rem;
       }
@@ -713,7 +697,7 @@
 
     /* Hero avec gradient bleuté */
     .hero {
-      background: linear-gradient(180deg, #dbeafe 0%, #eff6ff 40%, #f8fbff 70%, #ffffff 100%);
+      background: linear-gradient(180deg, #e0f2fe 0%, #eff6ff 40%, #f8fbff 70%, #ffffff 100%);
     }
 
     /* Sections alternées */
@@ -1410,9 +1394,11 @@
     }
 
     .ba-modern-metric-label {
-      font-size: 0.875rem;
-      color: var(--slate);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: #475569;
       margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
     }
 
     .ba-modern-metric-bar {
@@ -4331,608 +4317,13 @@
        LE CONSTAT
        ============================================ -->
   <section class="section-alt" id="section-constat" aria-labelledby="heading-constat">
-    <!-- Carrés déstructurés (désorganisation) -->
-    <svg class="section-bg-svg constat-bg active" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <pattern id="broken-squares" width="100" height="100" patternUnits="userSpaceOnUse">
-          <rect x="15" y="10" width="25" height="25" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.07" transform="rotate(8 27.5 22.5)"/>
-          <rect x="60" y="50" width="25" height="25" fill="none" stroke="#2563EB" stroke-width="0.5" opacity="0.07" transform="rotate(-12 72.5 62.5)"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="800" fill="url(#broken-squares)"/>
-    </svg>
-
-    <!-- Toggle pour changer de variante -->
-    <div class="constat-toggle-container">
-      <button class="constat-toggle-btn active" onclick="switchConstatVariant(0)">Original</button>
-      <button class="constat-toggle-btn" onclick="switchConstatVariant(1)">+ Icons</button>
-      <button class="constat-toggle-btn" onclick="switchConstatVariant(2)">+ Hover</button>
-      <button class="constat-toggle-btn" onclick="switchConstatVariant(3)">+ Compact</button>
-      <button class="constat-toggle-btn" onclick="switchConstatVariant(4)">Data XXL</button>
-      <button class="constat-toggle-btn" onclick="switchConstatVariant(5)">Story</button>
-      <button class="constat-toggle-btn" onclick="switchConstatVariant(6)">Avant/Après</button>
-      <button class="constat-toggle-btn" onclick="switchConstatVariant(7)">Bloc + BA</button>
-      <button class="constat-toggle-btn" onclick="switchConstatVariant(8)">Moderne</button>
-      <button class="constat-toggle-btn" onclick="switchConstatVariant(9)">Moderne+</button>
-      <button class="constat-toggle-btn" onclick="switchConstatVariant(10)">Vertical</button>
-      <button class="constat-toggle-btn" onclick="switchConstatVariant(11)">Minimal</button>
-    </div>
-
     <div class="container">
       <div class="section-header">
         <h2 id="heading-constat">Le constat</h2>
         <p class="lead">Les professionnels du bâtiment manquent d'outils adaptés</p>
       </div>
 
-      <!-- VARIANTE 0: Original (par défaut) -->
-      <div class="constat-variant active" data-variant="0">
-        <div class="constat-pyramid">
-          <div class="constat-main-problem">
-            <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            <h3>La complexité administrative paralyse votre activité</h3>
-            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
-          </div>
-
-          <div class="constat-impacts">
-            <div class="card constat-impact-card constat-time">
-              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <h4>14h par semaine perdues</h4>
-              <p>en administration au lieu d'être sur le terrain</p>
-            </div>
-
-            <div class="card constat-impact-card constat-clients">
-              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-              <h4>1 client sur 3 abandonne</h4>
-              <p>face à la complexité des démarches</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 1: + Icons colorés -->
-      <div class="constat-variant" data-variant="1">
-        <div class="constat-pyramid">
-          <div class="constat-main-problem">
-            <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            <h3>La complexité administrative paralyse votre activité</h3>
-            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
-          </div>
-
-          <div class="constat-impacts">
-            <div class="card constat-impact-card constat-time">
-              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <h4><span class="stat-number">14h</span>par semaine perdues</h4>
-              <p>en administration au lieu d'être sur le terrain</p>
-            </div>
-
-            <div class="card constat-impact-card constat-clients">
-              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-              <h4><span class="stat-number">1/3</span>des clients abandonnent</h4>
-              <p>face à la complexité des démarches</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 2: + Hover (effets interactifs) -->
-      <div class="constat-variant" data-variant="2">
-        <div class="constat-pyramid">
-          <div class="constat-main-problem">
-            <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            <h3>La complexité administrative paralyse votre activité</h3>
-            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
-          </div>
-
-          <div class="constat-impacts">
-            <div class="card constat-impact-card constat-time">
-              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <h4><span class="stat-number">14h</span>par semaine perdues</h4>
-              <p>en administration au lieu d'être sur le terrain</p>
-            </div>
-
-            <div class="card constat-impact-card constat-clients">
-              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-              <h4><span class="stat-number">1/3</span>des clients abandonnent</h4>
-              <p>face à la complexité des démarches</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 3: + Compact (version condensée) -->
-      <div class="constat-variant" data-variant="3">
-        <div class="constat-pyramid">
-          <div class="constat-main-problem">
-            <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            <h3>La complexité administrative paralyse votre activité</h3>
-            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
-          </div>
-
-          <div class="constat-impacts">
-            <div class="card constat-impact-card constat-time">
-              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône temps perdu">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <h4><span class="stat-number">14h</span>par semaine perdues</h4>
-              <p>en administration au lieu d'être sur le terrain</p>
-            </div>
-
-            <div class="card constat-impact-card constat-clients">
-              <svg class="constat-icon-small" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône clients perdus">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-              <h4><span class="stat-number">1/3</span>des clients abandonnent</h4>
-              <p>face à la complexité des démarches</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 4: Data dramatique XXL -->
-      <div class="constat-variant" data-variant="4">
-        <div class="constat-data-dramatic">
-          <div class="constat-main-problem">
-            <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            <h3>La complexité administrative paralyse votre activité</h3>
-            <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
-          </div>
-
-          <div class="constat-impacts-dramatic">
-            <div class="card constat-impact-card-dramatic constat-time">
-              <div class="stat-mega">2j</div>
-              <h4>par mois perdus</h4>
-              <p>en administration au lieu d'être sur le terrain</p>
-              <div class="stat-progress">
-                <div class="stat-progress-bar" style="width: 58%;"></div>
-              </div>
-            </div>
-
-            <div class="card constat-impact-card-dramatic constat-clients">
-              <div class="stat-mega">33%</div>
-              <h4>de clients perdus</h4>
-              <p>face à la complexité des démarches administratives</p>
-              <div class="stat-progress">
-                <div class="stat-progress-bar" style="width: 33%;"></div>
-              </div>
-            </div>
-
-            <div class="card constat-impact-card-dramatic constat-revenue">
-              <div class="stat-mega">-15k€</div>
-              <h4>de CA/an en moins</h4>
-              <p>à cause du temps perdu et des clients abandonnés</p>
-              <div class="stat-progress">
-                <div class="stat-progress-bar" style="width: 45%;"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="constat-source-badge">
-            <svg class="badge-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span>Enquête terrain auprès de 45 professionnels (2024)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 5: Storytelling progressif -->
-      <div class="constat-variant" data-variant="5">
-        <div class="constat-story">
-          <div class="story-timeline-horizontal">
-            <div class="story-step-h">
-              <div class="story-step-number">1</div>
-              <div class="card story-step-card story-warning">
-                <div class="story-step-icon">📅</div>
-                <h4>Lundi matin</h4>
-                <p class="story-quote">"Nouveau dossier MaPrimeRénov à monter..."</p>
-                <p class="story-desc">Démarrage de la semaine avec un dossier administratif complexe</p>
-              </div>
-            </div>
-
-            <div class="story-arrow">→</div>
-
-            <div class="story-step-h">
-              <div class="story-step-number">2</div>
-              <div class="card story-step-card story-alert">
-                <div class="story-step-icon">⏰</div>
-                <h4>Mardi après-midi</h4>
-                <p class="story-quote">"3h passées sur les formulaires ANAH..."</p>
-                <p class="story-desc">Le temps s'envole, le chantier attend</p>
-              </div>
-            </div>
-
-            <div class="story-arrow">→</div>
-
-            <div class="story-step-h">
-              <div class="story-step-number">3</div>
-              <div class="card story-step-card story-danger">
-                <div class="story-step-icon">📞</div>
-                <h4>Jeudi soir</h4>
-                <p class="story-quote">"Le client rappelle, il comprend rien..."</p>
-                <p class="story-desc">Frustration montante, client dépassé</p>
-              </div>
-            </div>
-
-            <div class="story-arrow">→</div>
-
-            <div class="story-step-h">
-              <div class="story-step-number">4</div>
-              <div class="card story-step-card story-critical">
-                <div class="story-step-icon">❌</div>
-                <h4>Vendredi</h4>
-                <p class="story-quote">"Trop compliqué, j'abandonne..."</p>
-                <p class="story-desc">Le client renonce, vous perdez le contrat</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="story-conclusion">
-            <p><strong>Résultat :</strong> 1 semaine perdue, 1 client perdu, des centaines d'euros envolés</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 6: Avant/Après visuel -->
-      <div class="constat-variant" data-variant="6">
-        <div class="constat-before-after">
-          <div class="before-after-split">
-            <!-- AVANT (Sans Protoreno) -->
-            <div class="before-section">
-              <div class="ba-header ba-header-before">
-                <span class="ba-icon">❌</span>
-                <h3>Sans Protoreno</h3>
-              </div>
-
-              <div class="ba-content">
-                <div class="ba-item ba-negative">
-                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <div class="ba-stat">14h/semaine</div>
-                    <p>perdues en admin</p>
-                  </div>
-                </div>
-
-                <div class="ba-item ba-negative">
-                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                  <div>
-                    <div class="ba-stat">33%</div>
-                    <p>de clients perdus</p>
-                  </div>
-                </div>
-
-                <div class="ba-item ba-negative">
-                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <div class="ba-stat">-15k€</div>
-                    <p>de CA annuel</p>
-                  </div>
-                </div>
-
-                <div class="ba-chaos">
-                  <p>😫 Stress • 📄 Paperasse • ❌ Erreurs • ⏰ Retards</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Séparateur -->
-            <div class="ba-separator">
-              <div class="ba-separator-line"></div>
-              <div class="ba-separator-icon">VS</div>
-              <div class="ba-separator-line"></div>
-            </div>
-
-            <!-- APRÈS (Avec Protoreno) -->
-            <div class="after-section">
-              <div class="ba-header ba-header-after">
-                <span class="ba-icon">✅</span>
-                <h3>Avec Protoreno</h3>
-              </div>
-
-              <div class="ba-content">
-                <div class="ba-item ba-positive">
-                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <div class="ba-stat">2h/semaine</div>
-                    <p>pour toute l'admin</p>
-                  </div>
-                </div>
-
-                <div class="ba-item ba-positive">
-                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                  <div>
-                    <div class="ba-stat">5%</div>
-                    <p>d'abandon client</p>
-                  </div>
-                </div>
-
-                <div class="ba-item ba-positive">
-                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <div class="ba-stat">+8k€</div>
-                    <p>de CA retrouvé</p>
-                  </div>
-                </div>
-
-                <div class="ba-zen">
-                  <p>😊 Sérénité • ⚡ Rapidité • ✓ Précision • 📈 Croissance</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 7: Bloc principal + Avant/Après (original) -->
-      <div class="constat-variant" data-variant="7">
-        <!-- Bloc principal de la variante 0 -->
-        <div class="constat-main-problem" style="margin-bottom: 3rem;">
-          <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          <h3>La complexité administrative paralyse votre activité</h3>
-          <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
-        </div>
-
-        <!-- Titre intermédiaire -->
-        <h3 class="constat-section-title">L'impact en chiffres</h3>
-
-        <!-- Avant/Après de la variante 6 -->
-        <div class="constat-before-after">
-          <div class="before-after-split">
-            <!-- AVANT (Sans Protoreno) -->
-            <div class="before-section">
-              <div class="ba-header ba-header-before">
-                <span class="ba-icon">❌</span>
-                <h3>Sans Protoreno</h3>
-              </div>
-
-              <div class="ba-content">
-                <div class="ba-item ba-negative">
-                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <div class="ba-stat">14h/semaine</div>
-                    <p>perdues en admin</p>
-                  </div>
-                </div>
-
-                <div class="ba-item ba-negative">
-                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                  <div>
-                    <div class="ba-stat">33%</div>
-                    <p>de clients perdus</p>
-                  </div>
-                </div>
-
-                <div class="ba-item ba-negative">
-                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <div class="ba-stat">-15k€</div>
-                    <p>de CA annuel</p>
-                  </div>
-                </div>
-
-                <div class="ba-chaos">
-                  <p>😫 Stress • 📄 Paperasse • ❌ Erreurs • ⏰ Retards</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Séparateur -->
-            <div class="ba-separator">
-              <div class="ba-separator-line"></div>
-              <div class="ba-separator-icon">VS</div>
-              <div class="ba-separator-line"></div>
-            </div>
-
-            <!-- APRÈS (Avec Protoreno) -->
-            <div class="after-section">
-              <div class="ba-header ba-header-after">
-                <span class="ba-icon">✅</span>
-                <h3>Avec Protoreno</h3>
-              </div>
-
-              <div class="ba-content">
-                <div class="ba-item ba-positive">
-                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <div class="ba-stat">2h/semaine</div>
-                    <p>pour toute l'admin</p>
-                  </div>
-                </div>
-
-                <div class="ba-item ba-positive">
-                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                  <div>
-                    <div class="ba-stat">5%</div>
-                    <p>d'abandon client</p>
-                  </div>
-                </div>
-
-                <div class="ba-item ba-positive">
-                  <svg class="ba-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <div class="ba-stat">+8k€</div>
-                    <p>de CA retrouvé</p>
-                  </div>
-                </div>
-
-                <div class="ba-zen">
-                  <p>😊 Sérénité • ⚡ Rapidité • ✓ Précision • 📈 Croissance</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 8: Bloc principal + Avant/Après (UI moderne retravaillé) -->
-      <div class="constat-variant" data-variant="8">
-        <!-- Bloc principal de la variante 0 -->
-        <div class="constat-main-problem" style="margin-bottom: 3rem;">
-          <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          <h3>La complexité administrative paralyse votre activité</h3>
-          <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
-        </div>
-
-        <!-- Titre intermédiaire -->
-        <h3 class="constat-section-title">L'impact en chiffres</h3>
-
-        <!-- Avant/Après avec UI moderne -->
-        <div class="constat-ba-modern">
-          <div class="ba-modern-grid">
-            <!-- AVANT -->
-            <div class="ba-modern-col ba-modern-before">
-              <div class="ba-modern-header">
-                <div class="ba-modern-badge ba-modern-badge-negative">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  Sans solution
-                </div>
-                <h3>La réalité du terrain</h3>
-              </div>
-
-              <div class="ba-modern-metrics">
-                <div class="ba-modern-metric ba-modern-metric-negative">
-                  <div class="ba-modern-metric-value">14h</div>
-                  <div class="ba-modern-metric-label">Admin par semaine</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 93%;"></div>
-                  </div>
-                </div>
-
-                <div class="ba-modern-metric ba-modern-metric-negative">
-                  <div class="ba-modern-metric-value">33%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 66%;"></div>
-                  </div>
-                </div>
-
-                <div class="ba-modern-metric ba-modern-metric-negative">
-                  <div class="ba-modern-metric-value">-15k€</div>
-                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 75%;"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="ba-modern-tags ba-modern-tags-negative">
-                <span>😫 Stress constant</span>
-                <span>📄 Paperasse</span>
-                <span>❌ Erreurs fréquentes</span>
-                <span>⏰ Retards</span>
-              </div>
-            </div>
-
-            <!-- Flèche de transformation -->
-            <div class="ba-modern-arrow">
-              <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </div>
-
-            <!-- APRÈS -->
-            <div class="ba-modern-col ba-modern-after">
-              <div class="ba-modern-header">
-                <div class="ba-modern-badge ba-modern-badge-positive">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  Avec Protoreno
-                </div>
-                <h3>La transformation</h3>
-              </div>
-
-              <div class="ba-modern-metrics">
-                <div class="ba-modern-metric ba-modern-metric-positive">
-                  <div class="ba-modern-metric-value">2h</div>
-                  <div class="ba-modern-metric-label">Admin par semaine</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 13%;"></div>
-                  </div>
-                </div>
-
-                <div class="ba-modern-metric ba-modern-metric-positive">
-                  <div class="ba-modern-metric-value">5%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 10%;"></div>
-                  </div>
-                </div>
-
-                <div class="ba-modern-metric ba-modern-metric-positive">
-                  <div class="ba-modern-metric-value">+8k€</div>
-                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 53%;"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="ba-modern-tags ba-modern-tags-positive">
-                <span>😊 Sérénité</span>
-                <span>⚡ Rapidité</span>
-                <span>✓ Précision</span>
-                <span>📈 Croissance</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 9: UI moderne avec badges prononcés et bordures épaisses -->
-      <div class="constat-variant" data-variant="9">
-        <!-- Bloc principal -->
+      <!-- Bloc principal -->
         <div class="constat-main-problem" style="margin-bottom: 3rem;">
           <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -5047,170 +4438,6 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- VARIANTE 10: UI moderne avec layout vertical -->
-      <div class="constat-variant" data-variant="10">
-        <!-- Bloc principal -->
-        <div class="constat-main-problem" style="margin-bottom: 3rem;">
-          <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          <h3>La complexité administrative paralyse votre activité</h3>
-          <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
-        </div>
-
-        <!-- Titre intermédiaire -->
-        <h3 class="constat-section-title">L'impact en chiffres</h3>
-
-        <!-- Avant/Après avec layout vertical -->
-        <div class="constat-ba-vertical">
-          <!-- AVANT -->
-          <div class="ba-vertical-section ba-vertical-before">
-            <div class="ba-vertical-header">
-              <div class="ba-vertical-badge ba-vertical-badge-negative">
-                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                Sans solution
-              </div>
-              <h3>La situation actuelle</h3>
-            </div>
-
-            <div class="ba-vertical-metrics">
-              <div class="ba-vertical-metric ba-vertical-metric-negative">
-                <div class="ba-vertical-metric-number">14h</div>
-                <div class="ba-vertical-metric-label">Admin / semaine</div>
-              </div>
-              <div class="ba-vertical-metric ba-vertical-metric-negative">
-                <div class="ba-vertical-metric-number">33%</div>
-                <div class="ba-vertical-metric-label">Abandon clients</div>
-              </div>
-              <div class="ba-vertical-metric ba-vertical-metric-negative">
-                <div class="ba-vertical-metric-number">-15k€</div>
-                <div class="ba-vertical-metric-label">CA perdu / an</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Séparateur -->
-          <div class="ba-vertical-divider">
-            <div class="ba-vertical-arrow">
-              <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-              <span>Transformation</span>
-            </div>
-          </div>
-
-          <!-- APRÈS -->
-          <div class="ba-vertical-section ba-vertical-after">
-            <div class="ba-vertical-header">
-              <div class="ba-vertical-badge ba-vertical-badge-positive">
-                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Avec Protoreno
-              </div>
-              <h3>Le résultat obtenu</h3>
-            </div>
-
-            <div class="ba-vertical-metrics">
-              <div class="ba-vertical-metric ba-vertical-metric-positive">
-                <div class="ba-vertical-metric-number">2h</div>
-                <div class="ba-vertical-metric-label">Admin / semaine</div>
-              </div>
-              <div class="ba-vertical-metric ba-vertical-metric-positive">
-                <div class="ba-vertical-metric-number">5%</div>
-                <div class="ba-vertical-metric-label">Abandon clients</div>
-              </div>
-              <div class="ba-vertical-metric ba-vertical-metric-positive">
-                <div class="ba-vertical-metric-number">+8k€</div>
-                <div class="ba-vertical-metric-label">CA retrouvé / an</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VARIANTE 11: UI moderne minimaliste -->
-      <div class="constat-variant" data-variant="11">
-        <!-- Bloc principal -->
-        <div class="constat-main-problem" style="margin-bottom: 3rem;">
-          <svg class="constat-icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Icône document administratif">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          <h3>La complexité administrative paralyse votre activité</h3>
-          <p>Des processus lourds, des outils dispersés et une paperasse chronophage vous éloignent de l'essentiel : vos chantiers et vos clients.</p>
-        </div>
-
-        <!-- Titre intermédiaire -->
-        <h3 class="constat-section-title">L'impact en chiffres</h3>
-
-        <!-- Comparaison minimaliste -->
-        <div class="constat-ba-minimal">
-          <div class="ba-minimal-grid">
-            <!-- Colonne AVANT -->
-            <div class="ba-minimal-col">
-              <div class="ba-minimal-header ba-minimal-negative">Sans solution</div>
-
-              <div class="ba-minimal-stats">
-                <div class="ba-minimal-stat">
-                  <span class="ba-minimal-value negative">14h</span>
-                  <span class="ba-minimal-label">par semaine</span>
-                </div>
-                <div class="ba-minimal-stat">
-                  <span class="ba-minimal-value negative">33%</span>
-                  <span class="ba-minimal-label">d'abandon</span>
-                </div>
-                <div class="ba-minimal-stat">
-                  <span class="ba-minimal-value negative">-15k€</span>
-                  <span class="ba-minimal-label">par an</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Colonne VS -->
-            <div class="ba-minimal-vs">VS</div>
-
-            <!-- Colonne APRÈS -->
-            <div class="ba-minimal-col">
-              <div class="ba-minimal-header ba-minimal-positive">Avec Protoreno</div>
-
-              <div class="ba-minimal-stats">
-                <div class="ba-minimal-stat">
-                  <span class="ba-minimal-value positive">2h</span>
-                  <span class="ba-minimal-label">par semaine</span>
-                </div>
-                <div class="ba-minimal-stat">
-                  <span class="ba-minimal-value positive">5%</span>
-                  <span class="ba-minimal-label">d'abandon</span>
-                </div>
-                <div class="ba-minimal-stat">
-                  <span class="ba-minimal-value positive">+8k€</span>
-                  <span class="ba-minimal-label">par an</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Impact résumé -->
-          <div class="ba-minimal-impact">
-            <div class="ba-minimal-impact-item">
-              <span class="ba-minimal-impact-icon">⏱️</span>
-              <span class="ba-minimal-impact-text"><strong>86%</strong> de temps gagné</span>
-            </div>
-            <div class="ba-minimal-impact-item">
-              <span class="ba-minimal-impact-icon">👥</span>
-              <span class="ba-minimal-impact-text"><strong>85%</strong> de rétention</span>
-            </div>
-            <div class="ba-minimal-impact-item">
-              <span class="ba-minimal-impact-icon">💰</span>
-              <span class="ba-minimal-impact-text"><strong>23k€</strong> récupérés</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <!-- Sources -->
       <div class="constat-sources">
@@ -5750,26 +4977,6 @@
 
       // Ajouter la classe active à la variante sélectionnée
       const selectedVariant = document.querySelector(`.hero-variant[data-variant="${variantIndex}"]`);
-      if (selectedVariant) {
-        selectedVariant.classList.add('active');
-      }
-    }
-
-    // Gestion du toggle des variantes Constat
-    function switchConstatVariant(variantIndex) {
-      // Retirer la classe active de tous les boutons
-      const buttons = document.querySelectorAll('.constat-toggle-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
-
-      // Ajouter la classe active au bouton cliqué
-      buttons[variantIndex].classList.add('active');
-
-      // Retirer la classe active de toutes les variantes
-      const variants = document.querySelectorAll('.constat-variant');
-      variants.forEach(variant => variant.classList.remove('active'));
-
-      // Ajouter la classe active à la variante sélectionnée
-      const selectedVariant = document.querySelector(`.constat-variant[data-variant="${variantIndex}"]`);
       if (selectedVariant) {
         selectedVariant.classList.add('active');
       }
