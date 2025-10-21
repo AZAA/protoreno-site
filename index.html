@@ -1693,81 +1693,11 @@
       display: grid;
     }
 
-    /* VARIANTE 1: Avec icônes */
-    .metric-with-icon {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-
-    .metric-icon {
-      flex-shrink: 0;
-      margin-top: 0.25rem;
-    }
-
-    .metric-icon-large {
-      margin-top: 0;
-    }
-
-    .metric-content {
-      flex: 1;
-    }
-
-    .ba-modern-metric-negative .metric-icon {
-      stroke: #DC2626;
-    }
-
-    .ba-modern-metric-positive .metric-icon {
-      stroke: #16a34a;
-    }
-
-    /* VARIANTE 2: Hiérarchie tailles */
-    .metric-large {
-      padding: 1.75rem 1.5rem;
-    }
-
-    .metric-large .ba-modern-metric-value {
-      font-size: 3rem;
-    }
-
-    .metric-large .ba-modern-metric-label {
-      font-size: 1.125rem;
-    }
-
-    .metric-medium {
-      padding: 1.5rem 1.25rem;
-    }
-
-    .metric-medium .ba-modern-metric-value {
-      font-size: 2.5rem;
-    }
-
-    .metric-medium .ba-modern-metric-label {
-      font-size: 1rem;
-    }
-
-    .metric-normal {
-      padding: 1.25rem 1rem;
-    }
-
-    .metric-normal .ba-modern-metric-value {
-      font-size: 2rem;
-    }
-
-    .metric-normal .ba-modern-metric-label {
-      font-size: 0.875rem;
-    }
-
-    /* VARIANTE 3: Focus principal */
+    /* STYLES COMMUNS: Focus principal (1 hero + 2 secondaires) */
     .metric-hero {
       padding: 2rem 1.5rem;
-      background: rgba(239, 68, 68, 0.05);
       border-radius: 12px;
       margin-bottom: 1.5rem;
-    }
-
-    .ba-modern-col.ba-modern-after .metric-hero {
-      background: rgba(34, 197, 94, 0.05);
     }
 
     .metric-hero .ba-modern-metric-value {
@@ -1799,19 +1729,62 @@
       font-size: 0.8125rem;
     }
 
+    /* VARIANTE 0: Hero avec fond subtil */
+    .metric-hero-v0 {
+      background: rgba(239, 68, 68, 0.05);
+    }
+
+    .ba-modern-col.ba-modern-after .metric-hero-v0 {
+      background: rgba(34, 197, 94, 0.05);
+    }
+
+    /* VARIANTE 1: Hero avec bordure épaisse */
+    .metric-hero-v1 {
+      background: rgba(239, 68, 68, 0.02);
+      border: 3px solid #DC2626;
+    }
+
+    .ba-modern-col.ba-modern-after .metric-hero-v1 {
+      background: rgba(34, 197, 94, 0.02);
+      border-color: #16a34a;
+    }
+
+    /* VARIANTE 2: Hero avec ombre prononcée */
+    .metric-hero-v2 {
+      background: rgba(239, 68, 68, 0.03);
+      box-shadow: 0 8px 24px rgba(220, 38, 38, 0.15);
+    }
+
+    .ba-modern-col.ba-modern-after .metric-hero-v2 {
+      background: rgba(34, 197, 94, 0.03);
+      box-shadow: 0 8px 24px rgba(22, 163, 74, 0.15);
+    }
+
+    /* VARIANTE 3: Hero minimaliste (pas de fond) */
+    .metric-hero-v3 {
+      background: transparent;
+      padding: 1.5rem 0;
+      border-bottom: 2px solid rgba(220, 38, 38, 0.2);
+    }
+
+    .ba-modern-col.ba-modern-after .metric-hero-v3 {
+      border-bottom-color: rgba(22, 163, 74, 0.2);
+    }
+
+    /* VARIANTE 4: Hero avec gradient */
+    .metric-hero-v4 {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(239, 68, 68, 0.02) 100%);
+    }
+
+    .ba-modern-col.ba-modern-after .metric-hero-v4 {
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, rgba(34, 197, 94, 0.02) 100%);
+    }
+
     /* Responsive métriques */
     @media (max-width: 768px) {
       .metrics-toggle-btn {
         font-size: 0.75rem;
         padding: 0.4rem 0.75rem;
-      }
-
-      .metric-large .ba-modern-metric-value {
-        font-size: 2.5rem;
-      }
-
-      .metric-medium .ba-modern-metric-value {
-        font-size: 2rem;
       }
 
       .metric-hero .ba-modern-metric-value {
@@ -1820,11 +1793,6 @@
 
       .metrics-secondary {
         flex-direction: column;
-      }
-
-      .metric-with-icon {
-        flex-direction: column;
-        gap: 0.5rem;
       }
     }
 
@@ -4726,15 +4694,16 @@
 
         <!-- Toggle pour variantes métriques -->
         <div class="metrics-toggle-container">
-          <button class="metrics-toggle-btn active" onclick="switchMetricsVariant(0)">Actuelle</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(1)">Icônes</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(2)">Hiérarchie</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(3)">Focus principal</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(4)">Mix optimal</button>
+          <button class="metrics-toggle-btn active" onclick="switchMetricsVariant(0)">Fond subtil</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(1)">Bordure</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(2)">Ombre</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(3)">Minimal</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(4)">Gradient</button>
         </div>
 
         <!-- Avant/Après avec UI moderne emphase -->
         <div class="constat-ba-modern constat-ba-bold">
+          <!-- VARIANTE 0: Hero avec fond subtil -->
           <div class="ba-modern-grid metrics-variant active" data-metrics-variant="0">
             <!-- AVANT -->
             <div class="ba-modern-col ba-modern-before ba-bold">
@@ -4749,7 +4718,7 @@
               </div>
 
               <div class="ba-modern-metrics">
-                <div class="ba-modern-metric ba-modern-metric-negative">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v0">
                   <div class="ba-modern-metric-value">14h</div>
                   <div class="ba-modern-metric-label">Admin par semaine</div>
                   <div class="ba-modern-metric-bar">
@@ -4757,19 +4726,15 @@
                   </div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-negative">
-                  <div class="ba-modern-metric-value">33%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 66%;"></div>
+                <div class="metrics-secondary">
+                  <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
+                    <div class="ba-modern-metric-value">33%</div>
+                    <div class="ba-modern-metric-label">Clients abandonnent</div>
                   </div>
-                </div>
 
-                <div class="ba-modern-metric ba-modern-metric-negative">
-                  <div class="ba-modern-metric-value">-15k€</div>
-                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 75%;"></div>
+                  <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
+                    <div class="ba-modern-metric-value">-15k€</div>
+                    <div class="ba-modern-metric-label">Manque à gagner / an</div>
                   </div>
                 </div>
               </div>
@@ -4795,7 +4760,7 @@
               </div>
 
               <div class="ba-modern-metrics">
-                <div class="ba-modern-metric ba-modern-metric-positive">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v0">
                   <div class="ba-modern-metric-value">2h</div>
                   <div class="ba-modern-metric-label">Admin par semaine</div>
                   <div class="ba-modern-metric-bar">
@@ -4803,27 +4768,22 @@
                   </div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-positive">
-                  <div class="ba-modern-metric-value">5%</div>
-                  <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 10%;"></div>
+                <div class="metrics-secondary">
+                  <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
+                    <div class="ba-modern-metric-value">5%</div>
+                    <div class="ba-modern-metric-label">Clients abandonnent</div>
                   </div>
-                </div>
 
-                <div class="ba-modern-metric ba-modern-metric-positive">
-                  <div class="ba-modern-metric-value">+8k€</div>
-                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 53%;"></div>
+                  <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
+                    <div class="ba-modern-metric-value">+8k€</div>
+                    <div class="ba-modern-metric-label">CA retrouvé / an</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- VARIANTE 1: Avec icônes -->
+        <!-- VARIANTE 1: Hero avec bordure épaisse -->
         <div class="ba-modern-grid metrics-variant" data-metrics-variant="1">
           <!-- AVANT -->
           <div class="ba-modern-col ba-modern-before ba-bold">
@@ -4838,45 +4798,23 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-negative metric-with-icon">
-                <svg class="metric-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <circle cx="12" cy="12" r="10" stroke-width="2"/>
-                  <path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="metric-content">
-                  <div class="ba-modern-metric-value">14h</div>
-                  <div class="ba-modern-metric-label">Admin par semaine</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 93%;"></div>
-                  </div>
+              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v1">
+                <div class="ba-modern-metric-value">14h</div>
+                <div class="ba-modern-metric-label">Admin par semaine</div>
+                <div class="ba-modern-metric-bar">
+                  <div class="ba-modern-metric-fill" style="width: 93%;"></div>
                 </div>
               </div>
 
-              <div class="ba-modern-metric ba-modern-metric-negative metric-with-icon">
-                <svg class="metric-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-width="2" stroke-linecap="round"/>
-                  <circle cx="9" cy="7" r="4" stroke-width="2"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="metric-content">
+              <div class="metrics-secondary">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
                   <div class="ba-modern-metric-value">33%</div>
                   <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 66%;"></div>
-                  </div>
                 </div>
-              </div>
 
-              <div class="ba-modern-metric ba-modern-metric-negative metric-with-icon">
-                <svg class="metric-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="metric-content">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
                   <div class="ba-modern-metric-value">-15k€</div>
                   <div class="ba-modern-metric-label">Manque à gagner / an</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 75%;"></div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -4902,52 +4840,30 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-positive metric-with-icon">
-                <svg class="metric-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <circle cx="12" cy="12" r="10" stroke-width="2"/>
-                  <path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="metric-content">
-                  <div class="ba-modern-metric-value">2h</div>
-                  <div class="ba-modern-metric-label">Admin par semaine</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 13%;"></div>
-                  </div>
+              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v1">
+                <div class="ba-modern-metric-value">2h</div>
+                <div class="ba-modern-metric-label">Admin par semaine</div>
+                <div class="ba-modern-metric-bar">
+                  <div class="ba-modern-metric-fill" style="width: 13%;"></div>
                 </div>
               </div>
 
-              <div class="ba-modern-metric ba-modern-metric-positive metric-with-icon">
-                <svg class="metric-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-width="2" stroke-linecap="round"/>
-                  <circle cx="9" cy="7" r="4" stroke-width="2"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="metric-content">
+              <div class="metrics-secondary">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
                   <div class="ba-modern-metric-value">5%</div>
                   <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 10%;"></div>
-                  </div>
                 </div>
-              </div>
 
-              <div class="ba-modern-metric ba-modern-metric-positive metric-with-icon">
-                <svg class="metric-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="metric-content">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
                   <div class="ba-modern-metric-value">+8k€</div>
                   <div class="ba-modern-metric-label">CA retrouvé / an</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 53%;"></div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- VARIANTE 2: Hiérarchie tailles -->
+        <!-- VARIANTE 2: Hero avec ombre prononcée -->
         <div class="ba-modern-grid metrics-variant" data-metrics-variant="2">
           <!-- AVANT -->
           <div class="ba-modern-col ba-modern-before ba-bold">
@@ -4962,7 +4878,7 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-negative metric-large">
+              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v2">
                 <div class="ba-modern-metric-value">14h</div>
                 <div class="ba-modern-metric-label">Admin par semaine</div>
                 <div class="ba-modern-metric-bar">
@@ -4970,19 +4886,15 @@
                 </div>
               </div>
 
-              <div class="ba-modern-metric ba-modern-metric-negative metric-medium">
-                <div class="ba-modern-metric-value">33%</div>
-                <div class="ba-modern-metric-label">Clients abandonnent</div>
-                <div class="ba-modern-metric-bar">
-                  <div class="ba-modern-metric-fill" style="width: 66%;"></div>
+              <div class="metrics-secondary">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
+                  <div class="ba-modern-metric-value">33%</div>
+                  <div class="ba-modern-metric-label">Clients abandonnent</div>
                 </div>
-              </div>
 
-              <div class="ba-modern-metric ba-modern-metric-negative metric-normal">
-                <div class="ba-modern-metric-value">-15k€</div>
-                <div class="ba-modern-metric-label">Manque à gagner / an</div>
-                <div class="ba-modern-metric-bar">
-                  <div class="ba-modern-metric-fill" style="width: 75%;"></div>
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
+                  <div class="ba-modern-metric-value">-15k€</div>
+                  <div class="ba-modern-metric-label">Manque à gagner / an</div>
                 </div>
               </div>
             </div>
@@ -5008,7 +4920,7 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-positive metric-large">
+              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v2">
                 <div class="ba-modern-metric-value">2h</div>
                 <div class="ba-modern-metric-label">Admin par semaine</div>
                 <div class="ba-modern-metric-bar">
@@ -5016,26 +4928,22 @@
                 </div>
               </div>
 
-              <div class="ba-modern-metric ba-modern-metric-positive metric-medium">
-                <div class="ba-modern-metric-value">5%</div>
-                <div class="ba-modern-metric-label">Clients abandonnent</div>
-                <div class="ba-modern-metric-bar">
-                  <div class="ba-modern-metric-fill" style="width: 10%;"></div>
+              <div class="metrics-secondary">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
+                  <div class="ba-modern-metric-value">5%</div>
+                  <div class="ba-modern-metric-label">Clients abandonnent</div>
                 </div>
-              </div>
 
-              <div class="ba-modern-metric ba-modern-metric-positive metric-normal">
-                <div class="ba-modern-metric-value">+8k€</div>
-                <div class="ba-modern-metric-label">CA retrouvé / an</div>
-                <div class="ba-modern-metric-bar">
-                  <div class="ba-modern-metric-fill" style="width: 53%;"></div>
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
+                  <div class="ba-modern-metric-value">+8k€</div>
+                  <div class="ba-modern-metric-label">CA retrouvé / an</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- VARIANTE 3: Focus principal -->
+        <!-- VARIANTE 3: Hero minimaliste -->
         <div class="ba-modern-grid metrics-variant" data-metrics-variant="3">
           <!-- AVANT -->
           <div class="ba-modern-col ba-modern-before ba-bold">
@@ -5050,7 +4958,7 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-negative metric-hero">
+              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v3">
                 <div class="ba-modern-metric-value">14h</div>
                 <div class="ba-modern-metric-label">Admin par semaine</div>
                 <div class="ba-modern-metric-bar">
@@ -5092,7 +5000,7 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-positive metric-hero">
+              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v3">
                 <div class="ba-modern-metric-value">2h</div>
                 <div class="ba-modern-metric-label">Admin par semaine</div>
                 <div class="ba-modern-metric-bar">
@@ -5115,7 +5023,7 @@
           </div>
         </div>
 
-        <!-- VARIANTE 4: Mix optimal (icônes + hiérarchie) -->
+        <!-- VARIANTE 4: Hero avec gradient -->
         <div class="ba-modern-grid metrics-variant" data-metrics-variant="4">
           <!-- AVANT -->
           <div class="ba-modern-col ba-modern-before ba-bold">
@@ -5130,45 +5038,23 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-negative metric-with-icon metric-large">
-                <svg class="metric-icon metric-icon-large" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <circle cx="12" cy="12" r="10" stroke-width="2"/>
-                  <path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="metric-content">
-                  <div class="ba-modern-metric-value">14h</div>
-                  <div class="ba-modern-metric-label">Admin par semaine</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 93%;"></div>
-                  </div>
+              <div class="ba-modern-metric ba-modern-metric-negative metric-hero metric-hero-v4">
+                <div class="ba-modern-metric-value">14h</div>
+                <div class="ba-modern-metric-label">Admin par semaine</div>
+                <div class="ba-modern-metric-bar">
+                  <div class="ba-modern-metric-fill" style="width: 93%;"></div>
                 </div>
               </div>
 
-              <div class="ba-modern-metric ba-modern-metric-negative metric-with-icon metric-medium">
-                <svg class="metric-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-width="2" stroke-linecap="round"/>
-                  <circle cx="9" cy="7" r="4" stroke-width="2"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="metric-content">
+              <div class="metrics-secondary">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
                   <div class="ba-modern-metric-value">33%</div>
                   <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 66%;"></div>
-                  </div>
                 </div>
-              </div>
 
-              <div class="ba-modern-metric ba-modern-metric-negative metric-with-icon metric-normal">
-                <svg class="metric-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="metric-content">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
                   <div class="ba-modern-metric-value">-15k€</div>
                   <div class="ba-modern-metric-label">Manque à gagner / an</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 75%;"></div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -5194,45 +5080,23 @@
             </div>
 
             <div class="ba-modern-metrics">
-              <div class="ba-modern-metric ba-modern-metric-positive metric-with-icon metric-large">
-                <svg class="metric-icon metric-icon-large" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <circle cx="12" cy="12" r="10" stroke-width="2"/>
-                  <path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="metric-content">
-                  <div class="ba-modern-metric-value">2h</div>
-                  <div class="ba-modern-metric-label">Admin par semaine</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 13%;"></div>
-                  </div>
+              <div class="ba-modern-metric ba-modern-metric-positive metric-hero metric-hero-v4">
+                <div class="ba-modern-metric-value">2h</div>
+                <div class="ba-modern-metric-label">Admin par semaine</div>
+                <div class="ba-modern-metric-bar">
+                  <div class="ba-modern-metric-fill" style="width: 13%;"></div>
                 </div>
               </div>
 
-              <div class="ba-modern-metric ba-modern-metric-positive metric-with-icon metric-medium">
-                <svg class="metric-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-width="2" stroke-linecap="round"/>
-                  <circle cx="9" cy="7" r="4" stroke-width="2"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="metric-content">
+              <div class="metrics-secondary">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
                   <div class="ba-modern-metric-value">5%</div>
                   <div class="ba-modern-metric-label">Clients abandonnent</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 10%;"></div>
-                  </div>
                 </div>
-              </div>
 
-              <div class="ba-modern-metric ba-modern-metric-positive metric-with-icon metric-normal">
-                <svg class="metric-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="metric-content">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact">
                   <div class="ba-modern-metric-value">+8k€</div>
                   <div class="ba-modern-metric-label">CA retrouvé / an</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 53%;"></div>
-                  </div>
                 </div>
               </div>
             </div>
