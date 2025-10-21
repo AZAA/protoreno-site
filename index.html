@@ -1532,48 +1532,73 @@
 
     .conversation-result-wrapper {
       position: relative;
-      margin-top: 1.5rem;
-      padding-left: 2rem;
+      margin-top: 2rem;
+      padding-left: 1rem;
     }
 
     .conversation-result-wrapper::before {
-      content: '';
+      content: '↓';
       position: absolute;
       left: 0;
-      top: -1.5rem;
-      width: 2px;
-      height: 2rem;
-      background: linear-gradient(to bottom, #2563EB, #22c55e);
-      opacity: 0.3;
+      top: -1.75rem;
+      font-size: 1.25rem;
+      color: #22c55e;
+      opacity: 0.4;
     }
 
     .conversation-result {
-      padding: 1.25rem 1.5rem;
-      background: rgba(34, 197, 94, 0.08);
-      border-left: 4px solid #22c55e;
-      border-radius: 12px;
-      font-size: 0.9375rem;
-      color: #15803d;
+      padding: 1.75rem 2rem;
+      background: white;
+      border: 2px solid #22c55e;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(34, 197, 94, 0.15);
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      font-weight: 500;
+      gap: 1.5rem;
+      position: relative;
+      transition: all 0.3s ease;
     }
 
-    .result-badge {
-      display: inline-flex;
+    .conversation-result:hover {
+      box-shadow: 0 6px 24px rgba(34, 197, 94, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .conversation-result::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.375rem;
-      padding: 0.5rem 1rem;
-      background: #22c55e !important;
-      color: white !important;
-      border-radius: 20px;
-      font-size: 0.8125rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      box-shadow: 0 3px 8px rgba(34, 197, 94, 0.3);
-      white-space: nowrap;
-      min-width: fit-content;
+      box-shadow: 0 3px 12px rgba(34, 197, 94, 0.4);
+    }
+
+    .conversation-result-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .conversation-result-metric {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #15803d;
+      line-height: 1.2;
+    }
+
+    .conversation-result-description {
+      font-size: 0.9375rem;
+      color: #166534;
+      font-weight: 500;
+      line-height: 1.4;
     }
 
     /* Sondage Tally intégré */
@@ -3177,7 +3202,10 @@
           </div>
           <div class="conversation-result-wrapper">
             <div class="conversation-result">
-              <span class="result-badge">✓ Résultat</span> <strong>85% de temps gagné</strong> sur les devis - Marc passe maintenant 2h/semaine au lieu de 14h
+              <div class="conversation-result-content">
+                <div class="conversation-result-metric">85% de temps gagné</div>
+                <div class="conversation-result-description">Marc passe maintenant 2h/semaine au lieu de 14h sur les devis</div>
+              </div>
             </div>
           </div>
 
@@ -3207,7 +3235,10 @@
           </div>
           <div class="conversation-result-wrapper">
             <div class="conversation-result">
-              <span class="result-badge">✓ Résultat</span> <strong>0 client perdu</strong> depuis 6 mois - taux de satisfaction client : 98%
+              <div class="conversation-result-content">
+                <div class="conversation-result-metric">0 client perdu</div>
+                <div class="conversation-result-description">Depuis 6 mois - taux de satisfaction client : 98%</div>
+              </div>
             </div>
           </div>
 
@@ -3237,7 +3268,10 @@
           </div>
           <div class="conversation-result-wrapper">
             <div class="conversation-result">
-              <span class="result-badge">✓ Résultat</span> <strong>100% de dossiers acceptés</strong> du premier coup - 0 rejet depuis 4 mois
+              <div class="conversation-result-content">
+                <div class="conversation-result-metric">100% de dossiers acceptés</div>
+                <div class="conversation-result-description">Du premier coup - 0 rejet depuis 4 mois</div>
+              </div>
             </div>
           </div>
 
@@ -3267,7 +3301,10 @@
           </div>
           <div class="conversation-result-wrapper">
             <div class="conversation-result">
-              <span class="result-badge">✓ Résultat</span> <strong>90% moins de sollicitations</strong> - tableau de bord consulté 200 fois/mois
+              <div class="conversation-result-content">
+                <div class="conversation-result-metric">90% moins de sollicitations</div>
+                <div class="conversation-result-description">Tableau de bord consulté 200 fois/mois</div>
+              </div>
             </div>
           </div>
 
@@ -3297,7 +3334,10 @@
           </div>
           <div class="conversation-result-wrapper">
             <div class="conversation-result">
-              <span class="result-badge">✓ Résultat</span> <strong>12k€ de subventions récupérées</strong> en 3 mois grâce aux rappels
+              <div class="conversation-result-content">
+                <div class="conversation-result-metric">12k€ de subventions récupérées</div>
+                <div class="conversation-result-description">En 3 mois grâce aux rappels automatiques</div>
+              </div>
             </div>
           </div>
 
@@ -3327,7 +3367,10 @@
           </div>
           <div class="conversation-result-wrapper">
             <div class="conversation-result">
-              <span class="result-badge">✓ Résultat</span> <strong>Satisfaction client : 95%</strong> - clients informés en temps réel, stress divisé par 3
+              <div class="conversation-result-content">
+                <div class="conversation-result-metric">Satisfaction client : 95%</div>
+                <div class="conversation-result-description">Clients informés en temps réel, stress divisé par 3</div>
+              </div>
             </div>
           </div>
 
@@ -3357,7 +3400,10 @@
           </div>
           <div class="conversation-result-wrapper">
             <div class="conversation-result">
-              <span class="result-badge">✓ Résultat</span> <strong>Délai de paiement réduit de 45%</strong> - 23k€ récupérés en 2 mois avec relances auto
+              <div class="conversation-result-content">
+                <div class="conversation-result-metric">Délai de paiement réduit de 45%</div>
+                <div class="conversation-result-description">23k€ récupérés en 2 mois avec relances auto</div>
+              </div>
             </div>
           </div>
 
@@ -3387,7 +3433,10 @@
           </div>
           <div class="conversation-result-wrapper">
             <div class="conversation-result">
-              <span class="result-badge">✓ Résultat</span> <strong>70% moins d'erreurs de coordination</strong> - temps de communication divisé par 4
+              <div class="conversation-result-content">
+                <div class="conversation-result-metric">70% moins d'erreurs de coordination</div>
+                <div class="conversation-result-description">Temps de communication divisé par 4</div>
+              </div>
             </div>
           </div>
 
@@ -3417,7 +3466,10 @@
           </div>
           <div class="conversation-result-wrapper">
             <div class="conversation-result">
-              <span class="result-badge">✓ Résultat</span> <strong>Formation en 4 jours</strong> au lieu de 3 semaines - apprenti autonome 80% plus vite
+              <div class="conversation-result-content">
+                <div class="conversation-result-metric">Formation en 4 jours</div>
+                <div class="conversation-result-description">Au lieu de 3 semaines - apprenti autonome 80% plus vite</div>
+              </div>
             </div>
           </div>
         </div>
