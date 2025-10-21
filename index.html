@@ -1421,11 +1421,17 @@
     .testimonials-conversations {
       display: flex;
       flex-direction: column;
-      gap: 2.5rem;
-      margin-bottom: 2rem;
+      gap: 5rem;
+      margin-bottom: 0;
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .conversation-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
     /* Séparation entre Conversations et Sondage */
@@ -1533,19 +1539,18 @@
       padding-left: 0;
     }
 
-    /* Success Badge Gaming - Achievement Unlocked Style */
+    /* Success Badge Professional */
     .conversation-result {
       display: flex;
       align-items: center;
       gap: 1rem;
       background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
       padding: 1.25rem 1.75rem;
-      border-radius: 24px;
-      border: 3px solid #fbbf24;
+      border-radius: 16px;
+      border: 2px solid #15803d;
       box-shadow:
-        0 8px 24px rgba(34, 197, 94, 0.4),
-        0 0 40px rgba(34, 197, 94, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        0 4px 16px rgba(34, 197, 94, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
       position: relative;
       transition: all 0.3s ease;
     }
@@ -1553,23 +1558,24 @@
     .conversation-result:hover {
       transform: translateY(-2px);
       box-shadow:
-        0 12px 32px rgba(34, 197, 94, 0.5),
-        0 0 50px rgba(34, 197, 94, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        0 8px 24px rgba(34, 197, 94, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
     }
 
     .conversation-result::before {
-      content: '🏆';
+      content: '✓';
       flex-shrink: 0;
-      width: 48px;
-      height: 48px;
-      background: rgba(255, 255, 255, 0.15);
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.2);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
-      border: 2px solid rgba(255, 255, 255, 0.3);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.4);
     }
 
     .conversation-result-content {
@@ -3170,67 +3176,71 @@
 
         <div class="testimonials-conversations">
           <!-- Conversation 1 : Douleur €€€ -->
-          <div class="conversation-thread card">
-            <div class="conversation-message user">
-              <div class="message-avatar">M</div>
-              <div class="message-content">
-                <div class="message-author">Marc, conducteur de travaux</div>
-                <p>Je passe <strong>14 heures par semaine</strong> sur les devis et l'admin... Ça me coûte facilement <strong>15k€ de manque à gagner par an</strong>. C'est insoutenable.</p>
+          <div class="conversation-group">
+            <div class="conversation-thread card">
+              <div class="conversation-message user">
+                <div class="message-avatar">M</div>
+                <div class="message-content">
+                  <div class="message-author">Marc, conducteur de travaux</div>
+                  <p>Je passe <strong>14 heures par semaine</strong> sur les devis et l'admin... Ça me coûte facilement <strong>15k€ de manque à gagner par an</strong>. C'est insoutenable.</p>
+                </div>
+              </div>
+              <div class="conversation-message reply">
+                <div class="message-avatar">P</div>
+                <div class="message-content">
+                  <div class="message-author">Équipe Protoreno</div>
+                  <p>On a développé un système de templates intelligents. Devis automatisés, données pré-remplies. Tu veux tester ?</p>
+                </div>
+              </div>
+              <div class="conversation-message user">
+                <div class="message-avatar">M</div>
+                <div class="message-content">
+                  <div class="message-author">Marc</div>
+                  <p>Si ça peut me faire gagner ne serait-ce que 5h par semaine, je prends !</p>
+                </div>
               </div>
             </div>
-            <div class="conversation-message reply">
-              <div class="message-avatar">P</div>
-              <div class="message-content">
-                <div class="message-author">Équipe Protoreno</div>
-                <p>On a développé un système de templates intelligents. Devis automatisés, données pré-remplies. Tu veux tester ?</p>
-              </div>
-            </div>
-            <div class="conversation-message user">
-              <div class="message-avatar">M</div>
-              <div class="message-content">
-                <div class="message-author">Marc</div>
-                <p>Si ça peut me faire gagner ne serait-ce que 5h par semaine, je prends !</p>
-              </div>
-            </div>
-          </div>
-          <div class="conversation-result-wrapper">
-            <div class="conversation-result">
-              <div class="conversation-result-content">
-                <div class="conversation-result-metric">85% de temps gagné</div>
-                <div class="conversation-result-description">Marc passe maintenant 2h/semaine au lieu de 14h sur les devis</div>
+            <div class="conversation-result-wrapper">
+              <div class="conversation-result">
+                <div class="conversation-result-content">
+                  <div class="conversation-result-metric">85% de temps gagné</div>
+                  <div class="conversation-result-description">Marc passe maintenant 2h/semaine au lieu de 14h sur les devis</div>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Conversation 2 : Amélioration outil - Scan intelligent -->
-          <div class="conversation-thread card">
-            <div class="conversation-message user">
-              <div class="message-avatar">L</div>
-              <div class="message-content">
-                <div class="message-author">Lucie, conductrice de travaux</div>
-                <p>L'outil collecte fonctionne bien. Mais <strong>mes clients galèrent à prendre des photos nettes</strong> de leurs documents. La moitié est illisible, je dois redemander...</p>
+          <div class="conversation-group">
+            <div class="conversation-thread card">
+              <div class="conversation-message user">
+                <div class="message-avatar">L</div>
+                <div class="message-content">
+                  <div class="message-author">Lucie, conductrice de travaux</div>
+                  <p>L'outil collecte fonctionne bien. Mais <strong>mes clients galèrent à prendre des photos nettes</strong> de leurs documents. La moitié est illisible, je dois redemander...</p>
+                </div>
+              </div>
+              <div class="conversation-message reply">
+                <div class="message-avatar">P</div>
+                <div class="message-content">
+                  <div class="message-author">Équipe Protoreno</div>
+                  <p>On intègre scan intelligent : détection auto des bords, amélioration qualité, reconnaissance du type de doc ?</p>
+                </div>
+              </div>
+              <div class="conversation-message user">
+                <div class="message-avatar">L</div>
+                <div class="message-content">
+                  <div class="message-author">Lucie</div>
+                  <p>Si c'est automatique et que ça guide le client, je vais gagner un temps fou en allers-retours !</p>
+                </div>
               </div>
             </div>
-            <div class="conversation-message reply">
-              <div class="message-avatar">P</div>
-              <div class="message-content">
-                <div class="message-author">Équipe Protoreno</div>
-                <p>On intègre scan intelligent : détection auto des bords, amélioration qualité, reconnaissance du type de doc ?</p>
-              </div>
-            </div>
-            <div class="conversation-message user">
-              <div class="message-avatar">L</div>
-              <div class="message-content">
-                <div class="message-author">Lucie</div>
-                <p>Si c'est automatique et que ça guide le client, je vais gagner un temps fou en allers-retours !</p>
-              </div>
-            </div>
-          </div>
-          <div class="conversation-result-wrapper">
-            <div class="conversation-result">
-              <div class="conversation-result-content">
-                <div class="conversation-result-metric">90% documents valides du 1er coup</div>
-                <div class="conversation-result-description">Avant : 50% - fini les allers-retours avec les clients</div>
+            <div class="conversation-result-wrapper">
+              <div class="conversation-result">
+                <div class="conversation-result-content">
+                  <div class="conversation-result-metric">90% documents valides du 1er coup</div>
+                  <div class="conversation-result-description">Avant : 50% - fini les allers-retours avec les clients</div>
+                </div>
               </div>
             </div>
           </div>
