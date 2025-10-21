@@ -1900,6 +1900,111 @@
     }
 
     /* ============================================
+       VISUALISATIONS MÉTRIQUES
+       ============================================ */
+
+    /* V1: Barres comparatives */
+    .metric-with-bar {
+      position: relative;
+    }
+
+    .metric-comparison-bar {
+      width: 100%;
+      height: 6px;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 3px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+    }
+
+    .metric-comparison-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.3s ease;
+    }
+
+    .metric-comparison-negative {
+      background: linear-gradient(90deg, #DC2626, #EF4444);
+    }
+
+    .metric-comparison-positive {
+      background: linear-gradient(90deg, #16a34a, #22c55e);
+    }
+
+    /* V2: Delta avec flèches */
+    .metric-delta {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      width: fit-content;
+    }
+
+    .metric-delta-positive {
+      color: #16a34a;
+      background: rgba(22, 163, 74, 0.1);
+    }
+
+    .metric-delta-arrow {
+      flex-shrink: 0;
+    }
+
+    /* V3: Icônes multiples */
+    .metric-icons {
+      display: flex;
+      gap: 0.25rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .metric-icon {
+      opacity: 0.7;
+    }
+
+    .metric-icon-negative {
+      color: #DC2626;
+    }
+
+    .metric-icon-positive {
+      color: #16a34a;
+    }
+
+    /* V4: Jauges circulaires */
+    .metric-with-gauge {
+      position: relative;
+    }
+
+    .metric-gauge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.5rem;
+      position: relative;
+    }
+
+    .metric-gauge-circle {
+      display: block;
+    }
+
+    .metric-gauge-badge {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #16a34a;
+      background: white;
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    /* ============================================
        VARIANTE 9: BADGES PRONONCÉS ET BORDURES ÉPAISSES
        ============================================ */
 
@@ -4797,11 +4902,11 @@
 
         <!-- Toggle pour variantes métriques -->
         <div class="metrics-toggle-container">
-          <button class="metrics-toggle-btn active" onclick="switchMetricsVariant(0)">2 cartes égales</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(1)">Grande + Petite</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(2)">Fond + Transparent</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(3)">Bordure + Ombre</button>
-          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(4)">Layout vertical</button>
+          <button class="metrics-toggle-btn active" onclick="switchMetricsVariant(0)">Chiffres simples</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(1)">Barres comparatives</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(2)">Delta avec flèches</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(3)">Icônes multiples</button>
+          <button class="metrics-toggle-btn" onclick="switchMetricsVariant(4)">Jauges circulaires</button>
         </div>
 
         <!-- Avant/Après avec UI moderne emphase -->
@@ -4829,13 +4934,13 @@
                   </div>
                 </div>
 
-                <div class="metrics-secondary">
-                  <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
+                <div class="metrics-secondary metrics-contrast">
+                  <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background">
                     <div class="ba-modern-metric-value">33%</div>
                     <div class="ba-modern-metric-label">Clients abandonnent</div>
                   </div>
 
-                  <div class="ba-modern-metric ba-modern-metric-negative metric-compact">
+                  <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent">
                     <div class="ba-modern-metric-value">-15k€</div>
                     <div class="ba-modern-metric-label">Manque à gagner / an</div>
                   </div>
@@ -4909,15 +5014,21 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary metrics-hierarchy">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-large-secondary">
+              <div class="metrics-secondary metrics-contrast">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background metric-with-bar">
                   <div class="ba-modern-metric-value">33%</div>
                   <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="metric-comparison-bar">
+                    <div class="metric-comparison-fill metric-comparison-negative" style="width: 33%;"></div>
+                  </div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-small-secondary">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent metric-with-bar">
                   <div class="ba-modern-metric-value">-15k€</div>
                   <div class="ba-modern-metric-label">Manque à gagner / an</div>
+                  <div class="metric-comparison-bar">
+                    <div class="metric-comparison-fill metric-comparison-negative" style="width: 65%;"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -4951,15 +5062,21 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary metrics-hierarchy">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-large-secondary">
+              <div class="metrics-secondary metrics-contrast">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-background metric-with-bar">
                   <div class="ba-modern-metric-value">5%</div>
                   <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="metric-comparison-bar">
+                    <div class="metric-comparison-fill metric-comparison-positive" style="width: 5%;"></div>
+                  </div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-small-secondary">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-transparent metric-with-bar">
                   <div class="ba-modern-metric-value">+8k€</div>
                   <div class="ba-modern-metric-label">CA retrouvé / an</div>
+                  <div class="metric-comparison-bar">
+                    <div class="metric-comparison-fill metric-comparison-positive" style="width: 35%;"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -4990,12 +5107,12 @@
               </div>
 
               <div class="metrics-secondary metrics-contrast">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background metric-with-delta">
                   <div class="ba-modern-metric-value">33%</div>
                   <div class="ba-modern-metric-label">Clients abandonnent</div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent metric-with-delta">
                   <div class="ba-modern-metric-value">-15k€</div>
                   <div class="ba-modern-metric-label">Manque à gagner / an</div>
                 </div>
@@ -5032,14 +5149,26 @@
               </div>
 
               <div class="metrics-secondary metrics-contrast">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-background">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-background metric-with-delta">
                   <div class="ba-modern-metric-value">5%</div>
                   <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="metric-delta metric-delta-positive">
+                    <svg class="metric-delta-arrow" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7-7m0 0l-7 7m7-7v18" />
+                    </svg>
+                    <span>-28 pts</span>
+                  </div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-transparent">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-transparent metric-with-delta">
                   <div class="ba-modern-metric-value">+8k€</div>
                   <div class="ba-modern-metric-label">CA retrouvé / an</div>
+                  <div class="metric-delta metric-delta-positive">
+                    <svg class="metric-delta-arrow" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                    </svg>
+                    <span>+23k€</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -5069,15 +5198,36 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary metrics-mix-styles">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-border-left">
+              <div class="metrics-secondary metrics-contrast">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background metric-with-icons">
                   <div class="ba-modern-metric-value">33%</div>
                   <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="metric-icons">
+                    <svg class="metric-icon metric-icon-negative" width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                    </svg>
+                    <svg class="metric-icon metric-icon-negative" width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                    </svg>
+                    <svg class="metric-icon metric-icon-negative" width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                    </svg>
+                  </div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-shadow">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent metric-with-icons">
                   <div class="ba-modern-metric-value">-15k€</div>
                   <div class="ba-modern-metric-label">Manque à gagner / an</div>
+                  <div class="metric-icons">
+                    <svg class="metric-icon metric-icon-negative" width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                    </svg>
+                    <svg class="metric-icon metric-icon-negative" width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -5111,15 +5261,34 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary metrics-mix-styles">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-border-left">
+              <div class="metrics-secondary metrics-contrast">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-background metric-with-icons">
                   <div class="ba-modern-metric-value">5%</div>
                   <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="metric-icons">
+                    <svg class="metric-icon metric-icon-positive" width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                    </svg>
+                  </div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-shadow">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-transparent metric-with-icons">
                   <div class="ba-modern-metric-value">+8k€</div>
                   <div class="ba-modern-metric-label">CA retrouvé / an</div>
+                  <div class="metric-icons">
+                    <svg class="metric-icon metric-icon-positive" width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                    </svg>
+                    <svg class="metric-icon metric-icon-positive" width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                    </svg>
+                    <svg class="metric-icon metric-icon-positive" width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"/>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -5149,15 +5318,31 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary metrics-vertical">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-stacked-top">
+              <div class="metrics-secondary metrics-contrast">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-with-background metric-with-gauge">
                   <div class="ba-modern-metric-value">33%</div>
                   <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="metric-gauge">
+                    <svg class="metric-gauge-circle" width="48" height="48" viewBox="0 0 48 48">
+                      <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="4"/>
+                      <circle cx="24" cy="24" r="20" fill="none" stroke="#DC2626" stroke-width="4"
+                              stroke-dasharray="126" stroke-dashoffset="84"
+                              transform="rotate(-90 24 24)" stroke-linecap="round"/>
+                    </svg>
+                  </div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-stacked-bottom">
+                <div class="ba-modern-metric ba-modern-metric-negative metric-compact metric-transparent metric-with-gauge">
                   <div class="ba-modern-metric-value">-15k€</div>
                   <div class="ba-modern-metric-label">Manque à gagner / an</div>
+                  <div class="metric-gauge">
+                    <svg class="metric-gauge-circle" width="48" height="48" viewBox="0 0 48 48">
+                      <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="4"/>
+                      <circle cx="24" cy="24" r="20" fill="none" stroke="#DC2626" stroke-width="4"
+                              stroke-dasharray="126" stroke-dashoffset="44"
+                              transform="rotate(-90 24 24)" stroke-linecap="round"/>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -5191,15 +5376,33 @@
                 </div>
               </div>
 
-              <div class="metrics-secondary metrics-vertical">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-stacked-top">
+              <div class="metrics-secondary metrics-contrast">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-with-background metric-with-gauge">
                   <div class="ba-modern-metric-value">5%</div>
                   <div class="ba-modern-metric-label">Clients abandonnent</div>
+                  <div class="metric-gauge">
+                    <svg class="metric-gauge-circle" width="48" height="48" viewBox="0 0 48 48">
+                      <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="4"/>
+                      <circle cx="24" cy="24" r="20" fill="none" stroke="#16a34a" stroke-width="4"
+                              stroke-dasharray="126" stroke-dashoffset="120"
+                              transform="rotate(-90 24 24)" stroke-linecap="round"/>
+                    </svg>
+                    <div class="metric-gauge-badge">-85%</div>
+                  </div>
                 </div>
 
-                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-stacked-bottom">
+                <div class="ba-modern-metric ba-modern-metric-positive metric-compact metric-transparent metric-with-gauge">
                   <div class="ba-modern-metric-value">+8k€</div>
                   <div class="ba-modern-metric-label">CA retrouvé / an</div>
+                  <div class="metric-gauge">
+                    <svg class="metric-gauge-circle" width="48" height="48" viewBox="0 0 48 48">
+                      <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="4"/>
+                      <circle cx="24" cy="24" r="20" fill="none" stroke="#16a34a" stroke-width="4"
+                              stroke-dasharray="126" stroke-dashoffset="31"
+                              transform="rotate(-90 24 24)" stroke-linecap="round"/>
+                    </svg>
+                    <div class="metric-gauge-badge">+153%</div>
+                  </div>
                 </div>
               </div>
             </div>
