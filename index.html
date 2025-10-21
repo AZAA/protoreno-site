@@ -1050,6 +1050,19 @@
       position: relative;
     }
 
+    /* Espacement rythmé variable */
+    .dialogue-step:nth-child(1) {
+      margin-bottom: 4rem;
+    }
+
+    .dialogue-step:nth-child(2) {
+      margin-bottom: 6rem;
+    }
+
+    .dialogue-step:nth-child(3) {
+      margin-bottom: 4.5rem;
+    }
+
     .dialogue-step:last-child {
       margin-bottom: 2rem;
     }
@@ -1152,6 +1165,9 @@
       font-weight: 800;
       margin-bottom: 1.5rem;
       letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
 
     .dialogue-on .dialogue-title {
@@ -1160,6 +1176,22 @@
 
     .dialogue-vous .dialogue-title {
       color: #F59E0B;
+    }
+
+    /* Badge numéroté */
+    .step-badge {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.125rem;
+      font-weight: 800;
+      border: 3px solid currentColor;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .dialogue-card {
@@ -3191,7 +3223,10 @@
               <span class="dialogue-avatar-label">Vous</span>
             </div>
             <div class="dialogue-bubble">
-              <h3 class="dialogue-title">Vous dites</h3>
+              <h3 class="dialogue-title">
+                <span class="step-badge">1</span>
+                Vous dites
+              </h3>
               <div class="card dialogue-card">
                 <p class="dialogue-text">
                   <strong>"J'en peux plus de la paperasse..."</strong><br>
@@ -3220,7 +3255,10 @@
               <span class="dialogue-avatar-label">Nous</span>
             </div>
             <div class="dialogue-bubble">
-              <h3 class="dialogue-title">On crée</h3>
+              <h3 class="dialogue-title">
+                <span class="step-badge">2</span>
+                On crée
+              </h3>
               <div class="card dialogue-card">
                 <p class="dialogue-text">
                   <strong>Un module de devis intelligent</strong> qui pré-remplit automatiquement les données techniques, calcule les aides <em>MaPrimeRénov</em> selon les barèmes en vigueur, et génère un <strong>PDF professionnel</strong> en 2 clics.
@@ -3239,7 +3277,10 @@
               <span class="dialogue-avatar-label">Vous</span>
             </div>
             <div class="dialogue-bubble">
-              <h3 class="dialogue-title">Vous testez</h3>
+              <h3 class="dialogue-title">
+                <span class="step-badge">3</span>
+                Vous testez
+              </h3>
               <div class="card dialogue-card">
                 <p class="dialogue-text">
                   <strong>"C'est déjà pas mal, mais..."</strong><br>
@@ -3267,7 +3308,10 @@
               <span class="dialogue-avatar-label">Nous</span>
             </div>
             <div class="dialogue-bubble">
-              <h3 class="dialogue-title">On ajuste</h3>
+              <h3 class="dialogue-title">
+                <span class="step-badge">4</span>
+                On ajuste
+              </h3>
               <div class="card dialogue-card">
                 <p class="dialogue-text">
                   On ajoute la <strong>sauvegarde de barèmes</strong>, l'<strong>export Excel</strong> multi-formats, et un <strong>système de checklist CEE</strong> avec suivi automatique des documents manquants.
