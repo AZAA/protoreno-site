@@ -934,6 +934,155 @@
       transform: translateY(-2px);
     }
 
+    /* Option K - Blanc / Gris ardoise plus contrasté */
+    body[data-theme="K"] section:nth-of-type(odd) {
+      background-color: #ffffff;
+    }
+
+    body[data-theme="K"] section:nth-of-type(even) {
+      background-color: #e2e8f0;
+    }
+
+    body[data-theme="K"] .card {
+      background: #ffffff;
+      box-shadow: 0 2px 16px rgba(15, 23, 42, 0.1);
+    }
+
+    /* Option L - Tons chauds beige/crème */
+    body[data-theme="L"] section:nth-of-type(odd) {
+      background-color: #fefefe;
+    }
+
+    body[data-theme="L"] section:nth-of-type(even) {
+      background-color: #f5f1ed;
+    }
+
+    body[data-theme="L"] .card {
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(120, 80, 40, 0.08);
+    }
+
+    /* Option M - Tons froids bleutés */
+    body[data-theme="M"] section:nth-of-type(odd) {
+      background-color: #ffffff;
+    }
+
+    body[data-theme="M"] section:nth-of-type(even) {
+      background-color: #eff6ff;
+    }
+
+    body[data-theme="M"] .card {
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(37, 99, 235, 0.06);
+    }
+
+    /* Option N - Gris neutres équilibrés */
+    body[data-theme="N"] section:nth-of-type(odd) {
+      background-color: #fefefe;
+    }
+
+    body[data-theme="N"] section:nth-of-type(even) {
+      background-color: #f4f4f5;
+    }
+
+    body[data-theme="N"] .card {
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Option O - Minimaliste ultra-léger */
+    body[data-theme="O"] section:nth-of-type(odd) {
+      background-color: #ffffff;
+    }
+
+    body[data-theme="O"] section:nth-of-type(even) {
+      background-color: #fafafa;
+    }
+
+    body[data-theme="O"] .card {
+      background: #ffffff;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    /* ============================================
+       ADAPTATION DU HERO POUR CHAQUE THÈME
+       ============================================ */
+
+    /* Thème A - transition vers blanc */
+    body[data-theme="A"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+    }
+
+    /* Thème B - transition vers blanc */
+    body[data-theme="B"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+    }
+
+    /* Thème C - transition vers gris perle */
+    body[data-theme="C"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+    }
+
+    /* Thème D - transition vers blanc cassé */
+    body[data-theme="D"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+    }
+
+    /* Thème E - transition vers blanc cassé chaud */
+    body[data-theme="E"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #fefdfb 100%);
+    }
+
+    /* Thème F - transition vers gris perle */
+    body[data-theme="F"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    }
+
+    /* Thème G - transition vers blanc neige */
+    body[data-theme="G"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+    }
+
+    /* Thème H - transition vers crème */
+    body[data-theme="H"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #fdfcfa 100%);
+    }
+
+    /* Thème I - transition vers blanc */
+    body[data-theme="I"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+    }
+
+    /* Thème J - gradient radial premium */
+    body[data-theme="J"] .hero {
+      background: radial-gradient(circle at top center, #ffffff 0%, #fafbfc 70%, #f5f7fa 100%);
+    }
+
+    /* Thème K - transition vers blanc */
+    body[data-theme="K"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+    }
+
+    /* Thème L - transition vers blanc chaud */
+    body[data-theme="L"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #fefefe 100%);
+    }
+
+    /* Thème M - transition vers blanc */
+    body[data-theme="M"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+    }
+
+    /* Thème N - transition vers blanc cassé */
+    body[data-theme="N"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #fefefe 100%);
+    }
+
+    /* Thème O - transition vers blanc */
+    body[data-theme="O"] .hero {
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+    }
+
     /* Par défaut, appliquer l'option A */
     section:nth-of-type(odd) {
       background-color: #ffffff;
@@ -3916,6 +4065,11 @@
     <button class="global-theme-btn" onclick="switchGlobalTheme('H')">H</button>
     <button class="global-theme-btn" onclick="switchGlobalTheme('I')">I</button>
     <button class="global-theme-btn" onclick="switchGlobalTheme('J')">J</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('K')">K</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('L')">L</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('M')">M</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('N')">N</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('O')">O</button>
   </div>
 
   <!-- ============================================
