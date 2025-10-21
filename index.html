@@ -845,6 +845,95 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
     }
 
+    /* Option E - Blanc cassé / Beige ultra-clair (chaleureux) */
+    body[data-theme="E"] section:nth-of-type(odd) {
+      background-color: #fefefe;
+    }
+
+    body[data-theme="E"] section:nth-of-type(even) {
+      background-color: #faf8f5;
+    }
+
+    body[data-theme="E"] .card {
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(139, 92, 46, 0.06);
+    }
+
+    /* Option F - Gris perle / Gris colombe (élégant) */
+    body[data-theme="F"] section:nth-of-type(odd) {
+      background-color: #f9fafb;
+    }
+
+    body[data-theme="F"] section:nth-of-type(even) {
+      background-color: #f3f4f6;
+    }
+
+    body[data-theme="F"] .card {
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Option G - Blanc neige / Gris nuage (très subtil, minimaliste) */
+    body[data-theme="G"] section:nth-of-type(odd) {
+      background-color: #ffffff;
+    }
+
+    body[data-theme="G"] section:nth-of-type(even) {
+      background-color: #fafafa;
+    }
+
+    body[data-theme="G"] .card {
+      background: #ffffff;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Option H - Crème / Ivoire (chaleureux, vintage) */
+    body[data-theme="H"] section:nth-of-type(odd) {
+      background-color: #fffdf9;
+    }
+
+    body[data-theme="H"] section:nth-of-type(even) {
+      background-color: #faf7f2;
+    }
+
+    body[data-theme="H"] .card {
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(184, 134, 11, 0.08);
+    }
+
+    /* Option I - Blanc / Gris ardoise très clair (moderne, tech) */
+    body[data-theme="I"] section:nth-of-type(odd) {
+      background-color: #ffffff;
+    }
+
+    body[data-theme="I"] section:nth-of-type(even) {
+      background-color: #f1f5f9;
+    }
+
+    body[data-theme="I"] .card {
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(15, 23, 42, 0.08);
+    }
+
+    /* Option J - Gradients multi-niveaux (premium, dynamique) */
+    body[data-theme="J"] section:nth-of-type(odd) {
+      background: radial-gradient(circle at top right, #ffffff 0%, #fafbfc 60%, #f5f7fa 100%);
+    }
+
+    body[data-theme="J"] section:nth-of-type(even) {
+      background: radial-gradient(circle at top left, #f8f9fa 0%, #f1f3f5 60%, #e9ecef 100%);
+    }
+
+    body[data-theme="J"] .card {
+      background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    body[data-theme="J"] .card:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+      transform: translateY(-2px);
+    }
+
     /* Par défaut, appliquer l'option A */
     section:nth-of-type(odd) {
       background-color: #ffffff;
@@ -3816,11 +3905,17 @@
        TOGGLE GLOBAL OPTIONS DE FOND
        ============================================ -->
   <div class="global-theme-toggle">
-    <div class="global-theme-label">Test fonds :</div>
-    <button class="global-theme-btn active" onclick="switchGlobalTheme('A')">A: Blanc/Gris</button>
-    <button class="global-theme-btn" onclick="switchGlobalTheme('B')">B: Blanc/Bleu</button>
-    <button class="global-theme-btn" onclick="switchGlobalTheme('C')">C: Gris/Gris+</button>
-    <button class="global-theme-btn" onclick="switchGlobalTheme('D')">D: Gradient</button>
+    <div class="global-theme-label">Fonds :</div>
+    <button class="global-theme-btn active" onclick="switchGlobalTheme('A')">A</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('B')">B</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('C')">C</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('D')">D</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('E')">E</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('F')">F</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('G')">G</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('H')">H</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('I')">I</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('J')">J</button>
   </div>
 
   <!-- ============================================
@@ -4911,7 +5006,7 @@
       buttons.forEach(btn => btn.classList.remove('active'));
 
       // Ajouter la classe active au bouton cliqué
-      const clickedButton = Array.from(buttons).find(btn => btn.textContent.startsWith(theme + ':'));
+      const clickedButton = Array.from(buttons).find(btn => btn.textContent === theme);
       if (clickedButton) {
         clickedButton.classList.add('active');
       }
