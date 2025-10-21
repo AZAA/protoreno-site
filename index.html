@@ -1004,6 +1004,20 @@
       box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
     }
 
+    /* Option M+ - Tons froids bleutés avec gradient hero optimisé */
+    body[data-theme="M+"] section:nth-of-type(odd) {
+      background-color: #ffffff;
+    }
+
+    body[data-theme="M+"] section:nth-of-type(even) {
+      background-color: #eff6ff;
+    }
+
+    body[data-theme="M+"] .card {
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(37, 99, 235, 0.06);
+    }
+
     /* ============================================
        ADAPTATION DU HERO POUR CHAQUE THÈME
        ============================================ */
@@ -1081,6 +1095,11 @@
     /* Thème O - transition vers blanc */
     body[data-theme="O"] .hero {
       background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+    }
+
+    /* Thème M+ - gradient bleuté optimisé hero → section outils */
+    body[data-theme="M+"] .hero {
+      background: linear-gradient(180deg, #f0f9ff 0%, #fafcff 50%, #ffffff 100%);
     }
 
     /* Par défaut, appliquer l'option A */
@@ -4258,6 +4277,7 @@
     <button class="global-theme-btn" onclick="switchGlobalTheme('M')">M</button>
     <button class="global-theme-btn" onclick="switchGlobalTheme('N')">N</button>
     <button class="global-theme-btn" onclick="switchGlobalTheme('O')">O</button>
+    <button class="global-theme-btn" onclick="switchGlobalTheme('M+')">M+</button>
   </div>
 
   <!-- ============================================
