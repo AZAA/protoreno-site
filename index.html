@@ -316,6 +316,14 @@
       width: 100%;
     }
 
+    .nav-links a.active {
+      color: var(--blue);
+    }
+
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
     /* Navigation mobile */
     @media (max-width: 768px) {
       .nav-links {
@@ -3762,6 +3770,46 @@
         submitBtn.disabled = false;
       }
     });
+
+    // Scroll Spy - Active navbar links based on scroll position
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = document.querySelectorAll('section[id^="section-"]');
+
+    // Configuration de l'Intersection Observer
+    const observerOptions = {
+      root: null, // viewport
+      rootMargin: '-20% 0px -60% 0px', // Active quand la section est à 20% du haut
+      threshold: 0
+    };
+
+    let currentActiveSection = null;
+
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.getAttribute('id');
+
+          // Ne mettre à jour que si c'est différent de la section active actuelle
+          if (currentActiveSection !== sectionId) {
+            currentActiveSection = sectionId;
+
+            // Retirer la classe active de tous les liens
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Ajouter la classe active au lien correspondant
+            const activeLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+            if (activeLink) {
+              activeLink.classList.add('active');
+            }
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observer toutes les sections
+    sections.forEach(section => observer.observe(section));
 
     // Chargement du widget Tally
     var d = document,
