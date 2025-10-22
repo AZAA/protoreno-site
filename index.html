@@ -2846,19 +2846,7 @@
       border-left-color: #F59E0B;
     }
 
-    .tools-grid .tool-card:nth-child(even) {
-      grid-template-columns: 1fr 2fr;
-    }
-
-    .tools-grid .tool-card:nth-child(even) .tool-image {
-      order: 2;
-    }
-
-    .tools-grid .tool-card:nth-child(even) .tool-content {
-      order: 1;
-    }
-
-    /* Bordures toujours à gauche (pas d'inversion pour les cartes paires) */
+    /* Bordures toujours à gauche */
 
     .tools-grid .tool-card:hover {
       box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
@@ -2880,7 +2868,7 @@
       max-height: 400px;
       object-fit: contain;
       border-radius: 8px;
-      box-shadow: 0 0 0 1px #E5E7EB;
+      box-shadow: 0 0 0 2px #D1D5DB;
     }
 
     .tools-grid .tool-content {
@@ -2934,19 +2922,6 @@
     @media (max-width: 1024px) {
       .tools-grid .tool-card {
         grid-template-columns: 1fr;
-      }
-
-      .tools-grid .tool-card:nth-child(even) {
-        grid-template-columns: 1fr;
-      }
-
-      /* Annuler l'alternance : toujours image au-dessus sur mobile */
-      .tools-grid .tool-card:nth-child(even) .tool-image {
-        order: 0;
-      }
-
-      .tools-grid .tool-card:nth-child(even) .tool-content {
-        order: 0;
       }
 
       /* Cacher l'icône SVG sur mobile (redondante avec l'image) */
@@ -3148,9 +3123,6 @@
 
       <div class="tools-grid">
         <div class="card tool-card">
-          <div class="tool-image">
-            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
-          </div>
           <div class="tool-content">
             <div class="tool-icon">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -3162,12 +3134,12 @@
               <p>Calculez rapidement les performances énergétiques de vos projets de rénovation. Modélisation thermique, estimation des gains énergétiques et calcul des économies prévisionnelles en quelques clics.</p>
             </div>
           </div>
+          <div class="tool-image">
+            <img src="images/simulateur.png" alt="Simulation de projets énergétiques" loading="lazy">
+          </div>
         </div>
 
         <div class="card tool-card">
-          <div class="tool-image">
-            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
-          </div>
           <div class="tool-content">
             <div class="tool-icon">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -3179,12 +3151,12 @@
               <p>Simplifiez la collecte des pièces justificatives auprès de vos clients. Interface intuitive, rappels automatiques et validation des documents pour constituer vos dossiers de financement plus rapidement.</p>
             </div>
           </div>
+          <div class="tool-image">
+            <img src="images/dossier.png" alt="Collecte de documents" loading="lazy">
+          </div>
         </div>
 
         <div class="card tool-card">
-          <div class="tool-image">
-            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
-          </div>
           <div class="tool-content">
             <div class="tool-icon">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -3196,6 +3168,9 @@
               <h3>Pilotage de chantiers</h3>
               <p>Suivez l'avancement de vos chantiers en temps réel avec des tableaux de bord clairs. Gestion des plannings, suivi budgétaire et communication facilitée avec vos équipes et sous-traitants.</p>
             </div>
+          </div>
+          <div class="tool-image">
+            <img src="images/chantier.png" alt="Pilotage de chantiers" loading="lazy">
           </div>
         </div>
       </div>
