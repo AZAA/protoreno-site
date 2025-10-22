@@ -2655,6 +2655,32 @@
       .hero .lead {
         font-size: 1.0625rem;
       }
+
+      /* Barre bénéfices : 3 items sur une ligne */
+      .tally-benefits-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1.5rem;
+      }
+
+      .benefit-stat {
+        flex-basis: 100%;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--light-gray);
+        text-align: center;
+      }
+
+      .benefit-divider {
+        display: none;
+      }
+
+      .benefit-item-inline {
+        flex-basis: calc(33.333% - 0.67rem);
+        font-size: 0.875rem;
+        justify-content: center;
+        min-width: 0;
+      }
     }
 
     /* Très petits mobiles */
