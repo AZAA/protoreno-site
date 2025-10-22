@@ -1826,6 +1826,44 @@
       border: 4px solid white;
     }
 
+    /* VRAIES solutions - Focus sur la COCHE, pas le background */
+
+    /* ALPHA - Contraste inversé (pastille verte foncée) */
+    .conversation-result.option-alpha {
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    }
+
+    .conversation-result.option-alpha::before {
+      background: #047857;  /* Vert FONCÉ opaque */
+      border: 4px solid white;
+      color: white;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    /* BETA - Effet néon/glow (pastille blanche + coche verte) */
+    .conversation-result.option-beta {
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    }
+
+    .conversation-result.option-beta::before {
+      background: white;  /* Blanc opaque */
+      border: 4px solid #047857;
+      color: #047857;  /* Coche VERTE foncée */
+      box-shadow: 0 0 24px rgba(16, 185, 129, 0.6);  /* Glow vert */
+    }
+
+    /* GAMMA - Relief 3D (dégradé + shadow forte) */
+    .conversation-result.option-gamma {
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    }
+
+    .conversation-result.option-gamma::before {
+      background: linear-gradient(135deg, #ffffff 0%, #d1fae5 100%);  /* Blanc → vert pâle */
+      border: 4px solid #047857;
+      color: #047857;
+      filter: drop-shadow(0 6px 16px rgba(4, 120, 87, 0.4));
+    }
+
     .conversation-result.option-4::before {
       background: rgba(21, 128, 61, 0.6);
       border: 3px solid white;
@@ -3554,6 +3592,41 @@
             <div class="conversation-result-wrapper">
               <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 1rem; font-weight: 600;">Option 3F - Diagonal fort (néon vert → noir-vert)</p>
               <div class="conversation-result option-3f">
+                <div class="conversation-result-content">
+                  <div class="conversation-result-metric">90% documents valides du 1er coup</div>
+                  <div class="conversation-result-description">Avant : 50% - fini les allers-retours avec les clients</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 4rem; padding-top: 4rem; border-top: 3px solid #047857;">
+              <p style="font-size: 1.125rem; color: #047857; margin-bottom: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">⚡ VRAIES SOLUTIONS - Focus sur la COCHE</p>
+              <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 2.5rem;">Le problème n'était pas le background, mais la coche elle-même. Ces 3 variantes changent la COCHE :</p>
+            </div>
+
+            <div class="conversation-result-wrapper">
+              <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 1rem; font-weight: 600;">🔥 ALPHA - Contraste inversé (pastille VERT FONCÉ + coche blanche)</p>
+              <div class="conversation-result option-alpha">
+                <div class="conversation-result-content">
+                  <div class="conversation-result-metric">90% documents valides du 1er coup</div>
+                  <div class="conversation-result-description">Avant : 50% - fini les allers-retours avec les clients</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="conversation-result-wrapper">
+              <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 1rem; font-weight: 600;">🔥 BETA - Effet néon/glow (pastille BLANCHE + coche VERTE + glow)</p>
+              <div class="conversation-result option-beta">
+                <div class="conversation-result-content">
+                  <div class="conversation-result-metric">90% documents valides du 1er coup</div>
+                  <div class="conversation-result-description">Avant : 50% - fini les allers-retours avec les clients</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="conversation-result-wrapper">
+              <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 1rem; font-weight: 600;">🔥 GAMMA - Relief 3D (dégradé blanc→vert pâle + coche VERTE + shadow)</p>
+              <div class="conversation-result option-gamma">
                 <div class="conversation-result-content">
                   <div class="conversation-result-metric">90% documents valides du 1er coup</div>
                   <div class="conversation-result-description">Avant : 50% - fini les allers-retours avec les clients</div>
