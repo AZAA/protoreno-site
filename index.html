@@ -927,14 +927,6 @@
       border-radius: 12px;
       padding: 2.5rem 2rem;
       text-align: center;
-      transition: all 0.4s;
-    }
-
-    .constat-main-problem:hover {
-      background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
-      border-color: #1E40AF;
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.15);
     }
 
     .constat-icon-large {
@@ -2862,14 +2854,7 @@
       order: 1;
     }
 
-    .tools-grid .tool-card:nth-child(even) {
-      border-left: 1px solid var(--light-gray);
-      border-right: 6px solid #10B981;
-    }
-
-    .tools-grid .tool-card:nth-child(2n) {
-      border-right-color: #EF4444;
-    }
+    /* Bordures toujours à gauche (pas d'inversion pour les cartes paires) */
 
     .tools-grid .tool-card:hover {
       box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
