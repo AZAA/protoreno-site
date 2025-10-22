@@ -1754,6 +1754,27 @@
       border: 3px solid rgba(255, 255, 255, 0.5);
     }
 
+    /* Options de test pour le bandeau succès */
+    .conversation-result.option-1::before {
+      background: rgba(255, 255, 255, 0.4);
+      border: 3px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .conversation-result.option-2::before {
+      background: rgba(255, 255, 255, 0.25);
+      border: 4px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .conversation-result.option-3::before {
+      background: rgba(255, 255, 255, 0.35);
+      border: 4px solid white;
+    }
+
+    .conversation-result.option-4::before {
+      background: rgba(21, 128, 61, 0.6);
+      border: 3px solid white;
+    }
+
     .conversation-result-content {
       flex: 1;
       display: flex;
@@ -3062,7 +3083,7 @@
     <div class="container-narrow">
       <h1>Développez vos outils<br><strong>avec nous</strong></h1>
       <p class="lead">
-        Vous dites → On crée → Vous testez → On ajuste
+        Vous demandez → On crée → Vous testez → On ajuste
       </p>
       <a href="#section-outils" class="btn btn-primary btn-large">Découvrir nos outils</a>
     </div>
@@ -3248,7 +3269,7 @@
             <div class="dialogue-bubble">
               <h3 class="dialogue-title">
                 <span class="step-badge">1</span>
-                Vous dites
+                Vous demandez
               </h3>
               <div class="card dialogue-card">
                 <p class="dialogue-text">
@@ -3377,7 +3398,38 @@
               </div>
             </div>
             <div class="conversation-result-wrapper">
-              <div class="conversation-result">
+              <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 1rem; font-weight: 600;">Option 1 - Pastille plus opaque</p>
+              <div class="conversation-result option-1">
+                <div class="conversation-result-content">
+                  <div class="conversation-result-metric">90% documents valides du 1er coup</div>
+                  <div class="conversation-result-description">Avant : 50% - fini les allers-retours avec les clients</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="conversation-result-wrapper">
+              <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 1rem; font-weight: 600;">Option 2 - Bordure plus épaisse + opaque</p>
+              <div class="conversation-result option-2">
+                <div class="conversation-result-content">
+                  <div class="conversation-result-metric">90% documents valides du 1er coup</div>
+                  <div class="conversation-result-description">Avant : 50% - fini les allers-retours avec les clients</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="conversation-result-wrapper">
+              <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 1rem; font-weight: 600;">Option 3 - Pastille blanche solide</p>
+              <div class="conversation-result option-3">
+                <div class="conversation-result-content">
+                  <div class="conversation-result-metric">90% documents valides du 1er coup</div>
+                  <div class="conversation-result-description">Avant : 50% - fini les allers-retours avec les clients</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="conversation-result-wrapper">
+              <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 1rem; font-weight: 600;">Option 4 - Pastille vert foncé</p>
+              <div class="conversation-result option-4">
                 <div class="conversation-result-content">
                   <div class="conversation-result-metric">90% documents valides du 1er coup</div>
                   <div class="conversation-result-description">Avant : 50% - fini les allers-retours avec les clients</div>
