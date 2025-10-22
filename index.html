@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Protoreno développe des outils simples et efficaces pour les professionnels de la rénovation énergétique. Participez à la conception de solutions adaptées au terrain.">
+  <meta name="keywords" content="rénovation énergétique, outils professionnels bâtiment, logiciel rénovation, simulation projet énergétique, collecte documents rénovation, pilotage chantier, Ma Prime Rénov, audit énergétique, artisan RGE, logiciel artisan, gestion chantier rénovation">
+  <meta name="author" content="Protoreno">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#2563EB">
   <title>Protoreno - Des outils pensés pour le terrain | Rénovation énergétique</title>
@@ -29,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://tally.so">
   <link rel="dns-prefetch" href="https://usebasin.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -169,7 +171,7 @@
 
     h2 {
       font-size: clamp(1.75rem, 3vw + 1rem, 2.75rem);
-      font-weight: 700;
+      font-weight: 600;
       line-height: 1.2;
       letter-spacing: -0.02em;
       color: var(--navy);
@@ -292,7 +294,7 @@
       color: var(--slate);
       text-decoration: none;
       font-size: 0.9375rem;
-      font-weight: 500;
+      font-weight: 400;
       transition: color 0.2s;
       position: relative;
     }
@@ -313,6 +315,15 @@
     }
 
     .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* État actif pour la section visible */
+    .nav-links a.active {
+      color: var(--blue);
+    }
+
+    .nav-links a.active::after {
       width: 100%;
     }
 
@@ -707,7 +718,7 @@
     .constat-section-title {
       text-align: center;
       font-size: 1.75rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--slate);
       margin: 4.5rem 0 2.5rem 0;
       padding-bottom: 1rem;
@@ -984,7 +995,7 @@
       font-size: 1.5rem;
       margin-bottom: 0.75rem;
       color: var(--navy);
-      font-weight: 700;
+      font-weight: 600;
     }
 
     .constat-impact-card p {
@@ -1170,7 +1181,7 @@
 
     .dialogue-avatar-label {
       font-size: 0.875rem;
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       color: #6B7280;
@@ -1269,7 +1280,7 @@
 
     .dialogue-text strong {
       color: #1F2937;
-      font-weight: 700;
+      font-weight: 600;
     }
 
     .dialogue-text em {
@@ -1522,7 +1533,7 @@
 
     .conversation-profile-horizontal .profile-name {
       font-size: 1.125rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--navy);
     }
 
@@ -1565,7 +1576,7 @@
 
     .conversation-profile-vertical .profile-name {
       font-size: 1.25rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--navy);
     }
 
@@ -1677,7 +1688,7 @@
 
     .message-author {
       font-size: 0.9375rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--navy);
       margin-bottom: 0.625rem;
       display: flex;
@@ -1915,7 +1926,7 @@
 
     .subsection-title h3 {
       font-size: 1.75rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--navy);
       margin: 0;
       position: relative;
@@ -2409,7 +2420,7 @@
       display: flex;
       align-items: center;
       gap: 0.625rem;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 1.25rem;
       color: white;
     }
@@ -2986,11 +2997,15 @@
     "url": "https://protoreno.com",
     "logo": "https://protoreno.com/images/logo-protoreno.png",
     "description": "Développement collaboratif d'outils numériques pour les professionnels de la rénovation énergétique",
+    "industry": "Logiciel pour la rénovation énergétique",
+    "areaServed": "FR",
+    "inLanguage": "fr-FR",
     "sameAs": [],
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "contact@protoreno.com",
-      "contactType": "Customer Service"
+      "contactType": "Customer Service",
+      "availableLanguage": "French"
     }
   }
   </script>
@@ -3170,7 +3185,7 @@
             <div class="ba-modern-col ba-modern-before">
               <div class="ba-modern-header">
                 <div class="ba-modern-badge ba-modern-badge-negative">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                   Sans solution adaptée
@@ -3191,7 +3206,7 @@
 
             <!-- Flèche -->
             <div class="ba-modern-arrow">
-              <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </div>
@@ -3200,7 +3215,7 @@
             <div class="ba-modern-col ba-modern-after">
               <div class="ba-modern-header">
                 <div class="ba-modern-badge ba-modern-badge-positive">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                   </svg>
                   Avec Protoreno
@@ -3263,7 +3278,7 @@
           <div class="dialogue-step dialogue-on">
             <div class="dialogue-avatar">
               <div class="dialogue-avatar-circle">
-                <svg class="dialogue-avatar-logo" viewBox="0 0 100 100" fill="none">
+                <svg class="dialogue-avatar-logo" viewBox="0 0 100 100" fill="none" aria-label="Logo Protoreno">
                   <circle cx="50" cy="50" r="50" fill="#2563EB"/>
                   <path d="M50 25 L75 45 L75 75 L25 75 L25 45 Z" fill="white" opacity="0.2" stroke="white" stroke-width="2.5"/>
                   <rect x="35" y="60" width="8" height="10" rx="2" fill="white"/>
@@ -3307,7 +3322,7 @@
           <div class="dialogue-step dialogue-on">
             <div class="dialogue-avatar">
               <div class="dialogue-avatar-circle">
-                <svg class="dialogue-avatar-logo" viewBox="0 0 100 100" fill="none">
+                <svg class="dialogue-avatar-logo" viewBox="0 0 100 100" fill="none" aria-label="Logo Protoreno">
                   <circle cx="50" cy="50" r="50" fill="#2563EB"/>
                   <path d="M50 25 L75 45 L75 75 L25 75 L25 45 Z" fill="white" opacity="0.2" stroke="white" stroke-width="2.5"/>
                   <rect x="35" y="60" width="8" height="10" rx="2" fill="white"/>
@@ -3551,84 +3566,84 @@
       <div class="faq-accordion-spacious">
         <!-- Tarif & Engagement -->
         <div class="faq-accordion-item card">
-          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="faq-content-1">
             <h3>Combien ça coûte ?</h3>
             <span class="accordion-icon">+</span>
           </button>
-          <div class="faq-accordion-content">
+          <div class="faq-accordion-content" id="faq-content-1">
             <p>Les outils sont accessibles avec des tarifs adaptés aux professionnels. Nous proposons des abonnements simples et transparents, sans engagement long terme ni frais cachés.</p>
           </div>
         </div>
 
         <div class="faq-accordion-item card">
-          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="faq-content-2">
             <h3>Peut-on tester avant de s'engager ?</h3>
             <span class="accordion-icon">+</span>
           </button>
-          <div class="faq-accordion-content">
+          <div class="faq-accordion-content" id="faq-content-2">
             <p>Tout à fait. Nous proposons des démonstrations et des périodes d'essai pour que vous puissiez évaluer si nos outils correspondent vraiment à vos besoins avant de vous abonner.</p>
           </div>
         </div>
 
         <!-- Pré-requis & Démarrage -->
         <div class="faq-accordion-item card">
-          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="faq-content-3">
             <h3>Quelles compétences techniques sont requises ?</h3>
             <span class="accordion-icon">+</span>
           </button>
-          <div class="faq-accordion-content">
+          <div class="faq-accordion-content" id="faq-content-3">
             <p>Si vous savez utiliser un navigateur web et votre messagerie, vous avez déjà tout ce qu'il faut. Nos interfaces sont pensées pour le terrain, pas pour des informaticiens.</p>
           </div>
         </div>
 
         <div class="faq-accordion-item card">
-          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="faq-content-4">
             <h3>Combien de temps pour prendre en main ?</h3>
             <span class="accordion-icon">+</span>
           </button>
-          <div class="faq-accordion-content">
+          <div class="faq-accordion-content" id="faq-content-4">
             <p>Moins d'une heure pour être opérationnel sur l'essentiel. Les interfaces sont conçues pour être intuitives et vous pouvez bénéficier d'un accompagnement personnalisé au démarrage si besoin.</p>
           </div>
         </div>
 
         <!-- Sécurité & Support -->
         <div class="faq-accordion-item card">
-          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="faq-content-5">
             <h3>Mes données sont-elles sécurisées ?</h3>
             <span class="accordion-icon">+</span>
           </button>
-          <div class="faq-accordion-content">
+          <div class="faq-accordion-content" id="faq-content-5">
             <p>Oui. Hébergement en France, chiffrement des données sensibles, sauvegardes quotidiennes. Nous sommes conformes au RGPD et vos données restent votre propriété exclusive.</p>
           </div>
         </div>
 
         <div class="faq-accordion-item card">
-          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="faq-content-6">
             <h3>Qui contacter en cas de problème ?</h3>
             <span class="accordion-icon">+</span>
           </button>
-          <div class="faq-accordion-content">
+          <div class="faq-accordion-content" id="faq-content-6">
             <p>Contact direct par email ou téléphone. Vous parlez directement à de vraies personnes qui connaissent votre métier et qui comprennent vos contraintes.</p>
           </div>
         </div>
 
         <!-- Évolution & Personnalisation -->
         <div class="faq-accordion-item card">
-          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="faq-content-7">
             <h3>Comment proposer des améliorations ?</h3>
             <span class="accordion-icon">+</span>
           </button>
-          <div class="faq-accordion-content">
+          <div class="faq-accordion-content" id="faq-content-7">
             <p>C'est tout le principe de Protoreno ! Contactez-nous directement, participez aux sondages réguliers ou aux ateliers utilisateurs. Vos retours terrain façonnent l'évolution des outils.</p>
           </div>
         </div>
 
         <div class="faq-accordion-item card">
-          <button class="faq-accordion-header" onclick="toggleAccordion(this)">
+          <button class="faq-accordion-header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="faq-content-8">
             <h3>Les outils sont-ils personnalisables ?</h3>
             <span class="accordion-icon">+</span>
           </button>
-          <div class="faq-accordion-content">
+          <div class="faq-accordion-content" id="faq-content-8">
             <p>Les fonctionnalités sont conçues à partir des besoins exprimés sur le terrain. Les personnalisations spécifiques sont étudiées si elles peuvent bénéficier à plusieurs professionnels du secteur.</p>
           </div>
         </div>
@@ -3679,7 +3694,7 @@
     <div class="footer-content">
       <div class="footer-brand">
         <div class="footer-logo-text">
-          <svg class="footer-logo-icon" viewBox="0 0 100 100" fill="none">
+          <svg class="footer-logo-icon" viewBox="0 0 100 100" fill="none" aria-label="Logo Protoreno">
             <rect width="100" height="100" rx="16" fill="white" opacity="0.1"/>
             <path d="M50 25 L75 45 L75 75 L25 75 L25 45 Z" fill="white" opacity="0.2" stroke="white" stroke-width="2.5"/>
             <rect x="35" y="60" width="8" height="10" rx="2" fill="white"/>
@@ -3716,11 +3731,16 @@
 
       // Fermer tous les items (comportement accordéon - un seul ouvert à la fois)
       const allItems = document.querySelectorAll('.faq-accordion-item');
-      allItems.forEach(i => i.classList.remove('active'));
+      allItems.forEach(i => {
+        i.classList.remove('active');
+        const btn = i.querySelector('.faq-accordion-header');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
 
       // Si l'item n'était pas actif, l'ouvrir
       if (!wasActive) {
         item.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
       }
     }
 
@@ -3762,6 +3782,39 @@
         submitBtn.disabled = false;
       }
     });
+
+    // Navigation active selon la section visible
+    const sections = document.querySelectorAll('section[id^="section-"]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#section-"]');
+
+    // Observer pour détecter quelle section est visible
+    const observerOptions = {
+      root: null,
+      rootMargin: '-80px 0px -60% 0px', // Déclenche quand la section atteint le haut de l'écran
+      threshold: 0
+    };
+
+    let activeSection = null;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          activeSection = entry.target.id;
+
+          // Retirer la classe active de tous les liens
+          navLinks.forEach(link => link.classList.remove('active'));
+
+          // Ajouter la classe active au lien correspondant
+          const activeLink = document.querySelector(`.nav-links a[href="#${activeSection}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observer toutes les sections
+    sections.forEach(section => observer.observe(section));
 
     // Chargement du widget Tally
     var d = document,
