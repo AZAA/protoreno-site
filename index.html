@@ -925,7 +925,7 @@
       background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
       border: 3px solid #2563EB;
       border-radius: 12px;
-      padding: 3.5rem 3rem;
+      padding: 2.5rem 2rem;
       text-align: center;
       transition: all 0.4s;
     }
@@ -938,20 +938,20 @@
     }
 
     .constat-icon-large {
-      width: 160px;
-      height: 160px;
-      margin: 0 auto 2rem;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 1.5rem;
       color: #2563EB;
     }
 
     .constat-main-problem h3 {
-      font-size: 2.25rem;
-      margin-bottom: 1.25rem;
+      font-size: 1.875rem;
+      margin-bottom: 1rem;
       color: var(--navy);
     }
 
     .constat-main-problem p {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       color: var(--slate);
       max-width: 640px;
       margin: 0 auto;
@@ -1032,22 +1032,22 @@
       }
 
       .constat-main-problem {
-        padding: 2.5rem 2rem;
+        padding: 2rem 1.5rem;
       }
 
       .constat-icon-large {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 1.5rem;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1.25rem;
       }
 
       .constat-main-problem h3 {
-        font-size: 1.75rem;
-        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.875rem;
       }
 
       .constat-main-problem p {
-        font-size: 1.125rem;
+        font-size: 1rem;
       }
 
       .constat-impact-card {
@@ -2714,14 +2714,15 @@
       }
 
       .message-content p {
-        padding: 1rem;
-        font-size: 1rem;
+        padding: 2.25rem 2rem;
+        font-size: 1.3125rem;
+        line-height: 1.7;
       }
 
       /* Tally embed responsive */
       .tally-benefits-bar {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1.25rem;
         padding: 1.5rem;
       }
 
@@ -2729,16 +2730,33 @@
         padding-bottom: 1rem;
         border-bottom: 1px solid var(--light-gray);
         width: 100%;
+        text-align: center;
       }
 
       .benefit-divider {
         display: none;
       }
 
+      /* 3 items sur une ligne */
       .benefit-item-inline {
-        font-size: 0.9375rem;
-        width: 100%;
+        font-size: 0.875rem;
+        flex: 1;
         justify-content: center;
+        min-width: 0;
+      }
+
+      /* Container flex pour les 3 items */
+      .tally-benefits-bar {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .benefit-stat {
+        flex-basis: 100%;
+      }
+
+      .benefit-item-inline {
+        flex-basis: calc(33.333% - 0.5rem);
       }
 
       .tally-embed-container {
@@ -2920,6 +2938,20 @@
         grid-template-columns: 1fr;
       }
 
+      /* Annuler l'alternance : toujours image au-dessus sur mobile */
+      .tools-grid .tool-card:nth-child(even) .tool-image {
+        order: 0;
+      }
+
+      .tools-grid .tool-card:nth-child(even) .tool-content {
+        order: 0;
+      }
+
+      /* Cacher l'icône SVG sur mobile (redondante avec l'image) */
+      .tools-grid .tool-icon {
+        display: none;
+      }
+
       .tools-grid .tool-image {
         min-height: 240px;
       }
@@ -2931,31 +2963,43 @@
         margin-bottom: 3rem;
       }
 
-      .dialogue-on,
-      .dialogue-vous {
+      /* Style messagerie : "Nous" à gauche */
+      .dialogue-on {
         flex-direction: column !important;
-        align-items: center;
+        align-items: flex-start;
         padding-left: 0 !important;
         padding-right: 0 !important;
       }
 
+      /* Style messagerie : "Vous" à droite */
+      .dialogue-vous {
+        flex-direction: column !important;
+        align-items: flex-end;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      /* Cacher les avatars sur mobile */
       .dialogue-avatar {
-        margin-bottom: 1rem;
+        display: none;
       }
 
-      .dialogue-avatar-circle {
-        width: 80px;
-        height: 80px;
-        font-size: 2.5rem;
-      }
-
+      /* Bulles limitées à 85% pour effet messagerie */
       .dialogue-bubble {
-        max-width: 100%;
+        max-width: 85%;
       }
 
       .dialogue-title {
         font-size: 1.5rem;
-        text-align: center;
+      }
+
+      /* Aligner titre selon le côté */
+      .dialogue-on .dialogue-title {
+        text-align: left;
+      }
+
+      .dialogue-vous .dialogue-title {
+        text-align: right;
       }
 
       .dialogue-card {
