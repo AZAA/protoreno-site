@@ -1091,6 +1091,40 @@
       font-size: 4rem;
     }
 
+    /* Conteneur des cartes minimalistes */
+    .constat-cards-container {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      max-width: 1120px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    /* Responsive : empiler les cartes sur mobile */
+    @media (max-width: 768px) {
+      .constat-cards-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1rem;
+      }
+
+      .badge-red,
+      .badge-green {
+        font-size: 1.125rem;
+        padding: 1rem 1.5rem;
+      }
+
+      #section-constat .docs-visual {
+        width: 140px;
+        height: 140px;
+      }
+
+      #section-constat .metric-hero .ba-modern-metric-value {
+        font-size: 3rem;
+      }
+    }
+
     /* ============================================
        STYLES POUR CARTES DE COMPARAISON
        ============================================ */
@@ -3608,7 +3642,7 @@
 
 
         <!-- Design minimaliste : cartes simplifiées -->
-        <div style="display: flex; flex-direction: row; gap: 2rem; max-width: 1120px; margin: 0 auto; align-items: start;">
+        <div class="constat-cards-container">
 
           <!-- Carte SANS PROTORENO -->
           <div class="ba-modern-col ba-modern-before" style="text-align: center; flex: 1;">
