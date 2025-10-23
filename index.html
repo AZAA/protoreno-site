@@ -568,11 +568,11 @@
     }
 
     .ba-modern-before {
-      border: 2px solid rgba(239, 68, 68, 0.2);
+      border: 3px solid rgba(239, 68, 68, 0.4);
     }
 
     .ba-modern-after {
-      border: 2px solid rgba(34, 197, 94, 0.2);
+      border: 3px solid rgba(34, 197, 94, 0.4);
     }
 
     .ba-modern-header {
@@ -631,12 +631,12 @@
     }
 
     .ba-modern-metric-negative {
-      background: rgba(239, 68, 68, 0.04);
+      background: rgba(239, 68, 68, 0.08);
       border: 4px solid #ef4444;
     }
 
     .ba-modern-metric-positive {
-      background: rgba(34, 197, 94, 0.04);
+      background: rgba(34, 197, 94, 0.08);
       border: 4px solid #22c55e;
     }
 
@@ -663,7 +663,7 @@
     }
 
     .ba-modern-metric-bar {
-      height: 6px;
+      height: 14px;
       background: rgba(0, 0, 0, 0.05);
       border-radius: 999px;
       overflow: hidden;
@@ -692,7 +692,13 @@
 
     .ba-modern-arrow svg {
       stroke: var(--blue);
-      opacity: 0.3;
+      opacity: 0.6;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.1); }
     }
 
     @media (max-width: 1200px) {
@@ -763,6 +769,408 @@
       .metric-hero .ba-modern-metric-value {
         font-size: 2.75rem;
       }
+    }
+
+    /* ============================================
+       COMBO ULTIME: Appliqué à la section originale
+       ============================================ */
+    #section-constat .ba-modern-header h3 {
+      display: none;
+    }
+
+    #section-constat .ba-modern-badge {
+      font-size: 1.375rem;
+      padding: 1.25rem 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    #section-constat .ba-modern-before {
+      background: white;
+    }
+
+    #section-constat .ba-modern-after {
+      background: white;
+      box-shadow: 0 16px 40px rgba(34, 197, 94, 0.25);
+    }
+
+    #section-constat .docs-visual {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 2rem;
+      display: block;
+      overflow: visible;
+    }
+
+    #section-constat .ba-modern-col {
+      overflow: visible;
+    }
+
+    #section-constat .docs-chaos {
+      color: #dc2626;
+    }
+
+    #section-constat .docs-chaos .doc-floating {
+      animation: float 2s ease-in-out infinite;
+    }
+
+    #section-constat .docs-chaos .doc-1 {
+      animation-delay: 0s;
+    }
+
+    #section-constat .docs-chaos .doc-2 {
+      animation-delay: 0.3s;
+    }
+
+    #section-constat .docs-chaos .doc-3 {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(3deg); }
+    }
+
+    #section-constat .docs-zen {
+      color: #16a34a;
+    }
+
+    /* ============================================
+       ANIMATIONS VARIANTES DOCUMENT VERT
+       ============================================ */
+
+    /* Variante 1 : Souriant - Bounce joyeux + fade lignes */
+    .variant-1-doc {
+      animation: gentleBounce 2s ease-in-out infinite;
+    }
+
+    .variant-1-lines line {
+      animation: lineFade 3s ease-in-out infinite;
+    }
+
+    .variant-1-lines line:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .variant-1-lines line:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    @keyframes gentleBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    /* Variante 4 : Minimaliste - Fade très subtil */
+    .variant-4-doc {
+      animation: minimalFloat 4s ease-in-out infinite;
+    }
+
+    .variant-4-lines line {
+      animation: lineFade 3s ease-in-out infinite;
+    }
+
+    .variant-4-lines line:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    .variant-4-lines line:nth-child(3) {
+      animation-delay: 1s;
+    }
+
+    @keyframes minimalFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+    @keyframes lineFade {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 0.3; }
+    }
+
+    /* ============================================
+       ANIMATIONS VARIANTES DOCUMENTS ROUGES CHAOTIQUES
+       ============================================ */
+
+    /* VARIANTE ROUGE 1 : Shake violent */
+    .docs-red-shake .red-doc-1 {
+      animation: violentShake1 0.4s ease-in-out infinite;
+    }
+
+    .docs-red-shake .red-doc-2 {
+      animation: violentShake2 0.35s ease-in-out infinite;
+    }
+
+    .docs-red-shake .red-doc-3 {
+      animation: violentShake3 0.3s ease-in-out infinite;
+    }
+
+    @keyframes violentShake1 {
+      0%, 100% { transform: translate(0, 0) rotate(-12deg); }
+      25% { transform: translate(-3px, 2px) rotate(-15deg); }
+      50% { transform: translate(3px, -2px) rotate(-9deg); }
+      75% { transform: translate(-2px, -3px) rotate(-13deg); }
+    }
+
+    @keyframes violentShake2 {
+      0%, 100% { transform: translate(0, 0) rotate(8deg); }
+      25% { transform: translate(4px, -2px) rotate(12deg); }
+      50% { transform: translate(-3px, 3px) rotate(5deg); }
+      75% { transform: translate(2px, 2px) rotate(10deg); }
+    }
+
+    @keyframes violentShake3 {
+      0%, 100% { transform: translate(0, 0) rotate(-5deg); }
+      25% { transform: translate(-4px, -3px) rotate(-8deg); }
+      50% { transform: translate(4px, 2px) rotate(-2deg); }
+      75% { transform: translate(-2px, 3px) rotate(-7deg); }
+    }
+
+    /* VARIANTE ROUGE 2 : Bounce extrême */
+    .docs-red-bounce .bounce-doc-1 {
+      animation: extremeBounce1 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+    }
+
+    .docs-red-bounce .bounce-doc-2 {
+      animation: extremeBounce2 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+      animation-delay: 0.2s;
+    }
+
+    .docs-red-bounce .bounce-doc-3 {
+      animation: extremeBounce3 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+      animation-delay: 0.4s;
+    }
+
+    @keyframes extremeBounce1 {
+      0%, 100% { transform: translate(0, 0) rotate(-12deg) scale(1); }
+      25% { transform: translate(-8px, -15px) rotate(-20deg) scale(0.95); }
+      50% { transform: translate(5px, 5px) rotate(-5deg) scale(1.05); }
+      75% { transform: translate(-3px, -8px) rotate(-15deg) scale(0.98); }
+    }
+
+    @keyframes extremeBounce2 {
+      0%, 100% { transform: translate(0, 0) rotate(8deg) scale(1); }
+      25% { transform: translate(10px, -12px) rotate(18deg) scale(0.93); }
+      50% { transform: translate(-6px, 8px) rotate(0deg) scale(1.07); }
+      75% { transform: translate(4px, -5px) rotate(12deg) scale(0.96); }
+    }
+
+    @keyframes extremeBounce3 {
+      0%, 100% { transform: translate(0, 0) rotate(-5deg) scale(1); }
+      25% { transform: translate(-7px, -18px) rotate(-15deg) scale(0.9); }
+      50% { transform: translate(8px, 3px) rotate(3deg) scale(1.1); }
+      75% { transform: translate(-5px, -10px) rotate(-10deg) scale(0.95); }
+    }
+
+    /* VARIANTE ROUGE 3 : Spin chaos */
+    .docs-red-spin .spin-doc-1 {
+      animation: chaosSpinFloat1 2s linear infinite;
+    }
+
+    .docs-red-spin .spin-doc-2 {
+      animation: chaosSpinFloat2 1.5s linear infinite;
+    }
+
+    .docs-red-spin .spin-doc-3 {
+      animation: chaosSpinFloat3 1.8s linear infinite;
+    }
+
+    @keyframes chaosSpinFloat1 {
+      0% { transform: translate(0, 0) rotate(-12deg); }
+      25% { transform: translate(-5px, -8px) rotate(78deg); }
+      50% { transform: translate(3px, 2px) rotate(168deg); }
+      75% { transform: translate(-3px, -5px) rotate(258deg); }
+      100% { transform: translate(0, 0) rotate(348deg); }
+    }
+
+    @keyframes chaosSpinFloat2 {
+      0% { transform: translate(0, 0) rotate(8deg); }
+      25% { transform: translate(6px, -5px) rotate(-82deg); }
+      50% { transform: translate(-4px, 4px) rotate(-172deg); }
+      75% { transform: translate(5px, -3px) rotate(-262deg); }
+      100% { transform: translate(0, 0) rotate(-352deg); }
+    }
+
+    @keyframes chaosSpinFloat3 {
+      0% { transform: translate(0, 0) rotate(-5deg); }
+      25% { transform: translate(-6px, -10px) rotate(85deg); }
+      50% { transform: translate(7px, 1px) rotate(175deg); }
+      75% { transform: translate(-4px, -6px) rotate(265deg); }
+      100% { transform: translate(0, 0) rotate(355deg); }
+    }
+
+    /* VARIANTE ROUGE 4 : Collision chaos */
+    .docs-red-collision .collision-doc-1 {
+      animation: collision1 1.2s ease-in-out infinite;
+    }
+
+    .docs-red-collision .collision-doc-2 {
+      animation: collision2 1.4s ease-in-out infinite;
+    }
+
+    .docs-red-collision .collision-doc-3 {
+      animation: collision3 1.1s ease-in-out infinite;
+    }
+
+    @keyframes collision1 {
+      0%, 100% { transform: translate(0, 0) rotate(-12deg); }
+      20% { transform: translate(-10px, -12px) rotate(-20deg); }
+      22% { transform: translate(-8px, -10px) rotate(-18deg); } /* rebond */
+      40% { transform: translate(8px, 5px) rotate(-5deg); }
+      42% { transform: translate(6px, 6px) rotate(-7deg); } /* rebond */
+      60% { transform: translate(-5px, -8px) rotate(-15deg); }
+      80% { transform: translate(3px, 2px) rotate(-10deg); }
+    }
+
+    @keyframes collision2 {
+      0%, 100% { transform: translate(0, 0) rotate(8deg); }
+      25% { transform: translate(12px, -10px) rotate(18deg); }
+      27% { transform: translate(10px, -8px) rotate(15deg); } /* rebond */
+      50% { transform: translate(-8px, 8px) rotate(0deg); }
+      52% { transform: translate(-6px, 7px) rotate(2deg); } /* rebond */
+      75% { transform: translate(6px, -6px) rotate(12deg); }
+    }
+
+    @keyframes collision3 {
+      0%, 100% { transform: translate(0, 0) rotate(-5deg); }
+      18% { transform: translate(-8px, -15px) rotate(-12deg); }
+      20% { transform: translate(-7px, -13px) rotate(-10deg); } /* rebond */
+      45% { transform: translate(10px, 4px) rotate(3deg); }
+      47% { transform: translate(8px, 5px) rotate(1deg); } /* rebond */
+      70% { transform: translate(-6px, -9px) rotate(-8deg); }
+      72% { transform: translate(-5px, -7px) rotate(-7deg); } /* rebond */
+    }
+
+    /* VARIANTE ROUGE 5 : Wild chaos COMBO - Plus doux */
+    .docs-red-wild .wild-doc-1 {
+      animation: wildCombo1 2.5s ease-in-out infinite;
+    }
+
+    .docs-red-wild .wild-doc-2 {
+      animation: wildCombo2 2.2s ease-in-out infinite;
+    }
+
+    .docs-red-wild .wild-doc-3 {
+      animation: wildCombo3 2.8s ease-in-out infinite;
+    }
+
+    @keyframes wildCombo1 {
+      0%, 100% { transform: translate(0, 0) rotate(-12deg) scale(1); }
+      15% { transform: translate(-4px, -2px) rotate(-20deg) scale(0.97); }
+      30% { transform: translate(3px, -6px) rotate(12deg) scale(1.03); }
+      45% { transform: translate(-5px, 2px) rotate(-30deg) scale(0.95); }
+      60% { transform: translate(4px, -4px) rotate(25deg) scale(1.04); }
+      75% { transform: translate(-2px, -5px) rotate(-15deg) scale(0.96); }
+      90% { transform: translate(3px, 1px) rotate(8deg) scale(1.01); }
+    }
+
+    @keyframes wildCombo2 {
+      0%, 100% { transform: translate(0, 0) rotate(8deg) scale(1); }
+      12% { transform: translate(5px, -5px) rotate(28deg) scale(0.96); }
+      28% { transform: translate(-3px, 3px) rotate(-15deg) scale(1.05); }
+      44% { transform: translate(6px, -2px) rotate(35deg) scale(0.93); }
+      60% { transform: translate(-4px, -6px) rotate(-22deg) scale(1.06); }
+      76% { transform: translate(4px, 2px) rotate(18deg) scale(0.97); }
+      88% { transform: translate(-2px, -3px) rotate(-8deg) scale(1.02); }
+    }
+
+    @keyframes wildCombo3 {
+      0%, 100% { transform: translate(0, 0) rotate(-5deg) scale(1); }
+      10% { transform: translate(-6px, -8px) rotate(-25deg) scale(0.92); }
+      25% { transform: translate(5px, 1px) rotate(22deg) scale(1.07); }
+      40% { transform: translate(-4px, -5px) rotate(-32deg) scale(0.95); }
+      55% { transform: translate(5px, -3px) rotate(30deg) scale(1.04); }
+      70% { transform: translate(-4px, 4px) rotate(-18deg) scale(0.97); }
+      85% { transform: translate(3px, -5px) rotate(10deg) scale(1.02); }
+    }
+
+    #section-constat .metric-hero .ba-modern-metric-value {
+      font-size: 4rem;
+    }
+
+    /* ============================================
+       STYLES POUR CARTES DE COMPARAISON
+       ============================================ */
+
+    .container-constat {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .variant-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .variant-title h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 0.5rem;
+    }
+
+    .variant-title p {
+      font-size: 0.9375rem;
+      color: #64748b;
+    }
+
+    /* Badges spécifiques */
+    .badge-green {
+      background: rgba(34, 197, 94, 0.1);
+      color: #16a34a;
+      font-size: 1.375rem;
+      padding: 1.25rem 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .badge-red {
+      background: rgba(239, 68, 68, 0.1);
+      color: #dc2626;
+      font-size: 1.375rem;
+      padding: 1.25rem 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Documents visuels (globaux pour sections de test seulement) */
+    .section-alt:not(#section-constat) .docs-visual {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 2rem;
+      display: block;
+      overflow: visible;
+    }
+
+    .section-alt:not(#section-constat) .docs-zen {
+      color: #16a34a;
+    }
+
+    .section-alt:not(#section-constat) .docs-chaos {
+      color: #dc2626;
+    }
+
+    /* Grille pour cartes de test (une seule carte) */
+    .section-alt:not(#section-constat) .ba-modern-grid {
+      grid-template-columns: 1fr;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section-alt:not(#section-constat) .ba-modern-col {
+      overflow: visible;
     }
 
     /* ============================================
@@ -3199,62 +3607,66 @@
         </div>
 
 
-        <!-- Avant/Après avec icônes proportionnelles -->
-        <div class="constat-ba-modern">
-          <div class="ba-modern-grid">
-            <!-- AVANT -->
-            <div class="ba-modern-col ba-modern-before">
-              <div class="ba-modern-header">
-                <div class="ba-modern-badge ba-modern-badge-negative">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  Sans solution adaptée
-                </div>
-                <h3>La réalité quotidienne</h3>
-              </div>
+        <!-- Design minimaliste : cartes simplifiées -->
+        <div style="display: flex; flex-direction: row; gap: 2rem; max-width: 1120px; margin: 0 auto; align-items: start;">
 
-              <div class="ba-modern-metrics">
-                <div class="ba-modern-metric ba-modern-metric-negative metric-hero">
-                  <div class="ba-modern-metric-value">14h</div>
-                  <div class="ba-modern-metric-label">Admin par semaine</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 93%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <!-- Carte SANS PROTORENO -->
+          <div class="ba-modern-col ba-modern-before" style="text-align: center; flex: 1;">
+            <span class="badge-red" style="margin-bottom: 2rem;">SANS PROTORENO</span>
 
-            <!-- Flèche -->
-            <div class="ba-modern-arrow">
-              <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </div>
+            <!-- Documents rouges Wild chaos COMBO (Variante 5) -->
+            <svg class="docs-visual docs-chaos docs-red-wild" fill="none" viewBox="0 -3 24 30" stroke="currentColor" style="overflow: visible;">
+              <g class="wild-doc-1">
+                <rect x="2" y="7" width="14" height="16" rx="2" stroke-width="1.5" opacity="0.4" transform="rotate(-12 9 15)"/>
+                <line x1="5" y1="11" x2="11" y2="10" stroke-width="1" opacity="0.4"/>
+                <line x1="5" y1="14" x2="11" y2="13" stroke-width="1" opacity="0.4"/>
+              </g>
+              <g class="wild-doc-2">
+                <rect x="5" y="5" width="14" height="16" rx="2" stroke-width="2" opacity="0.6" transform="rotate(8 12 13)"/>
+                <line x1="8" y1="9" x2="14" y2="10" stroke-width="1.2" opacity="0.6"/>
+                <line x1="8" y1="12" x2="14" y2="13" stroke-width="1.2" opacity="0.6"/>
+              </g>
+              <g class="wild-doc-3">
+                <rect x="8" y="4" width="14" height="16" rx="2" stroke-width="2.5" opacity="0.9" transform="rotate(-5 15 12)"/>
+                <line x1="11" y1="8" x2="17" y2="8" stroke-width="1.5" opacity="0.9"/>
+                <line x1="11" y1="11" x2="17" y2="11" stroke-width="1.5" opacity="0.9"/>
+              </g>
+            </svg>
 
-            <!-- APRÈS -->
-            <div class="ba-modern-col ba-modern-after">
-              <div class="ba-modern-header">
-                <div class="ba-modern-badge ba-modern-badge-positive">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                  </svg>
-                  Avec Protoreno
-                </div>
-                <h3>La transformation concrète</h3>
-              </div>
-
-              <div class="ba-modern-metrics">
-                <div class="ba-modern-metric ba-modern-metric-positive metric-hero">
-                  <div class="ba-modern-metric-value">2h</div>
-                  <div class="ba-modern-metric-label">Admin par semaine</div>
-                  <div class="ba-modern-metric-bar">
-                    <div class="ba-modern-metric-fill" style="width: 13%;"></div>
-                  </div>
-                </div>
+            <div class="ba-modern-metric metric-hero">
+              <div class="ba-modern-metric-value" style="color: #dc2626;">14h</div>
+              <div class="ba-modern-metric-label">Admin par semaine</div>
+              <div class="ba-modern-metric-bar">
+                <div class="ba-modern-metric-fill" style="width: 100%; background: linear-gradient(90deg, #ef4444, #dc2626);"></div>
               </div>
             </div>
           </div>
+
+          <!-- Carte AVEC PROTORENO -->
+          <div class="ba-modern-col ba-modern-after" style="text-align: center; flex: 1;">
+            <span class="badge-green" style="margin-bottom: 2rem;">AVEC PROTORENO</span>
+
+            <!-- Document vert souriant (Variante 1) -->
+            <svg class="docs-visual docs-zen variant-1-doc" fill="none" viewBox="0 -5 24 30" stroke="currentColor">
+              <rect x="7" y="4" width="14" height="16" rx="2" stroke-width="1"/>
+              <g class="variant-1-lines">
+                <line x1="10" y1="8" x2="18" y2="8" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
+                <line x1="10" y1="11" x2="18" y2="11" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
+              </g>
+              <circle cx="11" cy="14" r="0.6" fill="currentColor"/>
+              <circle cx="17" cy="14" r="0.6" fill="currentColor"/>
+              <path d="M12 16.5 Q14 18 16 16.5" stroke-width="1" fill="none" stroke-linecap="round"/>
+            </svg>
+
+            <div class="ba-modern-metric metric-hero">
+              <div class="ba-modern-metric-value" style="color: #16a34a;">2h</div>
+              <div class="ba-modern-metric-label">Admin par semaine</div>
+              <div class="ba-modern-metric-bar">
+                <div class="ba-modern-metric-fill" style="width: 14%; background: linear-gradient(90deg, #10b981, #059669);"></div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       <!-- Sources -->
@@ -3264,6 +3676,7 @@
 
     </div>
   </section>
+
 
   <!-- ============================================
        NOTRE APPROCHE
