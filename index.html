@@ -701,6 +701,25 @@
       50% { opacity: 1; transform: scale(1.1); }
     }
 
+    /* Animation remplissage barres de progression */
+    @keyframes fillProgress {
+      from {
+        transform: scaleX(0);
+      }
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    .ba-modern-metric-fill {
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+
+    .ba-modern-metric-fill.animate {
+      animation: fillProgress 2.5s ease-out 0.5s forwards;
+    }
+
     @media (max-width: 1200px) {
       .ba-modern-grid {
         grid-template-columns: 1fr;
@@ -3065,9 +3084,13 @@
 
     /* Bordures toujours à gauche */
 
+    .tools-grid .tool-card {
+      transition: all 0.3s ease;
+    }
+
     .tools-grid .tool-card:hover {
       box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
-      transform: translateY(-4px);
+      transform: translateY(-8px);
     }
 
     .tools-grid .tool-image {
@@ -3078,6 +3101,7 @@
       align-items: center;
       justify-content: center;
       padding: 2rem;
+      overflow: hidden;
     }
 
     .tools-grid .tool-image img {
@@ -3086,6 +3110,11 @@
       object-fit: contain;
       border-radius: 8px;
       box-shadow: 0 0 0 2px #D1D5DB;
+      transition: transform 0.4s ease;
+    }
+
+    .tools-grid .tool-card:hover .tool-image img {
+      transform: scale(1.05);
     }
 
     .tools-grid .tool-content {
@@ -3248,15 +3277,14 @@
   }
   </script>
 
-  <!-- Cloudflare Web Analytics - Privacy-friendly, gratuit, sans cookies -->
-  <!-- Pour activer :
-       1. Connectez-vous à https://dash.cloudflare.com
-       2. Allez dans "Analytics & Logs" > "Web Analytics"
-       3. Ajoutez votre site protoreno.com
-       4. Copiez le token généré et remplacez YOUR_TOKEN_HERE ci-dessous
-       5. Décommentez la ligne suivante
-  -->
-  <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script> -->
+  <!-- Microsoft Clarity - Privacy-friendly, gratuit, sans cookies -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "two14wvj3k");
+  </script>
 </head>
 <body>
   <!-- Skip to content pour accessibilité -->
@@ -4080,6 +4108,28 @@
       s.onload = v;
       s.onerror = v;
       d.body.appendChild(s);
+    }
+
+    // Animation des barres de progression dans la section "Le constat"
+    const constatSection = document.getElementById('section-constat');
+    if (constatSection) {
+      const progressBarsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Animer les barres de progression
+            const progressBars = entry.target.querySelectorAll('.ba-modern-metric-fill');
+            progressBars.forEach(bar => {
+              bar.classList.add('animate');
+            });
+            // Ne déclencher qu'une seule fois
+            progressBarsObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.5
+      });
+
+      progressBarsObserver.observe(constatSection);
     }
   </script>
 </body>
